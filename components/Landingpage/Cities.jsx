@@ -23,7 +23,7 @@ const cities = [
   },
   {
     name: "Kolkata",
-    iconSrc: "/city/kolkata.webp",
+    iconSrc: "/city/Kolkata.webp",
   },
   {
     name: "Pune",
