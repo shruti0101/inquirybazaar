@@ -6,7 +6,7 @@ import { Toaster  } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], // adjust if needed
+  weight: ["300", "400", "500", "600", "700"], 
   variable: "--font-poppins",
 });
 

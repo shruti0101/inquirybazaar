@@ -21,7 +21,7 @@ const CategorySidebar = ({data}) => {
             </Link>
           ))
         ) : (
-          <p>No categories</p>
+          <p>No categoriesSE</p>
         )}
       </div>
     </div>

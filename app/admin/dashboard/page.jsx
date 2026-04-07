@@ -100,14 +100,14 @@ export default function Dashboard() {
         <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer">
           <div className="flex items-center gap-3 mb-4">
             <Settings className="text-gray-600" />
-            <h2 className="text-lg font-semibold">Settings</h2>
+            <h2 className="text-lg font-semibold">Footer Links</h2>
           </div>
           <p className="text-gray-500 text-sm mb-4">
-            General site configurations
+          Add and change links of categories, brands and popular searches in footer
           </p>
-          <button className="text-gray-700 font-medium">
-            Open →
-          </button>
+          <Link href="/admin/footerlink" className="text-gray-700 font-medium">
+            Edit →
+          </Link>
         </div>
 
       </div>

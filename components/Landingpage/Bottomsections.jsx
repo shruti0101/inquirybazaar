@@ -1,0 +1,214 @@
+"use client";
+
+import Image from "next/image";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPinterestP,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import {
+  Headphones,
+  PackageCheck,
+  ShieldCheck,
+  BadgeCheck,
+} from "lucide-react";
+
+export default function Footer() {
+  return (
+    <footer className="w-full text-[13px] leading-[1.4]">
+      {/* TOP STRIP */}
+      <div className="bg-[#1e3a5f] text-white px-10 py-[26px]">
+        <div className="grid grid-cols-4 gap-x-[60px] gap-y-[26px]">
+          {/* COL 1 */}
+          <div className="flex gap-[12px]">
+            <Image
+              src="/footer/bottom/imgi_99_helpline.webp"
+              alt=""
+               width={100}
+    height={100}
+    className="h-[50px] w-auto object-contain"
+
+            />
+            <div>
+              <p className="font-semibold text-[15px]">Helpline Number</p>
+              <p className="text-[13px] mt-[2px]">Call: +91 9650660070</p>
+              <p className="text-[13px]">(Mon–Sun: 9am–8pm)</p>
+            </div>
+          </div>
+
+          <div className="flex gap-[12px]">
+            <Image
+              src="/footer/bottom/imgi_102_original-tag.webp"
+              alt=""
+                width={100}
+    height={100}
+    className="h-[50px] w-auto object-contain"
+            />
+            <div>
+              <p className="font-semibold text-[15px]">100% ORIGINAL</p>
+              <p className="text-[13px] mt-[2px]">guarantee for all products</p>
+            </div>
+          </div>
+
+          {/* COL 2 */}
+          <div className="flex gap-[12px]">
+            <Image
+              src="/footer/bottom/imgi_100_box.webp"
+              alt=""
+             width={100}
+    height={100}
+    className="h-[50px] w-auto object-contain"
+            />
+            <div>
+              <p className="font-semibold text-[15px]">Return within 7 days</p>
+              <p className="text-[13px] mt-[2px]">of receiving your order</p>
+            </div>
+          </div>
+
+          <div className="flex gap-[12px]">
+            <Image
+              src="/footer/bottom/imgi_103_wallet-check.webp"
+              alt=""
+               width={100}
+    height={100}
+    className="h-[47px] w-auto object-contain"
+            />
+            <div>
+              <p className="font-semibold text-[15px]">Complete products</p>
+              <p className="text-[13px] mt-[2px]">
+                20,00,000+ products from 12,000+ Brands
+              </p>
+            </div>
+          </div>
+
+          {/* COL 3 */}
+          <div className="flex gap-[12px]">
+            <Image
+              src="/footer/bottom/imgi_103_wallet-check.webp"
+              alt=""
+               width={100}
+    height={100}
+    className="h-[47px] w-auto object-contain"
+            />
+            <div>
+              <p className="font-semibold text-[15px]">
+                100% Safe & Secure Payments
+              </p>
+              <p className="text-[13px] mt-[2px]">
+                Pay using secure payment methods
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-[12px]">
+            <Image
+              src="/footer/bottom/imgi_104_secure-shield.webp"
+              alt=""
+                width={100}
+    height={100}
+    className="h-[50px] w-auto object-contain"
+            />
+            <div>
+              <p className="font-semibold text-[15px]">Buyer Protection</p>
+              <p className="text-[13px] mt-[2px] max-w-[260px]">
+                Committed to buyer interests to provide a smooth shopping
+                experience.
+              </p>
+            </div>
+          </div>
+
+      
+
+          <div>
+            <p className="font-semibold text-[15px] mb-[8px]">Follow us on</p>
+            <div className="flex gap-[18px] text-[15px]">
+              <FaFacebookF />
+              <FaXTwitter />
+              <FaInstagram />
+              <FaPinterestP />
+              <FaLinkedinIn />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* GREEN SECTION */}
+      <div className="bg-[#c9d8b6] px-[60px] py-[40px]">
+        <div className="grid grid-cols-4 gap-[40px] items-start">
+          <div>
+            <p className="font-bold text-[15px] mb-[12px]">COMPANY</p>
+            <ul className="space-y-[6px]">
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>Careers</li>
+              <li>Become a seller</li>
+              <li>Special Offers</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-bold text-[15px] mb-[12px]">SISTER SITE</p>
+            <ul className="space-y-[6px]">
+              <li>Monotaro (Japan)</li>
+              <li>Navimro (Korea)</li>
+              <li>Monotaro (Indonesia)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-bold text-[15px] mb-[12px]">HELP</p>
+            <ul className="space-y-[6px]">
+              <li>FAQs</li>
+              <li>Report Infringement</li>
+              <li>Cancellations & Returns</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Write to Management</li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div className="bg-white rounded-[10px] px-[20px] py-[20px] shadow-sm">
+            <p className="text-[16px] font-semibold mb-[12px] text-center">
+              Subscribe to Newsletter
+            </p>
+
+            <div className="flex items-center bg-[#f3f3f3] rounded-full overflow-hidden h-[42px]">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-[14px] text-[13px] bg-transparent outline-none"
+              />
+              <button className="bg-black text-white text-[12px] px-[18px] h-full">
+                SUBMIT NOW
+              </button>
+            </div>
+
+            <p className="text-[12px] text-gray-600 mt-[10px] text-center leading-[1.3]">
+              Sign up to get exclusive offers from our favorite brands and to be
+              well up in the news
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTTOM */}
+      <div className="bg-[#f2f2f2] px-[60px] py-[14px] flex justify-between items-center text-[13px]">
+        <p>Copyright Inquirybazaar.com 2013–2026 All Right Reserved</p>
+
+        <div className="flex gap-[14px] items-center">
+          <Image src="/visa.png" alt="visa" width={46} height={18} />
+          <Image src="/mastercard.png" alt="mc" width={46} height={18} />
+          <Image src="/rupay.png" alt="rupay" width={46} height={18} />
+          <Image src="/cod.png" alt="cod" width={46} height={18} />
+          <Image src="/emi.png" alt="emi" width={46} height={18} />
+          <Image src="/payu.png" alt="payu" width={46} height={18} />
+          <Image src="/mobikwik.png" alt="mobikwik" width={46} height={18} />
+        </div>
+      </div>
+    </footer>
+  );
+}

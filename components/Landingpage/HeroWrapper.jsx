@@ -12,6 +12,9 @@ import MoreForYou from "./Facility1";
 import TopCities from "./Cities";
 import Bestseller from "./Bestseller";
 import TestimonialSection from "./Testimonial";
+import Youtube from "./Youtube";
+import About from "./About";
+import FooterLinksUI from "./Footerlink";
 export default function HeroWrapper() {
   const [data, setData] = useState(null);
 
@@ -63,7 +66,29 @@ export default function HeroWrapper() {
       .then((res) =>  setBestsellerData(res.content));
   }, []);
 
+  // abpout ua
+
+    const [aboutData, setAboutData] = useState(null);
+    useEffect(()=>{
+      fetch("/api/aboutus")
+        .then((res) => res.json())
+        .then((res) => setAboutData(res.content));
+    }, []);
+
+    // footerlinks
+
+const [footerdata, setfooterData] = useState(null);
+
+ useEffect(() => {
+    fetch("/api/footerlink")
+      .then((res) => res.json())
+      .then((res) => setfooterData(res));
+  }, []);
+
   return (
+
+    <>
+    
     <section className="px-8 mt-3 bg-[#F3F4F6]">
       <div className="grid grid-cols-12 gap-5">
         {/* LEFT STICKY */}
@@ -94,9 +119,19 @@ export default function HeroWrapper() {
 
 
 <TestimonialSection></TestimonialSection>
+<Youtube></Youtube>
+
+<About content={aboutData} />
 
         </div>
+
+
+
       </div>
+      
+        {/* FOOTER LINKS */}
     </section>
+   <FooterLinksUI data={footerdata} />
+    </>
   );
 }

@@ -55,7 +55,7 @@ export default function HeroSection({ data }) {
       ))}
     </Swiper>
   ) : (
-    <p>No banners</p>
+    <p>No bannersQWD</p>
   )}
 
 
