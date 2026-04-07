@@ -4,9 +4,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useState } from "react";
+import Link from "next/link";
+import RequestQuoteModal from "@/components/Layout/Requestquote";
+
 
 export default function FeaturedProducts({ data }) {
+
+const [isOpen, setIsOpen] = useState(false);
+
+  
   return (
+
+    <>
+    
+    
     <section className=" py-4 ">
 
       {/* HEADER */}
@@ -66,7 +78,7 @@ export default function FeaturedProducts({ data }) {
               </p>
 
               {/* BUTTON */}
-              <button className=" w-full bg-[#F45A06] text-white text-sm mt-2 py-2 ">
+              <button onClick={()=> setIsOpen(true)} className=" w-full bg-[#F45A06] text-white text-sm mt-2 py-2 ">
               Request a Quote
               </button>
 
@@ -75,5 +87,10 @@ export default function FeaturedProducts({ data }) {
         ))}
       </Swiper>
     </section>
+
+  <RequestQuoteModal isOpen={isOpen} setIsOpen={setIsOpen} />
+    </>
+
+
   );
 }

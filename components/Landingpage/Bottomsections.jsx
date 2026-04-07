@@ -197,16 +197,13 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="bg-[#f2f2f2] px-[60px] py-[14px] flex justify-between items-center text-[13px]">
-        <p>Copyright Inquirybazaar.com 2013–2026 All Right Reserved</p>
-
+        <p>Copyright Inquirybazaar.com 2026 All Right Reserved</p>
+ 
         <div className="flex gap-[14px] items-center">
-          <Image src="/visa.png" alt="visa" width={46} height={18} />
-          <Image src="/mastercard.png" alt="mc" width={46} height={18} />
-          <Image src="/rupay.png" alt="rupay" width={46} height={18} />
-          <Image src="/cod.png" alt="cod" width={46} height={18} />
-          <Image src="/emi.png" alt="emi" width={46} height={18} />
-          <Image src="/payu.png" alt="payu" width={46} height={18} />
-          <Image src="/mobikwik.png" alt="mobikwik" width={46} height={18} />
+          <Image src="/payment-options.webp" alt="visa"      width={450}
+    height={400}
+    className=" object-cover" />
+       
         </div>
       </div>
     </footer>

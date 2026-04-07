@@ -15,12 +15,12 @@ export default function Navbar() {
           <div className="flex items-center gap-8">
             <span className="flex items-center gap-2 whitespace-nowrap text-lg animate-pulse">
               <Phone size={20} />
-              Have a question? Call us now at +91 9650660070
+              Have a question? Call us now at +91 7303486777
             </span>
 
             <span className="flex items-center gap-2 whitespace-nowrap text-lg">
               <Mail size={20} />
-              care@industrybuying.com
+              care@inquirybazaar.com
             </span>
           </div>
 
