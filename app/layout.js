@@ -2,7 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Layoutwrapper from "@/components/Layout/Layoutwrapper";
 import { Toaster  } from "react-hot-toast";
-import StickyOfferButton from "@/components/socialicons/stickybutton";
+
 
 
 const poppins = Poppins({
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
 
         <Layoutwrapper>
 
-<StickyOfferButton></StickyOfferButton>
+
           {children}
         </Layoutwrapper>  
       </body>

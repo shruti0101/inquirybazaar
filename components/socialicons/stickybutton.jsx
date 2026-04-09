@@ -15,7 +15,7 @@ export default function StickyOfferButton() {
   {/* MAIN BUTTON */}
   <div
     onClick={() => setShowPopup(true)}
-    style={{ backgroundImage: "url(/stickybg1.png)" }}
+    style={{ backgroundImage: "url(/stickybgfinal1.png)" }}
     className="relative w-28 h-28 bg-center bg-cover rounded-full shadow-xl flex items-center justify-center overflow-hidden cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 animate-popIn"
   >
     {/* 🔴 NOTIFICATION BADGE */}
@@ -27,7 +27,7 @@ export default function StickyOfferButton() {
    
 
     {/* TEXT */}
-    <p className="relative text-white text-center text-md font-semibold leading-tight px-3 animate-blink">
+    <p className="relative text-black text-center text-md font-semibold leading-tight px-3 animate-blink">
       Register For Free
     </p>
   </div>
