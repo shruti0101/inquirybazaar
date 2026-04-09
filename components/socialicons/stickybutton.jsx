@@ -7,7 +7,7 @@ export default function StickyOfferButton() {
 
   return (
     <>
-<div className="fixed bottom-5 right-0 z-50 group ">
+<div className="fixed bottom-15 right-10 z-50 group ">
 
   {/* 🌈 PULSE GLOW RING */}
   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-blue-900 opacity-70 blur-md animate-ping" />
@@ -15,8 +15,8 @@ export default function StickyOfferButton() {
   {/* MAIN BUTTON */}
   <div
     onClick={() => setShowPopup(true)}
-    style={{ backgroundImage: "url(/stickybgfinal1.png)" }}
-    className="relative w-28 h-28 bg-center bg-cover rounded-full shadow-xl flex items-center justify-center overflow-hidden cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 animate-popIn"
+    style={{ backgroundImage: "url(/stickybgfinal.png)" }}
+    className="relative w-28 h-28 bg-center bg-cover  flex items-center justify-center overflow-hidden cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 animate-popIn"
   >
     {/* 🔴 NOTIFICATION BADGE */}
     <div className="absolute top-4 right-6 bg-red-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full shadow-md animate-bounce">

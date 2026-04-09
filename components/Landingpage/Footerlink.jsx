@@ -22,13 +22,17 @@ export default function FooterLinksUI({ data }) {
   );
 
   return (
-    <section className="w-full bg-gray-100 px-6 md:px-16 py-6 text-sm text-gray-800">
+    <section className="w-full bg-gray-100 px-6 md:px-10 py-6 text-sm text-gray-800">
 
-      <div className="mb-4">
-        <h3 className="font-semibold text-black mb-1">
+      <div className="mb-4 w-full">
+        <h3 className="font-semibold  text-black mb-1">
           SHOP ALL CATEGORIES
         </h3>
+
+        <span className="capitalize w-full">
+
         {renderLinks(data?.categories)}
+        </span>
       </div>
 
       <div className="mb-4">

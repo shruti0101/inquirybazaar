@@ -143,7 +143,7 @@ export default function Footer() {
               <li>About Us</li>
               <li>Contact Us</li>
               <li>Careers</li>
-              <li>Become a seller</li>
+              <li>Become a Supplier</li>
               <li>Special Offers</li>
               <li>Blog</li>
             </ul>
@@ -152,9 +152,8 @@ export default function Footer() {
           <div>
             <p className="font-bold text-[15px] mb-[12px]">SISTER SITE</p>
             <ul className="space-y-[6px]">
-              <li>Monotaro (Japan)</li>
-              <li>Navimro (Korea)</li>
-              <li>Monotaro (Indonesia)</li>
+              <a href="https://www.promozionebranding.com/">Promozione Branding </a>
+           
             </ul>
           </div>
 

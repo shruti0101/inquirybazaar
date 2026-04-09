@@ -41,14 +41,12 @@ export default function Navbar() {
               href="https://g.page/r/CX8DUuqTRZshEBM/review"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-90 hover:underline whitespace-nowrap"
+              className="text-lg hover:underline whitespace-nowrap"
             >
               Write Review
             </a>
 
-            <span className="opacity-90 whitespace-nowrap">
-              Chat
-            </span>
+           
           </div>
         </div>
       </div>
