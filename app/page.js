@@ -7,7 +7,7 @@ export default function Page() {
     <div>
       <Lead></Lead>
       <HeroWrapper />
-      <Bottomsections></Bottomsections>
+   
     
     </div>
   );

@@ -6,7 +6,7 @@ export default function TermsConditions() {
       <div className="max-w-5xl mx-auto bg-white shadow rounded-lg p-6 md:p-10 space-y-6">
 
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
-          Terms of Use – Inquiry Bazar
+          Terms of Use – Inquiry Bazaar
         </h1>
 
         <p className="text-gray-600 font-medium">
@@ -14,7 +14,7 @@ export default function TermsConditions() {
         </p>
 
         <p className="text-gray-600">
-          The following agreement captures the terms and conditions of use (“Agreement”) applicable to your use of Inquiry Bazar (“Platform”), which facilitates business connections between buyers and suppliers. This Agreement is between you (“User”, “You”, or “Your”) and Inquiry Bazar.
+          The following agreement captures the terms and conditions of use (“Agreement”) applicable to your use of Inquiry Bazaar (“Platform”), which facilitates business connections between buyers and suppliers. This Agreement is between you (“User”, “You”, or “Your”) and Inquiry Bazaar.
         </p>
 
         <p className="text-gray-600">
@@ -32,10 +32,10 @@ export default function TermsConditions() {
         </p>
 
         <p className="text-gray-600">
-          Inquiry Bazar is not a party to any transaction between users and does not participate in any agreements formed between them.
+          Inquiry Bazaar is not a party to any transaction between users and does not participate in any agreements formed between them.
         </p>
 
-        <p className="text-gray-600">Inquiry Bazar:</p>
+        <p className="text-gray-600">Inquiry Bazaar:</p>
 
         <ul className="list-disc pl-6 text-gray-600 space-y-1">
           <li>Does not control the quality, safety, or legality of products/services</li>
@@ -44,13 +44,13 @@ export default function TermsConditions() {
         </ul>
 
         <p className="text-gray-600">
-          This Agreement does not create any partnership or joint venture between Inquiry Bazar and users.
+          This Agreement does not create any partnership or joint venture between Inquiry Bazaar and users.
         </p>
 
         <h2 className="text-lg font-semibold text-gray-800">II. SERVICES PROVIDED</h2>
 
         <p className="text-gray-600">
-          Inquiry Bazar provides services including, but not limited to:
+          Inquiry Bazaar provides services including, but not limited to:
         </p>
 
         <ul className="list-disc pl-6 text-gray-600 space-y-1">
@@ -61,7 +61,7 @@ export default function TermsConditions() {
         </ul>
 
         <p className="text-gray-600">
-          All services are subject to change, modification, or discontinuation at the sole discretion of Inquiry Bazar.
+          All services are subject to change, modification, or discontinuation at the sole discretion of Inquiry Bazaar.
         </p>
 
         <h2 className="text-lg font-semibold text-gray-800">III. USER(S) ELIGIBILITY</h2>
@@ -77,7 +77,7 @@ export default function TermsConditions() {
         </ul>
 
         <p className="text-gray-600">
-          Inquiry Bazar reserves the right to refuse service to any user at any time.
+          Inquiry Bazaar reserves the right to refuse service to any user at any time.
         </p>
 
         <h2 className="text-lg font-semibold text-gray-800">IV. USER(S) AGREEMENT</h2>
@@ -101,7 +101,7 @@ export default function TermsConditions() {
         <h2 className="text-lg font-semibold text-gray-800">V. AMENDMENT TO AGREEMENT</h2>
 
         <p className="text-gray-600">
-          Inquiry Bazar reserves the right to modify or update this Agreement at any time.
+          Inquiry Bazaar reserves the right to modify or update this Agreement at any time.
         </p>
 
         <ul className="list-disc pl-6 text-gray-600 space-y-1">
@@ -112,7 +112,7 @@ export default function TermsConditions() {
         <h2 className="text-lg font-semibold text-gray-800">VI. INTELLECTUAL PROPERTY RIGHTS</h2>
 
         <p className="text-gray-600">
-          All content on the Platform, including design, text, graphics, and logos, belongs to Inquiry Bazar or its licensors.
+          All content on the Platform, including design, text, graphics, and logos, belongs to Inquiry Bazaar or its licensors.
         </p>
 
         <p className="text-gray-600">User(s) agree that they will not:</p>
@@ -133,7 +133,7 @@ export default function TermsConditions() {
         </p>
 
         <ul className="list-disc pl-6 text-gray-600 space-y-1">
-          <li>Inquiry Bazar does not control or endorse such websites</li>
+          <li>Inquiry Bazaar does not control or endorse such websites</li>
           <li>Users access third-party sites at their own risk</li>
           <li>Users are advised to review their terms and policies</li>
         </ul>
@@ -141,7 +141,7 @@ export default function TermsConditions() {
         <h2 className="text-lg font-semibold text-gray-800">VIII. TERMINATION</h2>
 
         <p className="text-gray-600">
-          Inquiry Bazar reserves the right to suspend or terminate user access at any time without prior notice.
+          Inquiry Bazaar reserves the right to suspend or terminate user access at any time without prior notice.
         </p>
 
         <p className="text-gray-600">Termination may occur if:</p>
@@ -168,7 +168,7 @@ export default function TermsConditions() {
         <ul className="list-disc pl-6 text-gray-600 space-y-1">
           <li>All information provided is accurate and updated</li>
           <li>They are authorized to represent their business</li>
-          <li>Inquiry Bazar may verify and share information with other users</li>
+          <li>Inquiry Bazaar may verify and share information with other users</li>
         </ul>
 
         <p className="text-gray-600">
@@ -203,13 +203,13 @@ export default function TermsConditions() {
         </ul>
 
         <p className="text-gray-600">
-          Inquiry Bazar reserves the right to remove any content at its discretion.
+          Inquiry Bazaar reserves the right to remove any content at its discretion.
         </p>
 
         <h2 className="text-lg font-semibold text-gray-800">XII. INTERACTIONS BETWEEN USERS</h2>
 
         <p className="text-gray-600">
-          Inquiry Bazar provides a platform for interaction but does not control transactions.
+          Inquiry Bazaar provides a platform for interaction but does not control transactions.
         </p>
 
         <p className="text-gray-600">User(s):</p>
@@ -221,7 +221,7 @@ export default function TermsConditions() {
         </ul>
 
         <p className="text-gray-600">
-          Inquiry Bazar is not liable for disputes, losses, or damages arising from interactions.
+          Inquiry Bazaar is not liable for disputes, losses, or damages arising from interactions.
         </p>
 
         <h2 className="text-lg font-semibold text-gray-800">XIII. LIMITATION OF LIABILITY / DISCLAIMER</h2>
@@ -230,7 +230,7 @@ export default function TermsConditions() {
           The Platform is provided on an “as is” basis without warranties of any kind.
         </p>
 
-        <p className="text-gray-600">Inquiry Bazar shall not be liable for:</p>
+        <p className="text-gray-600">Inquiry Bazaar shall not be liable for:</p>
 
         <ul className="list-disc pl-6 text-gray-600 space-y-1">
           <li>Any direct or indirect business loss</li>
@@ -239,7 +239,7 @@ export default function TermsConditions() {
         </ul>
 
         <p className="text-gray-600">
-          Users agree to indemnify Inquiry Bazar against any claims arising from misuse of the Platform.
+          Users agree to indemnify Inquiry Bazaar against any claims arising from misuse of the Platform.
         </p>
 
         <h2 className="text-lg font-semibold text-gray-800">XIV. NOTICES</h2>
@@ -268,13 +268,13 @@ export default function TermsConditions() {
           <li>Headings are for reference only</li>
           <li>Failure to enforce any right does not waive that right</li>
           <li>If any provision is invalid, others remain enforceable</li>
-          <li>This Agreement constitutes the complete understanding between users and Inquiry Bazar</li>
+          <li>This Agreement constitutes the complete understanding between users and Inquiry Bazaar</li>
         </ul>
 
         <h2 className="text-lg font-semibold text-gray-800">FINAL NOTE</h2>
 
         <p className="text-gray-600">
-          By using Inquiry Bazar, you agree to use the Platform responsibly and for genuine business purposes.
+          By using Inquiry Bazaar, you agree to use the Platform responsibly and for genuine business purposes.
         </p>
 
         <p className="text-gray-600 font-medium">

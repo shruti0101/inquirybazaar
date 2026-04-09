@@ -6,11 +6,11 @@ export default function PrivacyPolicy() {
       <div className="max-w-5xl mx-auto bg-white shadow rounded-lg p-6 md:p-10 space-y-6">
 
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
-          PRIVACY POLICY – INQUIRY BAZAR
+          PRIVACY POLICY – INQUIRY Bazaar
         </h1>
 
         <p className="text-gray-600">
-          The Privacy Policy of Inquiry Bazar (hereinafter referred to as the “Platform”) governs the collection, possession, storage, handling, and use of personal identifiable information and sensitive personal data (collectively referred to as “Information”) of users.
+          The Privacy Policy of Inquiry Bazaar (hereinafter referred to as the “Platform”) governs the collection, possession, storage, handling, and use of personal identifiable information and sensitive personal data (collectively referred to as “Information”) of users.
         </p>
 
         <p className="text-gray-600">
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
         </ul>
 
         <p className="text-gray-600">
-          Inquiry Bazar does not request confidential credentials such as banking passwords.
+          Inquiry Bazaar does not request confidential credentials such as banking passwords.
         </p>
 
         <h2 className="text-lg font-semibold text-gray-800">V. COOKIES</h2>
@@ -195,7 +195,7 @@ export default function PrivacyPolicy() {
         <h2 className="text-lg font-semibold text-gray-800">XI. CHANGES TO PRIVACY POLICY</h2>
 
         <p className="text-gray-600">
-          Inquiry Bazar reserves the right to update this Privacy Policy at any time.
+          Inquiry Bazaar reserves the right to update this Privacy Policy at any time.
         </p>
 
         <ul className="list-disc pl-6 text-gray-600 space-y-1">
@@ -206,7 +206,7 @@ export default function PrivacyPolicy() {
         <h2 className="text-lg font-semibold text-gray-800">FINAL NOTE</h2>
 
         <p className="text-gray-600">
-          By using Inquiry Bazar, you agree to the collection and use of your information as described in this Privacy Policy.
+          By using Inquiry Bazaar, you agree to the collection and use of your information as described in this Privacy Policy.
         </p>
 
         <p className="text-gray-600 font-medium">

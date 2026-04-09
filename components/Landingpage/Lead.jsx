@@ -236,7 +236,7 @@ setIsOpen(true);
               />
             </div>
 
-            <div className="flex items-start gap-2 mb-5">
+            <div className="flex items-start justify-center gap-2 mb-5">
               <input
                 type="checkbox"
                 defaultChecked
@@ -248,7 +248,7 @@ setIsOpen(true);
                 <span className="text-orange-500 font-medium cursor-pointer">
                   Terms & Conditions
                 </span>
-                <br />
+               
                 <span className="underline cursor-pointer text-gray-600">
                   T&C's Privacy Policy
                 </span>
