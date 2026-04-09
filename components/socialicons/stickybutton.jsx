@@ -21,6 +21,7 @@ export default function StickyOfferButton() {
     {/* 🔴 NOTIFICATION BADGE */}
     <div className="absolute top-4 right-6 bg-red-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full shadow-md animate-bounce">
       1
+
     </div>
 
     {/* DARK OVERLAY */}
