@@ -27,14 +27,11 @@ export default function Navbar() {
           {/* RIGHT */}
           <div className="flex items-center gap-4">
 
-            {/* Yellow pill */}
-            <div className="bg-[#FFC107] text-black px-4 py-[6px] rounded-full flex items-center gap-2 font-medium whitespace-nowrap text-[16px] cursor-pointer">
-              Register as a Buyer
-            </div>
+          
 
             {/* Orange pill */}
-            <div className="bg-[#F45A06] px-4 py-[6px] cursor-pointer text-[16px] rounded-md whitespace-nowrap">
-            Register as a Supplier
+            <div className="bg-[#F45A06] capitalize px-4 py-[6px] cursor-pointer text-[16px] rounded-sm whitespace-nowrap">
+          why trust us
             </div>
 
             {/* GMB REVIEW LINK */}
@@ -75,12 +72,12 @@ export default function Navbar() {
       {/* LOGO (ENHANCED) */}
       <div className="flex items-center ">
         <Image
-          width={180}
-          height={100}
-          src="/inquiry-logo.png"
+          width={150}
+          height={60}
+          src="/logoo.png"
           alt="Logo"
           loading="eager"
-          className="object-contain w-auto h-auto"
+          className="object-contain "
         />
       </div>
 

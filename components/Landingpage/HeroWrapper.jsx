@@ -15,6 +15,7 @@ import TestimonialSection from "./Testimonial";
 import Youtube from "./Youtube";
 import About from "./About";
 import FooterLinksUI from "./Footerlink";
+import Fourcards from "./Fourcards";
 export default function HeroWrapper() {
   const [data, setData] = useState(null);
 
@@ -122,6 +123,9 @@ const [footerdata, setfooterData] = useState(null);
 <Youtube></Youtube>
 
 <About content={aboutData} />
+
+<Fourcards></Fourcards>
+
 
         </div>
 

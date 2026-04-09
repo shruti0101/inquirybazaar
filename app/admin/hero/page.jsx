@@ -104,7 +104,124 @@ export default function HeroAdmin() {
 
       {/* GRID LAYOUT */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* CATEGORIES */}
+       
+
+
+
+
+
+
+
+
+        {/* MAIN BANNERS */}
+        <div className="bg-white  p-6 rounded-2xl shadow-sm border">
+          <div className="flex  gap-2 mb-4">
+            <Layers className="text-purple-600" />
+            <h2 className="text-lg font-semibold">Main Banners</h2>
+          </div>
+
+          <div className="space-y-4">
+            {data.banners.map((b, i) => (
+              <div
+                key={i}
+                className="border p-4 rounded-xl bg-gray-50 space-y-2"
+              >
+                <input
+                  placeholder="Title"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
+                  value={b.title}
+                  onChange={(e) => {
+                    const updated = [...data.banners];
+                    updated[i].title = e.target.value;
+                    setData({ ...data, banners: updated });
+                  }}
+                />
+
+                <input
+                  placeholder="Subtitle"
+               className="w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
+                  value={b.subtitle}
+                  onChange={(e) => {
+                    const updated = [...data.banners];
+                    updated[i].subtitle = e.target.value;
+                    setData({ ...data, banners: updated });
+                  }}
+                />
+
+                <input
+                  type="file"
+                  onChange={(e) => uploadImage(e.target.files[0], i, "banners")}
+                />
+
+                {b.image && (
+                  <img
+                    src={b.image}
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+
+          <button
+            onClick={addBanner}
+            className="mt-4 w-full border border-dashed py-2 rounded-lg hover:bg-gray-50"
+          >
+            + Add Banner
+          </button>
+        </div>
+
+
+
+
+          {/* BELOW BANNERS */}
+        <div className="bg-white h-100 p-6 rounded-2xl shadow-sm border ">
+          <div className="flex items-center gap-2 mb-4">
+            <Image className="text-orange-500" />
+            <h2 className="text-lg font-semibold">Below Banners</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {data.banners2.map((b, i) => (
+              <div
+                key={i}
+                className="border p-4 rounded-xl bg-gray-50 text-center"
+              >
+                <input
+                  type="file"
+                  onChange={(e) =>
+                    uploadImage(e.target.files[0], i, "banners2")
+                  }
+                />
+
+                {b.image && (
+                  <img
+                    src={b.image}
+                    className="w-full h-28 object-cover rounded-lg mt-2"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+
+
+<div className="flex justify-center ">
+
+
+          <button
+            onClick={addBanner2}
+            className="mt-15 px-7 cursor-pointer text-white border border-dashed py-2 rounded-lg bg-blue-600 hover:bg-blue-800"
+          >
+            + Add Banner
+          </button>
+</div>
+        </div>  
+
+      
+      </div>
+
+
+       {/* CATEGORIES */}
         <DragDropContext
           onDragEnd={(result) => {
             if (!result.destination) return;
@@ -116,13 +233,18 @@ export default function HeroAdmin() {
             setData({ ...data, categories: items });
           }}
         >
+ <h2 className="text-3xl my-10 capitalize font-bold">add side categories</h2>
+         
           <Droppable droppableId="categories" direction="horizontal">
+            
             {(provided) => (
               <div
                 ref={provided.innerRef}
                 {...provided.droppableProps}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-5"
+                className="grid grid-cols-1 sm:grid-cols-4  gap-5"
               >
+
+                
                 {data.categories.map((cat, i) => (
                   <Draggable key={i} draggableId={`cat-${i}`} index={i}>
                     {(provided) => (
@@ -220,115 +342,6 @@ export default function HeroAdmin() {
           </Droppable>
         </DragDropContext>
 
-
-
-
-
-  {/* BELOW BANNERS */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm border ">
-          <div className="flex items-center gap-2 mb-4">
-            <Image className="text-orange-500" />
-            <h2 className="text-lg font-semibold">Below Banners</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {data.banners2.map((b, i) => (
-              <div
-                key={i}
-                className="border p-4 rounded-xl bg-gray-50 text-center"
-              >
-                <input
-                  type="file"
-                  onChange={(e) =>
-                    uploadImage(e.target.files[0], i, "banners2")
-                  }
-                />
-
-                {b.image && (
-                  <img
-                    src={b.image}
-                    className="w-full h-28 object-cover rounded-lg mt-2"
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-
-
-<div className="flex justify-center ">
-
-
-          <button
-            onClick={addBanner2}
-            className="mt-15 px-7 cursor-pointer text-white border border-dashed py-2 rounded-lg bg-blue-600 hover:bg-blue-800"
-          >
-            + Add Banner
-          </button>
-</div>
-        </div>
-
-
-
-        {/* MAIN BANNERS */}
-        <div className="bg-white col-span-full p-6 rounded-2xl shadow-sm border">
-          <div className="flex  gap-2 mb-4">
-            <Layers className="text-purple-600" />
-            <h2 className="text-lg font-semibold">Main Banners</h2>
-          </div>
-
-          <div className="space-y-4">
-            {data.banners.map((b, i) => (
-              <div
-                key={i}
-                className="border p-4 rounded-xl bg-gray-50 space-y-2"
-              >
-                <input
-                  placeholder="Title"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
-                  value={b.title}
-                  onChange={(e) => {
-                    const updated = [...data.banners];
-                    updated[i].title = e.target.value;
-                    setData({ ...data, banners: updated });
-                  }}
-                />
-
-                <input
-                  placeholder="Subtitle"
-               className="w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
-                  value={b.subtitle}
-                  onChange={(e) => {
-                    const updated = [...data.banners];
-                    updated[i].subtitle = e.target.value;
-                    setData({ ...data, banners: updated });
-                  }}
-                />
-
-                <input
-                  type="file"
-                  onChange={(e) => uploadImage(e.target.files[0], i, "banners")}
-                />
-
-                {b.image && (
-                  <img
-                    src={b.image}
-                    className="w-full h-32 object-cover rounded-lg"
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-
-          <button
-            onClick={addBanner}
-            className="mt-4 w-full border border-dashed py-2 rounded-lg hover:bg-gray-50"
-          >
-            + Add Banner
-          </button>
-        </div>
-
-      
-      </div>
     </div>
   );
 }

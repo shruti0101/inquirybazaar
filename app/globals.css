@@ -8,3 +8,33 @@ body {
   font-family: poppins;
   background-color: #F3F4F6;
 }
+
+
+
+/* Blink text */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.animate-blink {
+  animation: blink 1.2s infinite;
+}
+
+/* 🔥 POP / EXPAND EFFECT */
+@keyframes popIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-popIn {
+  animation: popIn 0.4s ease-out;
+}

@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Layoutwrapper from "@/components/Layout/Layoutwrapper";
 import { Toaster  } from "react-hot-toast";
+import StickyOfferButton from "@/components/socialicons/stickybutton";
 
 
 const poppins = Poppins({
@@ -26,11 +27,11 @@ export default function RootLayout({ children }) {
       <Toaster position="top-center top-20" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
 
 
-
-
         <Layoutwrapper>
+
+<StickyOfferButton></StickyOfferButton>
           {children}
-        </Layoutwrapper>
+        </Layoutwrapper>  
       </body>
     </html>
   );
