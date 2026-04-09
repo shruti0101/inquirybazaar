@@ -47,7 +47,7 @@ const CategorySidebar = ({ data }) => {
             )}
           </>
         ) : (
-          <p>No categoriesSE</p>
+          <p></p>
         )}
       </div>
     </div>

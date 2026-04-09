@@ -82,7 +82,7 @@ const data2 = [
       ))}
     </Swiper>
   ) : (
-    <p>No bannersQWD</p>
+    <p></p>
   )}
 
 

@@ -2,6 +2,8 @@
 
 import { Phone, Mail, Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function Navbar() {
   return (
@@ -30,9 +32,9 @@ export default function Navbar() {
           
 
             {/* Orange pill */}
-            <div className="bg-[#F45A06] capitalize px-4 py-[6px] cursor-pointer text-[16px] rounded-sm whitespace-nowrap">
+            <Link href="/whytrustus" className="bg-[#F45A06] capitalize px-4 py-[6px] cursor-pointer text-[16px] rounded-sm whitespace-nowrap">
           why trust us
-            </div>
+            </Link>
 
             {/* GMB REVIEW LINK */}
             <a
@@ -70,7 +72,7 @@ export default function Navbar() {
       </div>
 
       {/* LOGO (ENHANCED) */}
-      <div className="flex items-center ">
+      <Link href="/" className="flex items-center ">
         <Image
           width={150}
           height={60}
@@ -79,7 +81,7 @@ export default function Navbar() {
           loading="eager"
           className="object-contain "
         />
-      </div>
+      </Link>
 
       {/* Badge */}
       <div className="hidden lg:flex items-center gap-2 px-4 py-3 rounded-full bg-gradient-to-r from-blue-800 to-orange-500 text-white text-[12px] font-semibold whitespace-nowrap">

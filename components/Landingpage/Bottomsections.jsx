@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link"; 
 import Image from "next/image";
 import {
   FaFacebookF,
@@ -160,14 +160,35 @@ export default function Footer() {
 
           <div>
             <p className="font-bold text-[15px] mb-[12px]">HELP</p>
-            <ul className="space-y-[6px]">
-              <li>FAQs</li>
-              <li>Report Infringement</li>
-              <li>Cancellations & Returns</li>
-              <li>Privacy Policy</li>
-              <li>Terms & Conditions</li>
-              <li>Write to Management</li>
-            </ul>
+      
+  <ul className="space-y-[6px]">
+    
+    <li>
+      <Link href="/faqs" className="block">
+        FAQs
+      </Link>
+    </li>
+
+    <li>
+      <Link href="/privacy-policy" className="block">
+        Privacy Policy
+      </Link>
+    </li>
+
+    <li>
+      <Link href="/terms-conditions" className="block">
+        Terms & Conditions
+      </Link>
+    </li>
+
+    <li>
+      <a href="mailto:care@inquirybazaar.com" className="block">
+        Write to Management
+      </a>
+    </li>
+
+  </ul>
+
           </div>
 
           {/* Newsletter */}

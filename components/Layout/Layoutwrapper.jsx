@@ -2,6 +2,8 @@
 
 import Navbar from "./Navbar";
 import { usePathname } from "next/navigation";
+import Bottomsections from "../Landingpage/Bottomsections";
+
 
 const Layoutwrapper = ({ children }) => {
   const pathname = usePathname();
@@ -16,6 +18,8 @@ const Layoutwrapper = ({ children }) => {
       {!hidenav && <Navbar />}
 
       {children}
+
+    {!hidenav && <Bottomsections/>}  
     </>
   );
 };
