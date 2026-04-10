@@ -8,47 +8,40 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "Jane Doe",
-    role: "CEO, ExampleCorp",
+    name: "matrix tissues",
     photo: "/client1logo.webp",
     message:
-      "This service completely transformed our business. Professional, reliable, and excellent support.",
+      "InquiryBazaar ne sirf listing nahi di, balki hume real business inquiries milna start hua. Leads ka quality genuinely better hai aur conversion bhi improve hua.",
   },
   {
-    name: "John Smith",
-    role: "Marketing Head, Acme Inc.",
+    name: "exotic crate",
     photo: "/client2logo.webp",
     message:
-      "A seamless experience from start to finish. Highly recommend for anyone looking to grow.",
+      "Pehle hum multiple platforms use kar rahe the but results clear nahi the. Yahan hume proper visibility aur genuine buyers mile — exactly what we needed.",
   },
   {
-    name: "Alice Johnson",
-    role: "Founder, Startup XYZ",
+    name: "shree shakti infratech",
     photo: "/client3logo.webp",
     message:
-      "Exceptional quality and attention to detail. The team really cares about your success.",
+      "InquiryBazaar ka biggest advantage hai targeted inquiries. Random calls band ho gaye aur sirf serious buyers hi connect karte hain.",
   },
   {
-    name: "Michael Lee",
-    role: "CTO, Tech Solutions",
+    name: "strides design studio",
     photo: "/client5logo.webp",
     message:
-      "Innovative and reliable team. Helped us scale our platform efficiently.",
+      "Unki marketing approach alag hai — sirf listing nahi, actively promote karte hain. Isse humari brand visibility kaafi strong hui hai.",
   },
   {
-    name: "Sara Patel",
-    role: "Product Manager, RetailCorp",
+    name: "bhagya laxmi industries",
     photo: "/client4logo.webp",
     message:
-      "Outstanding service and great communication throughout the project.",
+      "Platform use karna simple hai aur results transparent hain. Hume clearly dikhta hai inquiries kahan se aa rahi hain. Highly Recommended",
   },
-
-   {
-    name: "Sara Patel",
-    role: "Product Manager, RetailCorp",
+  {
+    name: "mr dates",
     photo: "/client6logo.webp",
     message:
-      "Outstanding service and great communication throughout the project.",
+      "InquiryBazaar ne humara time aur effort dono bachaya. Ab hume sirf relevant aur high-intent buyers se hi inquiries milti hain.",
   },
 ];
 
@@ -104,10 +97,9 @@ export default function TestimonialSection() {
   </p>
 
   {/* Name */}
-  <p className="font-semibold text-gray-900">{name}</p>
+  <p className="font-semibold capitalize text-gray-900">{name}</p>
 
-  {/* Role */}
-  <p className="text-xs text-gray-500">{role}</p>
+
 
 </div>
 

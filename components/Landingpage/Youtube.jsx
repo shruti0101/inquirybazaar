@@ -27,7 +27,7 @@ export default function VideoSection() {
 
             <iframe
               className="w-full  h-[260px] md:h-[390px]"
-              src="https://www.youtube.com/embed/UaN-ZPn7Br4"
+              src="https://www.youtube.com/embed/_xK-xNrJVrs"
               title="Video 2"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -35,6 +35,8 @@ export default function VideoSection() {
             ></iframe>
           </div>
         </div>
+
+        
       </div>
 
     
