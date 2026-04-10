@@ -1,6 +1,7 @@
-"use client";
 
-import { useEffect, useState } from "react";
+
+export const revalidate = 60; 
+
 import HeroSection from "./Hero";
 import Cta from "./Cta";
 import CategorySidebar from "./CategorySidebar";
@@ -16,126 +17,84 @@ import Youtube from "./Youtube";
 import About from "./About";
 import FooterLinksUI from "./Footerlink";
 import Fourcards from "./Fourcards";
-export default function HeroWrapper() {
-  const [data, setData] = useState(null);
 
-  // hero
-  useEffect(() => {
-    fetch("/api/hero")
-      .then((res) => res.json())
-      .then((res) => setData(res.content));
-  }, []);
+//  Fetch functions (SERVER SIDE)
+async function getData(url) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}${url}`, {
+    next: { revalidate: 60 },
+  });
 
-  // feature categories
-  const [featuredData, setFeaturedData] = useState(null);
+  const data = await res.json();
+  return data;
+}
 
-  useEffect(() => {
-    fetch("/api/categories")
-      .then((res) => res.json())
-      .then((res) => setFeaturedData(res.content));
-  }, []);
+export default async function HeroWrapper() {
+  // ✅ Parallel fetching (SUPER FAST)
+  const [
+    heroRes,
+    categoriesRes,
+    directoryRes,
+    bannerRes,
+    bestsellerRes,
+    aboutRes,
+    footerRes,
+  ] = await Promise.all([
+    getData("/api/hero"),
+    getData("/api/categories"),
+    getData("/api/directory"),
+    getData("/api/banner"),
+    getData("/api/bestseller"),
+    getData("/api/aboutus"),
+    getData("/api/footerlink"),
+  ]);
 
-  // directory
-
-  const [directoryData, setDirectoryData] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/directory")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("DIRECTORY DATA:", data);
-        setDirectoryData(data);
-      });
-  }, []);
-
-  // banner3
-
-  const [banner3Data, setBanner3Data] = useState(null);
-
- useEffect(() => {
-    fetch("/api/banner")
-      .then((res) => res.json())
-      .then((res) =>  setBanner3Data(res.content));
-  }, []);
-
-
-   const [bestsellerData, setBestsellerData] = useState(null);
-
- useEffect(() => {
-    fetch("/api/bestseller")
-      .then((res) => res.json())
-      .then((res) =>  setBestsellerData(res.content));
-  }, []);
-
-  // abpout ua
-
-    const [aboutData, setAboutData] = useState(null);
-    useEffect(()=>{
-      fetch("/api/aboutus")
-        .then((res) => res.json())
-        .then((res) => setAboutData(res.content));
-    }, []);
-
-    // footerlinks
-
-const [footerdata, setfooterData] = useState(null);
-
- useEffect(() => {
-    fetch("/api/footerlink")
-      .then((res) => res.json())
-      .then((res) => setfooterData(res));
-  }, []);
+  const data = heroRes?.content;
+  const featuredData = categoriesRes?.content;
+  const directoryData = directoryRes || [];
+  const banner3Data = bannerRes?.content;
+  const bestsellerData = bestsellerRes?.content;
+  const aboutData = aboutRes?.content;
+  const footerdata = footerRes;
 
   return (
-
     <>
-    
-    <section className="px-8 mt-3 bg-[#F3F4F6]">
-      <div className="grid grid-cols-12 gap-5">
-        {/* LEFT STICKY */}
-        <div className="col-span-3 md:sticky top-0 self-start">
-          <CategorySidebar data={data} />
+      <section className="px-8 mt-3 bg-[#F3F4F6]">
+        <div className="grid grid-cols-12 gap-5">
+
+          {/* LEFT STICKY */}
+          <div className="col-span-3 md:sticky top-0 self-start">
+            <CategorySidebar data={data} />
+          </div>
+
+          {/* RIGHT */}
+          <div className="col-span-9 space-y-4">
+            <HeroSection data={data} />
+            <Cta />
+
+            <FeaturedProducts data={featuredData} />
+
+            {directoryData?.map((dir) => (
+              <DirectorySection key={dir._id} data={dir.content} />
+            ))}
+
+            <Banner3Section data={banner3Data} />
+
+            <Clientele />
+            <Bestseller data={bestsellerData} />
+            <MoreForYou />
+            <TopCities />
+
+            <TestimonialSection />
+            <Youtube />
+
+            <About content={aboutData} />
+            <Fourcards />
+          </div>
         </div>
+      </section>
 
-        {/* RIGHT */}
-        <div className="col-span-9 space-y-4 ">
-          <HeroSection data={data} />
-          <Cta />
-
-          <FeaturedProducts data={featuredData} />
-
-          {directoryData?.map((dir) => (
-            <DirectorySection key={dir._id} data={dir.content} />
-          ))}
-
-
-
-          {/* banner 3 */}
-<Banner3Section data={banner3Data}/>
-
-<Clientele></Clientele>
-<Bestseller data={bestsellerData} />
-<MoreForYou></MoreForYou>
-<TopCities></TopCities>
-
-
-<TestimonialSection></TestimonialSection>
-<Youtube></Youtube>
-
-<About content={aboutData} />
-
-<Fourcards></Fourcards>
-
-
-        </div>
-
-
-
-      </div>
-      
-        {/* FOOTER LINKS */}
-    </section>
-   <FooterLinksUI data={footerdata} />
+      {/* FOOTER */}
+      <FooterLinksUI data={footerdata} />
     </>
   );
 }

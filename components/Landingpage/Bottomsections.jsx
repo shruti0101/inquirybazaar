@@ -65,7 +65,7 @@ Every supplier is screened for quality and reliability.</p>
     className="h-[50px] w-auto object-contain"
             />
             <div>
-              <p className="font-semibold text-[15px]">Quick Response Guarantee</p>
+              <p className="font-semibold text-[15px]">Quick Response </p>
               <p className="text-[13px] mt-[2px]">Get multiple quotations within hours of posting your requirement.
 Save time and close deals faster.</p>
             </div>
@@ -239,7 +239,7 @@ Hassle-free sourcing experience guaranteed.
 
       {/* BOTTOM */}
       <div className="bg-[#f2f2f2] px-[60px] py-[14px] flex justify-between items-center text-[13px]">
-        <p>Copyright@ Inquirybazaar Pvt Ltd. 2026 All Right Reserved</p>
+        <p>Copyright@ Inquiry Bazaar Pvt Ltd. 2026 All Right Reserved</p>
  
         <div className="flex gap-[14px] items-center">
           <Image src="/payment-options.webp" alt="visa"      width={450}

@@ -37,7 +37,7 @@ export default function HeroInquiry() {
 
             <Feature icon={<ShoppingCart className="text-[#10316C]"  size={26} />} title=" Buyer Assistance" subtitle="Seamless sourcing" />
             <Feature icon={<BadgeDollarSign className="text-[#10316C]" size={26} />} title="India’s Hybrid B2B Network" subtitle="Competitive pricing" />
-            <Feature icon={<ShieldCheck className="text-[#10316C]" size={26} />} title=" Quick Response Guarantee" subtitle="Full protection" />
+            <Feature icon={<ShieldCheck className="text-[#10316C]" size={26} />} title=" Quick Response " subtitle="Full protection" />
             <Feature icon={<Users className="text-[#10316C]" size={26} />} title="  Get Genuine Inquiries" subtitle="Daily inquiries" />
 
           </div>

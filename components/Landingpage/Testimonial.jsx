@@ -31,14 +31,22 @@ const testimonials = [
   {
     name: "Michael Lee",
     role: "CTO, Tech Solutions",
-    photo: "/client1logo.webp",
+    photo: "/client5logo.webp",
     message:
       "Innovative and reliable team. Helped us scale our platform efficiently.",
   },
   {
     name: "Sara Patel",
     role: "Product Manager, RetailCorp",
-    photo: "/client3logo.webp",
+    photo: "/client4logo.webp",
+    message:
+      "Outstanding service and great communication throughout the project.",
+  },
+
+   {
+    name: "Sara Patel",
+    role: "Product Manager, RetailCorp",
+    photo: "/client6logo.webp",
     message:
       "Outstanding service and great communication throughout the project.",
   },
