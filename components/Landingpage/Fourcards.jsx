@@ -9,7 +9,7 @@ export default function IndustrySection() {
       {/* subtle stars */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-10 left-10 w-2 h-2 bg-white rounded-full blur-sm"></div>
-        <div className="absolute top-32 right-20 w-1.5 h-1.5 bg-white rounded-full blur-sm"></div>
+        <div className="absolute top-32 right-20 w-1.5 h-1.5 bg-whit  e rounded-full blur-sm"></div>
         <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-white rounded-full blur-sm"></div>
         <div className="absolute bottom-10 right-10 w-1.5 h-1.5 bg-white rounded-full blur-sm"></div>
       </div>

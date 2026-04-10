@@ -32,9 +32,10 @@ export default function Footer() {
 
             />
             <div>
-              <p className="font-semibold text-[15px]">Helpline Number</p>
-              <p className="text-[13px] mt-[2px]">Call: +91 9650660070</p>
+              <p className="font-semibold text-[15px]">Dedicated Support</p>
+              <p className="text-[13px] mt-[2px]">Call: +91 7303486777</p>
               <p className="text-[13px]">(Mon–Sun: 9am–8pm)</p>
+              <p className="text-[13px] mt-[2px]">Get quick assistance for all your business needs.</p>
             </div>
           </div>
 
@@ -47,8 +48,10 @@ export default function Footer() {
     className="h-[50px] w-auto object-contain"
             />
             <div>
-              <p className="font-semibold text-[15px]">100% ORIGINAL</p>
-              <p className="text-[13px] mt-[2px]">guarantee for all products</p>
+              <p className="font-semibold text-[15px]">Verified Suppliers Only
+</p>
+              <p className="text-[13px] mt-[2px]">Connect with trusted manufacturers & wholesalers.
+Every supplier is screened for quality and reliability.</p>
             </div>
           </div>
 
@@ -62,8 +65,9 @@ export default function Footer() {
     className="h-[50px] w-auto object-contain"
             />
             <div>
-              <p className="font-semibold text-[15px]">Return within 7 days</p>
-              <p className="text-[13px] mt-[2px]">of receiving your order</p>
+              <p className="font-semibold text-[15px]">Quick Response Guarantee</p>
+              <p className="text-[13px] mt-[2px]">Get multiple quotations within hours of posting your requirement.
+Save time and close deals faster.</p>
             </div>
           </div>
 
@@ -76,9 +80,10 @@ export default function Footer() {
     className="h-[47px] w-auto object-contain"
             />
             <div>
-              <p className="font-semibold text-[15px]">Complete products</p>
+              <p className="font-semibold text-[15px]">Wide Product Categories</p>
               <p className="text-[13px] mt-[2px]">
-                20,00,000+ products from 12,000+ Brands
+               Explore lakhs of products across multiple industries.
+One platform for all your B2B sourcing needs.
               </p>
             </div>
           </div>
@@ -94,10 +99,11 @@ export default function Footer() {
             />
             <div>
               <p className="font-semibold text-[15px]">
-                100% Safe & Secure Payments
+                Buyer Assistance
               </p>
               <p className="text-[13px] mt-[2px]">
-                Pay using secure payment methods
+              Our team helps you find the right supplier at the best price.
+Hassle-free sourcing experience guaranteed.
               </p>
             </div>
           </div>
@@ -144,15 +150,31 @@ export default function Footer() {
               <li>Contact Us</li>
               <li>Careers</li>
               <li>Become a Supplier</li>
-              <li>Special Offers</li>
+     
               <li>Blog</li>
             </ul>
           </div>
 
-          <div>
-            <p className="font-bold text-[15px] mb-[12px]">SISTER SITE</p>
+          <div className="space-y-[6px]">
+            <p className="font-bold text-[15px] mb-[12px] ">SISTER SITE</p>
             <ul className="space-y-[6px]">
               <a href="https://www.promozionebranding.com/">Promozione Branding </a>
+           
+            </ul>
+
+            <ul className="space-y-[6px]">
+              <a href="https://www.promotionbranding.com/">Promotion Branding </a>
+           
+            </ul>
+
+            
+            <ul className="space-y-[6px]">
+              <a href="https://promotebharat.com/">Promote Bharat </a>
+           
+            </ul>
+
+               <ul className="space-y-[6px]">
+              <a href="https://promotebharat.com/">Top 10 Digital Marketing Agency </a>
            
             </ul>
           </div>
@@ -217,7 +239,7 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="bg-[#f2f2f2] px-[60px] py-[14px] flex justify-between items-center text-[13px]">
-        <p>Copyright Inquirybazaar.com 2026 All Right Reserved</p>
+        <p>Copyright@ Inquirybazaar Pvt Ltd. 2026 All Right Reserved</p>
  
         <div className="flex gap-[14px] items-center">
           <Image src="/payment-options.webp" alt="visa"      width={450}

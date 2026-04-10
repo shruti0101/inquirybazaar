@@ -19,21 +19,25 @@ const data2 = [
     subtitle: "Exhibition Se Google Tak Har Jagah Bas Aap",
     img: "/doodle/4.png",
   },
+
   {
     title: "Inquiry Bazaar",
     subtitle: "Buy Premium Domains",
     img: "/doodle/2.png",
   },
+
   {
     title: "Inquiry Bazaar",
     subtitle: "Membership Plans",
     img: "/doodle/3.png",
   },
+
   {
     title: "Inquiry Bazaar",
-    subtitle: "Tenders ",
+    subtitle: "GEM Tenders ",
     img: "/doodle/4.png",
   },
+
 
 ];
 
@@ -42,7 +46,7 @@ const data2 = [
 
 
 
-    <section className="w-full   mx-auto  ">
+    <section className="w-full mt-32  mx-auto  ">
 
 
     <div className=" ">
@@ -203,22 +207,22 @@ const data2 = [
   {data2.map((item, i) => (
     <div
       key={i}
-      className="h-[120px] bg-white border border-gray-200 rounded-xl p-4 relative shadow-sm hover:shadow-md transition-all duration-300 group overflow-visible hover:bg-[#F48335]"
+      className="h-[140px] bg-[#F48335] border border-gray-200 rounded-xl p-4 relative shadow-sm hover:shadow-md transition-all duration-300 group overflow-visible hover:bg-white"
     >
       
       {/* TEXT */}
-      <p className="text-[13px] text-black group-hover:text-white relative z-10">
+      <p className="text-[13px] text-white group-hover:text-black relative z-10 mb-3">
         {item.title}
       </p>
 
-      <h3 className="text-[12px] font-semibold text-gray-800 mt-1 leading-snug w-[150px] group-hover:text-white relative z-10">
+      <h3 className="text-[15px] font-semibold text-white mt-1 leading-snug w-[190px] group-hover:text-black relative z-10">
         {item.subtitle}
       </h3>
 
       {/* LEARN MORE */}
-      <div className="absolute bottom-5 left-4 flex items-center gap-1 text-orange-500 text-sm font-medium group-hover:text-white z-10">
+      <div className="absolute bottom-5 left-4 flex items-center gap-1 text-white text-sm font-medium group-hover:text-black z-10">
         Learn more
-        <span className="bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center group-hover:bg-white group-hover:text-orange-500">
+        <span className="bg-white text-black rounded-full w-5 h-5 flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white">
           <ArrowRight size={12} />
         </span>
       </div>
@@ -229,7 +233,7 @@ const data2 = [
         alt="doodle"
         width={100}
         height={100}
-        className="absolute right-0 -bottom-2 object-contain opacity-40 group-hover:opacity-100  transition-all duration-300 z-0"
+        className="absolute right-0 -bottom-2 object-contain opacity-70 group-hover:opacity-100  transition-all duration-300 z-0"
       />
     </div>
   ))}

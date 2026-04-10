@@ -22,7 +22,7 @@ export default function FooterLinksUI({ data }) {
   );
 
   return (
-    <section className="w-full bg-gray-100 px-6 md:px-10 py-6 text-sm text-gray-800">
+    <section className="w-full bg-gray-100 px-6 md:px-10 py-10 text-sm text-gray-800">
 
       <div className="mb-4 w-full">
         <h3 className="font-semibold  text-black mb-1">
@@ -35,12 +35,12 @@ export default function FooterLinksUI({ data }) {
         </span>
       </div>
 
-      <div className="mb-4">
+      {/* <div className="mb-4">
         <h3 className="font-semibold text-black mb-1">
           SHOP ALL BRANDS
         </h3>
         {renderLinks(data?.brands)}
-      </div>
+      </div> */}
 
       <div>
         <h3 className="font-semibold text-black mb-1">

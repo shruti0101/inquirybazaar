@@ -35,9 +35,9 @@ export default function HeroInquiry() {
           {/* FEATURES */}
           <div className="mt-5 grid grid-cols-2 gap-8">
 
-            <Feature icon={<ShoppingCart className="text-[#10316C]"  size={26} />} title="Easy Buying" subtitle="Seamless sourcing" />
-            <Feature icon={<BadgeDollarSign className="text-[#10316C]" size={26} />} title="India’s Growing B2B Network" subtitle="Competitive pricing" />
-            <Feature icon={<ShieldCheck className="text-[#10316C]" size={26} />} title="Secure Payments" subtitle="Full protection" />
+            <Feature icon={<ShoppingCart className="text-[#10316C]"  size={26} />} title=" Buyer Assistance" subtitle="Seamless sourcing" />
+            <Feature icon={<BadgeDollarSign className="text-[#10316C]" size={26} />} title="India’s Hybrid B2B Network" subtitle="Competitive pricing" />
+            <Feature icon={<ShieldCheck className="text-[#10316C]" size={26} />} title=" Quick Response Guarantee" subtitle="Full protection" />
             <Feature icon={<Users className="text-[#10316C]" size={26} />} title="  Get Genuine Inquiries" subtitle="Daily inquiries" />
 
           </div>
@@ -47,7 +47,7 @@ export default function HeroInquiry() {
 
             <div className="flex items-center gap-2">
               <Star size={16} className="text-[#10316C]" />
-              Trusted by 500+ Businesses
+              Trusted by 100+ Businesses
             </div>
 
             <div className="flex items-center gap-2">

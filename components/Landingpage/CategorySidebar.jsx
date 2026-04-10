@@ -14,7 +14,7 @@ const CategorySidebar = ({ data }) => {
   return (
     <div>
       {/* LEFT CATEGORIES */}
-      <div className="col-span-3 bg-white rounded-lg p-3 sticky top-0 self-start shadow h-fit">
+      <div className="col-span-3 mt-32 bg-white rounded-lg p-3 sticky top-0 self-start shadow h-fit">
         
         {categoriesToShow?.length > 0 ? (
           <>

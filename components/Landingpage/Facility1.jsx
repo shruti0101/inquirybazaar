@@ -10,27 +10,27 @@ import {
 export default function MoreForYou() {
   const items = [
     {
-      icon: <BadgeCheck size={42} />,
-      title: "Connect with verified sellers",
-      desc: "Tell us your requirement & let our experts find verified sellers for you",
-      btn: "Get Verified Sellers",
+      icon: <Receipt size={42} />,
+      title: "Connect with Verified Suppliers",
+      desc: "Find trusted & verified manufacturers, wholesalers, and exporters across India. Share your requirement and get the best quotes instantly.",
+      btn: "Get Verified Suppliers",
     },
     {
       icon: <Store size={42} />,
-      title: "Sell on IndiaMART for free",
-      desc: "Reach out to more than 21+ crore buyers. Sell with us.",
+      title: "Sell on Inquiry Bazaar for Free",
+      desc: "Expand your business reach and connect with high-intent buyers. Generate quality B2B leads without upfront cost.",
       btn: "Start Selling",
     },
     {
       icon: <Smartphone size={42} />,
-      title: "Download our App",
-      desc: "Get instant notifications on the go. Download our App Now",
-      btn: "Download Now",
+      title: "Get Instant Business Enquiries",
+      desc: "Receive real-time enquiries directly on your mobile & dashboard. Never miss a potential deal with instant alerts.",
+      btn: "Get Enquiries Now",
     },
     {
-      icon: <Receipt size={42} />,
-      title: "Tally on Mobile",
-      desc: "With Live Keeping, SME’s can now connect their Tally offline data to mobile app",
+      icon: <BadgeCheck size={42} />,
+      title: "Legal Compliance ",
+      desc: "Verified Goods & Service Tax IdentificationNumber (GSTIN) indicates a registered business that complies with the Indian Tax Regulations",
       btn: "Know More",
     },
   ];

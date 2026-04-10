@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="w-full font-sans">
+    <header className="w-full fixed top-0 left-0 z-50 font-sans">
 
       {/* ================= TOP BAR ================= */}
       <div className="bg-[#1E3A56] text-white text-[13px]">
@@ -31,10 +31,7 @@ export default function Navbar() {
 
           
 
-            {/* Orange pill */}
-            <Link href="/whytrustus" className="bg-[#F45A06] capitalize px-4 py-[6px] cursor-pointer text-[16px] rounded-sm whitespace-nowrap">
-          why trust us
-            </Link>
+         
 
             {/* GMB REVIEW LINK */}
             <a
@@ -55,37 +52,53 @@ export default function Navbar() {
    <div className="bg-white border-b">
   <div className="w-full mx-auto flex items-center px-6  gap-6">
 
-    {/* LEFT */}
-    <div className="flex items-center gap-6 min-w-fit">
+   {/* LEFT */}
+<div className="flex items-center gap-6 min-w-fit">
 
-      {/* Categories */}
-      <div className="flex flex-col items-center text-[17px] text-gray-600 cursor-pointer">
-        <div className="grid grid-cols-2 gap-[3px] mb-[2px]">
-          <span className="w-[12px] h-[12px] bg-gray-700"></span>
-          <span className="w-[12px] h-[12px] bg-gray-700"></span>
-          <span className="w-[12px] h-[12px] bg-gray-700"></span>
-          <span className="w-[12px] h-[12px] bg-orange-500"></span>
-        </div>
-        Categories
-      </div>
-
-      {/* LOGO (ENHANCED) */}
-      <Link href="/" className="flex items-center ">
-        <Image
-          width={150}
-          height={60}
-          src="/logoo.png"
-          alt="Logo"
-          loading="eager"
-          className="object-contain "
-        />
-      </Link>
-
-      {/* Badge */}
-      <div className="hidden lg:flex items-center gap-2 px-4 py-3 rounded-full bg-gradient-to-r from-blue-800 to-orange-500 text-white text-[12px] font-semibold whitespace-nowrap">
-     DAILY ESSENTIALS SPECIAL DEALS
-      </div>
+  {/* Categories */}
+  <div className="flex flex-col items-center text-[17px] text-gray-600 cursor-pointer">
+    <div className="grid grid-cols-2 gap-[3px] mb-[2px]">
+      <span className="w-[12px] h-[12px] bg-gray-700"></span>
+      <span className="w-[12px] h-[12px] bg-gray-700"></span>
+      <span className="w-[12px] h-[12px] bg-gray-700"></span>
+      <span className="w-[12px] h-[12px] bg-orange-500"></span>
     </div>
+    Categories
+  </div>
+
+  {/* LOGO */}
+  <Link href="/" className="flex items-center ">
+    <Image
+      width={150}
+      height={60}
+      src="/logoo.png"
+      alt="Logo"
+      loading="eager"
+      className="object-contain "
+    />
+  </Link>
+
+  {/* Why Trust Us */}
+  <Link
+    href="/whytrustus"
+    className="bg-[#F45A06] text-white capitalize px-4 py-[6px] cursor-pointer text-[16px] rounded-sm whitespace-nowrap"
+  >
+    why trust us
+  </Link>
+
+  {/* 🔥 NEW: SEARCH CITY FIELD */}
+  <div className="flex items-center border border-gray-300 rounded-sm overflow-hidden">
+    <input
+      type="text"
+      placeholder="Search City..."
+      className="px-3 py-[6px] text-[14px] outline-none w-[140px]"
+    />
+    <button className="bg-[#F45A06] px-3 py-[6px] flex items-center justify-center">
+      <Search size={16} color="white" />
+    </button>
+  </div>
+
+</div>
 
     {/* SEARCH (SHORT + CENTERED) */}
     <div className="flex justify-center flex-1">
