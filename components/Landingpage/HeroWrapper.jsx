@@ -18,14 +18,18 @@ import About from "./About";
 import FooterLinksUI from "./Footerlink";
 import Fourcards from "./Fourcards";
 
-//  Fetch functions (SERVER SIDE)
+// ✅ Fetch functions (SERVER SIDE)
 async function getData(url) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}${url}`, {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}${url}`, {
     next: { revalidate: 60 },
   });
 
-  const data = await res.json();
-  return data;
+  if (!res.ok) throw new Error("Failed to fetch");
+
+  return res.json();
 }
 
 export default async function HeroWrapper() {
