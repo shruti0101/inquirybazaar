@@ -17,6 +17,12 @@ import Youtube from "./Youtube";
 import About from "./About";
 import FooterLinksUI from "./Footerlink";
 import Fourcards from "./Fourcards";
+import pharmaData from "@/data/pharmaData";
+import hospitalData from "@/data/hospitalData";
+import bannerData from "@/data/bannerData";
+import foodData from "@/data/foodData"
+import Industrial from "@/data/Industrial"
+import Banner from "@/components/Landingpage/DirectoryBanner"
 
 //  Fetch functions (SERVER SIDE)
 async function getData(url) {
@@ -41,6 +47,19 @@ async function getData(url) {
 }
 
 export default async function HeroWrapper() {
+
+
+
+  const sections = [
+    pharmaData,
+    hospitalData,
+    foodData,
+    Industrial
+    // 👉 add more here later
+  ];
+
+
+
   // ✅ Parallel fetching (SUPER FAST)
   const [
     heroRes,
@@ -70,24 +89,41 @@ export default async function HeroWrapper() {
 
   return (
     <>
-      <section className="px-8 mt-3 bg-[#F3F4F6]">
+      <section className="px-2 md:px-8 mt-3 mx-auto bg-[#F3F4F6]">
         <div className="grid grid-cols-12 gap-5">
 
+          
+
           {/* LEFT STICKY */}
-          <div className="col-span-3 md:sticky top-0 self-start">
+          <div className="col-span-12 md:col-span-3 md:sticky md:top-0 md:self-start">
             <CategorySidebar data={data} />
           </div>
 
           {/* RIGHT */}
-          <div className="col-span-9 space-y-4">
+          <div className="col-span-full lg:col-span-9 space-y-4">
             <HeroSection data={data} />
             <Cta />
 
             <FeaturedProducts data={featuredData} />
 
-            {directoryData?.map((dir) => (
+            {/* {directoryData?.map((dir) => (
               <DirectorySection key={dir._id} data={dir.content} />
-            ))}
+            ))} */}
+
+          <div>
+      {sections.map((section, index) => (
+        <div key={index}>
+          
+          {/* SECTION */}
+          <DirectorySection data={section} />
+
+          {/* 🔥 SHOW BANNER AFTER EVERY 2 SECTIONS */}
+          {(index + 1) % 2 === 0 && (
+            <Banner data={bannerData[(index + 1) / 2 - 1]} />
+          )}
+        </div>
+      ))}
+    </div>
 
             <Banner3Section data={banner3Data} />
 
