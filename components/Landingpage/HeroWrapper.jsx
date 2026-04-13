@@ -1,5 +1,5 @@
 
-
+export const dynamic = "force-dynamic";
 export const revalidate = 60; 
 
 import HeroSection from "./Hero";
@@ -18,18 +18,26 @@ import About from "./About";
 import FooterLinksUI from "./Footerlink";
 import Fourcards from "./Fourcards";
 
-// ✅ Fetch functions (SERVER SIDE)
+//  Fetch functions (SERVER SIDE)
 async function getData(url) {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  try {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-  const res = await fetch(`${baseUrl}${url}`, {
-    next: { revalidate: 60 },
-  });
+    const res = await fetch(`${baseUrl}${url}`, {
+      cache: "no-store", 
+    });
 
-  if (!res.ok) throw new Error("Failed to fetch");
+    if (!res.ok) {
+      console.error(`Fetch failed: ${url}`);
+      return null; 
+    }
 
-  return res.json();
+    return res.json();
+  } catch (err) {
+    console.error("Fetch error:", err.message);
+    return null; 
+  }
 }
 
 export default async function HeroWrapper() {
