@@ -1,10 +1,10 @@
 const pharmaData = {
   title: "Drugs & Pharmaceuticals",
-  mainImage: "/images/pharma-main.jpg",
+  mainImage: "/Drugs.webp",
   categories: [
     {
       title: "Common Disease Medicines",
-      image: "/icons/pills-heart.png",
+      image: "/test1.webp",
       links: [
         "Pharmaceutical Medicines",
         "Pharmaceutical Tablets",
@@ -13,7 +13,7 @@ const pharmaData = {
     },
     {
       title: "Ayurvedic, Herbal Products & Medicine",
-      image: "/icons/herbal.png",
+      image: "/test2.webp",
       links: [
         "Ayurvedic Medicine",
         "Herbal Ayurvedic Medicines",
@@ -22,7 +22,7 @@ const pharmaData = {
     },
     {
       title: "Nutraceuticals & Dietary Supplements",
-      image: "/icons/supplements.png",
+      image: "/test3.webp",
       links: [
         "Protein Powder",
         "Protein Supplement",
@@ -31,7 +31,7 @@ const pharmaData = {
     },
     {
       title: "Anti Infective Drugs & Medicines",
-      image: "/icons/capsule.png",
+      image: "/test4.webp",
       links: [
         "Antibiotic Tablets",
         "Azithromycin Tablets",
@@ -40,7 +40,7 @@ const pharmaData = {
     },
     {
       title: "Cardiovascular Drugs & Medication",
-      image: "/icons/heart-pills.png",
+      image: "/test5.webp",
       links: [
         "Antidiabetic Medicine",
         "Antidiabetic Supplements",
@@ -49,7 +49,7 @@ const pharmaData = {
     },
     {
       title: "Common Disease Medicines",
-      image: "/icons/tablets.png",
+      image: "/test2.webp",
       links: [
         "Pharmaceutical Medicines",
         "Pharmaceutical Tablets",

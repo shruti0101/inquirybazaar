@@ -103,22 +103,22 @@ import Link from "next/link";
 
 export default function CategorySection({ data }) {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 bg-white">
+    <div className="w-full mx-auto px-2 py-8 bg-white">
       
       {/* Title */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+      <h2 className="text-3xl font-semibold text-gray-800 mb-6">
         {data.title}
       </h2>
 
-      <div className="grid grid-cols-12 gap-6">
+      <div className="grid grid-cols-12 gap-4">
         
         {/* LEFT IMAGE */}
         <div className="col-span-12 md:col-span-4">
-          <div className="bg-gray-100 p-4 h-full">
+          <div className="bg-gray-100 h-full">
             <Image
               src={data.mainImage}
               alt={data.title}
-              width={500}
+              width={400}
               height={350}
               className="object-cover w-full h-full"
             />
@@ -126,24 +126,24 @@ export default function CategorySection({ data }) {
         </div>
 
         {/* RIGHT GRID */}
-        <div className="col-span-12 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="col-span-12 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {data.categories.map((item, index) => (
             <div key={index} className="flex gap-3">
               
               {/* ICON */}
-              <div className="w-14 h-14 flex-shrink-0">
+              <div className="w-18 h-18 flex-shrink-0">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={56}
-                  height={56}
+                  width={70}
+                  height={66}
                   className="object-contain"
                 />
               </div>
 
               {/* TEXT */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-800 mb-1">
+                <h3 className="text-md font-semibold text-gray-800 mb-1">
                   {item.title}
                 </h3>
 
