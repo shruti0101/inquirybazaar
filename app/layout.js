@@ -13,7 +13,21 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Hybrid B2B Marketplace in India | Inquiry Bazaar",
+  
+  
   description: "Inquiry Bazaar is the Smartest B2B Marketplace, combining marketplace and performance marketing to deliver high-intent business inquiries and real growth.",
+
+icons:{
+
+
+  icon: "/favicon.ico",
+  shortcut: "/favicon.ico",
+  apple: "/favicon.ico",
+}
+
+
+
+
 };
 
 export default function RootLayout({ children }) {
