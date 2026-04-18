@@ -7,9 +7,9 @@ export default function Banner({ data }) {
   if (!data) return null;
 
   return (
-    <div className="max-w-7xl mx-auto  py-6">
+    <div className="max-w-7xl mx-auto  pt-4">
       <Link href={data.link}>
-        <div className="w-full h-[180px] md:h-[250px] relative rounded-lg overflow-hidden">
+        <div className="w-full h-[100px] md:h-[250px] relative rounded-lg overflow-hidden">
           <Image
             src={data.image}
             alt="banner"

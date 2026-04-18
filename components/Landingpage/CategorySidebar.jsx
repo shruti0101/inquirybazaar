@@ -24,6 +24,8 @@ const CategorySidebar = ({ data }) => {
           spaceBetween={12}
           slidesPerView={"auto"}
               modules={[Autoplay]}
+              
+              
                       autoplay={{ delay: 3000 }}
           
         >
@@ -34,7 +36,7 @@ const CategorySidebar = ({ data }) => {
                 className="flex flex-col items-center justify-center min-w-[60px]"
               >
                 <div className="text-xl mb-1">{cat.icon}</div>
-                <span className="text-xs capitalize text-gray-600 whitespace-nowrap">
+                <span className="text-xs  capitalize text-black whitespace-nowrap">
                   {cat.name}
                 </span>
               </Link>

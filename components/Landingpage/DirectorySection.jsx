@@ -95,7 +95,6 @@
 
 
 
-
 "use client";
 
 import Image from "next/image";
@@ -103,14 +102,14 @@ import Link from "next/link";
 
 export default function CategorySection({ data }) {
   return (
-    <div className="w-full mx-auto px-2 py-8 bg-white">
+    <div className="w-full mx-auto px-3 md:px-6 py-6 md:py-8 bg-white">
       
       {/* Title */}
-      <h2 className="text-3xl font-semibold text-gray-800 mb-6">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-4 md:mb-6">
         {data.title}
       </h2>
 
-      <div className="grid grid-cols-12 gap-4">
+      <div className="grid grid-cols-12 gap-4 md:gap-6">
         
         {/* LEFT IMAGE */}
         <div className="col-span-12 md:col-span-4">
@@ -120,18 +119,18 @@ export default function CategorySection({ data }) {
               alt={data.title}
               width={400}
               height={350}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-[200px] sm:h-[250px] md:h-full"
             />
           </div>
         </div>
 
         {/* RIGHT GRID */}
-        <div className="col-span-12 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="col-span-12 md:col-span-8 grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {data.categories.map((item, index) => (
             <div key={index} className="flex gap-3">
               
               {/* ICON */}
-              <div className="w-18 h-18 flex-shrink-0">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -143,11 +142,11 @@ export default function CategorySection({ data }) {
 
               {/* TEXT */}
               <div>
-                <h3 className="text-md font-semibold text-gray-800 mb-1">
+                <h3 className="text-xs sm:text-md font-semibold text-gray-800 mb-1">
                   {item.title}
                 </h3>
 
-                <div className="flex flex-col text-sm text-blue-600">
+                <div className="flex flex-col text-xs sm:text-sm text-blue-600">
                   {item.links.map((link, i) => (
                     <Link key={i} href="#" className="hover:underline">
                       {link}
@@ -157,7 +156,7 @@ export default function CategorySection({ data }) {
 
                 <Link
                   href="#"
-                  className="text-sm text-gray-600 mt-1 inline-block hover:underline"
+                  className="text-xs sm:text-sm text-gray-600 mt-1 inline-block hover:underline"
                 >
                   + View All
                 </Link>
