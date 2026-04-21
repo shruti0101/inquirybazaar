@@ -16,6 +16,9 @@ const CategorySidebar = ({ data }) => {
     ? data?.categories
     : data?.categories?.slice(0, visibleCount);
 
+const truncate = (text, limit = 12) =>
+  text.length > limit ? text.slice(0, limit) + ".." : text;
+
   return (
     <>
       {/* ✅ MOBILE SWIPER SLIDER */}
@@ -37,7 +40,7 @@ const CategorySidebar = ({ data }) => {
               >
                 <div className="text-xl mb-1">{cat.icon}</div>
                 <span className="text-xs  capitalize text-black whitespace-nowrap">
-                  {cat.name}
+           {truncate(cat.name)}
                 </span>
               </Link>
             </SwiperSlide>
