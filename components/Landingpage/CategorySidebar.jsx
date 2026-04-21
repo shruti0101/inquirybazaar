@@ -19,7 +19,7 @@ const CategorySidebar = ({ data }) => {
   return (
     <>
       {/* ✅ MOBILE SWIPER SLIDER */}
-      <div className="md:hidden col-span-12 mt-24 bg-white shadow-sm py-3 px-2 s z-50">
+      <div className="md:hidden col-span-12  bg-white shadow-sm py-3 px-2 s z-50">
         <Swiper
           spaceBetween={12}
           slidesPerView={"auto"}
@@ -46,7 +46,7 @@ const CategorySidebar = ({ data }) => {
       </div>
 
       {/* ✅ DESKTOP SIDEBAR (UNCHANGED) */}
-      <div className="hidden md:block col-span-3 mt-32 bg-white rounded-lg p-3 sticky top-0 self-start shadow h-fit">
+      <div className="hidden md:block col-span-3  bg-white rounded-lg p-3 sticky top-0 self-start shadow h-fit">
         {categoriesToShow?.length > 0 ? (
           <>
             {categoriesToShow.map((cat, i) => (

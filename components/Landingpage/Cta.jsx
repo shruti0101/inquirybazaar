@@ -25,7 +25,7 @@ export default function HeroInquiry() {
           </h1>
 
           <p className="mt-3 text-[14px] sm:text-[15px] text-black max-w-full sm:max-w-[540px] leading-relaxed">
-            Inquiry Bazaar is a premium B2B marketplace helping businesses
+            Inquiry Bazaar is a India's Hybrid B2B Network helping businesses
             discover verified buyers and trusted suppliers effortlessly.
           </p>
 

@@ -35,7 +35,7 @@ const data2 = [
 ];
 
   return (
-    <section className="w-full mt-0 md:mt-32 mx-auto">
+    <section className="w-full  mx-auto">
 
       <div className="w-full">
 
