@@ -86,15 +86,15 @@ const data2 = [
 
     <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/30">
       
-      <h2 className="text-white text-[10px] sm:text-lg md:text-2xl font-semibold leading-tight">
+      <h2 className="text-white text-[11px] sm:text-lg md:text-2xl font-semibold leading-tight">
         Looking for a product?
       </h2>
 
-      <p className="text-white text-[8px] sm:text-sm md:text-md w-[95%] sm:w-60 mt-1 sm:mt-3">
+      <p className="text-white text-[10px] sm:text-sm md:text-[16px] w-[95%] sm:w-60 mt-1 sm:mt-3">
         Before making a purchase, make sure you’ve posted your buy requirement.
       </p>
 
-      <button className="mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[8px] sm:text-sm hover:shadow-md transition">
+      <button className="mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[10px] sm:text-sm hover:shadow-md transition">
         Post As Per Requirement →
       </button>
     </div>
@@ -112,23 +112,23 @@ const data2 = [
 
     <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/10">
 
-      <h2 className="text-white text-[10px] sm:text-lg md:text-2xl w-[95%] sm:w-[280px] font-semibold leading-tight">
+      <h2 className="text-white text-[11px] sm:text-lg md:text-2xl w-[95%] sm:w-[280px] font-semibold leading-tight">
         Want to grow your business 10x faster?
       </h2>
 
       <div className="flex items-center mt-1 sm:mt-3">
-        <p className="text-white text-[8px] sm:text-sm">
+        <p className="text-white text-[11px] sm:text-[16px]">
           Showcase your <br /> product
         </p>
 
         <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-white"></div>
 
-        <p className="text-white text-[8px] sm:text-sm">
+        <p className="text-white text-[11px] sm:text-[16px]">
           Get Free <br /> listing
         </p>
       </div>
 
-      <button className="mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[9px] sm:text-sm hover:shadow-md transition">
+      <button className="mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[11px] sm:text-[14px] hover:shadow-md transition">
         Sell On Inquiry Bazaar →
       </button>
     </div>
