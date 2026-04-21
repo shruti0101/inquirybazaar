@@ -102,8 +102,9 @@ export default async function HeroWrapper() {
           {/* RIGHT */}
           <div className="col-span-full lg:col-span-9 space-y-4">
             <HeroSection data={data} />
-            <Cta />
              <Clientele />
+            <Cta />
+         
 
             <FeaturedProducts data={featuredData} />
 

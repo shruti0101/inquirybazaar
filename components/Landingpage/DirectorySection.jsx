@@ -99,8 +99,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function CategorySection({ data }) {
+
+const [expanded, setExpanded] = useState({});
+
+  
+
   return (
     <div className="w-full mx-auto px-3 md:px-6 py-6 md:py-8 bg-white">
       
@@ -126,43 +132,59 @@ export default function CategorySection({ data }) {
 
         {/* RIGHT GRID */}
         <div className="col-span-12 md:col-span-8 grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {data.categories.map((item, index) => (
-            <div key={index} className="flex gap-3">
-              
-              {/* ICON */}
-              <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={70}
-                  height={66}
-                  className="object-contain"
-                />
-              </div>
+        {data.categories.map((item, index) => {
+  const visibleLimit = 1;
+  const isExpanded = expanded[index];
 
-              {/* TEXT */}
-              <div>
-                <h3 className="text-xs sm:text-md font-semibold text-gray-800 mb-1">
-                  {item.title}
-                </h3>
+  return (
+    <div key={index} className="flex gap-3">
+      
+      {/* ICON */}
+      <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
+        <Image
+          src={item.image}
+          alt={item.title}
+          width={70}
+          height={66}
+          className="object-contain"
+        />
+      </div>
 
-                <div className="flex flex-col text-xs sm:text-sm text-blue-600">
-                  {item.links.map((link, i) => (
-                    <Link key={i} href="#" className="hover:underline">
-                      {link}
-                    </Link>
-                  ))}
-                </div>
+      {/* TEXT */}
+      <div>
+        <h3 className="text-xs sm:text-md font-semibold text-gray-800 mb-1">
+          {item.title}
+        </h3>
 
-                <Link
-                  href="#"
-                  className="text-xs sm:text-sm text-gray-600 mt-1 inline-block hover:underline"
-                >
-                  + View All
-                </Link>
-              </div>
-            </div>
+        <div className="flex flex-col text-xs sm:text-sm text-blue-600">
+          {(isExpanded
+            ? item.links
+            : item.links.slice(0, visibleLimit)
+          ).map((link, i) => (
+            <Link key={i} href="#" className="hover:underline">
+              {link}
+            </Link>
           ))}
+        </div>
+
+        {/* VIEW MORE / LESS */}
+        {item.links.length > visibleLimit && (
+          <button
+            onClick={() =>
+              setExpanded((prev) => ({
+                ...prev,
+                [index]: !prev[index],
+              }))
+            }
+            className="text-xs sm:text-sm text-gray-600 mt-1 inline-block hover:underline"
+          >
+            {isExpanded ? "View Less -" : "View More +"}
+          </button>
+        )}
+      </div>
+    </div>
+  );
+})}
         </div>
       </div>
     </div>
