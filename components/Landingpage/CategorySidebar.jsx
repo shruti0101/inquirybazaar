@@ -22,7 +22,7 @@ const truncate = (text, limit = 12) =>
   return (
     <>
       {/* ✅ MOBILE SWIPER SLIDER */}
-      <div className="md:hidden col-span-12  bg-white shadow-sm py-3 px-2 s z-50">
+      <div className="md:hidden col-span-12  bg-white shadow-sm py-4 px-2   z-50">
         <Swiper
           spaceBetween={12}
           slidesPerView={"auto"}

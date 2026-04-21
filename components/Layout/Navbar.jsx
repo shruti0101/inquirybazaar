@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {  ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -27,24 +27,20 @@ const [isFixed, setIsFixed] = useState(false);
 
 
 
-useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsFixed(true);
-    } else {
-      setIsFixed(false);
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
 
   return (
-<header
-  className={`w-full top-0 left-0 z-50 font-sans transition-transform duration-300 
-${isFixed ? "fixed top-0 shadow-md bg-white" : "relative"}
-  `}
+<motion.header
+  initial={false}
+animate={{
+  y: 0,
+  opacity: 1,
+}}
+transition={{
+  duration: 0.25,
+  ease: "easeOut",
+}}
+
+  className="w-full fixed top-0 left-0 z-50 font-sans bg-white shadow-md"
 >
 
     
@@ -221,6 +217,6 @@ ${isFixed ? "fixed top-0 shadow-md bg-white" : "relative"}
         </div>
       )}
 
-    </header>
+    </motion.header>
   );
 }
