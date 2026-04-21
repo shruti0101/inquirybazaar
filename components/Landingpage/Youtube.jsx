@@ -17,7 +17,7 @@ export default function VideoSection() {
 
         </div>
 
-        <div className="grid grid-cols-1 gap-6 px-20">
+        <div className="grid grid-cols-1 gap-6 md:px-20">
       
 
           {/* VIDEO 2 */}

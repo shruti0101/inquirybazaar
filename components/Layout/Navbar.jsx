@@ -52,9 +52,9 @@ ${isFixed ? "fixed top-0 shadow-md bg-white" : "relative"}
         <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-2">
 
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 text-sm">
+            <span className="flex items-center gap-2 text-sm animate-pulse">
               <Phone size={16} />
-              +91 7303486777
+         Have a question? Call us now at  +91 7303486777
             </span>
 
             <span className="flex items-center gap-2 text-sm">

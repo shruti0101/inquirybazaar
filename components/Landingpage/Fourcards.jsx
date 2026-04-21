@@ -19,7 +19,7 @@ export default function IndustrySection() {
        
        
         {/* Grid */}
-        <div className="grid md:grid-cols-4 gap-8">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
 
           {/* Card 1 */}
           <Card
@@ -56,25 +56,24 @@ export default function IndustrySection() {
 }
 
 
-/* Reusable Card */
 function Card({ icon, title, desc }) {
   return (
-    <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-8 shadow-sm hover:shadow-md transition duration-300 text-center">
+    <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-xl md:rounded-2xl p-4 md:p-6 shadow-sm hover:shadow-md transition duration-300 text-center">
       
       {/* Icon */}
-      <div className="flex justify-center mb-4">
-        <div className="p-3 rounded-xl bg-orange-50">
+      <div className="flex justify-center mb-3">
+        <div className="p-2 md:p-3 rounded-lg md:rounded-xl bg-orange-50">
           {icon}
         </div>
       </div>
 
       {/* Title */}
-      <h3 className="text-md font-semibold text-gray-700 leading-snug mb-3">
+      <h3 className="text-xs sm:text-sm md:text-md font-semibold text-gray-700 leading-snug mb-2">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+      <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed">
         {desc}
       </p>
     </div>

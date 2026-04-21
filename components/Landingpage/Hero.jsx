@@ -71,67 +71,70 @@ const data2 = [
         )}
 
         {/* GRID BANNERS */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-3">
+     {/* GRID BANNERS */}
+<div className="grid grid-cols-2 gap-2 sm:gap-4 mt-4">
 
-          {/* IMAGE 1 */}
-          <div className="relative">
-            <Image
-              src="/new2.png"
-              width={600}
-              height={350}
-              alt="img1"
-              className="w-full h-[160px] md:h-[260px] rounded-sm object-cover"
-            />
+  {/* IMAGE 1 */}
+  <div className="relative overflow-hidden rounded-md">
+    <Image
+      src="/new2.png"
+      width={600}
+      height={350}
+      alt="img1"
+      className="w-full h-[130px] sm:h-[220px] md:h-[260px] object-cover"
+    />
 
-            <div className="absolute inset-0 flex flex-col md:justify-center p-2 sm:px-6">
-              <h2 className="text-sm sm:text-lg md:text-2xl font-semibold text-white">
-                Looking for a product?
-              </h2>
+    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/30">
+      
+      <h2 className="text-white text-[10px] sm:text-lg md:text-2xl font-semibold leading-tight">
+        Looking for a product?
+      </h2>
 
-              <p className="text-white text-[10px] sm:text-sm md:text-md w-[90%] sm:w-60 mt-2 sm:mt-3">
-                Before making a purchase, make sure you’ve posted your buy requirement.
-              </p>
+      <p className="text-white text-[8px] sm:text-sm md:text-md w-[95%] sm:w-60 mt-1 sm:mt-3">
+        Before making a purchase, make sure you’ve posted your buy requirement.
+      </p>
 
-              <button className="mt-3 sm:mt-4 text-white px-3 py-1.5 rounded-lg bg-[#f48335] w-fit text-[8px] sm:text-sm hover:shadow-md transition">
-                Post As Per Requirement →
-              </button>
-            </div>
-          </div>
+      <button className="mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[8px] sm:text-sm hover:shadow-md transition">
+        Post As Per Requirement →
+      </button>
+    </div>
+  </div>
 
-          {/* IMAGE 2 */}
-          <div className="relative">
-            <Image
-              src="/new1.jpeg"
-              width={550}
-              height={300}
-              alt="img2"
-           className="w-full h-[160px] md:h-[260px] object-cover rounded-sm"
-            />
+  {/* IMAGE 2 */}
+  <div className="relative overflow-hidden rounded-md">
+    <Image
+      src="/new1.jpeg"
+      width={550}
+      height={300}
+      alt="img2"
+      className="w-full h-[130px] sm:h-[220px] md:h-[260px] object-cover"
+    />
 
-            <div className="absolute inset-0 flex flex-col md:justify-center p-2 sm:px-6">
+    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/10">
 
-              <h2 className="text-[12px] sm:text-lg md:text-2xl w-[90%] sm:w-[280px] font-semibold text-white leading-snug">
-                Want to grow your business 10x faster?
-              </h2>
+      <h2 className="text-white text-[10px] sm:text-lg md:text-2xl w-[95%] sm:w-[280px] font-semibold leading-tight">
+        Want to grow your business 10x faster?
+      </h2>
 
-              <div className="flex items-center mt-2 sm:mt-3">
-                <p className="text-white text-xs sm:text-sm">
-                  Showcase your <br /> product
-                </p>
+      <div className="flex items-center mt-1 sm:mt-3">
+        <p className="text-white text-[8px] sm:text-sm">
+          Showcase your <br /> product
+        </p>
 
-                <div className="h-6 sm:h-8 border-r mx-3 sm:mx-4 border-white"></div>
+        <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-white"></div>
 
-                <p className="text-white text-xs sm:text-sm">
-                  Get Free <br /> listing
-                </p>
-              </div>
+        <p className="text-white text-[8px] sm:text-sm">
+          Get Free <br /> listing
+        </p>
+      </div>
 
-              <button className="mt-3 sm:mt-4 text-white px-3 py-1.5 rounded-lg bg-[#24457a] w-fit text-[8px] sm:text-sm hover:shadow-md transition">
-                Sell On Inquiry Bazaar →
-              </button>
-            </div>
-          </div>
-        </div>
+      <button className="mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[9px] sm:text-sm hover:shadow-md transition">
+        Sell On Inquiry Bazaar →
+      </button>
+    </div>
+  </div>
+
+</div>
 
         {/* MORE VALUE ADDS */}
         <section className="w-full px-2 sm:px-4 md:px-6 py-6 bg-white relative">

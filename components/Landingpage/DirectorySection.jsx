@@ -119,13 +119,13 @@ const [expanded, setExpanded] = useState({});
         
         {/* LEFT IMAGE */}
         <div className="col-span-12 md:col-span-4">
-          <div className="bg-gray-100 h-full">
+          <div className="bg-gray-100 ">
             <Image
               src={data.mainImage}
               alt={data.title}
-              width={400}
-              height={350}
-              className="object-cover w-full h-[200px] sm:h-[250px] md:h-full"
+         width={400}
+         height={500}
+              className="object-cover"
             />
           </div>
         </div>

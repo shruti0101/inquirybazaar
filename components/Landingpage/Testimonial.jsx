@@ -47,8 +47,8 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white py-12 text-center max-w-6xl mx-auto px-6">
-      <h2 className="text-3xl font-semibold mb-8 text-gray-900">What Our Clients Say</h2>
+    <section className="bg-white py-8 md:py-12 text-center max-w-6xl mx-auto px-6">
+      <h2 className="text-3xl font-semibold  md:mb-8 text-gray-900">What Our Clients Say</h2>
 
       <Swiper
         modules={[Autoplay, Pagination]}
