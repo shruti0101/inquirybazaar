@@ -11,7 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="w-full pb-20 text-[13px] leading-[1.4]">
+    <footer className="w-full pb-20 md:pb-0 text-[13px] leading-[1.4]">
 
       {/* TOP STRIP */}
       <div className="bg-[#1e3a5f] text-white px-4 sm:px-6 md:px-10 py-6">

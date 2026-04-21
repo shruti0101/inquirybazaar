@@ -86,63 +86,63 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
         {/* GRID BANNERS */}
      {/* GRID BANNERS */}
-<div className="grid grid-cols-2 gap-2 sm:gap-4 mt-4">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mt-4 px-2 sm:px-0">
 
   {/* IMAGE 1 */}
-  <div className="relative overflow-hidden rounded-md">
+  <div className="relative overflow-hidden rounded-xl">
     <Image
       src="/new2.png"
       width={600}
       height={350}
       alt="img1"
-      className="w-full h-[130px] sm:h-[220px] md:h-[260px] object-cover"
+      className="w-full h-[160px] sm:h-[220px] md:h-[260px] object-cover"
     />
 
-    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/30">
-      
-      <h2 className="text-white text-[11px] sm:text-lg md:text-2xl font-semibold leading-tight">
+    <div className="absolute inset-0 flex flex-col justify-center p-3 sm:p-6 bg-black/10">
+
+      <h2 className="text-white text-lg md:text-2xl font-semibold leading-snug">
         Looking for a product?
       </h2>
 
-      <p className="text-white text-[10px] sm:text-sm md:text-[16px] w-[95%] sm:w-60 mt-1 sm:mt-3">
+      <p className="text-white  text-sm md:text-[16px] w-[95%] sm:w-60 mt-1 sm:mt-3 leading-tight">
         Before making a purchase, make sure you’ve posted your buy requirement.
       </p>
 
-      <button className="mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[10px] sm:text-sm hover:shadow-md transition">
+      <button className="mt-3 sm:mt-4 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-xs sm:text-sm hover:shadow-md transition active:scale-95">
         Post As Per Requirement →
       </button>
     </div>
   </div>
 
   {/* IMAGE 2 */}
-  <div className="relative overflow-hidden rounded-md">
+  <div className="relative overflow-hidden rounded-xl">
     <Image
       src="/new1.jpeg"
       width={550}
       height={300}
       alt="img2"
-      className="w-full h-[130px] sm:h-[220px] md:h-[260px] object-cover"
+      className="w-full h-[160px] sm:h-[220px] md:h-[260px] object-cover"
     />
 
-    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/10">
+    <div className="absolute inset-0 flex flex-col justify-center p-3 sm:p-6 bg-black/10">
 
-      <h2 className="text-white text-[11px] sm:text-lg md:text-2xl w-[95%] sm:w-[280px] font-semibold leading-tight">
+      <h2 className="text-white text-lg md:text-2xl w-[95%] sm:w-[280px] font-semibold leading-snug">
         Want to grow your business 10x faster?
       </h2>
 
-      <div className="flex items-center mt-1 sm:mt-3">
-        <p className="text-white text-[11px] sm:text-[16px]">
+      <div className="flex items-center mt-2 sm:mt-3">
+        <p className="text-white text-[16px] leading-tight">
           Showcase your <br /> product
         </p>
 
-        <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-white"></div>
+        <div className="h-5 sm:h-8 border-r mx-2 sm:mx-4 border-white"></div>
 
-        <p className="text-white text-[11px] sm:text-[16px]">
+        <p className="text-white  text-[16px] leading-tight">
           Get Free <br /> listing
         </p>
       </div>
 
-      <button className="mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[11px] sm:text-[14px] hover:shadow-md transition">
+      <button className="mt-3 sm:mt-4 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-xs sm:text-[14px] hover:shadow-md transition active:scale-95">
         Sell On Inquiry Bazaar →
       </button>
     </div>
