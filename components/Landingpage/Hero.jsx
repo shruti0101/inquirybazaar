@@ -98,13 +98,13 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       className="w-full h-[160px] sm:h-[220px] md:h-[260px] object-cover"
     />
 
-    <div className="absolute inset-0 flex flex-col justify-center p-3 sm:p-6 bg-black/10">
+    <div className="absolute inset-0 flex flex-col justify-center p-3 sm:p-6 bg-black/20">
 
       <h2 className="text-white text-lg md:text-2xl font-semibold leading-snug">
         Looking for a product?
       </h2>
 
-      <p className="text-white  text-sm md:text-[16px] w-[95%] sm:w-60 mt-1 sm:mt-3 leading-tight">
+      <p className="text-white  text-[16px] w-[95%] sm:w-60 mt-1 sm:mt-3 leading-snug">
         Before making a purchase, make sure you’ve posted your buy requirement.
       </p>
 
@@ -131,13 +131,13 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       </h2>
 
       <div className="flex items-center mt-2 sm:mt-3">
-        <p className="text-white text-[16px] leading-tight">
+        <p className="text-white text-[17px] leading-snug">
           Showcase your <br /> product
         </p>
 
         <div className="h-5 sm:h-8 border-r mx-2 sm:mx-4 border-white"></div>
 
-        <p className="text-white  text-[16px] leading-tight">
+        <p className="text-white  text-[17px] leading-snug">
           Get Free <br /> listing
         </p>
       </div>
