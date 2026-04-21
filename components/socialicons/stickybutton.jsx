@@ -8,7 +8,7 @@ export default function StickyOfferButton() {
   return (
     <>
       {/* BUTTON */}
-      <div className="fixed bottom-5 sm:bottom-10 right-4 sm:right-10 z-50 group">
+      <div className="fixed bottom-20 sm:bottom-10 right-4 sm:right-10 z-50 group">
 
         {/* GLOW */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-blue-900 opacity-70 blur-md animate-ping" />

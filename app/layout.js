@@ -2,7 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Layoutwrapper from "@/components/Layout/Layoutwrapper";
 import { Toaster  } from "react-hot-toast";
-
+import Stickyfooter from "@/components/Stickyfooter";
 
 
 const poppins = Poppins({
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
 
 
         <Layoutwrapper>
-
+<Stickyfooter></Stickyfooter>
 
           {children}
         </Layoutwrapper>  

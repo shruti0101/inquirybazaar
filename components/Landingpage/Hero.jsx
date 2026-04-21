@@ -34,7 +34,12 @@ const data2 = [
   },
 ];
 
+
+const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
   return (
+
+    <>
+    
     <section className="w-full  mx-auto">
 
       <div className="w-full">
@@ -51,11 +56,20 @@ const data2 = [
               <SwiperSlide key={i}>
                 <div className="relative rounded-sm overflow-hidden">
 
-                  <img
-                    src={b.image}
-                    alt={b.title}
-                    className="max-w-full h-auto object-cover"
-                  />
+              <picture>
+  {/* Mobile Image */}
+  <source
+    media="(max-width: 768px)"
+    srcSet={mobileImages[i % mobileImages.length]}
+  />
+
+  {/* Desktop Image */}
+  <img
+    src={b.image}
+    alt={b.title}
+    className="w-full h-auto object-cover"
+  />
+</picture>
 
                   <div className="absolute top-4 sm:top-6 md:top-10 left-4 sm:left-6 md:left-10 text-white max-w-[90%]">
                     <p className="text-xs sm:text-sm md:text-lg">{b.subtitle}</p>
@@ -181,5 +195,9 @@ const data2 = [
 
       </div>
     </section>
+
+
+   
+    </>
   );
 }
