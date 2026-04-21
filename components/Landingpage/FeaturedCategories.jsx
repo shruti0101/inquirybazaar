@@ -1,11 +1,9 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import { useState } from "react";
-import Link from "next/link";
 import RequestQuoteModal from "@/components/Layout/Requestquote";
 
 export default function FeaturedProducts({ data }) {
@@ -19,21 +17,16 @@ export default function FeaturedProducts({ data }) {
           <h2 className="text-md md:text-xl font-bold text-black">
             Featured Categories for You - Explore Top Picks in Every Industry
           </h2>
-
-          {/* ✅ Arrows always visible */}
-          <div className="flex gap-2">
-            <button className="prev w-8 h-8 border rounded flex items-center justify-center">
-              ←
-            </button>
-            <button className="next w-8 h-8 border rounded flex items-center justify-center">
-              →
-            </button>
-          </div>
         </div>
 
         <Swiper
-          modules={[Navigation]}
-          navigation={{ prevEl: ".prev", nextEl: ".next" }}
+          modules={[Autoplay]}
+          loop={true}
+          speed={4000} // 👈 smooth continuous feel
+          autoplay={{
+            delay: 0, // 👈 makes it continuous
+            disableOnInteraction: false,
+          }}
           spaceBetween={15}
           breakpoints={{
             320: { slidesPerView: 2, spaceBetween: 10 },
@@ -47,6 +40,7 @@ export default function FeaturedProducts({ data }) {
           {data?.products?.map((p, i) => (
             <SwiperSlide key={i}>
               <div className="h-auto rounded-lg p-3 relative bg-white group">
+                
                 {/* BADGE */}
                 {p.badge && (
                   <div className="absolute capitalize top-2 left-2 text-[11px] bg-red-100 text-red-600 px-2 py-[2px] rounded">
