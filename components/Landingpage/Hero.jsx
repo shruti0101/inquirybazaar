@@ -85,7 +85,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
         )}
 
         {/* GRID BANNERS */}
- <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-4 mt-4 px-2 sm:px-0">
+ <div className="grid grid-cols-2 md:grid-cols-2 gap-2 sm:gap-4 mt-4 ">
 
   {/* IMAGE 1 */}
   <div className="relative overflow-hidden rounded-xl shadow-md md:shadow-none">
