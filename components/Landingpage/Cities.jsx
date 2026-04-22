@@ -37,10 +37,7 @@ const cities = [
     name: "Jaipur",
     iconSrc: "/city/jaipur.webp",
   },
-  {
-    name: "Hyderabad",
-    iconSrc: "/city/hyd.webp",
-  },
+
 ];
 
 export default function TopCities() {
@@ -55,7 +52,7 @@ export default function TopCities() {
    
 
       {/* Grid container */}
-      <div className="grid grid-cols-2 sm:grid-cols-5 gap-y-8 gap-x-10 justify-center">
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-y-8 gap-x-10 justify-center">
 
         {cities.map(({ name, iconSrc }) => (
           <div
