@@ -94,7 +94,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       width={600}
       height={350}
       alt="img1"
-      className="w-full h-[130px] sm:h-[220px] md:h-[240px] object-cover"
+      className="w-full h-[150px] sm:h-[220px] md:h-[240px] object-cover"
     />
 
     <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/20 md:bg-black/20">
@@ -120,7 +120,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       width={550}
       height={300}
       alt="img2"
-      className="w-full h-[130px] sm:h-[220px] md:h-[240px] object-cover"
+      className="w-full h-[150px] sm:h-[220px] md:h-[240px] object-cover"
     />
 
     <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/20 md:bg-black/10">
