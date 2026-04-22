@@ -1,10 +1,10 @@
 const foodData = {
   "title": "Food & Beverages",
-  "mainImage": "/images/food-main.jpg",
+  "mainImage": "/dir3/1.jpg",
   "categories": [
     {
       "title": "Cereals & Food Grains",
-      "image": "/icons/grains.png",
+      "image": "/dir3/2.jpg",
       "links": [
         "Rice",
         "Basmati Rice",
@@ -13,7 +13,7 @@ const foodData = {
     },
     {
       "title": "Meat & Poultry Food",
-      "image": "/icons/chicken.png",
+      "image": "/dir3/3.jpg",
       "links": [
         "Chicken",
         "Egg",
@@ -22,7 +22,7 @@ const foodData = {
     },
     {
       "title": "Fresh, Dried & Preserved Vegetables",
-      "image": "/icons/vegetables.png",
+      "image": "/dir3/4.webp",
       "links": [
         "Fresh Vegetables",
         "Potato",
@@ -31,31 +31,16 @@ const foodData = {
     },
     {
       "title": "Milk & Dairy Products",
-      "image": "/icons/dairy.png",
+      "image": "/dir3/5.jpg",
       "links": [
         "Milk",
         "Pure Ghee",
         "Paneer"
       ]
     },
-    {
-      "title": "Cooking Spices and Masala",
-      "image": "/icons/spices.png",
-      "links": [
-        "Cooking Masala",
-        "Turmeric Powder",
-        "Red Chilli Powder"
-      ]
-    },
-    {
-      "title": "Edible Oil & Allied Products",
-      "image": "/icons/oil.png",
-      "links": [
-        "Mustard Oil",
-        "Cooking Oil",
-        "Edible Oil"
-      ]
-    }
+
+   
+    
   ]
 }
 

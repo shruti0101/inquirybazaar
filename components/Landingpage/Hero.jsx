@@ -99,7 +99,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
     <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/10 md:bg-black/20">
 
-      <h2 className="mb-3 text-white text-[21px] sm:text-lg md:text-2xl font-semibold leading-snug">
+      <h2 className="mb-3 text-white text-[19px] sm:text-lg md:text-2xl font-semibold leading-snug">
         Looking for a product?
       </h2>
 
@@ -125,7 +125,8 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
     <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/15 md:bg-black/10">
 
-      <h2 className="text-white text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
+    <div className="relative">
+  <h2 className="text-white text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
         Want to grow your business 10x faster?
       </h2>
 
@@ -149,6 +150,10 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
            <button className="block md:hidden mt-2 sm:mt-4 text-white px-2 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[12px] sm:text-[14px] hover:shadow-md transition active:scale-95">
         Get Free listing →
       </button>
+
+    </div>
+
+    
     </div>
   </div>
 

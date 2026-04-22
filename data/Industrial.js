@@ -1,10 +1,10 @@
 const Industrial = {
   "title": "Industrial Plants & Machinery",
-  "mainImage": "/images/industrial-main.jpg",
+  "mainImage": "/dir4/1.webp",
   "categories": [
     {
       "title": "Machines & Equipments",
-      "image": "/icons/machine.png",
+      "image": "/dir4/2.png",
       "links": [
         "Industrial Machinery",
         "SPM Machine",
@@ -13,7 +13,7 @@ const Industrial = {
     },
     {
       "title": "Textile & Garment Machines",
-      "image": "/icons/textile.png",
+      "image": "/dir4/3.webp",
       "links": [
         "Textile Machinery Spares",
         "Textile Machine Components",
@@ -22,7 +22,7 @@ const Industrial = {
     },
     {
       "title": "Industrial Control Systems",
-      "image": "/icons/control-panel.png",
+      "image": "/dir4/4.jpg",
       "links": [
         "VFD",
         "Industrial Control Systems",
@@ -31,31 +31,15 @@ const Industrial = {
     },
     {
       "title": "Printing Machinery & Equipment",
-      "image": "/icons/printing.png",
+      "image": "/dir4/5.jpg",
       "links": [
         "Printing Machine",
         "Offset Printing Machines",
         "Card Printer"
       ]
     },
-    {
-      "title": "Used Machinery & Tools",
-      "image": "/icons/used-machine.png",
-      "links": [
-        "Used CNC Machine",
-        "Used Printing Machine",
-        "Used Textile Machinery"
-      ]
-    },
-    {
-      "title": "Paper Work & Making Machine",
-      "image": "/icons/paper-machine.png",
-      "links": [
-        "Agarbatti Making Machines",
-        "Paper Dona Machine",
-        "Tissue Paper Making Machine"
-      ]
-    }
+   
+  
   ]
 }
 

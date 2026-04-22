@@ -108,14 +108,14 @@ const [expanded, setExpanded] = useState({});
   
 
   return (
-    <div className="w-full mx-auto px-3 md:px-6 py-6 md:py-8 bg-white">
+    <div className="w-full mx-auto px-3 md:px-6 py-2 md:py-5 bg-white">
       
       {/* Title */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-4 md:mb-6">
         {data.title}
       </h2>
 
-      <div className="grid grid-cols-12 gap-4 md:gap-6">
+      <div className="grid grid-cols-12 gap-4 ">
         
         {/* LEFT IMAGE */}
         <div className="col-span-12 md:col-span-4">
@@ -125,13 +125,13 @@ const [expanded, setExpanded] = useState({});
               alt={data.title}
          width={400}
          height={500}
-              className="object-cover"
+              className="object-cover  h-[160px] sm:h-[220px] md:h-[240px] w-full"
             />
           </div>
         </div>
 
         {/* RIGHT GRID */}
-        <div className="col-span-12 md:col-span-8 grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="col-span-12 md:col-span-8 grid grid-cols-2  gap-2 md:gap-6">
         {data.categories.map((item, index) => {
   const visibleLimit = 1;
   const isExpanded = expanded[index];
@@ -156,7 +156,7 @@ const [expanded, setExpanded] = useState({});
           {item.title}
         </h3>
 
-        <div className="flex flex-col text-xs sm:text-sm text-blue-600">
+        <div className="flex flex-col text-xs sm:text-sm text-orange-600">
           {(isExpanded
             ? item.links
             : item.links.slice(0, visibleLimit)
@@ -181,11 +181,34 @@ const [expanded, setExpanded] = useState({});
             {isExpanded ? "View Less -" : "View More +"}
           </button>
         )}
+
+        
       </div>
+
+      
     </div>
+    
+
+    
   );
+
+  
 })}
+
+
+
+
         </div>
+<div className="col-span-12 flex justify-center ">
+  <Link
+    href="https://dir.promotebharat.com/"  // 👉 your external link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#ef7a1b] text-white px-5 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium shadow-md hover:shadow-lg hover:scale-105 transition duration-300"
+  >
+    View More →
+  </Link>
+</div>
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ const pharmaData = {
         "Cough Syrup",
       ],
     },
+
     {
       title: "Ayurvedic, Herbal Products & Medicine",
       image: "/test2.webp",
@@ -20,6 +21,7 @@ const pharmaData = {
         "Honey",
       ],
     },
+    
     {
       title: "Nutraceuticals & Dietary Supplements",
       image: "/test3.webp",
@@ -29,6 +31,8 @@ const pharmaData = {
         "Weight Gain Nutrition",
       ],
     },
+
+    
     {
       title: "Anti Infective Drugs & Medicines",
       image: "/test4.webp",
@@ -38,24 +42,7 @@ const pharmaData = {
         "Antibiotic Drugs",
       ],
     },
-    {
-      title: "Cardiovascular Drugs & Medication",
-      image: "/test5.webp",
-      links: [
-        "Antidiabetic Medicine",
-        "Antidiabetic Supplements",
-        "Metformin Tablets",
-      ],
-    },
-    {
-      title: "Common Disease Medicines",
-      image: "/test2.webp",
-      links: [
-        "Pharmaceutical Medicines",
-        "Pharmaceutical Tablets",
-        "Cough Syrup",
-      ],
-    },
+  
   ],
 };
 

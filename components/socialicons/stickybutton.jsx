@@ -25,7 +25,7 @@ export default function StickyOfferButton() {
           </div>
 
           {/* TEXT */}
-          <p className="relative text-black text-center text-[10px] sm:text-md font-semibold leading-tight px-2 sm:px-3 animate-blink">
+          <p className="relative text-black text-center text-[10px] sm:text-lg font-semibold leading-tight px-2 sm:px-3 animate-blink">
             Register For Free
           </p>
         </div>

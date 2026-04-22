@@ -30,24 +30,7 @@ const hospitalData = {
         "Personal Protective Equipment",
       ],
     },
-    {
-      title: "Diagnostic Medical Imaging Equipment",
-      image: "/dir2/6.jpg",
-      links: [
-        "Diagnostic Imaging Services",
-        "CT Scan Services",
-        "X Ray Machine",
-      ],
-    },
-    {
-      title: "Physiotherapy & Rehab Aids",
-      image: "/dir2/7.jpg",
-      links: [
-        "Cervical Collars",
-        "Physiotherapy Equipment",
-        "Crepe Bandage",
-      ],
-    },
+
   ],
 };
 
