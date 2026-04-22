@@ -12,7 +12,7 @@ export default function Banner({ data }) {
         <div className="w-full h-[100px] md:h-[250px] relative rounded-lg overflow-hidden">
           <Image
             src={data.image}
-            alt="banner"
+            alt="Hybrid B2B Marketplace in India"
             width={1800}
             height={800}
 

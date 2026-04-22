@@ -19,7 +19,7 @@ export default function Footer() {
 
           {/* ITEM */}
           <div className="flex gap-3 items-start">
-            <Image src="/footer/bottom/imgi_99_helpline.webp" alt="" width={100} height={100} className="h-[50px] w-auto object-contain"/>
+            <Image src="/footer/bottom/imgi_99_helpline.webp" alt="Hybrid B2B Marketplace in India" width={100} height={100} className="h-[50px] w-auto object-contain"/>
             <div>
               <p className="font-semibold text-[15px]">Dedicated Support</p>
               <p>Call: +91 7303486777</p>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-3 items-start">
-            <Image src="/footer/bottom/imgi_102_original-tag.webp" alt="" width={100} height={100} className="h-[50px] w-auto object-contain"/>
+            <Image src="/footer/bottom/imgi_102_original-tag.webp" alt="Hybrid B2B Marketplace in India" width={100} height={100} className="h-[50px] w-auto object-contain"/>
             <div>
               <p className="font-semibold text-[15px]">Verified Suppliers Only</p>
               <p>Connect with trusted manufacturers & wholesalers. Every supplier is screened for quality and reliability.</p>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-3 items-start">
-            <Image src="/footer/bottom/imgi_100_box.webp" alt="" width={100} height={100} className="h-[50px] w-auto object-contain"/>
+            <Image src="/footer/bottom/imgi_100_box.webp" alt="Hybrid B2B Marketplace in India" width={100} height={100} className="h-[50px] w-auto object-contain"/>
             <div>
               <p className="font-semibold text-[15px]">Quick Response</p>
               <p>Get multiple quotations within hours of posting your requirement. Save time and close deals faster.</p>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-3 items-start">
-            <Image src="/footer/bottom/imgi_103_wallet-check.webp" alt="" width={100} height={100} className="h-[47px] w-auto object-contain"/>
+            <Image src="/footer/bottom/imgi_103_wallet-check.webp" alt="Hybrid B2B Marketplace in India" width={100} height={100} className="h-[47px] w-auto object-contain"/>
             <div>
               <p className="font-semibold text-[15px]">Wide Product Categories</p>
               <p>Explore lakhs of products across multiple industries. One platform for all your B2B sourcing needs.</p>
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-3 items-start">
-            <Image src="/footer/bottom/imgi_103_wallet-check.webp" alt="" width={100} height={100} className="h-[47px] w-auto object-contain"/>
+            <Image src="/footer/bottom/imgi_103_wallet-check.webp" alt="Hybrid B2B Marketplace in India" width={100} height={100} className="h-[47px] w-auto object-contain"/>
             <div>
               <p className="font-semibold text-[15px]">Buyer Assistance</p>
               <p>Our team helps you find the right supplier at the best price. Hassle-free sourcing experience guaranteed.</p>
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-3 items-start">
-            <Image src="/footer/bottom/imgi_104_secure-shield.webp" alt="" width={100} height={100} className="h-[50px] w-auto object-contain"/>
+            <Image src="/footer/bottom/imgi_104_secure-shield.webp" alt="Hybrid B2B Marketplace in India" width={100} height={100} className="h-[50px] w-auto object-contain"/>
             <div>
               <p className="font-semibold text-[15px]">Buyer Protection</p>
               <p>Committed to buyer interests to provide a smooth shopping experience.</p>
@@ -167,7 +167,7 @@ export default function Footer() {
 
         <Image
           src="/payment-options.webp"
-          alt="visa"
+          alt="Hybrid B2B Marketplace in India"
           width={450}
           height={400}
           className="w-full max-w-[250px] md:max-w-[350px] object-contain"

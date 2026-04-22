@@ -49,7 +49,7 @@ export default function TrendingBrands() {
             >
               <img
                 src={logo}
-                alt="brand"
+                alt="Hybrid B2B Marketplace in India"
                 className="h-[90px] object-cover"
               />
             </SwiperSlide>

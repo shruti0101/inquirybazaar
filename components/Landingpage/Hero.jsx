@@ -93,7 +93,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       src="/new2.png"
       width={600}
       height={350}
-      alt="img1"
+      alt="Hybrid B2B Marketplace in India"
       className="w-full h-[160px] sm:h-[220px] md:h-[240px] object-cover"
     />
 
@@ -119,7 +119,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       src="/new1.jpeg"
       width={550}
       height={300}
-      alt="img2"
+      alt="Hybrid B2B Marketplace in India"
       className="w-full h-[160px] sm:h-[220px] md:h-[240px] object-cover"
     />
 
@@ -191,7 +191,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
                 <Image
                   src={item.img}
-                  alt="doodle"
+                  alt="Hybrid B2B Marketplace in India"
                   width={80}
                   height={80}
                   className="absolute right-0 -bottom-2 object-contain transition-all duration-300 z-0"

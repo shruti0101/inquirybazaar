@@ -83,7 +83,7 @@ transition={{
                 width={130}
                 height={50}
                 src="/logoo.png"
-                alt="Logo"
+                alt="Hybrid B2B Marketplace in India"
                 className="object-contain"
               />
             </Link>

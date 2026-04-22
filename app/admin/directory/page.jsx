@@ -170,7 +170,7 @@ export default function DirectoryAdmin() {
   {dir.content.image && (
     <img
       src={dir.content.image}
-      alt="Directory Preview"
+      alt="Hybrid B2B Marketplace in India"
       className="w-full h-48 object-cover rounded-xl border border-gray-200 shadow-sm"
     />
   )}
@@ -216,7 +216,7 @@ export default function DirectoryAdmin() {
   {sec.image && (
     <img
       src={sec.image}
-      alt="Section Preview"
+      alt="Hybrid B2B Marketplace in India"
       className="w-full h-40 object-cover rounded-lg border border-gray-200"
     />
   )}
