@@ -2,7 +2,7 @@
 
 export default function TermsConditions() {
   return (
-    <div className="bg-gray-50 py-10 px-4 md:px-10">
+    <div className="bg-gray-50 py-10 px-4 md:px-10 mt-10 md:mt-30">
       <div className="max-w-5xl mx-auto bg-white shadow rounded-lg p-6 md:p-10 space-y-6">
 
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800">

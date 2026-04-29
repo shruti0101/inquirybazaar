@@ -73,9 +73,9 @@ export default function Footer() {
             <p className="font-semibold text-[15px] mb-2">Follow us on</p>
             <div className="flex gap-4 text-[16px]">
               <FaFacebookF />
-              <FaXTwitter />
+           
               <FaInstagram />
-              <FaPinterestP />
+           
               <FaLinkedinIn />
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Footer() {
 <li>
 
 
-              <a href="https://promotebharat.com/">Top 10 Digital Marketing Agency</a>
+              <a href="https://promozionebranding.com/">Top 10 Digital Marketing Agency</a>
 </li>
 
             </ul>

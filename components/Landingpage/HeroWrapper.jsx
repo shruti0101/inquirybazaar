@@ -20,8 +20,12 @@ import Fourcards from "./Fourcards";
 import pharmaData from "@/data/pharmaData";
 import hospitalData from "@/data/hospitalData";
 import bannerData from "@/data/bannerData";
-import foodData from "@/data/foodData"
+import buildingData from "@/data/buildingData"
 import Industrial from "@/data/Industrial"
+import packingData from "@/data/packingData"
+import chemicalData from "@/data/chemicalData"
+import labData from "@/data/labData"
+import mechanicalData from "@/data/mechanicalData"
 import Banner from "@/components/Landingpage/DirectoryBanner"
 
 //  Fetch functions (SERVER SIDE)
@@ -53,8 +57,12 @@ export default async function HeroWrapper() {
   const sections = [
     pharmaData,
     hospitalData,
-    foodData,
-    Industrial
+    buildingData,
+    Industrial,
+    packingData,
+    chemicalData,
+    labData,
+    mechanicalData
     // 👉 add more here later
   ];
 

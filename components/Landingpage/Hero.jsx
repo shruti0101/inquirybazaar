@@ -16,21 +16,25 @@ const data2 = [
     title: "Inquiry Bazaar",
     subtitle: "Exhibition Se Google Tak Har Jagah Bas Aap",
     img: "/doodle/5-5.png",
+    link:"/exhibition"
   },
   {
     title: "Inquiry Bazaar",
     subtitle: "Buy Premium Domains",
     img: "/doodle/3-3.png",
+    link:"/premium"
   },
   {
     title: "Inquiry Bazaar",
     subtitle: "Membership Plans",
     img: "/doodle/4-4.png",
+    link:"/premium"
   },
   {
     title: "Inquiry Bazaar",
     subtitle: "GEM Tenders ",
     img: "/doodle/2-2.png",
+    link:"/premium"
   },
 ];
 
@@ -169,7 +173,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
 
             {data2.map((item, i) => (
-              <div
+              <Link href={item.link}
                 key={i}
                 className="h-[140px] bg-[#eeecec] border border-[#F48335] rounded-xl p-4 relative shadow-sm hover:shadow-md transition-all duration-300 group overflow-visible hover:bg-[#F48335]"
               >
@@ -196,7 +200,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
                   height={80}
                   className="absolute right-0 -bottom-2 object-contain transition-all duration-300 z-0"
                 />
-              </div>
+              </Link>
             ))}
 
           </div>
