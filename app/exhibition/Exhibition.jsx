@@ -201,6 +201,7 @@ const Exhibition = () => {
             font-family: 'Syne', sans-serif;
             
             }
+            
       `}</style>
 
       <section className="mt-22 md:mt-34 relative  flex flex-col items-center justify-center text-center px-6 pt-10 pb-4 overflow-hidden bg-[#0F172A] text-white">
@@ -213,26 +214,26 @@ const Exhibition = () => {
        
 
         {/* Heading */}
-        <h1 className="relative syne-font z-10 font-extrabold leading-tight tracking-tight text-[clamp(36px,6vw,72px)]">
+        <h1 className="slide-up relative syne-font z-10 font-extrabold leading-tight tracking-tight text-[clamp(36px,6vw,72px)]">
           <span className="block text-white">Your Business,</span>
           <span className="block text-orange-500">Everywhere Online.</span>
           <span className="block text-white">Every Buyer. Every State.</span>
         </h1>
 
         {/* Hinglish Line */}
-        <p className="relative z-10 syne-3  mt-4 text-[clamp(13px,2vw,17px)] font-bold uppercase tracking-widest text-yellow-400">
+        <p className="relative slide-up z-10 syne-3  mt-4 text-[clamp(13px,2vw,17px)] font-bold uppercase tracking-widest text-yellow-400">
           ✦ Exhibition Se Google Tak — Har Jagah Bas Aap ✦
         </p>
 
         {/* Subtext */}
-        <p className="relative z-10 mt-6 max-w-xl text-gray-400 text-[16px] leading-relaxed">
+        <p className=" slide-up relative z-10 mt-6 max-w-xl text-gray-400 text-[16px] leading-relaxed">
           Pehle suppliers apna product showcase karne ke liye states me jaate
           the, exhibitions lagate the. Ab wahi visibility — bina stall ke, bina
           travel ke — sirf Google pe, 24/7.
         </p>
 
         {/* CTA Buttons */}
-        <div className="relative z-10 mt-10 flex flex-wrap gap-4 justify-center">
+        <div className="slide-up relative z-10 mt-10 flex flex-wrap gap-4 justify-center">
           <a
             href="#"
             className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-medium"
