@@ -1,6 +1,6 @@
 const labData = {
-  "title": "Packaging Machines & Goods ",
-  "mainImage": "/packing/1.webp",
+  "title": "Lab Instruments & Supplies ",
+  "mainImage": "/lab/1.webp",
   "categories": [
     {
       "title": "Lights & Light Products",

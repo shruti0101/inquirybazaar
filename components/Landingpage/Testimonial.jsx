@@ -47,64 +47,54 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white py-8 md:py-12 text-center max-w-6xl mx-auto px-6">
-      <h2 className="text-3xl font-semibold  md:mb-8 text-gray-900">What Our Clients Say</h2>
+    <section className="bg-white py-10 text-center max-w-6xl mx-auto px-6">
+      <h2 className="text-3xl font-semibold mb-8 text-gray-900">
+        What Our Clients Say
+      </h2>
 
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
-        loop={true}
+        loop
         spaceBetween={30}
         slidesPerView={3}
+        className="!pb-10"
         breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 25,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
+          320: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
       >
-     {testimonials.map(({ name, role, photo, message }, index) => (
-  <SwiperSlide key={index} className="h-full">
-    
-   <div className="bg-white rounded-xl shadow-md p-6 h-full flex flex-col items-center text-center max-w-sm mx-auto">
+        {testimonials.map(({ name, photo, message }, index) => (
+          <SwiperSlide key={index} className="!h-auto flex">
 
-  {/* Logo */}
-  <div className="mb-4 flex items-center justify-center h-12">
-    <img
-      src={photo}
-      alt={`${name} logo`}
-      className="max-h-full w-auto object-contain"
-      loading="lazy"
-    />
-  </div>
+            {/* CARD */}
+            <div className="flex flex-col w-full bg-white rounded-2xl shadow-lg p-6 h-full">
 
-  {/* Message */}
-  <p className="text-black italic text-md leading-relaxed mb-4 flex-grow">
-    “{message}”
-  </p>
+              {/* Logo */}
+              <div className="mb-4 flex items-center justify-center h-12">
+                <img
+                  src={photo}
+                  alt={name}
+                  className="max-h-full object-contain"
+                />
+              </div>
 
-  {/* Name */}
-  <p className="font-semibold capitalize text-gray-900">{name}</p>
+              {/* Message */}
+              <p className="text-black italic text-sm leading-relaxed flex-grow">
+                “{message}”
+              </p>
 
+              {/* Name */}
+              <p className="mt-4 font-semibold capitalize text-gray-900">
+                {name}
+              </p>
 
+            </div>
 
-</div>
-
-  </SwiperSlide>
-))}
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );
