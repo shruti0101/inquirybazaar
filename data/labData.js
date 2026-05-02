@@ -3,39 +3,40 @@ const labData = {
   "mainImage": "/lab/1.webp",
   "categories": [
     {
-      "title": "Lights & Light Products",
-      "image": "/packing/2.webp",
+      "title": "Laboratory Equipments",
+      "image": "/lab/cat/1.jpg",
       "links": [
-        "Stickers",
-        "Printed Stickers",
-        "Barcode Stickers"
+        "Laboratory Setup Service",
+        "Rotary Microtome",
+        "COD Analyzer"
       ]
     },
     {
-      "title": "Packaging Box & Cartons",
-      "image": "/packing/3.webp",
+      "title": "Laboratory Testing Equipments",
+      "image": "/lab/cat/2.jpg",
       "links": [
-        "Corrugated Boxes",
-        "Packaging Boxes",
-        "Corrugated Packaging Box"
+        "Lecher Antenna",
+        "Tan Delta System",
+        "Palm Husker"
       ]
     },
     {
-      "title": "Packaging Bottles & Jars",
-      "image": "/packing/4.webp",
+      "title": "Laboratory Chamber",
+      "image": "/lab/cat/3.jpg",
       "links": [
-        "Packaging Materials",
-        "Storage Containers",
-        "Metal Boxes"
+        "Vacuum Chambers",
+        "Stability Chamber",
+        "Humidity Chambers"
       ]
     },
     {
-      "title": "Industrial Uniforms & Safety Wear",
-      "image": "/building/5.jpg",
+      "title": "Engineering Training Equipment",
+      "image": "/lab/cat/4.jpg",
       "links": [
-        "Safety Helmets",
-        "Safety Gloves",
-        "Safety Suits"
+        "Civil Lab Equipment",
+        "Pantograph",
+        "Hydraulic Trainer Kit"
+
       ]
     },
 
