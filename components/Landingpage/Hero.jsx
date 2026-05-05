@@ -164,47 +164,98 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 </div>
 
         {/* MORE VALUE ADDS */}
-        <section className="w-full px-2 sm:px-4 md:px-6 py-6 bg-white relative">
+    <section className="w-full px-2 sm:px-4 md:px-6 py-6 bg-white relative">
 
-          <h2 className="text-[16px] sm:text-[18px] font-semibold text-gray-800 mb-4">
-            More Value Adds
-          </h2>
+  <h2 className="text-[16px] sm:text-[18px] font-semibold text-gray-800 mb-4">
+    More Value Adds
+  </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+  {/* ✅ Desktop Grid */}
+  <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+    {data2.map((item, i) => (
+      <Link
+        href={item.link}
+        key={i}
+        className="h-[140px] bg-[#eeecec] border border-[#F48335] rounded-xl p-4 relative shadow-sm 
+        hover:shadow-md transition-all duration-300 group overflow-visible 
+        hover:bg-[#F48335]"
+      >
 
-            {data2.map((item, i) => (
-              <Link href={item.link}
-                key={i}
-                className="h-[140px] bg-[#eeecec] border border-[#F48335] rounded-xl p-4 relative shadow-sm hover:shadow-md transition-all duration-300 group overflow-visible hover:bg-[#F48335]"
-              >
+        <p className="text-[12px] sm:text-[13px] text-black group-hover:text-white relative z-10 mb-2">
+          {item.title}
+        </p>
 
-                <p className="text-[12px] sm:text-[13px] text-black group-hover:text-white relative z-10 mb-2">
-                  {item.title}
-                </p>
+        <h3 className="text-[13px] sm:text-[15px] font-semibold text-gray-800 mt-1 leading-snug w-[90%] group-hover:text-white relative z-10">
+          {item.subtitle}
+        </h3>
 
-                <h3 className="text-[13px] sm:text-[15px] font-semibold text-gray-800 mt-1 leading-snug w-[90%] group-hover:text-white relative z-10">
-                  {item.subtitle}
-                </h3>
+        <div className="absolute bottom-4 left-4 flex items-center gap-1 text-orange-500 text-xs sm:text-sm font-medium group-hover:text-white z-10">
+          Learn more
+          <span className="bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center group-hover:bg-white group-hover:text-orange-500">
+            <ArrowRight size={12} />
+          </span>
+        </div>
 
-                <div className="absolute bottom-4 left-4 flex items-center gap-1 text-orange-500 text-xs sm:text-sm font-medium group-hover:text-white z-10">
-                  Learn more
-                  <span className="bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center group-hover:bg-white group-hover:text-orange-500">
-                    <ArrowRight size={12} />
-                  </span>
-                </div>
+        <Image
+          src={item.img}
+          alt="Hybrid B2B Marketplace in India"
+          width={80}
+          height={80}
+          className="absolute right-0 -bottom-2 object-contain transition-all duration-300 z-0 group-hover:scale-110"
+        />
+      </Link>
+    ))}
+  </div>
 
-                <Image
-                  src={item.img}
-                  alt="Hybrid B2B Marketplace in India"
-                  width={80}
-                  height={80}
-                  className="absolute right-0 -bottom-2 object-contain transition-all duration-300 z-0"
-                />
-              </Link>
-            ))}
+  {/* ✅ Mobile Slider */}
+  <div className="md:hidden">
+    <Swiper
+      slidesPerView={2}
+      spaceBetween={12}
+      freeMode={true}
+    >
+      {data2.map((item, i) => (
+        <SwiperSlide key={i}>
+          <Link
+            href={item.link}
+            className="block h-[140px] bg-[#eeecec] border border-[#F48335] rounded-xl p-4 relative shadow-sm 
+            transition-all duration-300 group overflow-visible 
+            active:bg-[#F48335]"
+          >
 
-          </div>
-        </section>
+            <p className="text-[12px] text-black group-active:text-white relative z-10 mb-2">
+              {item.title}
+            </p>
+
+            <h3 className="text-[13px] font-semibold text-gray-800 mt-1 leading-snug w-[90%] 
+            group-active:text-white relative z-10">
+              {item.subtitle}
+            </h3>
+
+            <div className="absolute bottom-4 left-4 flex items-center gap-1 text-orange-500 text-xs font-medium 
+            group-active:text-white z-10">
+              Learn more
+              <span className="bg-orange-500 text-white rounded-full w-5 h-5 flex items-center justify-center 
+              group-active:bg-white group-active:text-orange-500">
+                <ArrowRight size={12} />
+              </span>
+            </div>
+
+            <Image
+              src={item.img}
+              alt="Hybrid B2B Marketplace in India"
+              width={80}
+              height={80}
+              className="absolute right-0 -bottom-2 object-contain transition-all duration-300 z-0 
+              group-active:scale-110"
+            />
+          </Link>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+
+</section>
 
       </div>
     </section>

@@ -1,222 +1,131 @@
 "use client";
 
-import { Phone, Mail, Search, User, Menu } from "lucide-react";
+import { Search, User, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import {  ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-const dropdownRef = useRef(null);
-  const [menuOpen, setMenuOpen] = useState(false);
-const [isFixed, setIsFixed] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setOpen(false);
-    }
-  };
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => document.removeEventListener("mousedown", handleClickOutside);
-}, []);
-
-
-
-
-
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-<motion.header
-  initial={false}
-animate={{
-  y: 0,
-  opacity: 1,
-}}
-transition={{
-  duration: 0.25,
-  ease: "easeOut",
-}}
+    <header className="w-full fixed top-0 z-50 font-sans">
 
-  className="w-full fixed top-0 left-0 z-50 font-sans bg-white shadow-md"
->
+      {/* ================= TOP NAV ================= */}
+      <div className="bg-[#0D2340] h-[64px] flex items-center">
+       <div className="max-w-[1400px] mx-auto w-full flex items-center justify-between px-6">
 
-    
-      <div className="bg-[#1E3A56] text-white text-[13px] hidden md:block">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-2">
+  {/* LEFT → ONLY LOGO */}
+  {/* <Image
+    src="/logoo.png"
+    width={170}
+    height={40}
+    alt="logo"
+    className="object-contain"
+  /> */}
 
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 text-sm animate-pulse">
-              <Phone size={16} />
-         Have a question? Call us now at  +91 7303486777
-            </span>
+  <p className="text-3xl font-bold text-white">Inquiry <span className="text-[#ec771c]">Bazaar</span> </p>
 
-            <span className="flex items-center gap-2 text-sm">
-              <Mail size={16} />
-              care@inquirybazaar.com
-            </span>
-          </div>
+  {/* RIGHT SIDE */}
+  <div className="flex items-center gap-8">
 
-          <a
-            href="https://g.page/r/CX8DUuqTRZshEBM/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm hover:underline"
-          >
-            Write Review
-          </a>
-        </div>
-      </div>
+    {/* MENU LINKS (NOW CORRECT POSITION) */}
+    <nav className="hidden md:flex items-center gap-8 text-[18px] text-white">
+      <Link href="#" className="hover:opacity-80">Home</Link>
+      <Link href="#" className="hover:opacity-80">Request A Quote</Link>
+      <Link href="#" className="hover:opacity-80">Contact Us</Link>
+      <Link href="#" className="hover:opacity-80">All Categories</Link>
+    </nav>
 
-    
-      <div className="bg-white border-b">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between px-4 py-3">
-
-
-<div className="flex items-center gap-6">
-
-            {/* LOGO */}
-            <Link href="/">
-              <Image
-                width={130}
-                height={50}
-                src="/logoo.png"
-                alt="Hybrid B2B Marketplace in India"
-                className="object-contain"
-              />
-            </Link>
-
-
-  <div className="flex items-center mr-8 border border-gray-300 rounded-sm overflow-hidden w-full md:w-auto">
-  <input
-    type="text"
-    placeholder="Search City..."
-    className="px-3 py-[6px] text-[14px] outline-none w-full md:w-[140px]"
-  />
-  <button className="bg-[#F45A06] px-3 py-[6px] flex items-center justify-center">
-    <Search size={16} color="white" />
-  </button>
-</div>
-</div>
-
-            
-          {/* LEFT */}
-
-     
-        {/* ================= SEARCH (DESKTOP ONLY) ================= */}
-<div className="hidden lg:flex justify-center flex-1">
-  <div className="flex w-full max-w-[420px]">
-    <input
-      type="text"
-      placeholder="Search Products..."
-      className="w-full border border-gray-300 px-4 py-[9px] rounded-l-md text-[14px] outline-none"
-    />
-    <button className="bg-[#F45A06] px-4 flex items-center justify-center rounded-r-md">
-      <Search size={18} color="white" />
+    {/* REGISTER BUTTON */}
+    <button className="bg-[#ec771c] hover:bg-[#e85d12] text-white text-[16px] font-medium px-6 h-[40px] rounded-md">
+      Register Free →
     </button>
+
   </div>
 </div>
-
-  
-
-          {/* RIGHT */}
-          <div className="flex items-center gap-4">
-    {/* Mobile Menu */}
-            <button
-              className="lg:hidden"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <Menu size={24} />
-            </button>
-
-
-            {/* Why Trust Us */}
-            <Link
-              href="/whytrustus"
-              className="hidden lg:block bg-[#F45A06] text-white px-4 py-2 text-sm rounded-sm"
-            >
-              Why Trust Us
-            </Link>
-            {/* LOGIN ICON (NEW) */}
-     <div className="relative" ref={dropdownRef}>
-  
-  {/* BUTTON */}
-  <button
-    onClick={() => setOpen(!open)}
-    className="flex items-center gap-1 text-gray-700 hover:text-[#F45A06] transition"
-  >
-    <User size={22} />
-    <ChevronDown size={16} />
-  </button>
-
-  {/* DROPDOWN */}
-  {open && (
-    <div className="absolute right-0 mt-3 w-48 bg-white border rounded-md shadow-lg z-50 animate-fadeIn">
-
-      <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
-        Login as Supplier
-      </button>
-
-      <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
-        Login as Buyer
-      </button>
-
-    </div>
-  )}
-</div>
-
-            {/* Desktop Buttons */}
-            <div className="hidden lg:flex items-center gap-4">
-
-              <div className="bg-blue-900 flex items-center gap-2 px-3 py-2 rounded-md text-white cursor-pointer">
-                📄 <span className="text-sm">Write a Review</span>
-              </div>
-
-              <button className="bg-[#F45A06] text-white px-4 py-2 rounded-md text-sm">
-                Help Center
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* ================= SEARCH BAR (MOVED BELOW) ================= */}
-        <div className="block md:hidden w-full px-4 pb-3">
-          <div className="max-w-[800px] mx-auto flex">
-
-            <input
-              type="text"
-              placeholder="Search Products..."
-              className="w-full border border-gray-300 px-4 py-2 rounded-l-md text-sm outline-none"
-            />
-
-            <button className="bg-[#F45A06] px-4 flex items-center justify-center rounded-r-md">
-              <Search size={18} color="white" />
-            </button>
-          </div>
-        </div>
       </div>
 
-      {/* ================= MOBILE MENU ================= */}
-      {menuOpen && (
-        <div className="lg:hidden bg-white border-t px-4 py-4 space-y-3">
+      {/* ================= SEARCH STRIP ================= */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-[1400px] mx-auto px-4 py-[10px] flex items-center gap-4">
 
-          <Link href="/whytrustus" className="block text-gray-700">
-            Why Trust Us
-          </Link>
-
-          <div className="flex gap-3">
-            <button className="bg-[#F45A06] text-white px-4 py-2 rounded-md text-sm w-full">
-              Help Center
-            </button>
-            <button className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm w-full">
-              RFQ
+          {/* CITY SEARCH */}
+          <div className="flex items-center bg-[#FAFAF8] border-2 border-[#ec771c] rounded-md overflow-hidden h-[50px]">
+            <input
+              placeholder="📍 Search City..."
+              className="px-3 text-[14px] w-[200px] outline-none"
+            />
+            <button className="bg-[#ec771c] w-[42px] h-[50px] flex items-center justify-center">
+              <Search size={16} color="#fff" />
             </button>
           </div>
-        </div>
-      )}
 
-    </motion.header>
+        <div className="h-[45px] w-px bg-gray-400"></div>
+
+          {/* MAIN SEARCH */}
+          <div className="flex items-center flex-1 max-w-[520px] h-[42px]">
+            <input
+              placeholder="Search for products, supplier"
+              className="w-full h-[50px]  border-2 border-[#ec771c] px-4 text-[14px] rounded-l-md outline-none bg-[#FAFAF8]"
+            />
+            <button className="bg-[#ec771c]  h-[50px]  px-6 flex items-center gap-2 text-white text-[14px] font-medium rounded-r-md">
+              <Search size={16} />
+              Search
+            </button>
+          </div>
+
+          {/* WHY TRUST US */}
+          <button className="py-2 px-5 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[19px] flex items-center ">
+            🛡 Why Trust Us
+          </button>
+
+          {/* ACCOUNT */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setOpen(!open)}
+              className="h-[45px] px-4 border-2 border-gray-300 bg-[#FAFAF8] rounded-md text-[16px] flex items-center gap-2"
+            >
+              <User size={20} />
+              Account
+              <ChevronDown size={14} />
+            </button>
+
+            {open && (
+              <div className="absolute right-0 mt-2 w-[180px] bg-white border rounded-md shadow-md overflow-hidden">
+                <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                  Login as Supplier
+                </button>
+                <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                  Login as Buyer
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* WRITE REVIEW */}
+          <button className="h-[42px] px-5 bg-[#0D2340] text-white rounded-md text-[14px] flex items-center gap-2">
+            ✍️ Write a Review
+          </button>
+
+          {/* HELP CENTER */}
+          <button className="h-[42px] px-5 bg-[#ec771c] text-white rounded-md text-[14px] flex items-center gap-2">
+            💬 Help Center
+          </button>
+
+        </div>
+      </div>
+    </header>
   );
 }
