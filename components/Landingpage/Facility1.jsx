@@ -100,6 +100,7 @@ export default function MoreForYou() {
                     className={`mt-auto px-4 py-1.5 mb-5 rounded-full text-xs transition-all duration-300
 
                       
+
                     ${i === 1
                       ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
                       : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
