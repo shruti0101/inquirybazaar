@@ -8,7 +8,7 @@ export default function Page() {
       <StickyOfferButton></StickyOfferButton>
       <Lead></Lead>
 
-      <div className="pt-[120px] md:pt-[145px]">
+      <div className="pt-[77px] md:pt-[145px]">
 
 
       <HeroWrapper />
