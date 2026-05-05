@@ -7,6 +7,9 @@ import {
   Receipt,
 } from "lucide-react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 export default function MoreForYou() {
   const items = [
     {
@@ -35,6 +38,62 @@ export default function MoreForYou() {
     },
   ];
 
+  const Card = (item, i) => (
+    <div
+      key={i}
+      className={`group relative flex flex-col h-full items-center text-center 
+      px-3 sm:px-6 py-6 sm:py-10 transition-all duration-300
+
+      ${i === 1 ? "bg-[#0E2347] text-white" : "bg-white text-gray-800"}
+
+      hover:bg-[#ec771c] hover:text-white
+
+      ${i !== items.length - 1 ? "lg:border-r border-gray-200" : ""}
+      ${i < items.length - 1 ? "border-b sm:border-b-0 sm:border-r-0 lg:border-b-0 border-gray-200" : ""}
+      `}
+    >
+
+      {/* MOST POPULAR TAG */}
+      {i === 1 && (
+        <span className="absolute top-2 left-5 animate-pulse bg-[#ec771c] text-white text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
+          ⚡Most Popular
+        </span>
+      )}
+
+      {/* ICON */}
+      <div
+        className={`mb-3 sm:mb-4 transition-all duration-300
+        ${i === 1 ? "text-white" : "text-[#10316C]"}
+        group-hover:text-white`}
+      >
+        {item.icon}
+      </div>
+
+      {/* TITLE */}
+      <h3 className="text-[13px] sm:text-[16px] font-semibold mb-2">
+        {item.title}
+      </h3>
+
+      {/* DESC */}
+      <p className="text-[12px] sm:text-[14px] leading-relaxed max-w-full sm:max-w-[240px] mb-4 sm:mb-6 opacity-90">
+        {item.desc}
+      </p>
+
+      {/* BUTTON */}
+      <button
+        className={`mt-auto px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm transition-all duration-300
+
+        ${i === 1
+          ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
+          : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
+        }`}
+      >
+        {item.btn}
+      </button>
+
+    </div>
+  );
+
   return (
     <div className="w-full bg-[#f5f5f5] md:py-10">
 
@@ -43,68 +102,27 @@ export default function MoreForYou() {
         More for You
       </h2>
 
-      {/* GRID WRAPPER */}
       <div className="bg-white border border-gray-200 rounded-sm">
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-0 items-stretch">
-
-          {items.map((item, i) => (
-            <div
-              key={i}
-              className={`group relative flex flex-col h-full items-center text-center 
-              px-3 sm:px-6 py-6 sm:py-10 transition-all duration-300
-
-              ${i === 1 ? "bg-[#0E2347] text-white" : "bg-white text-gray-800"}
-
-              hover:bg-[#ec771c] hover:text-white
-
-              ${i !== items.length - 1 ? "lg:border-r border-gray-200" : ""}
-              ${i < items.length - 1 ? "border-b sm:border-b-0 sm:border-r-0 lg:border-b-0 border-gray-200" : ""}
-              `}
-            >
-
-              {/* MOST POPULAR TAG */}
-              {i === 1 && (
-                <span className="absolute top-2 left-5 animate-pulse bg-[#ec771c] text-white text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-                 ⚡Most Popular
-                </span>
-              )}
-
-              {/* ICON */}
-              <div
-                className={`mb-3 sm:mb-4 transition-all duration-300
-                ${i === 1 ? "text-white" : "text-[#10316C]"}
-                group-hover:text-white`}
-              >
-                {item.icon}
-              </div>
-
-              {/* TITLE */}
-              <h3 className="text-[13px] sm:text-[16px] font-semibold mb-2">
-                {item.title}
-              </h3>
-
-              {/* DESC */}
-              <p className="text-[12px] sm:text-[14px] leading-relaxed max-w-full sm:max-w-[240px] mb-4 sm:mb-6 opacity-90">
-                {item.desc}
-              </p>
-
-              {/* BUTTON */}
-              <button
-                className={`mt-auto px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm transition-all duration-300
-
-                ${i === 1
-                  ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
-                  : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
-                }`}
-              >
-                {item.btn}
-              </button>
-
-            </div>
-          ))}
-
+        {/* ✅ MOBILE SWIPER ONLY */}
+        <div className="md:hidden">
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={1.2}
+          >
+            {items.map((item, i) => (
+              <SwiperSlide key={i}>
+                {Card(item, i)}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
+
+        {/* ✅ DESKTOP GRID (UNCHANGED) */}
+        <div className="hidden md:grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-0 items-stretch">
+          {items.map((item, i) => Card(item, i))}
+        </div>
+
       </div>
     </div>
   );
