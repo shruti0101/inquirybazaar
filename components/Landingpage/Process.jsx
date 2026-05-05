@@ -56,6 +56,8 @@ export default function HowItWorks() {
         {step.number}
       </span>
 
+      
+
       {/* ICON BOX */}
       <div className="
         w-[48px] h-[48px] md:w-[60px] md:h-[60px]
