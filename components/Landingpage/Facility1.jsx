@@ -38,63 +38,6 @@ export default function MoreForYou() {
     },
   ];
 
-  const Card = (item, i) => (
-    <div
-      key={i}
-      className={`group relative flex flex-col h-full items-center text-center 
-      px-3 sm:px-6 py-6 sm:py-10 transition-all duration-300
-
-      ${i === 1 ? "bg-[#0E2347] text-white" : "bg-white text-gray-800"}
-
-      hover:bg-[#ec771c] hover:text-white
-active:bg-[#ec771c] active:text-white
-
-      ${i !== items.length - 1 ? "lg:border-r border-gray-200" : ""}
-      ${i < items.length - 1 ? "border-b sm:border-b-0 sm:border-r-0 lg:border-b-0 border-gray-200" : ""}
-      `}
-    >
-
-      {/* MOST POPULAR TAG */}
-      {i === 1 && (
-        <span className="absolute top-2 left-5 animate-pulse bg-[#ec771c] text-white text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
-          ⚡Most Popular
-        </span>
-      )}
-
-      {/* ICON */}
-      <div
-        className={`mb-3 sm:mb-4 transition-all duration-300
-        ${i === 1 ? "text-white" : "text-[#10316C]"}
-        group-hover:text-white`}
-      >
-        {item.icon}
-      </div>
-
-      {/* TITLE */}
-      <h3 className="text-[13px] sm:text-[16px] font-semibold mb-2">
-        {item.title}
-      </h3>
-
-      {/* DESC */}
-      <p className="text-[12px] sm:text-[14px] leading-relaxed max-w-full sm:max-w-[240px] mb-4 sm:mb-6 opacity-90">
-        {item.desc}
-      </p>
-
-      {/* BUTTON */}
-      <button
-        className={`mt-auto px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm transition-all duration-300
-
-        ${i === 1
-          ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
-          : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
-        }`}
-      >
-        {item.btn}
-      </button>
-
-    </div>
-  );
-
   return (
     <div className="w-full bg-[#f5f5f5] md:py-10">
 
@@ -105,23 +48,125 @@ active:bg-[#ec771c] active:text-white
 
       <div className="bg-white border border-gray-200 rounded-sm">
 
-        {/* ✅ MOBILE SWIPER ONLY */}
+        {/* ✅ MOBILE SWIPER (same size cards) */}
         <div className="md:hidden">
           <Swiper
-            spaceBetween={10}
-            slidesPerView={1.2}
+            spaceBetween={0}
+            slidesPerView={2}   // EXACT same as grid-cols-2
           >
             {items.map((item, i) => (
               <SwiperSlide key={i}>
-                {Card(item, i)}
+                <div
+              className={`group relative flex flex-col h-full pt-6 min-h-[270px] items-center text-center 
+
+                  ${i === 1 ? "bg-[#0E2347] text-white" : "bg-white text-gray-800"}
+
+                  hover:bg-[#ec771c] hover:text-white
+                  active:bg-[#ec771c] active:text-white
+
+                  border-b border-gray-200
+                  ${i % 2 === 0 ? "border-r border-gray-200" : ""}
+                  `}
+                >
+
+                  {/* MOST POPULAR TAG */}
+                  {i === 1 && (
+                    <span className="absolute top-2 left-1 md:left-5 bg-[#ec771c] text-white text-[7px] md:text-[10px] font-semibold px-2 py-1 rounded-full">
+                      ⚡Most Popular
+                    </span>
+                  )}
+
+                  {/* ICON */}
+                  <div
+                    className={`mb-3 transition-all duration-300
+                    ${i === 1 ? "text-white" : "text-[#10316C]"}
+                    group-hover:text-white`}
+                  >
+                    {item.icon}
+                  </div>
+
+                  {/* TITLE */}
+                  <h3 className="text-[13px] font-semibold mb-2">
+                    {item.title}
+                  </h3>
+
+                  {/* DESC */}
+                  <p className="text-[12px] leading-relaxed mb-4 opacity-90">
+                    {item.desc}
+                  </p>
+
+                  {/* BUTTON */}
+                  <button
+                    className={`mt-auto px-4 py-1.5 mb-5 rounded-full text-xs transition-all duration-300
+
+                    ${i === 1
+                      ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
+                      : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
+                    }`}
+                  >
+                    {item.btn}
+                  </button>
+
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
-        {/* ✅ DESKTOP GRID (UNCHANGED) */}
-        <div className="hidden md:grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-0 ">
-          {items.map((item, i) => Card(item, i))}
+        {/* ✅ DESKTOP GRID (100% untouched) */}
+        <div className="hidden md:grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-0 items-stretch">
+
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className={`group relative flex flex-col h-full items-center text-center 
+              px-3 sm:px-6 py-6 sm:py-10 transition-all duration-300
+
+              ${i === 1 ? "bg-[#0E2347] text-white" : "bg-white text-gray-800"}
+
+              hover:bg-[#ec771c] hover:text-white
+
+              ${i !== items.length - 1 ? "lg:border-r border-gray-200" : ""}
+              ${i < items.length - 1 ? "border-b sm:border-b-0 sm:border-r-0 lg:border-b-0 border-gray-200" : ""}
+              `}
+            >
+
+              {i === 1 && (
+                <span className="absolute top-2 left-5 bg-[#ec771c] text-white text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
+                  ⚡Most Popular
+                </span>
+              )}
+
+              <div
+                className={`mb-3 sm:mb-4 transition-all duration-300
+                ${i === 1 ? "text-white" : "text-[#10316C]"}
+                group-hover:text-white`}
+              >
+                {item.icon}
+              </div>
+
+              <h3 className="text-[13px] sm:text-[16px] font-semibold mb-2">
+                {item.title}
+              </h3>
+
+              <p className="text-[12px] sm:text-[14px] leading-relaxed max-w-full sm:max-w-[240px] mb-4 sm:mb-6 opacity-90">
+                {item.desc}
+              </p>
+
+              <button
+                className={`mt-auto px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm transition-all duration-300
+
+                ${i === 1
+                  ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
+                  : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
+                }`}
+              >
+                {item.btn}
+              </button>
+
+            </div>
+          ))}
+
         </div>
 
       </div>

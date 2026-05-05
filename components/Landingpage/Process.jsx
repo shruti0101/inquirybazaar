@@ -49,7 +49,7 @@ export default function HowItWorks() {
       <span className="
         absolute 
         -top-6 md:-top-12 
-        left-0 
+        left-10 
         text-[50px] md:text-[90px] 
         font-bold text-white/5 select-none
       ">
