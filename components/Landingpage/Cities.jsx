@@ -57,7 +57,7 @@ export default function TopCities() {
       {/* Title */}
    
 
-  <div className="grid grid-cols-3 sm:grid-cols-5 gap-y-8 gap-x-10 justify-center">
+  <div className="grid grid-cols-4 sm:grid-cols-5 gap-y-8 gap-x-10 justify-center">
 
   {cities.map(({ name, iconSrc }, index) => (
     <div
