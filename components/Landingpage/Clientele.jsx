@@ -3,17 +3,29 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import Process from "@/components/Landingpage/Process";
+import "swiper/css"
 
 const brands = [
   { initials: "VA", name: "Vands Engineering", category: "Engineering Solutions", color: "text-blue-600 bg-blue-50" },
   { initials: "Ai", name: "Ai Solutions", category: "IT & Technology", color: "text-purple-600 bg-purple-50" },
   { initials: "BS", name: "BSM Enterprises", category: "Manufacturing", color: "text-green-600 bg-green-50" },
   { initials: "SR", name: "Shree Shakti Infra", category: "Building & Construction", color: "text-orange-600 bg-orange-50" },
+
   { initials: "EC", name: "Eco Corp", category: "Sustainability", color: "text-emerald-600 bg-emerald-50" },
+
+
+   { initials: "MT", name: "Matrix Tissue", category: "Paper & Packaging", color: "text-pink-600 bg-pink-50" },
+  
 ];
 
 export default function ClienteleSlider() {
   return (
+
+    <>
+
+    <Process/>
+    
     <section className="bg-[#f5f2ef] py-8 px-4 ">
 
       {/* HEADER */}
@@ -104,5 +116,6 @@ export default function ClienteleSlider() {
 
       </div>
     </section>
+    </>
   );
 }
