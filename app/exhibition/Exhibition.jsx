@@ -521,7 +521,7 @@ const Exhibition = () => {
 
               <ul className="space-y-4 text-gray-300 text-sm">
                 {[
-                  "₹50,000–₹5,00,000 ka stall + travel + stay",
+                  "₹1,50,000–₹15,00,000 ka stall + travel + stay",
                   "Sirf 3–5 din ki visibility",
                   "Limited geography — ek city, ek event",
                   "Walk-in buyers — sab interested nahi hote",
