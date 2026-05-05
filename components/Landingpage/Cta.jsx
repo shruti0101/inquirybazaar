@@ -13,10 +13,9 @@ export default function HeroInquiry() {
   return (
     <section className="bg-[#f7f8fa] relative overflow-hidden">
       {/* BACKGROUND */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-[#f7f8fa] to-[#eef3f3]" />
-      <div className="absolute inset-0 opacity-[0.25] bg-[url('/pattern.png')] bg-repeat"></div>
+   
 
-      <div className="relative px-4 sm:px-6 md:px-8 py-6 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-start max-w-7xl mx-auto">
+      <div className="relative px-4 sm:px-6 md:px-8 py-4 grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-start max-w-7xl mx-auto">
         {/* ================= LEFT ================= */}
         <div>
           <h1 className="text-[28px] sm:text-[34px] md:text-[40px] leading-[36px] sm:leading-[46px] md:leading-[56px] font-bold text-[#1f2937]">
@@ -24,12 +23,12 @@ export default function HeroInquiry() {
             <span className="text-[#10316C]">Buyers & Sellers</span>
           </h1>
 
-          <p className="mt-3 text-[14px] sm:text-[15px] text-black max-w-full sm:max-w-[540px] leading-relaxed">
+          <p className="mt-1 text-[14px] sm:text-[15px] text-black max-w-full sm:max-w-[600px] leading-relaxed">
 Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to verified buyers and trusted suppliers—making trade more reliable and efficient
           </p>
 
           {/* FEATURES */}
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-6 md:gap-8">
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:gap-6 ">
             <Feature
               icon={<ShoppingCart className="text-[#10316C]" size={22} />}
               title=" Buyer Assistance"
@@ -53,7 +52,7 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
           </div>
 
           {/* BOTTOM */}
-          <div className="mt-8 md:mt-12 flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-6 text-gray-700 text-[13px] sm:text-[14px] border-t pt-5 md:pt-6">
+          <div className="mt-8  flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-6 text-gray-700 text-[13px] sm:text-[14px] border-t pt-5 md:pt-6">
             <div className="flex items-center gap-2">
               <Star size={14} className="text-[#10316C]" />
               Trusted by 100+ Businesses

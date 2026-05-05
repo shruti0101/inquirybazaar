@@ -51,10 +51,10 @@ export default function MoreForYou() {
           {items.map((item, i) => (
             <div
               key={i}
-              className={`group flex flex-col h-full items-center text-center 
+              className={`group relative flex flex-col h-full items-center text-center 
               px-3 sm:px-6 py-6 sm:py-10 transition-all duration-300
 
-              ${i === 1 ? "bg-[#10316C] text-white" : "bg-white text-gray-800"}
+              ${i === 1 ? "bg-[#0E2347] text-white" : "bg-white text-gray-800"}
 
               hover:bg-[#ec771c] hover:text-white
 
@@ -62,6 +62,13 @@ export default function MoreForYou() {
               ${i < items.length - 1 ? "border-b sm:border-b-0 sm:border-r-0 lg:border-b-0 border-gray-200" : ""}
               `}
             >
+
+              {/* MOST POPULAR TAG */}
+              {i === 1 && (
+                <span className="absolute top-2 left-5 animate-pulse bg-[#ec771c] text-white text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
+                 ⚡Most Popular
+                </span>
+              )}
 
               {/* ICON */}
               <div

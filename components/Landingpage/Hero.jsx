@@ -52,7 +52,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
         {data?.banners?.length && (
           <Swiper
             modules={[Autoplay, Pagination]}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 10000 }}
             pagination={{ clickable: true }}
             loop
           >

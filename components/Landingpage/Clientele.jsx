@@ -24,7 +24,7 @@ export default function ClienteleSlider() {
 
     <>
 
-    <Process/>
+
     
     <section className="bg-[#f5f2ef] py-8 px-4 ">
 
@@ -116,6 +116,8 @@ export default function ClienteleSlider() {
 
       </div>
     </section>
+
+        <Process/>
     </>
   );
 }
