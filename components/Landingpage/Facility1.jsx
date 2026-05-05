@@ -47,6 +47,7 @@ export default function MoreForYou() {
       ${i === 1 ? "bg-[#0E2347] text-white" : "bg-white text-gray-800"}
 
       hover:bg-[#ec771c] hover:text-white
+active:bg-[#ec771c] active:text-white
 
       ${i !== items.length - 1 ? "lg:border-r border-gray-200" : ""}
       ${i < items.length - 1 ? "border-b sm:border-b-0 sm:border-r-0 lg:border-b-0 border-gray-200" : ""}
@@ -119,7 +120,7 @@ export default function MoreForYou() {
         </div>
 
         {/* ✅ DESKTOP GRID (UNCHANGED) */}
-        <div className="hidden md:grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-0 items-stretch">
+        <div className="hidden md:grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-0 ">
           {items.map((item, i) => Card(item, i))}
         </div>
 
