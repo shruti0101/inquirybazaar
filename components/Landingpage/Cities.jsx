@@ -52,7 +52,7 @@ export default function TopCities() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-5">
         Find Suppliers from Top Cities
       </h2>
-    <div className="w-full px-6 py-10 bg-white">
+    <div className="w-full px-7 py-10 bg-white">
 
       {/* Title */}
    
@@ -63,7 +63,7 @@ export default function TopCities() {
     <div
       key={name}
       className={`flex flex-col items-center text-center space-y-3 ${
-        index === cities.length - 1 ? "hidden sm:flex" : ""
+         index >= cities.length - 2 ? "hidden sm:flex" : ""
       }`}
     >
       {/* Icon */}

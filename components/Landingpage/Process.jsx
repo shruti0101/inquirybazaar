@@ -29,50 +29,65 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="bg-[#0e2347] py-10 px-4">
+    <section className="bg-[#0e2347] py-4 md:py-10 px-4">
       <div className="max-w-[1200px] mx-auto text-center">
 
+<p className="text-[#ec771c]">Simple Process</p>
         {/* TITLE */}
-        <h2 className="text-white text-[32px] md:text-[42px] font-bold mb-10">
+        <h2 className="text-white text-[25px] md:text-[42px] font-bold mb-12">
           How InquiryBazaar Works
         </h2>
 
         {/* STEPS */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
+     {/* STEPS */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 relative">
 
-          {steps.map((step, index) => (
-            <div key={index} className="relative text-left">
+  {steps.map((step, index) => (
+    <div key={index} className="relative text-left">
 
-              {/* BIG FADED NUMBER */}
-              <span className="absolute -top-12 left-0 text-[90px] font-bold text-white/5 select-none">
-                {step.number}
-              </span>
+      {/* BIG FADED NUMBER */}
+      <span className="
+        absolute 
+        -top-6 md:-top-12 
+        left-0 
+        text-[50px] md:text-[90px] 
+        font-bold text-white/5 select-none
+      ">
+        {step.number}
+      </span>
 
-              {/* ICON BOX */}
-              <div className="w-[60px] h-[60px] rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-[22px] mb-6 shadow-inner">
-                {step.icon}
-              </div>
+      {/* ICON BOX */}
+      <div className="
+        w-[48px] h-[48px] md:w-[60px] md:h-[60px]
+        rounded-xl bg-white/10 backdrop-blur-md border border-white/20 
+        flex items-center justify-center 
+        text-[18px] md:text-[22px] 
+        mb-3 md:mb-6 shadow-inner
+      ">
+        {step.icon}
+      </div>
 
-              {/* ARROW (except last) */}
-              {index !== steps.length - 1 && (
-                <div className="hidden md:block absolute top-[30px] right-[-35px] text-white/30 text-xl">
-                  →
-                </div>
-              )}
-
-              {/* TITLE */}
-              <h3 className="text-white text-[18px] font-semibold mb-3">
-                {step.title}
-              </h3>
-
-              {/* DESCRIPTION */}
-              <p className="text-white text-[14px] leading-relaxed">
-                {step.desc}
-              </p>
-            </div>
-          ))}
-
+      {/* ARROW (ONLY DESKTOP) */}
+      {index !== steps.length - 1 && (
+        <div className="hidden md:block absolute top-[30px] right-[-35px] text-white/30 text-xl">
+          →
         </div>
+      )}
+
+      {/* TITLE */}
+      <h3 className="text-white text-[15px] md:text-[18px] font-semibold mb-2 md:mb-3 leading-tight">
+        {step.title}
+      </h3>
+
+      {/* DESCRIPTION */}
+      <p className="text-white/80 text-[12px] md:text-[14px] leading-relaxed">
+        {step.desc}
+      </p>
+
+    </div>
+  ))}
+
+</div>
       </div>
     </section>
   );

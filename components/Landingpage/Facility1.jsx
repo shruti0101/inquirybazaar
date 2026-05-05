@@ -36,7 +36,7 @@ export default function MoreForYou() {
   ];
 
   return (
-    <div className="w-full bg-[#f5f5f5]   md:py-10">
+    <div className="w-full bg-[#f5f5f5] md:py-10">
 
       {/* TITLE */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-4 md:mb-6">
@@ -51,30 +51,46 @@ export default function MoreForYou() {
           {items.map((item, i) => (
             <div
               key={i}
-              className={`flex flex-col h-full items-center text-center 
-              px-3 sm:px-6 py-6 sm:py-10
+              className={`group flex flex-col h-full items-center text-center 
+              px-3 sm:px-6 py-6 sm:py-10 transition-all duration-300
+
+              ${i === 1 ? "bg-[#10316C] text-white" : "bg-white text-gray-800"}
+
+              hover:bg-[#ec771c] hover:text-white
+
               ${i !== items.length - 1 ? "lg:border-r border-gray-200" : ""}
               ${i < items.length - 1 ? "border-b sm:border-b-0 sm:border-r-0 lg:border-b-0 border-gray-200" : ""}
               `}
             >
 
               {/* ICON */}
-              <div className="text-[#10316C] mb-3 sm:mb-4">
+              <div
+                className={`mb-3 sm:mb-4 transition-all duration-300
+                ${i === 1 ? "text-white" : "text-[#10316C]"}
+                group-hover:text-white`}
+              >
                 {item.icon}
               </div>
 
               {/* TITLE */}
-              <h3 className="text-[13px] sm:text-[16px] font-semibold text-gray-800 mb-2">
+              <h3 className="text-[13px] sm:text-[16px] font-semibold mb-2">
                 {item.title}
               </h3>
 
               {/* DESC */}
-              <p className="text-[12px] sm:text-[14px] text-black leading-relaxed max-w-full sm:max-w-[240px] mb-4 sm:mb-6">
+              <p className="text-[12px] sm:text-[14px] leading-relaxed max-w-full sm:max-w-[240px] mb-4 sm:mb-6 opacity-90">
                 {item.desc}
               </p>
 
               {/* BUTTON */}
-              <button className="mt-auto border border-[#10316C] text-[#10316C] px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm hover:bg-blue-50 transition">
+              <button
+                className={`mt-auto px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm transition-all duration-300
+
+                ${i === 1
+                  ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
+                  : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
+                }`}
+              >
                 {item.btn}
               </button>
 
