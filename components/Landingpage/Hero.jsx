@@ -197,7 +197,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
     <div className="absolute inset-0 flex flex-col justify-center pl-2 md:pl-6  bg-black/10 ">
 
-      <h2 className=" text-white text-[19px] sm:text-lg mb-5 md:text-2xl font-semibold leading-snug">
+      <h2 className=" text-white text-[19px] mb-3 font-semibold leading-relaxed">
         Looking for a <span className="text-[#FCD34D]">product?</span> 
       </h2>
 
@@ -205,7 +205,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
        Before making a purchase, make sure you've posted your buy requirement and connect directly with verified suppliers.
       </span>
 
-      <button className=" mb-2 text-white px-1 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95">
+      <button className="  text-white px-1 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95">
         Post As Per Requirement →
       </button>
 
