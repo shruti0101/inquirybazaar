@@ -89,7 +89,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
         )}
 
         {/* GRID BANNERS */}
- <div className="grid grid-cols-2 md:grid-cols-2 gap-2 sm:gap-4 mt-4 ">
+ <div className="hidden md:grid grid-cols-2 md:grid-cols-2 gap-2 sm:gap-4 mt-4 ">
 
   {/* IMAGE 1 */}
   <div className="relative overflow-hidden rounded-xl w-full h-full">
@@ -101,7 +101,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       className="w-full h-[160px] sm:h-[220px] md:h-[240px] object-cover"
     />
 
-    <div className="absolute inset-0 flex flex-col justify-center pl-6  bg-black/10 ">
+    <div className="absolute inset-0 flex flex-col justify-center pl-2 md:pl-6  bg-black/10 ">
 
       <h2 className=" text-white text-[19px] sm:text-lg md:text-2xl font-semibold leading-snug">
         Looking for a <span className="text-[#FCD34D]">product?</span> 
@@ -115,7 +115,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
         Post As Per Requirement →
       </button>
 
-<div className="flex gap-3 mt-3">
+<div className="hidden md:flex gap-3 mt-3">
   {/* Item 1 */}
   <div className="flex items-center gap-2">
     <span className="w-3 h-3 rounded-full bg-[#22d3a6]"></span>
@@ -143,7 +143,101 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       className="w-full h-[160px] sm:h-[220px] md:h-[240px] object-cover"
     />
 
-    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6 bg-black/15 md:bg-black/10">
+    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6  bg-black/10">
+
+    <div className="relative">
+  <h2 className="text-white text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
+        Want to grow your business <span className="text-[#1E3A5F] ">10x faster? </span> 
+      </h2>
+
+      <div className="hidden md:flex items-center mt-1 sm:mt-3">
+        <span className="text-white text-[10px] sm:text-[17px] leading-snug">
+          Showcase product
+        </span>
+
+        <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-white"></div>
+
+        <span className="text-white text-[10px] sm:text-[17px] leading-snug">
+          Get Free listing
+        </span>
+      </div>
+
+      <button className="hidden md:block mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
+        Sell On Inquiry Bazaar →
+      </button>
+
+
+           <button className="block md:hidden mt-2 sm:mt-4 text-white px-2 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[12px] sm:text-[14px] hover:shadow-md transition active:scale-95">
+        Get Free listing →
+      </button>
+
+    </div>
+
+    
+    </div>
+  </div>
+
+</div>
+
+
+
+
+        {/* mobile BANNERS */}
+ <div className="grid md:hidden  grid-cols-2 md:grid-cols-2 gap-2 sm:gap-4 mt-4 ">
+
+  {/* IMAGE 1 */}
+  <div className="relative overflow-hidden rounded-xl w-full h-full">
+    <Image
+      src="/mobile1.jpeg"
+      width={600}
+      height={350}
+      alt="Hybrid B2B Marketplace in India"
+      className="w-full h-[160px] sm:h-[220px] md:h-[240px] object-cover"
+    />
+
+    <div className="absolute inset-0 flex flex-col justify-center pl-2 md:pl-6  bg-black/10 ">
+
+      <h2 className=" text-white text-[19px] sm:text-lg mb-5 md:text-2xl font-semibold leading-snug">
+        Looking for a <span className="text-[#FCD34D]">product?</span> 
+      </h2>
+
+      <span className="hidden md:block text-white text-[10px] sm:text-[14px] w-full sm:w-80 mt-1 sm:mt-2 leading-snug">
+       Before making a purchase, make sure you've posted your buy requirement and connect directly with verified suppliers.
+      </span>
+
+      <button className=" mb-2 text-white px-1 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95">
+        Post As Per Requirement →
+      </button>
+
+<div className="hidden md:flex gap-3 mt-3">
+  {/* Item 1 */}
+  <div className="flex items-center gap-2">
+    <span className="w-3 h-3 rounded-full bg-[#22d3a6]"></span>
+    <span className="text-[#8f96c9] text-xs">Direct supplier contact</span>
+  </div>
+
+  {/* Item 2 */}
+  <div className="flex items-center gap-2">
+    <span className="w-3 h-3 rounded-full bg-[#facc15]"></span>
+    <span className="text-[#8f96c9] text-xs">100% transparent</span>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+
+  {/* IMAGE 2 */}
+  <div className="relative overflow-hidden rounded-xl shadow-md ">
+    <Image
+      src="/mobile2.jpeg"
+      width={550}
+      height={300}
+      alt="Hybrid B2B Marketplace in India"
+      className="w-full h-[160px] sm:h-[220px] md:h-[240px] object-cover"
+    />
+
+    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6  bg-black/10">
 
     <div className="relative">
   <h2 className="text-white text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
