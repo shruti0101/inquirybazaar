@@ -11,7 +11,7 @@ const bannerData = [
   },
   {
     id: 3,
-    image: "/banner2.png",
+    image: "/dirbanner2.jpeg",
     link: "/contact",
   },
 ];
