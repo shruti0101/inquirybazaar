@@ -3,7 +3,7 @@
 import { Search, User, ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-
+import { Phone, Mail } from "lucide-react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -21,9 +21,48 @@ export default function Navbar() {
 
   return (
     <header className="w-full fixed top-0 z-50 font-sans">
+<div className="w-full bg-[#183B63] text-white">
+      <div className="mx-auto flex w-full px-15 flex-col items-center justify-between gap-3 py-2 text-sm md:flex-row md:gap-0">
+        
+        {/* Left Section */}
+        <div className="flex flex-col items-center gap-2 md:flex-row md:gap-8">
+          
+          {/* Phone */}
+          <div className="flex items-center gap-2">
+            <Phone size={16} className="text-white" />
+            <span className="text-gray-100">
+              Have a question? Call us now at{" "}
+              <a
+                href="tel:+917303486777"
+                className="font-medium hover:text-gray-300"
+              >
+                +91 7303486777
+              </a>
+            </span>
+          </div>
 
+          {/* Email */}
+          <div className="flex items-center gap-2">
+            <Mail size={16} className="text-white" />
+            <a
+              href="mailto:care@inquirybazaar.com"
+              className="text-gray-100 hover:text-gray-300"
+            >
+              care@inquirybazaar.com
+            </a>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div>
+          <button className="font-medium text-white transition hover:text-gray-300">
+            Write Review
+          </button>
+        </div>
+      </div>
+    </div>
       {/* ================= TOP NAV ================= */}
-      <div className="bg-[#0D2340] h-[64px] flex items-center">
+      <div className="bg-[#0D2340] h-[58px] flex items-center">
         <div className=" mx-auto w-full flex items-center justify-between px-4 md:px-12">
 
           <p className="text-2xl md:text-3xl font-bold text-white">

@@ -94,7 +94,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
   {/* IMAGE 1 */}
   <div className="relative overflow-hidden rounded-xl w-full h-full">
     <Image
-      src="/test1-1.webp"
+      src="/aa.webp"
       width={600}
       height={350}
       alt="Hybrid B2B Marketplace in India"
@@ -136,7 +136,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
   {/* IMAGE 2 */}
   <div className="relative overflow-hidden rounded-xl shadow-md ">
     <Image
-      src="/test2-2.webp"
+      src="/bb.webp"
       width={550}
       height={300}
       alt="Hybrid B2B Marketplace in India"
