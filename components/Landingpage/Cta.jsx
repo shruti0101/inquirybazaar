@@ -51,31 +51,17 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
             />
           </div>
 
-          {/* BOTTOM */}
-          <div className="mt-5  flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-6 text-gray-700 text-[13px] sm:text-[14px] border-t pt-3">
-            <div className="flex items-center gap-2">
-              <Star size={14} className="text-[#10316C]" />
-              Trusted by 100+ Businesses
-            </div>
-
-            <div className="flex items-center gap-2">
-              <Lock size={14} className="text-[#10316C]" />
-              Safe & Secure
-            </div>
-          </div>
+       
         </div>
 
    
         <div className="md:pl-4 lg:pl-6">
           <div className="bg-white/80 backdrop-blur-lg border border-gray-200 p-5 sm:p-4 ">
-            <h2 className="text-[22px] sm:text-[24px] md:text-[28px] font-semibold text-black leading-snug">
+            <h2 className="text-[22px] sm:text-[24px] text-center font-semibold text-black leading-snug">
               Tell us what you need
             </h2>
 
-            <p className="text-sm text-black mt-1">
-              Get quotes from verified suppliers
-            </p>
-
+       
             <form
               action="/api/enquiry"
               method="POST"
