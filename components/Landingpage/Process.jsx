@@ -29,12 +29,12 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="bg-[#0e2347] py-4 md:py-10 px-4">
+    <section className="bg-[#0e2347] py-5  px-4">
       <div className="max-w-[1200px] mx-auto text-center">
 
-<p className="text-[#ec771c]">Simple Process</p>
+
         {/* TITLE */}
-        <h2 className="text-white text-[25px] md:text-[42px] font-bold mb-12">
+        <h2 className="text-white text-[25px] md:text-[42px] font-bold mb-5">
           How InquiryBazaar Works
         </h2>
 

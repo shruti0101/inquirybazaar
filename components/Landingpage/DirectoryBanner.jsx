@@ -9,12 +9,13 @@ export default function Banner({ data }) {
   return (
     <div className="max-w-7xl mx-auto pt-4">
       <Link href={data.link || "#"}>
-        <div className="w-full h-[100px] md:h-[250px] relative rounded-lg overflow-hidden">
+        <div className="w-full relative rounded-lg overflow-hidden">
           <Image
             src={data.image}
             alt="banner"
-            fill
-            className="object-cover hover:scale-105 transition duration-300"
+            width={1600}
+            height={400}
+            className="max-w-full h-auto hover:scale-105 transition duration-300"
           />
         </div>
       </Link>

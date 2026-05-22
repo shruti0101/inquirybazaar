@@ -10,7 +10,7 @@ export default function AboutPage({ content }) {
 
       <div
         className={`prose max-w-none transition-all duration-300 overflow-hidden ${
-          expanded ? "max-h-full" : "max-h-[620px]"
+          expanded ? "max-h-full" : "max-h-[550px]"
         }`}
       >
         <div dangerouslySetInnerHTML={{ __html: content }} />

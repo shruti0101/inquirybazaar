@@ -26,15 +26,13 @@ export default function ClienteleSlider() {
 
 
     
-    <section className="bg-[#f5f2ef] py-8 px-4 ">
+    <section className="bg-[#f5f2ef] py-3 px-4 ">
 
       {/* HEADER */}
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between mb-4">
+      <div className="max-w-[1400px] mx-auto flex items-center justify-between mb-2">
         <div>
-          <p className="text-[12px] tracking-[3px] text-[#ec771c] font-semibold mb-2">
-            VERIFIED PARTNERS
-          </p>
-          <h2 className="text-[34px]  font-bold text-[#0D2340]">
+       
+          <h2 className="text-[24px]  font-bold text-[#0D2340]">
             Trending Brands
           </h2>
         </div>

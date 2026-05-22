@@ -7,11 +7,11 @@ import Cta from "./Cta";
 import CategorySidebar from "./CategorySidebar";
 import FeaturedProducts from "./FeaturedCategories";
 import DirectorySection from "./DirectorySection";
-import Banner3Section from "./Banner3";
+// import Banner3Section from "./Banner3";
 import Clientele from "./Clientele";
 import MoreForYou from "./Facility1";
 import TopCities from "./Cities";
-import Bestseller from "./Bestseller";
+// import Bestseller from "./Bestseller";
 import TestimonialSection from "./Testimonial";
 import Youtube from "./Youtube";
 import About from "./About";
@@ -127,7 +127,7 @@ export default async function HeroWrapper() {
           {/* SECTION */}
           <DirectorySection data={section} />
 
-          {/* 🔥 SHOW BANNER AFTER EVERY 2 SECTIONS */}
+          {/* SHOW BANNER AFTER EVERY 2 SECTIONS */}
           {(index + 1) % 2 === 0 && (
             <Banner data={bannerData[(index + 1) / 2 - 1]} />
           )}
@@ -135,10 +135,10 @@ export default async function HeroWrapper() {
       ))}
     </div>
 
-            <Banner3Section data={banner3Data} />
+            {/* <Banner3Section data={banner3Data} /> */}
 
            
-            <Bestseller data={bestsellerData} />
+            {/* <Bestseller data={bestsellerData} /> */}
             <MoreForYou />
             <TopCities />
 

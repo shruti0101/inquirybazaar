@@ -18,12 +18,12 @@ export default function HeroInquiry() {
       <div className="relative px-4 sm:px-6 md:px-8 py-3 grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-start max-w-7xl mx-auto">
         {/* ================= LEFT ================= */}
         <div>
-          <h1 className="text-[28px] sm:text-[35px]  leading-[36px] sm:leading-[46px] md:leading-[56px] font-bold text-[#1f2937]">
+          <h1 className="text-[28px] sm:text-[32px]  leading-[36px] sm:leading-[46px] md:leading-[56px] font-bold text-[#1f2937]">
             We connect {" "}
             <span className="text-[#e85d12]">Buyers & Sellers</span>
           </h1>
 
-          <p className="my-1 text-[14px] sm:text-[15px] text-black max-w-full sm:max-w-[600px] leading-relaxed">
+          <p className=" text-[14px]  text-black max-w-full sm:max-w-[600px] leading-relaxed">
 Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to verified buyers and trusted suppliers—making trade more reliable and efficient
           </p>
 

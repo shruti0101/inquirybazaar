@@ -94,7 +94,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
   {/* IMAGE 1 */}
   <div className="relative overflow-hidden rounded-xl w-full h-full">
     <Image
-      src="/test1.jpeg"
+      src="/test1-1.webp"
       width={600}
       height={350}
       alt="Hybrid B2B Marketplace in India"
@@ -136,7 +136,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
   {/* IMAGE 2 */}
   <div className="relative overflow-hidden rounded-xl shadow-md ">
     <Image
-      src="/test2.jpeg"
+      src="/test2-2.webp"
       width={550}
       height={300}
       alt="Hybrid B2B Marketplace in India"
@@ -152,13 +152,14 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
       <div className="hidden md:flex items-center mt-1 sm:mt-3">
         <span className="text-white text-[10px] sm:text-[17px] leading-snug">
-          Showcase product
+          Showcase <br></br>
+           product
         </span>
 
         <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-white"></div>
 
         <span className="text-white text-[10px] sm:text-[17px] leading-snug">
-          Get Free listing
+          Get Free <br></br> listing
         </span>
       </div>
 
