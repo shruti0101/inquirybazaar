@@ -1,17 +1,17 @@
 const bannerData = [
   {
     id: 1,
-    image: "/cc.jpeg",
+    image: "/cc.jpg",
     link: "/products",
   },
   {
     id: 2,
-    image: "/dd.jpeg",
+    image: "/dd.jpg",
     link: "/services",
   },
   {
     id: 3,
-    image: "/cc.jpeg",
+    image: "/cc.jpg",
     link: "/contact",
   },
 ];
