@@ -59,6 +59,7 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
           <div className="bg-white/80 backdrop-blur-lg border border-gray-200 p-5 sm:p-4 ">
             <h2 className="text-[22px] sm:text-[24px] text-center font-semibold text-black leading-snug">
               Tell us what you need
+              
             </h2>
 
        
