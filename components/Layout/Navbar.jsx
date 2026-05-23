@@ -88,7 +88,7 @@ export default function Navbar() {
             </button>
 
             {/* REGISTER BUTTON (VISIBLE ALWAYS) */}
-      <div className="md:hidden mr-5">
+      <div className="md:hidden ml-5">
   <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
 
 
@@ -99,18 +99,14 @@ export default function Navbar() {
       className="flex-1 bg-transparent outline-none text-[12px] text-gray-700 placeholder:text-gray-400"
     />
 
-    {/* Mic Icon */}
-    <button className="ml-2 text-gray-500">
-      <Search size={18} />
-    </button>
-
+   
 
   </div>
 </div>
             {/* HAMBURGER (MOBILE ONLY) */}
             <button
               onClick={() => setMobileMenu(!mobileMenu)}
-              className="md:hidden text-white"
+              className="md:hidden text-black"
             >
               {mobileMenu ? <X size={26} /> : <Menu size={26} />}
             </button>
