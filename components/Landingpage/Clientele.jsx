@@ -96,7 +96,7 @@ export default function ClienteleSlider() {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="border-t border-gray-200 px-4 md:px-10 py-1 flex flex-col md:flex-row items-center justify-between gap-2 text-[14px]">
+        <div className="border-t border-gray-200 px-4 md:px-10 py-1 md:py-2 flex flex-col md:flex-row items-center justify-between gap-2 text-[14px]">
 
           <div className="flex items-center gap-2 text-gray-600">
             <span className="w-2 h-2 bg-green-400 rounded-full"></span>
