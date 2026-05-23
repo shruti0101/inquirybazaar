@@ -83,7 +83,7 @@ export default function Navbar() {
             </nav>
 
 
-              <button className="bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
+              <button className="hidden md:block bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
               Register Free →
             </button>
 
