@@ -195,7 +195,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       className="object-cover"
     />
 
-    <div className="absolute inset-0 bg-black/40 flex flex-col justify-center px-3">
+    <div className="absolute inset-0 bg-black/20 flex flex-col justify-center px-3">
       <h2 className="text-white relative text-[15px] font-semibold leading-snug mb-2">
         Looking for a{" "}
         <span className="text-[#FCD34D]">product?</span>
@@ -216,7 +216,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
       className="object-cover"
     />
 
-    <div className="absolute inset-0 bg-black/40 flex flex-col justify-center px-3">
+    <div className="absolute inset-0 bg-black/20 flex flex-col justify-center px-3">
       <h2 className="text-white text-[15px] font-semibold leading-snug mb-2 relative">
         Grow business{" "}
         <span className="text-[#FCD34D]">10x faster</span>
@@ -231,9 +231,9 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 </div>
 
         {/* MORE VALUE ADDS */}
-    <section className="w-full px-2 sm:px-4 md:px-6 py-6 bg-white relative">
+    <section className="w-full px-2 sm:px-4 md:px-6 py-3 bg-white relative">
 
-  <h2 className="text-[16px] sm:text-[18px] font-semibold text-gray-800 mb-4">
+  <h2 className="text-[16px] sm:text-[18px] font-semibold text-gray-800 mb-2">
     More Value Adds
   </h2>
 
