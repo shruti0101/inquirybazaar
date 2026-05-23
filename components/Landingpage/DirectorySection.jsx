@@ -120,14 +120,14 @@ export default function CategorySection({ data }) {
         {/* LEFT IMAGE */}
         <div className="col-span-12 md:col-span-4">
           <div className="bg-gray-100 ">
-        <Image
-  src={data.mainImage}
-  alt={data.title}
-  width={400}
-  height={500}
-  className="object-cover h-[160px] sm:h-[220px] md:h-[240px] w-full"
-  unoptimized
-/>
+            <Image
+              src={data.mainImage}
+              alt={data.title}
+              width={400}
+              height={500}
+              className="object-cover h-[160px] sm:h-[220px] md:h-[240px] w-full"
+              
+            />
           </div>
         </div>
 
@@ -138,14 +138,13 @@ export default function CategorySection({ data }) {
               
               {/* ICON */}
               <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
-         <Image
-  src={item.image}
-  alt={item.title}
-  width={70}
-  height={66}
-  className="object-contain"
-  unoptimized
-/>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={70}
+                  height={66}
+                  className="object-contain"
+                />
               </div>
 
               {/* TEXT */}
@@ -154,13 +153,18 @@ export default function CategorySection({ data }) {
                   {item.title}
                 </h3>
 
-                <div className="flex flex-col text-xs sm:text-sm text-orange-600">
-                  {item.links.map((link, i) => (
-                    <Link key={i} href="#" className="hover:underline">
-                      {link}
-                    </Link>
-                  ))}
-                </div>
+          <div className="flex flex-col text-xs sm:text-sm text-orange-600">
+  {item.links.map((link, i) => (
+    <Link
+      key={i}
+      href="#"
+      className="hover:underline flex items-center gap-1"
+    >
+      <span className="w-1 h-1 rounded-full bg-orange-500"></span>
+      {link}
+    </Link>
+  ))}
+</div>
               </div>
 
             </div>

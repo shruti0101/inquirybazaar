@@ -26,7 +26,7 @@ export default function ClienteleSlider() {
 
 
     
-    <section className="bg-[#f5f2ef] py-3 px-4 ">
+    <section className="bg-white py-3 px-4 ">
 
       {/* HEADER */}
       <div className="max-w-[1400px] mx-auto flex items-center justify-between mb-2">
@@ -40,10 +40,10 @@ export default function ClienteleSlider() {
       </div>
 
       {/* CARD */}
-      <div className="max-w-[1400px] mx-auto bg-white rounded-[28px] border border-gray-200 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto bg-[#f5f2ef] rounded-[28px] border border-gray-200 overflow-hidden">
 
         {/* SLIDER */}
-        <div className="px-4  py-10 overflow-hidden">
+        <div className="px-4  py-4 overflow-hidden">
         <Swiper
   modules={[Autoplay]}
   loop={true}
@@ -96,11 +96,11 @@ export default function ClienteleSlider() {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="border-t border-gray-200 px-4 md:px-10 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-[14px]">
+        <div className="border-t border-gray-200 px-4 md:px-10 py-1 flex flex-col md:flex-row items-center justify-between gap-2 text-[14px]">
 
           <div className="flex items-center gap-2 text-gray-600">
             <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-            100+ verified brands active on InquiryBazaar
+            100+ verified brands active on IB
           </div>
 
           <div className="text-gray-600">

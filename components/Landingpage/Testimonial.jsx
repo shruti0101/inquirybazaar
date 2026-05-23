@@ -47,8 +47,8 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white py-10 text-center max-w-6xl mx-auto px-6">
-      <h2 className="text-3xl font-semibold mb-8 text-gray-900">
+    <section className="bg-white pt-3 text-center max-w-6xl mx-auto px-6">
+      <h2 className="text-3xl font-semibold  text-gray-900">
         What Our Clients Say
       </h2>
 
@@ -70,7 +70,7 @@ export default function TestimonialSection() {
           <SwiperSlide key={index} className="!h-auto flex">
 
             {/* CARD */}
-            <div className="flex flex-col w-full bg-white rounded-2xl shadow-lg p-6 h-full">
+            <div className="flex flex-col w-full bg-white rounded-2xl shadow-lg p-4 h-full">
 
               {/* Logo */}
               <div className="mb-4 flex items-center justify-center h-12">
@@ -87,7 +87,7 @@ export default function TestimonialSection() {
               </p>
 
               {/* Name */}
-              <p className="mt-4 font-semibold capitalize text-gray-900">
+              <p className="font-semibold capitalize text-gray-900">
                 {name}
               </p>
 

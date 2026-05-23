@@ -7,7 +7,7 @@ export default function Banner({ data }) {
   if (!data || !data.image) return null;
 
   return (
-    <div className="max-w-7xl mx-auto pt-4">
+    <div className="hidden md:block max-w-7xl mx-auto pt-4">
       <Link href={data.link || "#"}>
         <div className="w-full relative rounded-lg overflow-hidden">
           <Image

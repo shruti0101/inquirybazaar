@@ -15,15 +15,15 @@ export default function HeroInquiry() {
       {/* BACKGROUND */}
    
 
-      <div className="relative px-4 sm:px-6 md:px-8 py-3 grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-start max-w-7xl mx-auto">
+      <div className="relative px-4 sm:px-6 md:px-8  grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-start max-w-7xl mx-auto">
         {/* ================= LEFT ================= */}
         <div>
-          <h1 className="text-[28px] sm:text-[32px]  leading-[36px] sm:leading-[46px] md:leading-[56px] font-bold text-[#1f2937]">
+          <h1 className="text-[24px] sm:text-[32px]  leading-[36px] sm:leading-[46px] md:leading-[56px] font-bold text-[#1f2937]">
             We connect {" "}
             <span className="text-[#e85d12]">Buyers & Sellers</span>
           </h1>
 
-          <p className=" text-[14px]  text-black max-w-full sm:max-w-[600px] leading-relaxed">
+          <p className=" text-[14px] hidden md:block  text-black max-w-full sm:max-w-[600px] leading-relaxed">
 Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to verified buyers and trusted suppliers—making trade more reliable and efficient
           </p>
 
@@ -56,7 +56,7 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
 
    
         <div className="md:pl-4 lg:pl-6">
-          <div className="bg-white/80 backdrop-blur-lg border border-gray-200 p-5 sm:p-4 ">
+          <div className="bg-white/80 backdrop-blur-lg border border-gray-200  p-4 ">
             <h2 className="text-[22px] sm:text-[24px] text-center font-semibold text-black leading-snug">
               Tell us what you need
               
@@ -98,7 +98,7 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
             </form>
 
             {/* BENEFITS */}
-            <div className="mt-5 md:mt-6 space-y-2 md:space-y-3 text-[13px] sm:text-[14px]">
+            <div className="hidden md:block mt-5 md:mt-6 space-y-2 md:space-y-3 text-[13px] sm:text-[14px]">
               <div className="flex items-center gap-3 text-gray-600">
                 <ShieldCheck size={14} className="text-[#10316C]" />
                 100% genuine inquiries {"  "}

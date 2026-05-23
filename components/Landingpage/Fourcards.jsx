@@ -1,55 +1,79 @@
 "use client";
 
-import { Factory, BarChart4, Focus , Globe } from "lucide-react";
+import { Factory, BarChart4, Focus, Globe } from "lucide-react";
+
+// SWIPER
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function IndustrySection() {
+
+  const cards = [
+    {
+      icon: <Factory className="w-6 h-6 text-orange-500" />,
+      title: "Har Industry, Har Category",
+      desc: "Ek platform jahan har type ka business connect hota hai",
+    },
+    {
+      icon: <BarChart4 className="w-6 h-6 text-orange-500" />,
+      title: "Sabko Equal Growth",
+      desc: "Opportunity sabke liye same, growth effort ke hisaab se",
+    },
+    {
+      icon: <Focus className="w-6 h-6 text-orange-500" />,
+      title: "Right Buyers Milenge",
+      desc: "Aapke products ke liye targeted buyers yahan available hai",
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-orange-500" />,
+      title: "Global Market Reach",
+      desc: "Aapka business India se global market tak grow karega",
+    },
+  ];
+
   return (
     <section className="w-full py-8 px-4 bg-gradient-to-b from-[#f6e9e4] to-[#f3dfd6] relative overflow-hidden">
-      
-      {/* subtle stars */}
+
+      {/* Background dots */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-10 left-10 w-2 h-2 bg-white rounded-full blur-sm"></div>
-        <div className="absolute top-32 right-20 w-1.5 h-1.5 bg-whit  e rounded-full blur-sm"></div>
+        <div className="absolute top-32 right-20 w-1.5 h-1.5 bg-white rounded-full blur-sm"></div>
         <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-white rounded-full blur-sm"></div>
         <div className="absolute bottom-10 right-10 w-1.5 h-1.5 bg-white rounded-full blur-sm"></div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
 
-       
-       
-        {/* Grid */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-
-          {/* Card 1 */}
-          <Card
-            icon={<Factory className="w-8 h-8 text-orange-500" />}
-            title="Har Industry, Har Category — Sab Yahan Hai"
-            desc="Ek platform jahan har type ka business connect hota hai"
-          />
-
-          {/* Card 2 */}
-          <Card
-            icon={<BarChart4 className="w-8 h-8 text-orange-500" />}
-            title="Chhota ho ya bada supplier — sabko equal growth"
-            desc="Opportunity sabke liye same, growth aapke effort ke hisaab se"
-          />
-
-          {/* Card 3 */}
-          <Card
-            icon={<Focus className="w-8 h-8 text-orange-500" />}
-            title="Jo aap bechte ho, uske buyers yahan milenge"
-            desc="Right product ke liye right audience target ki jaati hai"
-          />
-
-          {/* Card 4 */}
-          <Card
-            icon={<Globe className="w-8 h-8 text-orange-500" />}
-            title="India se lekar Global market tak reach"
-            desc="Aapka business sirf local nahi, global level tak grow karega"
-          />
-
+        {/* MOBILE SLIDER */}
+        <div className="md:hidden">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={10}
+            slidesPerView={2.1}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+          >
+            {cards.map((card, index) => (
+              <SwiperSlide key={index}>
+                <Card {...card} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
+
+        {/* DESKTOP GRID */}
+        <div className="hidden md:grid grid-cols-4 gap-8">
+          {cards.map((card, index) => (
+            <Card key={index} {...card} />
+          ))}
+        </div>
+
       </div>
     </section>
   );
@@ -58,24 +82,25 @@ export default function IndustrySection() {
 
 function Card({ icon, title, desc }) {
   return (
-    <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-xl md:rounded-2xl p-4 md:p-6 shadow-sm hover:shadow-md transition duration-300 text-center">
-      
+    <div className="bg-white/80 backdrop-blur-md border border-white/40 rounded-2xl p-4 shadow-sm hover:shadow-md transition duration-300 text-center h-[190px] flex flex-col justify-center">
+
       {/* Icon */}
       <div className="flex justify-center mb-3">
-        <div className="p-2 md:p-3 rounded-lg md:rounded-xl bg-orange-50">
+        <div className="p-3 rounded-xl bg-orange-50">
           {icon}
         </div>
       </div>
 
       {/* Title */}
-      <h3 className="text-xs sm:text-sm md:text-md font-semibold text-gray-700 leading-snug mb-2">
+      <h3 className="text-[13px] font-semibold text-black leading-snug mb-2">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed">
+      <p className="text-[11px] md:text-[14px] text-black leading-relaxed">
         {desc}
       </p>
+
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import { Search, User, ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
 
   return (
     <header className="w-full fixed top-0 z-50 font-sans">
-<div className="w-full bg-[#183B63] text-white">
+<div className="w-full bg-[#183B63] hidden md:block text-white">
       <div className="mx-auto flex w-full px-15 flex-col items-center justify-between gap-3 py-2 text-sm md:flex-row md:gap-0">
         
         {/* Left Section */}
@@ -62,28 +63,50 @@ export default function Navbar() {
       </div>
     </div>
       {/* ================= TOP NAV ================= */}
-      <div className="bg-[#0D2340] h-[58px] flex items-center">
+      <div className="bg-white flex h-[58px]  items-center">
         <div className=" mx-auto w-full flex items-center justify-between px-4 md:px-12">
 
-          <p className="text-2xl md:text-3xl font-bold text-white">
-            Inquiry <span className="text-[#ec771c]">Bazaar</span>
+          <p className="text-xl md:text-3xl font-semibold text-black mt-2 ">
+          <Image src="/logocheck.png" alt="Logo" width={280} height={60} >
+
+          </Image>
           </p>
 
           <div className="flex items-center gap-3 md:gap-8">
 
             {/* DESKTOP NAV (UNCHANGED) */}
-            <nav className="hidden md:flex items-center gap-8 text-[18px] text-white">
+            <nav className="hidden md:flex items-center gap-8 text-[18px] text-black">
               <Link href="#">Home</Link>
               <Link href="#">Request A Quote</Link>
               <Link href="#">Contact Us</Link>
               <Link href="#">All Categories</Link>
             </nav>
 
-            {/* REGISTER BUTTON (VISIBLE ALWAYS) */}
-            <button className="bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
+
+              <button className="bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
               Register Free →
             </button>
 
+            {/* REGISTER BUTTON (VISIBLE ALWAYS) */}
+      <div className="md:hidden mr-5">
+  <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
+
+
+    {/* Search Input */}
+    <input
+      type="text"
+      placeholder="Best B2B Portal, Mar..."
+      className="flex-1 bg-transparent outline-none text-[12px] text-gray-700 placeholder:text-gray-400"
+    />
+
+    {/* Mic Icon */}
+    <button className="ml-2 text-gray-500">
+      <Search size={18} />
+    </button>
+
+
+  </div>
+</div>
             {/* HAMBURGER (MOBILE ONLY) */}
             <button
               onClick={() => setMobileMenu(!mobileMenu)}
@@ -110,6 +133,11 @@ export default function Navbar() {
 </div>
 
 
+    {/* MAIN SEARCH */}
+          <button className="bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
+              Register Free →
+            </button>
+
           {/* CITY SEARCH */}
           <div className="flex items-center bg-[#FAFAF8] border-2 border-[#ec771c] rounded-md overflow-hidden h-[50px]">
             <input
@@ -121,17 +149,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* MAIN SEARCH */}
-          <div className="flex items-center">
-            <input
-              placeholder="Search for products, supplier"
-              className="w-full h-[50px] border-2 border-[#ec771c] px-4 text-[14px] rounded-l-md outline-none bg-[#FAFAF8]"
-            />
-            <button className="bg-[#ec771c] h-[50px] px-5 flex items-center gap-2 text-white text-[14px] font-medium rounded-r-md">
-              <Search size={16} />
-              Search
-            </button>
-          </div>
+      
 
           {/* BUTTONS */}
           <div className="grid grid-cols-2 gap-3">

@@ -35,7 +35,7 @@ export default function HowItWorks() {
 
         {/* TITLE */}
         <h2 className="text-white text-[25px] md:text-[42px] font-bold mb-5">
-          How InquiryBazaar Works
+          How Inquiry Bazaar Works
         </h2>
 
         {/* STEPS */}
