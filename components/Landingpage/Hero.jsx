@@ -189,7 +189,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
   {/* IMAGE 1 */}
   <div className="relative h-[110px] overflow-hidden rounded-2xl shadow-sm">
     <Image
-      src="/mobile1.jpeg"
+      src="/aa.webp"
       fill
       alt="Looking for product"
       className="object-cover"
@@ -210,7 +210,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
   {/* IMAGE 2 */}
   <div className="relative h-[110px] overflow-hidden rounded-2xl shadow-sm">
     <Image
-      src="/mobile2.jpeg"
+      src="/bb.webp"
       fill
       alt="Grow business faster"
       className="object-cover"

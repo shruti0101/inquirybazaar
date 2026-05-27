@@ -158,9 +158,9 @@ export default function CategorySection({ data }) {
     <Link
       key={i}
       href="#"
-      className="hover:underline flex items-center gap-1"
+    className="hover:underline flex items-start gap-2 leading-[1.2]"
     >
-      <span className="w-1 h-1 rounded-full bg-orange-500"></span>
+     <span className="w-1 h-1 rounded-full bg-orange-500 mt-[5px] flex-shrink-0"></span>
       {link}
     </Link>
   ))}

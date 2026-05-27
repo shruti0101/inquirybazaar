@@ -83,6 +83,40 @@ const truncate = (text, limit = 12) =>
         ) : (
           <p></p>
         )}
+
+
+
+{/* WRITE REVIEW BOX */}
+{/* WRITE REVIEW BOX */}
+<div className="mt-5 bg-[#F5EDB7] rounded-2xl p-4 shadow-sm">
+  
+  {/* TOP */}
+  <a href="https://www.google.com/search?sca_esv=69538f729b95e5bf&sxsrf=ANbL-n7uxvdh_X3dUXXDmVfX6zpqoFp5TQ:1779880445560&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOXT6y7tboRhshNIYWu8MITTAmcuFKzjNF4w6QsR-blybB0U6kBMPLoIJItMf7aNF1VHKpimG1Jvbaa2eynmTJUyPv9T9KMuCqO4XwVlbq7paeRMPrJLUAizKnT4ECpPqMmKM2qCnwoF72Qtglqz7qWqsTnlq34iUgaQIpCJkAVIjAVOj1M--QPlCpy7H2wlFlS1I1adJeDd4oRibASIywk3XQjQN8zpMfrcuHhau6538WJSnvw%3D%3D&q=Promozione+Branding+Pvt.+Ltd+%7C+Best+Digital+Marketing+Agency+In+Delhi+NCR+%7C+Web+Development,SEO,+PPC,+SMM+Agency+Reviews&sa=X&ved=2ahUKEwj128ytq9mUAxX26jgGHY5jI7EQ0bkNegQIKhAH&biw=1536&bih=695&dpr=1.25" className="flex items-start gap-3">
+    
+    {/* ICON */}
+    <div className="w-14 h-14 flex-shrink-0">
+      <img
+        src="/write-review-icon.webp"
+        alt="review"
+        className="w-full h-full object-contain"
+      />
+    </div>
+
+    {/* TEXT */}
+    <div>
+      <h3 className="text-[28px] leading-none font-bold text-[#1B2A41]">
+        Write a Review
+      </h3>
+
+      <p className="text-[15px] leading-[1.4] text-[#4B5563] mt-2 max-w-[250px]">
+        Share your experiences with the products
+      </p>
+    </div>
+  </a>
+
+
+</div>
+
       </div>
     </>
   );
