@@ -1,7 +1,7 @@
 const bannerData = [
   {
     id: 1,
-    image: "/cc.jpeg",
+    image: "/b3.jpeg",
     link: "/products",
   },
   {
