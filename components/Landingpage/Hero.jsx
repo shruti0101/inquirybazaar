@@ -39,6 +39,28 @@ const data2 = [
 ];
 
 
+// FRONTEND BANNERS
+const banners = [
+  {
+    title: "Premium Corporate Gifts",
+    subtitle: "Trusted Importer & Wholesaler",
+    desktopImage: "/b1.jpeg",
+    mobileImage: "/mob3.jpeg",
+  },
+  {
+    title: "Latest Smart Gadgets",
+    subtitle: "Explore Trending Products",
+    desktopImage: "/b2.jpeg",
+    mobileImage: "/mob2.jpeg",
+  },
+  {
+    title: "Fitness & Health Collection",
+    subtitle: "Stay Healthy Everyday",
+    desktopImage: "/b3.jpeg",
+    mobileImage: "/mob3.jpeg",
+  },
+];
+
 const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
   return (
 
@@ -48,45 +70,37 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
       <div className="w-full">
 
-        {/* SLIDER */}
-        {data?.banners?.length && (
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            autoplay={{ delay: 10000 }}
-            pagination={{ clickable: true }}
-            loop
-          >
-            {data.banners.map((b, i) => (
-              <SwiperSlide key={i}>
-                <div className="relative rounded-sm overflow-hidden">
+      {/* SLIDER */}
+<Swiper
+  modules={[Autoplay, Pagination]}
+  autoplay={{ delay: 10000 }}
+  pagination={{ clickable: true }}
+  loop
+>
+  {banners.map((b, i) => (
+    <SwiperSlide key={i}>
+      <div className="relative rounded-sm overflow-hidden">
+        
+        <picture>
+          {/* Mobile Image */}
+          <source
+            media="(max-width: 768px)"
+            srcSet={b.mobileImage}
+          />
 
-              <picture>
-  {/* Mobile Image */}
-  <source
-    media="(max-width: 768px)"
-    srcSet={mobileImages[i % mobileImages.length]}
-  />
+          {/* Desktop Image */}
+          <img
+            src={b.desktopImage}
+            alt={b.title}
+            className="w-full h-auto object-cover"
+          />
+        </picture>
 
-  {/* Desktop Image */}
-  <img
-    src={b.image}
-    alt={b.title}
-    className="w-full h-auto object-cover"
-  />
-</picture>
-
-                  <div className="absolute top-4 sm:top-6 md:top-10 left-4 sm:left-6 md:left-10 text-white max-w-[90%]">
-                    <p className="text-xs sm:text-sm md:text-lg">{b.subtitle}</p>
-                    <h2 className="text-sm sm:text-xl md:text-3xl font-bold leading-tight">
-                      {b.title}
-                    </h2>
-                  </div>
-
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
+      
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
         {/* GRID BANNERS */}
  <div className="hidden md:grid grid-cols-2 md:grid-cols-2 gap-2 sm:gap-4 mt-4 ">

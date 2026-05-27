@@ -86,15 +86,15 @@ const truncate = (text, limit = 12) =>
 
 
 
+
 {/* WRITE REVIEW BOX */}
-{/* WRITE REVIEW BOX */}
-<div className="mt-5 bg-[#F5EDB7] rounded-2xl p-4 shadow-sm">
+<div className="mt-5 bg-[#F5EDB7] rounded-2xl h-[200px] p-4 shadow-sm">
   
   {/* TOP */}
-  <a href="https://www.google.com/search?sca_esv=69538f729b95e5bf&sxsrf=ANbL-n7uxvdh_X3dUXXDmVfX6zpqoFp5TQ:1779880445560&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOXT6y7tboRhshNIYWu8MITTAmcuFKzjNF4w6QsR-blybB0U6kBMPLoIJItMf7aNF1VHKpimG1Jvbaa2eynmTJUyPv9T9KMuCqO4XwVlbq7paeRMPrJLUAizKnT4ECpPqMmKM2qCnwoF72Qtglqz7qWqsTnlq34iUgaQIpCJkAVIjAVOj1M--QPlCpy7H2wlFlS1I1adJeDd4oRibASIywk3XQjQN8zpMfrcuHhau6538WJSnvw%3D%3D&q=Promozione+Branding+Pvt.+Ltd+%7C+Best+Digital+Marketing+Agency+In+Delhi+NCR+%7C+Web+Development,SEO,+PPC,+SMM+Agency+Reviews&sa=X&ved=2ahUKEwj128ytq9mUAxX26jgGHY5jI7EQ0bkNegQIKhAH&biw=1536&bih=695&dpr=1.25" className="flex items-start gap-3">
+  <a href="https://www.google.com/maps/place/Inquiry+Bazaar+%5C%5C+Hybrid+B2B+Marketplace/@28.6922061,77.1477074,17z/data=!3m1!4b1!4m6!3m5!1s0x390d03087fd1b4df:0xec224959e4ec6e13!8m2!3d28.6922061!4d77.1477074!16s%2Fg%2F11njwfyl1v?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" className="flex items-start gap-3">
     
     {/* ICON */}
-    <div className="w-14 h-14 flex-shrink-0">
+    <div className="w-14 mt-5 h-14 flex-shrink-0">
       <img
         src="/write-review-icon.webp"
         alt="review"
@@ -104,11 +104,11 @@ const truncate = (text, limit = 12) =>
 
     {/* TEXT */}
     <div>
-      <h3 className="text-[28px] leading-none font-bold text-[#1B2A41]">
+      <h3 className="text-[25px] mt-5 leading-none font-bold text-[#1B2A41]">
         Write a Review
       </h3>
 
-      <p className="text-[15px] leading-[1.4] text-[#4B5563] mt-2 max-w-[250px]">
+      <p className="text-[15px]  leading-[1.4] text-black mt-2 max-w-[250px]">
         Share your experiences with the products
       </p>
     </div>

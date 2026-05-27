@@ -34,3 +34,55 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+   {/* SLIDER */}
+        {data?.banners?.length && (
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 10000 }}
+            pagination={{ clickable: true }}
+            loop
+          >
+            {data.banners.map((b, i) => (
+              <SwiperSlide key={i}>
+                <div className="relative rounded-sm overflow-hidden">
+
+              <picture>
+  {/* Mobile Image */}
+  <source
+    media="(max-width: 768px)"
+    srcSet={mobileImages[i % mobileImages.length]}
+  />
+
+  {/* Desktop Image */}
+  <img
+    src={b.image}
+    alt={b.title}
+    className="w-full h-auto object-cover"
+  />
+</picture>
+
+                  <div className="absolute top-4 sm:top-6 md:top-10 left-4 sm:left-6 md:left-10 text-white max-w-[90%]">
+                    <p className="text-xs sm:text-sm md:text-lg">{b.subtitle}</p>
+                    <h2 className="text-sm sm:text-xl md:text-3xl font-bold leading-tight">
+                      {b.title}
+                    </h2>
+                  </div>
+
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )} -->
