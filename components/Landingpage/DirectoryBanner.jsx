@@ -58,6 +58,7 @@ export default function Banner({ data }) {
               rounded-xl
               backdrop-blur-sm
               transition
+              
             "
           >
             Post Requirement
