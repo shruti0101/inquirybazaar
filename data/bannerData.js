@@ -3,16 +3,56 @@ const bannerData = [
     id: 1,
     image: "/b3.jpeg",
     link: "/products",
+    buttons: [
+      {
+        text: "Register Free →",
+        href: "/register",
+        className:
+          "bg-[#F07B20] hover:bg-[#F07B20] text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2",
+      },
+      {
+        text: "Post Requirement",
+        href: "/post-requirement",
+        className:
+          "border-2 border-cyan-400 text-white hover:bg-cyan-400/10 font-semibold text-md px-3 py-3 rounded-xl backdrop-blur-sm transition",
+      },
+    ],
   },
+
   {
     id: 2,
     image: "/b2.jpeg",
     link: "/services",
+    buttons: [
+      {
+        text: "Get Quotation →",
+        href: "/register",
+        className:
+          "bg-[#F07B20] hover:bg-[#F07B20] text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2",
+      },
+      {
+        text: "Partner With Us",
+        href: "/post-requirement",
+        className:
+          "border-2 border-cyan-400 text-white hover:bg-cyan-400/10 font-semibold text-md px-3 py-3 rounded-xl backdrop-blur-sm transition",
+      },
+    ],
   },
+
   {
     id: 3,
-    image: "/b3.jpeg",
+    image: "/b1.jpeg",
     link: "/contact",
+    buttons: [
+      {
+        text: "Register Free ->",
+        href: "/contact",
+        className:
+          "bg-[#F07B20]  text-white font-semibold text-md px-6 py-3 rounded-xl transition",
+      },
+
+    
+    ],
   },
 ];
 

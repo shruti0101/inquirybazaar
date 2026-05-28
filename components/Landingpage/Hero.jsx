@@ -147,7 +147,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
     <div className="relative">
   <h2 className="text-white text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
-        Want to grow your business <span className="text-[#1E3A5F] ">10x faster? </span> 
+        Want to grow your business  <span className="text-[#1E3A5F] ">10x faster? </span> 
       </h2>
 
       <div className="hidden md:flex items-center mt-1 sm:mt-3">
@@ -218,7 +218,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
     <div className="absolute inset-0 bg-black/20 flex flex-col justify-center px-3">
       <h2 className="text-white text-[15px] font-semibold leading-snug mb-2 relative">
-        Grow business{" "}
+        Grow business{" "} <br />
         <span className="text-[#FCD34D]">10x faster</span>
       </h2>
 
