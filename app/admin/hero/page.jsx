@@ -113,63 +113,102 @@ export default function HeroAdmin() {
 
 
 
-        {/* MAIN BANNERS */}
-        <div className="bg-white  p-6 rounded-2xl shadow-sm border">
-          <div className="flex  gap-2 mb-4">
-            <Layers className="text-purple-600" />
-            <h2 className="text-lg font-semibold">Main Banners</h2>
-          </div>
+   {/* MAIN BANNERS */}
+<div className="bg-white p-6 rounded-2xl shadow-sm border">
+  <div className="flex gap-2 mb-4">
+    <Layers className="text-purple-600" />
+    <h2 className="text-lg font-semibold">Main Banners</h2>
+  </div>
 
-          <div className="space-y-4">
-            {data.banners.map((b, i) => (
-              <div
-                key={i}
-                className="border p-4 rounded-xl bg-gray-50 space-y-2"
-              >
-                <input
-                  placeholder="Title"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
-                  value={b.title}
-                  onChange={(e) => {
-                    const updated = [...data.banners];
-                    updated[i].title = e.target.value;
-                    setData({ ...data, banners: updated });
-                  }}
-                />
+  <div className="space-y-4">
+    {data.banners.map((b, i) => (
+      <div
+        key={i}
+        className="border p-4 rounded-xl bg-gray-50 space-y-3 relative group"
+      >
 
-                <input
-                  placeholder="Subtitle"
-               className="w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
-                  value={b.subtitle}
-                  onChange={(e) => {
-                    const updated = [...data.banners];
-                    updated[i].subtitle = e.target.value;
-                    setData({ ...data, banners: updated });
-                  }}
-                />
+        {/* DELETE BUTTON */}
+        <button
+          onClick={() => {
+            const updated = data.banners.filter(
+              (_, idx) => idx !== i
+            );
 
-                <input
-                  type="file"
-                  onChange={(e) => uploadImage(e.target.files[0], i, "banners")}
-                />
+            setData({
+              ...data,
+              banners: updated,
+            });
 
-                {b.image && (
-                  <img
-                    src={b.image}
-                    className="w-full h-32 object-cover rounded-lg"
-                  />
-                )}
-              </div>
-            ))}
-          </div>
+            toast.success("Banner deleted");
+          }}
+          className="
+            absolute
+            top-3
+            right-3
+            w-8
+            h-8
+            rounded-full
+            bg-red-500
+            text-white
+            text-sm
+            flex
+            items-center
+            justify-center
+            opacity-0
+            group-hover:opacity-100
+            transition
+            hover:scale-110
+          "
+        >
+          ✕
+        </button>
 
-          <button
-            onClick={addBanner}
-            className="mt-4 w-full border border-dashed py-2 rounded-lg hover:bg-gray-50"
-          >
-            + Add Banner
-          </button>
-        </div>
+        <input
+          placeholder="Title"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
+          value={b.title}
+          onChange={(e) => {
+            const updated = [...data.banners];
+            updated[i].title = e.target.value;
+            setData({ ...data, banners: updated });
+          }}
+        />
+
+        <input
+          placeholder="Subtitle"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
+          value={b.subtitle}
+          onChange={(e) => {
+            const updated = [...data.banners];
+            updated[i].subtitle = e.target.value;
+            setData({ ...data, banners: updated });
+          }}
+        />
+
+        <input
+          type="file"
+          onChange={(e) =>
+            uploadImage(e.target.files[0], i, "banners")
+          }
+        />
+
+        {b.image && (
+          <img
+            src={b.image}
+            className="w-full h-32 object-cover rounded-lg"
+          />
+        )}
+      </div>
+    ))}
+  </div>
+
+  <button
+    onClick={addBanner}
+    className="mt-4 w-full border border-dashed py-2 rounded-lg hover:bg-gray-50"
+  >
+    + Add Banner
+  </button>
+</div>
 
 
 

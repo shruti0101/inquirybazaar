@@ -304,7 +304,7 @@ const mobileBanners = [
   {/* IMAGE 1 */}
   <div className="relative h-[140px] ">
     <Image
-      src="/mobilee.png"
+      src="/mobile2-2.jpeg"
    fill
       alt="Looking for product"
       className="object-cover"
@@ -316,7 +316,7 @@ const mobileBanners = [
         <span className="text-[#0D2340]">product?</span>
       </h2>
 
-      <button className="bg-[#f48335] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
+      <button className="bg-[#f48335] text-white text-[11px] px-2 py-1.5 rounded-md w-fit">
         Post Requirement →
       </button>
     </div>
@@ -337,7 +337,7 @@ const mobileBanners = [
         <span className="text-[#0D2340]">10x faster</span>
       </h2>
 
-      <button className="bg-[#24457a] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
+      <button className="bg-[#24457a] text-white text-[11px] px-2 py-1.5 rounded-md w-fit">
         Free Listing →
       </button>
     </div>

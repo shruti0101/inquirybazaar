@@ -89,7 +89,7 @@ export default function FeaturedProducts({ data }) {
       </section>
 
 {/* BANNER */}
-<section className="mt-6">
+<section className="mt-6 hidden md:block">
 
   <div className="relative overflow-hidden rounded-md">
 
@@ -106,8 +106,6 @@ export default function FeaturedProducts({ data }) {
       "
     />
 
-    {/* OVERLAY */}
-    <div className="absolute inset-0 bg-black/20" />
 
     {/* BUTTONS */}
     <div
@@ -128,22 +126,7 @@ export default function FeaturedProducts({ data }) {
 
         <button
           className="
-            border-2
-            border-cyan-400
-            bg-white/10
-            text-white
-            hover:bg-cyan-400/10
-            font-semibold
-            text-xs
-            md:text-md
-            px-4
-            md:px-5
-            py-2.5
-            md:py-3
-            rounded-xl
-            backdrop-blur-md
-            transition-all
-            duration-300
+          border-2 border-cyan-400 text-white hover:bg-cyan-400/10 font-semibold text-md px-3 py-3 rounded-xl backdrop-blur-sm transition
           "
         >
           Post Requirement
@@ -155,23 +138,7 @@ export default function FeaturedProducts({ data }) {
 
         <button
           className="
-            bg-[#F07B20]
-            hover:bg-[#e96d0d]
-            text-white
-            font-semibold
-            text-xs
-            md:text-md
-            px-4
-            md:px-5
-            py-2.5
-            md:py-3
-            rounded-xl
-            shadow-lg
-            transition-all
-            duration-300
-            flex
-            items-center
-            gap-2
+           bg-[#F07B20] hover:bg-[#F07B20] text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2
           "
         >
           Register Free →

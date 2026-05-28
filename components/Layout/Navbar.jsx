@@ -5,10 +5,15 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
+import  RequestQuoteModal from "@/components/Layout/Requestquote";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const dropdownRef = useRef(null);
+
+    const [isOpen, setIsOpen] = useState(false);
+
+
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -21,6 +26,12 @@ export default function Navbar() {
   }, []);
 
   return (
+
+
+    <>
+    
+    
+
     <header className="w-full fixed top-0 z-50 font-sans">
 <div className="w-full bg-[#183B63] hidden md:block text-white">
       <div className="mx-auto flex w-full px-15 flex-col items-center justify-between gap-3 py-2 text-sm md:flex-row md:gap-0">
@@ -77,9 +88,9 @@ export default function Navbar() {
             {/* DESKTOP NAV (UNCHANGED) */}
             <nav className="hidden md:flex items-center gap-8 text-[18px] text-black">
               <Link href="#">Home</Link>
-              <Link href="#">Request A Quote</Link>
+              <button onClick={()=> setIsOpen(true)}>Request A Quote</button>
               <Link href="#">Contact Us</Link>
-              <Link href="#">All Categories</Link>
+              <Link href="dir.inquirybazaar.com">All Categories</Link>
             </nav>
 
 
@@ -250,5 +261,12 @@ export default function Navbar() {
       </div>
 
     </header>
+
+
+ <RequestQuoteModal isOpen={isOpen} setIsOpen={setIsOpen} />
+
+
+    </>
+
   );
 }

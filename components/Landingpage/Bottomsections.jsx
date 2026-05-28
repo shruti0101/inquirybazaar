@@ -67,18 +67,86 @@ export default function Footer() {
               <p>Committed to buyer interests to provide a smooth shopping experience.</p>
             </div>
           </div>
+{/* SOCIAL */}
+<div>
+  <p className="font-semibold text-[15px] mb-2">
+    Follow us on
+  </p>
 
-          {/* SOCIAL */}
-          <div>
-            <p className="font-semibold text-[15px] mb-2">Follow us on</p>
-            <div className="flex gap-4 text-[16px]">
-              <FaFacebookF />
-           
-              <FaInstagram />
-           
-              <FaLinkedinIn />
-            </div>
-          </div>
+  <div className="flex gap-4 text-[16px]">
+
+    {/* FACEBOOK */}
+    <a
+      href="https://www.facebook.com/profile.php?id=61562989183794"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        w-9 h-9
+        rounded-full
+        border
+        border-gray-300
+        flex
+        items-center
+        justify-center
+        hover:bg-[#1877F2]
+        hover:text-white
+        hover:border-[#1877F2]
+        transition-all
+        duration-300
+      "
+    >
+      <FaFacebookF />
+    </a>
+
+    {/* INSTAGRAM */}
+    <a
+      href="https://www.instagram.com/inquirybazaar/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        w-9 h-9
+        rounded-full
+        border
+        border-gray-300
+        flex
+        items-center
+        justify-center
+        hover:bg-gradient-to-r
+        hover:from-pink-500
+        hover:to-orange-400
+        hover:text-white
+        transition-all
+        duration-300
+      "
+    >
+      <FaInstagram />
+    </a>
+
+    {/* LINKEDIN */}
+    <a
+      href="https://www.linkedin.com/company/inquiry-bazaar/?viewAsMember=true"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        w-9 h-9
+        rounded-full
+        border
+        border-gray-300
+        flex
+        items-center
+        justify-center
+        hover:bg-[#0A66C2]
+        hover:text-white
+        hover:border-[#0A66C2]
+        transition-all
+        duration-300
+      "
+    >
+      <FaLinkedinIn />
+    </a>
+
+  </div>
+</div>
 
         </div>
       </div>
