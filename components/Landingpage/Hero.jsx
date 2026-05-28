@@ -47,10 +47,10 @@ const mobileBanners = [
 
     buttons: [
       {
-        text: "Register",
+        text: "Register Free ->",
         link: "/register",
         className:
-          "bg-[#F07B20] text-white px-2 py-2 rounded-lg text-sm font-semibold",
+          "bg-[#F07B20] text-white px-1 py-2 rounded-lg text-[11px] font-semibold",
       },
 
     
@@ -302,42 +302,42 @@ const mobileBanners = [
 <div className="grid md:hidden grid-cols-2 gap-3 mt-4">
 
   {/* IMAGE 1 */}
-  <div className="relative h-[110px] ">
+  <div className="relative h-[140px] ">
     <Image
-      src="/mobile1-1.jpeg"
-      fill
+      src="/mobilee.png"
+   fill
       alt="Looking for product"
       className="object-cover"
     />
 
-    <div className="absolute inset-0  flex flex-col justify-center px-3">
-      <h2 className="text-black relative text-[15px] font-semibold leading-snug mb-2">
+    <div className="absolute inset-0  flex flex-col justify-center px-2">
+      <h2 className="text-black relative text-[17px] font-semibold leading-snug mb-2">
         Looking for a{" "}
         <span className="text-[#0D2340]">product?</span>
       </h2>
 
-      <button className="bg-[#24457a] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
+      <button className="bg-[#f48335] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
         Post Requirement →
       </button>
     </div>
   </div>
 
   {/* IMAGE 2 */}
-  <div className="relative h-[110px] overflow-hidden ">
+  <div className="relative h-[140px] overflow-hidden ">
     <Image
-      src="/mobile2-2.jpeg"
-      fill
+      src="/mobile1-1.jpeg"
+     fill
       alt="Grow business faster"
       className="object-cover"
     />
 
-    <div className="absolute inset-0  flex flex-col justify-center px-3">
-      <h2 className="text-black text-[15px] font-semibold leading-snug mb-2 relative">
+    <div className="absolute inset-0  flex flex-col justify-center px-2">
+      <h2 className="text-black text-[16px] font-semibold leading-snug mb-2 relative">
         Grow business{" "} <br />
         <span className="text-[#0D2340]">10x faster</span>
       </h2>
 
-      <button className="bg-[#f48335] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
+      <button className="bg-[#24457a] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
         Free Listing →
       </button>
     </div>

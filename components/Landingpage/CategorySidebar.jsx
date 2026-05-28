@@ -88,7 +88,7 @@ const truncate = (text, limit = 12) =>
 
 
 {/* WRITE REVIEW BOX */}
-<div className="mt-5 bg-[#F5EDB7] rounded-2xl h-[200px] p-4 shadow-sm">
+<div className="mt-5 bg-[#F5EDB7] rounded-2xl h-[150px] p-4 shadow-sm">
   
   {/* TOP */}
   <a href="https://www.google.com/maps/place/Inquiry+Bazaar+%5C%5C+Hybrid+B2B+Marketplace/@28.6922061,77.1477074,17z/data=!3m1!4b1!4m6!3m5!1s0x390d03087fd1b4df:0xec224959e4ec6e13!8m2!3d28.6922061!4d77.1477074!16s%2Fg%2F11njwfyl1v?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" className="flex items-start gap-3">

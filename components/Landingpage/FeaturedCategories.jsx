@@ -5,7 +5,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { useState } from "react";
 import RequestQuoteModal from "@/components/Layout/Requestquote";
-
+import Image from "next/image";
+import Link from "next/link";
 export default function FeaturedProducts({ data }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -86,6 +87,106 @@ export default function FeaturedProducts({ data }) {
           ))}
         </Swiper>
       </section>
+
+{/* BANNER */}
+<section className="mt-6">
+
+  <div className="relative overflow-hidden rounded-md">
+
+    {/* IMAGE */}
+    <Image
+      src="/b3.jpeg"
+      alt="banner"
+      width={2000}
+      height={700}
+      className="
+        w-full
+        h-auto
+        object-cover
+      "
+    />
+
+    {/* OVERLAY */}
+    <div className="absolute inset-0 bg-black/20" />
+
+    {/* BUTTONS */}
+    <div
+      className="
+        absolute
+        inset-x-0
+        bottom-4
+        flex
+        items-center
+        justify-center
+        gap-3
+        px-4
+        z-10
+      "
+    >
+
+      <Link href="/post-requirement">
+
+        <button
+          className="
+            border-2
+            border-cyan-400
+            bg-white/10
+            text-white
+            hover:bg-cyan-400/10
+            font-semibold
+            text-xs
+            md:text-md
+            px-4
+            md:px-5
+            py-2.5
+            md:py-3
+            rounded-xl
+            backdrop-blur-md
+            transition-all
+            duration-300
+          "
+        >
+          Post Requirement
+        </button>
+
+      </Link>
+
+      <Link href="/register">
+
+        <button
+          className="
+            bg-[#F07B20]
+            hover:bg-[#e96d0d]
+            text-white
+            font-semibold
+            text-xs
+            md:text-md
+            px-4
+            md:px-5
+            py-2.5
+            md:py-3
+            rounded-xl
+            shadow-lg
+            transition-all
+            duration-300
+            flex
+            items-center
+            gap-2
+          "
+        >
+          Register Free →
+        </button>
+
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
 
       <RequestQuoteModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
