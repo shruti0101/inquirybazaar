@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* Right Section */}
         <div>
           <button className="font-medium text-white transition hover:text-gray-300">
-            Write Review
+            Write Review ✍️
           </button>
         </div>
       </div>

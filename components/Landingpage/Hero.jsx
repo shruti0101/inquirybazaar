@@ -184,47 +184,44 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
 
  {/* MOBILE BANNERS */}
-<div className="grid md:hidden grid-cols-2 gap-3 mt-4">
+<div className="grid md:hidden grid-cols-2  mt-4">
 
   {/* IMAGE 1 */}
-  <div className="relative h-[110px] overflow-hidden rounded-2xl shadow-sm">
+  <div className="relative h-[110px] overflow-hidden ">
     <Image
-      src="/aa.webp"
+      src="/post-card-3.png"
       fill
       alt="Looking for product"
       className="object-cover"
     />
 
-    <div className="absolute inset-0 bg-black/20 flex flex-col justify-center px-3">
-      <h2 className="text-white relative text-[15px] font-semibold leading-snug mb-2">
+    <div className=" flex flex-col mt-8 justify-center px-3">
+      <h2 className="text-black relative text-[15px] font-semibold leading-snug mb-2">
         Looking for a{" "}
-        <span className="text-[#FCD34D]">product?</span>
+        <span className="text-blue-900">product?</span>
       </h2>
 
-      <button className="bg-[#f48335] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
-        Post Requirement →
-      </button>
     </div>
   </div>
 
   {/* IMAGE 2 */}
-  <div className="relative h-[110px] overflow-hidden rounded-2xl shadow-sm">
+  <div className="relative h-[110px] overflow-hidden ">
     <Image
-      src="/bb.webp"
+      src="/sell-card-3.png"
       fill
       alt="Grow business faster"
       className="object-cover"
     />
 
-    <div className="absolute inset-0 bg-black/20 flex flex-col justify-center px-3">
-      <h2 className="text-white text-[15px] font-semibold leading-snug mb-2 relative">
+    <div className="flex flex-col  mt-8 justify-center px-3">
+      <h2 className="text-white text-[14px] font-semibold leading-snug mb-2 relative">
         Grow business{" "} <br />
         <span className="text-[#FCD34D]">10x faster</span>
       </h2>
 
-      <button className="bg-[#24457a] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
+      {/* <button className="bg-[#24457a] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
         Free Listing →
-      </button>
+      </button> */}
     </div>
   </div>
 
