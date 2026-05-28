@@ -39,7 +39,65 @@ const data2 = [
 ];
 
 
-const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
+
+const mobileBanners = [
+  {
+    image: "/mob1.jpeg",
+
+
+    buttons: [
+      {
+        text: "Register",
+        link: "/register",
+        className:
+          "bg-[#F07B20] text-white px-2 py-2 rounded-lg text-sm font-semibold",
+      },
+
+    
+    ],
+  },
+
+  {
+    image: "/mob2.jpeg",
+
+  buttons: [
+      {
+        text: "Register Free",
+        link: "/sell",
+        className:
+          "bg-[#F47B1D] text-white px-1 py-1 rounded-lg text-[10px] ",
+      },
+
+      {
+        text: "Post Requirement",
+        link: "/contact",
+        className:
+          "border-1 border-cyan-400 text-white px-1 py-1 rounded-lg text-[10px] ",
+      },
+    ],
+  },
+
+  {
+    image: "/mob3.jpeg",
+
+
+    buttons: [
+      {
+        text: "Get Quotation",
+        link: "/sell",
+        className:
+          "bg-[#F47B1D] text-white px-1 py-1 rounded-lg text-[10px] ",
+      },
+
+      {
+        text: "Partner With Us",
+        link: "/contact",
+        className:
+          "border-1 border-cyan-400 text-white px-1 py-1 rounded-lg text-[10px] ",
+      },
+    ],
+  },
+];
   return (
 
     <>
@@ -48,7 +106,9 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
       <div className="w-full">
 
-        {/* SLIDER */}
+     
+<div className="hidden md:block">
+ {/* SLIDER */}
         {data?.banners?.length && (
           <Swiper
             modules={[Autoplay, Pagination]}
@@ -61,11 +121,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
                 <div className="relative rounded-sm overflow-hidden">
 
               <picture>
-  {/* Mobile Image */}
-  <source
-    media="(max-width: 768px)"
-    srcSet={mobileImages[i % mobileImages.length]}
-  />
+
 
   {/* Desktop Image */}
   <img
@@ -87,6 +143,65 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
             ))}
           </Swiper>
         )}
+
+
+</div>
+       
+
+{/* mobile banners */}
+
+  <div className="block md:hidden">
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 10000 }}
+        pagination={{ clickable: true }}
+        loop
+      >
+        {mobileBanners.map((b, i) => (
+          <SwiperSlide key={i}>
+            <div className="relative overflow-hidden">
+
+              {/* IMAGE */}
+              <img
+                src={b.image}
+                alt={b.title}
+                className="w-full h-auto object-cover"
+              />
+
+        
+
+              {/* CONTENT */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 text-white">
+
+                <p className="text-sm mb-2">
+                  {b.subtitle}
+                </p>
+
+                <h2 className="text-2xl font-bold leading-tight mb-5">
+                  {b.title}
+                </h2>
+
+                {/* BUTTONS */}
+                <div className="flex flex-col gap-3 absolute bottom-7">
+                  {b.buttons.map((btn, idx) => (
+                    <Link
+                      key={idx}
+                      href={btn.link}
+                      className={btn.className}
+                    >
+                      {btn.text}
+                    </Link>
+                  ))}
+                </div>
+
+              </div>
+
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+
 
         {/* GRID BANNERS */}
  <div className="hidden md:grid grid-cols-2 md:grid-cols-2 gap-2 sm:gap-4 mt-4 ">
@@ -147,7 +262,7 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
     <div className="relative">
   <h2 className="text-white text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
-        Want to grow your business  <span className="text-[#1E3A5F] ">10x faster? </span> 
+        Want to grow your business <span className="text-[#1E3A5F] ">10x faster? </span> 
       </h2>
 
       <div className="hidden md:flex items-center mt-1 sm:mt-3">
@@ -184,44 +299,47 @@ const mobileImages = ["/mob1.jpeg","/mob2.jpeg","/mob3.jpeg"];
 
 
  {/* MOBILE BANNERS */}
-<div className="grid md:hidden grid-cols-2  mt-4">
+<div className="grid md:hidden grid-cols-2 gap-3 mt-4">
 
   {/* IMAGE 1 */}
-  <div className="relative h-[110px] overflow-hidden ">
+  <div className="relative h-[110px] ">
     <Image
-      src="/post-card-3.png"
+      src="/mobile1-1.jpeg"
       fill
       alt="Looking for product"
       className="object-cover"
     />
 
-    <div className=" flex flex-col mt-8 justify-center px-3">
+    <div className="absolute inset-0  flex flex-col justify-center px-3">
       <h2 className="text-black relative text-[15px] font-semibold leading-snug mb-2">
         Looking for a{" "}
-        <span className="text-blue-900">product?</span>
+        <span className="text-[#0D2340]">product?</span>
       </h2>
 
+      <button className="bg-[#24457a] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
+        Post Requirement →
+      </button>
     </div>
   </div>
 
   {/* IMAGE 2 */}
   <div className="relative h-[110px] overflow-hidden ">
     <Image
-      src="/sell-card-3.png"
+      src="/mobile2-2.jpeg"
       fill
       alt="Grow business faster"
       className="object-cover"
     />
 
-    <div className="flex flex-col  mt-8 justify-center px-3">
-      <h2 className="text-white text-[14px] font-semibold leading-snug mb-2 relative">
+    <div className="absolute inset-0  flex flex-col justify-center px-3">
+      <h2 className="text-black text-[15px] font-semibold leading-snug mb-2 relative">
         Grow business{" "} <br />
-        <span className="text-[#FCD34D]">10x faster</span>
+        <span className="text-[#0D2340]">10x faster</span>
       </h2>
 
-      {/* <button className="bg-[#24457a] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
+      <button className="bg-[#f48335] text-white text-[10px] px-2 py-1.5 rounded-md w-fit">
         Free Listing →
-      </button> */}
+      </button>
     </div>
   </div>
 

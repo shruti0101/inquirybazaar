@@ -41,7 +41,7 @@ const bannerData = [
 
   {
     id: 3,
-    image: "/b1.jpeg",
+    image: "/b1-1.png",
     link: "/contact",
     buttons: [
       {
