@@ -134,9 +134,9 @@ export default function Navbar() {
 {/* MOBILE NAV LINKS */}
 <div className="space-y-2 text-[#0D2340] font-medium">
   <Link href="#" className="block py-2 border-b">Home</Link>
-  <Link href="#" className="block py-2 border-b">Request A Quote</Link>
-  <Link href="#" className="block py-2 border-b">Contact Us</Link>
-  <Link href="#" className="block py-2">All Categories</Link>
+  <button onClick={()=> setIsOpen(true)} className="block py-2 border-b">Request A Quote</button>
+  <Link href="contact-us" className="block py-2 border-b">Contact Us</Link>
+  <Link href="dir.inquirybazaar.com" className="block py-2">All Categories</Link>
 </div>
 
 
@@ -161,9 +161,12 @@ export default function Navbar() {
           {/* BUTTONS */}
           <div className="grid grid-cols-2 gap-3">
 
-            <button className="py-3 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[14px]">
+<Link href="/whytrustus">
+
+            <button className="py-3 px-1 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[14px]">
               🛡 Why Trust Us
             </button>
+</Link>
 
             <div className="relative" ref={dropdownRef}>
               <button
@@ -223,9 +226,14 @@ export default function Navbar() {
             </button>
           </div>
 
+
+<Link href="/whytrustus">
+
           <button className="py-2 px-5 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[15px] flex items-center ">
             🛡 Why Trust Us
           </button>
+</Link>
+
 
           <div className="relative" ref={dropdownRef}>
             <button
