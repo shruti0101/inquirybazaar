@@ -216,7 +216,7 @@ const mobileBanners = [
       className="w-full h-[160px] sm:h-[220px] md:h-[240px] object-cover"
     />
 
-    <div className="absolute inset-0 flex flex-col justify-center pl-2 md:pl-6  bg-black/10 ">
+    <div className="absolute inset-0 flex flex-col justify-center pl-2 md:pl-6   ">
 
       <h2 className="mt-3 text-black text-[20px] sm:text-lg md:text-2xl font-semibold leading-snug">
         Looking for a <br /> <span className="text-[#1753C5]">Quality Product?</span> 
@@ -236,7 +236,7 @@ const mobileBanners = [
       </div>
    
 
-      <button className="mt-2 sm:mt-3 mb-2 text-white px-1 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95">
+      <button className="mt-2 sm:mt-3 mb-2 text-black px-1 py-2 sm:px-4 sm:py-2 rounded-lg border  border-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95">
         Post As Per Requirement →
       </button>
 
@@ -255,7 +255,7 @@ const mobileBanners = [
       className="w-full h-[160px] sm:h-[220px] md:h-[240px] object-cover"
     />
 
-    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6  bg-black/10">
+    <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6  ">
 
     <div className="relative">
   <h2 className="text-black text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
@@ -275,7 +275,7 @@ const mobileBanners = [
         </span>
       </div>
 
-      <button className="hidden md:block mt-2 sm:mt-4 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
+      <button className="hidden md:block mt-2 sm:mt-4 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-lg border border-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
         Sell On Inquiry Bazaar →
       </button>
 

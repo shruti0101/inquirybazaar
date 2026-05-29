@@ -119,11 +119,11 @@ export default function Navbar() {
       <div className="bg-white flex h-[58px] border-b border-[#183B63] pb-3 items-center">
         <div className=" mx-auto w-full flex items-center justify-between px-2 md:px-12">
 
-          <p className=" font-semibold text-black mt-3  ">
+          <Link href="/" className=" font-semibold text-black mt-3  ">
           <Image  src="/logocheck.png" alt="Logo" width={280} height={60} >
 
           </Image>
-          </p>
+          </Link>
 
           <div className="flex items-center gap-3 md:gap-8">
 
