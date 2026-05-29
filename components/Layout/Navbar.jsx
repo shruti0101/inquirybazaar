@@ -115,7 +115,7 @@ export default function Navbar() {
 </div>
       </div>
     </div>
-      {/* ================= TOP NAV ================= */}
+      {/*  TOP NAV  */}
       <div className="bg-white flex h-[58px] border-b border-[#183B63] pb-3 items-center">
         <div className=" mx-auto w-full flex items-center justify-between px-2 md:px-12">
 

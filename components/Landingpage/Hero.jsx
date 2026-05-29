@@ -209,7 +209,7 @@ const mobileBanners = [
   {/* IMAGE 1 */}
   <div className="relative overflow-hidden rounded-xl w-full h-full">
     <Image
-      src="/aa.webp"
+      src="/1.png"
       width={600}
       height={350}
       alt="Hybrid B2B Marketplace in India"
@@ -218,31 +218,28 @@ const mobileBanners = [
 
     <div className="absolute inset-0 flex flex-col justify-center pl-2 md:pl-6  bg-black/10 ">
 
-      <h2 className=" text-white text-[19px] sm:text-lg md:text-2xl font-semibold leading-snug">
-        Looking for a <span className="text-[#FCD34D]">product?</span> 
+      <h2 className=" text-black text-[19px] sm:text-lg md:text-2xl font-semibold leading-snug">
+        Looking for a <br /> <span className="text-[#1753C5]">product?</span> 
       </h2>
 
-      <span className="hidden md:block text-white text-[10px] sm:text-[14px] w-full sm:w-80 mt-1 sm:mt-2 leading-snug">
-       Before making a purchase, make sure you've posted your buy requirement and connect directly with verified suppliers.
-      </span>
+<div className="hidden md:flex items-center mt-1 sm:mt-3">
+        <span className="text-black text-[10px] sm:text-[17px] leading-snug">
+          100% <br></br> Transparent 
+           
+        </span>
 
-      <button className="mt-2 sm:mt-4 mb-2 text-white px-1 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95">
+        <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-gray-500"></div>
+
+        <span className="text-black text-[10px] sm:text-[17px] leading-snug">
+          Direct Supplier <br></br> Contact
+        </span>
+      </div>
+   
+
+      <button className="mt-2 sm:mt-3 mb-2 text-white px-1 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95">
         Post As Per Requirement →
       </button>
 
-<div className="hidden md:flex gap-3 mt-3">
-  {/* Item 1 */}
-  <div className="flex items-center gap-2">
-    <span className="w-3 h-3 rounded-full bg-[#22d3a6]"></span>
-    <span className="text-[#8f96c9] text-xs">Direct supplier contact</span>
-  </div>
-
-  {/* Item 2 */}
-  <div className="flex items-center gap-2">
-    <span className="w-3 h-3 rounded-full bg-[#facc15]"></span>
-    <span className="text-[#8f96c9] text-xs">100% transparent</span>
-  </div>
-</div>
 
 
     </div>
@@ -251,7 +248,7 @@ const mobileBanners = [
   {/* IMAGE 2 */}
   <div className="relative overflow-hidden rounded-xl shadow-md ">
     <Image
-      src="/bb.webp"
+      src="/2.png"
       width={550}
       height={300}
       alt="Hybrid B2B Marketplace in India"
@@ -261,19 +258,19 @@ const mobileBanners = [
     <div className="absolute inset-0 flex flex-col justify-center p-2 sm:p-6  bg-black/10">
 
     <div className="relative">
-  <h2 className="text-white text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
-        Want to grow your business <span className="text-[#1E3A5F] ">10x faster? </span> 
+  <h2 className="text-black text-[18px] sm:text-lg md:text-2xl w-full sm:w-[280px] font-semibold leading-snug">
+        Want to grow your business <span className="text-[#F16D15] ">10x faster? </span> 
       </h2>
 
       <div className="hidden md:flex items-center mt-1 sm:mt-3">
-        <span className="text-white text-[10px] sm:text-[17px] leading-snug">
+        <span className="text-black text-[10px] sm:text-[17px] leading-snug">
           Showcase <br></br>
            product
         </span>
 
-        <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-white"></div>
+        <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-gray-500"></div>
 
-        <span className="text-white text-[10px] sm:text-[17px] leading-snug">
+        <span className="text-black text-[10px] sm:text-[17px] leading-snug">
           Get Free <br></br> listing
         </span>
       </div>
@@ -312,7 +309,7 @@ const mobileBanners = [
 
     <div className="absolute inset-0  flex flex-col justify-center px-2">
       <h2 className="text-black relative text-[15px] font-semibold leading-snug mb-2">
-        Looking for a{" "}
+        Looking for a <br />
         <span className="text-[#0D2340]">product?</span>
       </h2>
 
