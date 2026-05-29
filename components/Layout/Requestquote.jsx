@@ -327,6 +327,7 @@ Contact: ${form.phone}`;
         {/* CLOSE */}
         <button
           onClick={() => setIsOpen(false)}
+          
           className="absolute top-4 right-4 text-gray-500 hover:text-black"
         >
           <X />
