@@ -77,8 +77,8 @@ export default function Navbar() {
       <div className="bg-white flex h-[58px] border-b border-gray-300 pb-3 items-center">
         <div className=" mx-auto w-full flex items-center justify-between px-4 md:px-12">
 
-          <p className=" font-semibold text-black mt-3 ">
-          <Image src="/logocheck.png" alt="Logo" width={300} height={60} >
+          <p className=" font-semibold text-black mt-3  ">
+          <Image className="w-full h-auto" src="/logocheck.png" alt="Logo" width={300} height={60} >
 
           </Image>
           </p>
@@ -99,7 +99,7 @@ export default function Navbar() {
             </button>
 
       
-      <div className="md:hidden ml-5">
+      <div className="md:hidden ml-2 mt-2">
   <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
 
 
