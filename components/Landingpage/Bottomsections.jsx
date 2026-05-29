@@ -7,9 +7,49 @@ import {
   FaPinterestP,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { useState } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
+
+
+ const handleSubscribe = async () => {
+    if (!email) return;
+
+    try {
+      setLoading(true);
+      setMessage("");
+
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setMessage("Subscribed successfully 🎉");
+        setEmail("");
+      } else {
+        setMessage(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      setMessage("Failed to subscribe");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
+
+
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
   return (
     <footer className="w-full pb-20 md:pb-0 text-[13px] leading-[1.4]">
 
@@ -158,11 +198,11 @@ export default function Footer() {
           <div>
             <p className="font-bold text-[15px] mb-3">COMPANY</p>
             <ul className="space-y-1">
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li>Careers</li>
+              <Link href="https://corporate.inquirybazaar.com/about/whoweare">About Us</Link>
+              <Link href="https://corporate.inquirybazaar.com/contact">Contact Us</Link>
+              <Link href="https://corporate.inquirybazaar.com/career">Careers</Link>
               <li>Become a Supplier</li>
-              <li>Blog</li>
+              <Link href="https://corporate.inquirybazaar.com/blogs">Blog</Link>
             </ul>
           </div>
 
@@ -205,27 +245,39 @@ export default function Footer() {
           </div>
 
           {/* NEWSLETTER */}
-          <div className="bg-white rounded-[10px] p-4 shadow-sm w-full">
-            <p className="text-[16px] font-semibold mb-3 text-center">
-              Subscribe to Newsletter
-            </p>
+           <div className="bg-white rounded-[10px] p-4 shadow-sm w-full">
+      <p className="text-[16px] font-semibold mb-3 text-center">
+        Subscribe to Newsletter
+      </p>
 
-            <div className="flex flex-col sm:flex-row bg-[#f3f3f3] rounded-full overflow-hidden">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-3 py-2 text-[13px] bg-transparent outline-none"
-              />
-              <button className="bg-black text-white text-[12px] px-4 py-2">
-                SUBMIT NOW
-              </button>
-            </div>
+      <div className="flex flex-col sm:flex-row bg-[#f3f3f3] rounded-full overflow-hidden">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email address"
+          className="flex-1 px-3 py-2 text-[13px] bg-transparent outline-none"
+        />
 
-            <p className="text-[12px] text-gray-600 mt-2 text-center">
-              Sign up to get exclusive offers and updates
-            </p>
-          </div>
+        <button
+          onClick={handleSubscribe}
+          disabled={loading}
+          className="bg-black text-white text-[12px] px-4 py-2 disabled:opacity-50"
+        >
+          {loading ? "SUBSCRIBING..." : "SUBMIT NOW"}
+        </button>
+      </div>
 
+      {message && (
+        <p className="text-center mt-2 text-sm">
+          {message}
+        </p>
+      )}
+
+      <p className="text-[12px] text-gray-600 mt-2 text-center">
+        Sign up to get exclusive offers and updates
+      </p>
+    </div>
         </div>
       </div>
 

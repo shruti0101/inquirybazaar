@@ -126,7 +126,7 @@ export default function FeaturedProducts({ data }) {
 
         <button
           className="
-          border-2 border-cyan-400 text-white hover:bg-cyan-400/10 font-semibold text-md px-3 py-3 rounded-xl backdrop-blur-sm transition
+          border-2 border-cyan-400 cursor-pointer text-white hover:bg-cyan-400/10 font-semibold text-md px-3 py-3 rounded-xl backdrop-blur-sm transition
           "
         >
           Post Requirement
@@ -138,7 +138,7 @@ export default function FeaturedProducts({ data }) {
 
         <button
           className="
-           bg-[#F07B20] hover:bg-[#F07B20] text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2
+           border-2 border-[#F07B20] cursor-pointer hover:bg-[#cd6413] text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2
           "
         >
           Register Free →

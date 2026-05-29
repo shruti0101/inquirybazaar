@@ -98,7 +98,7 @@ export default async function HeroWrapper() {
   return (
     <>
       <section className="px-1 md:px-8  mx-auto  bg-[#F3F4F6]">
-        <div className="grid grid-cols-12 gap-5">
+        <div className="grid grid-cols-12 ">
 
           
 

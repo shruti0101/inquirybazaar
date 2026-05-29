@@ -28,13 +28,13 @@ const data2 = [
     title: "Inquiry Bazaar",
     subtitle: "Membership Plans",
     img: "/doodle/4-4.png",
-    link:"/premium"
+    link:"https://corporate.inquirybazaar.com/solutions"
   },
   {
     title: "Inquiry Bazaar",
     subtitle: "GEM Tenders ",
     img: "/doodle/2-2.png",
-    link:"/premium"
+    link:"https://gem.gov.in/"
   },
 ];
 
@@ -50,7 +50,7 @@ const mobileBanners = [
         text: "Register Free ->",
         link: "/register",
         className:
-          "bg-[#F07B20] text-white px-1 py-2 rounded-lg text-[11px] font-semibold",
+          "border-2 border-[#F07B20] text-white px-1 py-2 rounded-lg text-[11px] font-semibold",
       },
 
     
@@ -65,7 +65,7 @@ const mobileBanners = [
         text: "Register Free",
         link: "/sell",
         className:
-          "bg-[#F47B1D] text-white px-1 py-1 rounded-lg text-[10px] ",
+          "border-2 border-[#F07B20] text-white px-1 py-1 rounded-lg text-[10px] ",
       },
 
       {
@@ -86,7 +86,7 @@ const mobileBanners = [
         text: "Get Quotation",
         link: "/sell",
         className:
-          "bg-[#F47B1D] text-white px-1 py-1 rounded-lg text-[10px] ",
+          "border-2 border-[#F07B20] text-white px-1 py-1 rounded-lg text-[10px] ",
       },
 
       {

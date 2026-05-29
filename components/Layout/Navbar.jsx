@@ -74,31 +74,31 @@ export default function Navbar() {
       </div>
     </div>
       {/* ================= TOP NAV ================= */}
-      <div className="bg-white flex h-[58px]  items-center">
+      <div className="bg-white flex h-[58px] border-b border-gray-300 pb-3 items-center">
         <div className=" mx-auto w-full flex items-center justify-between px-4 md:px-12">
 
-          <p className="text-xl md:text-3xl font-semibold text-black mt-2 ">
-          <Image src="/logocheck.png" alt="Logo" width={280} height={60} >
+          <p className=" font-semibold text-black mt-3 ">
+          <Image src="/logocheck.png" alt="Logo" width={300} height={60} >
 
           </Image>
           </p>
 
           <div className="flex items-center gap-3 md:gap-8">
 
-            {/* DESKTOP NAV (UNCHANGED) */}
-            <nav className="hidden md:flex items-center gap-8 text-[18px] text-black">
+            
+            <nav className="hidden md:flex items-center gap-8 text-[19px] mt-3 text-black">
               <Link href="#">Home</Link>
               <button onClick={()=> setIsOpen(true)}>Request A Quote</button>
               <Link href="#">Contact Us</Link>
-              <Link href="dir.inquirybazaar.com">All Categories</Link>
+              <a href="http://dir.inquirybazaar.com/">All Categories</a>
             </nav>
 
 
-              <button className="hidden md:block bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
+              <button className="hidden md:block mt-3 bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
               Register Free →
             </button>
 
-            {/* REGISTER BUTTON (VISIBLE ALWAYS) */}
+      
       <div className="md:hidden ml-5">
   <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
 
@@ -106,7 +106,7 @@ export default function Navbar() {
     {/* Search Input */}
     <input
       type="text"
-      placeholder="Best B2B Portal, Mar..."
+      placeholder="Search Products.."
       className="flex-1 bg-transparent outline-none text-[12px] text-gray-700 placeholder:text-gray-400"
     />
 
@@ -114,7 +114,7 @@ export default function Navbar() {
 
   </div>
 </div>
-            {/* HAMBURGER (MOBILE ONLY) */}
+           
             <button
               onClick={() => setMobileMenu(!mobileMenu)}
               className="md:hidden text-black"
@@ -126,7 +126,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ================= MOBILE PANEL ================= */}
+      {/*  MOBILE PANEL  */}
       {mobileMenu && (
         <div className="md:hidden bg-white border-b border-gray-200 px-4 py-4 space-y-4 shadow-lg">
 
@@ -136,7 +136,7 @@ export default function Navbar() {
   <Link href="#" className="block py-2 border-b">Home</Link>
   <button onClick={()=> setIsOpen(true)} className="block py-2 border-b">Request A Quote</button>
   <Link href="contact-us" className="block py-2 border-b">Contact Us</Link>
-  <Link href="dir.inquirybazaar.com" className="block py-2">All Categories</Link>
+  <a href="http://dir.inquirybazaar.com/" className="block py-2">All Categories</a>
 </div>
 
 

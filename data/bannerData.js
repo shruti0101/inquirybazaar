@@ -10,7 +10,7 @@ const bannerData = [
         text: "Get Quotation →",
         href: "/register",
         className:
-          "bg-[#F07B20] hover:bg-[#F07B20] text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2",
+          "border-2 border-[#F07B20]  cursor-pointer text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2",
       },
       {
         text: "Partner With Us",
@@ -36,7 +36,7 @@ const bannerData = [
         text: "Register Free ->",
         href: "/contact",
         className:
-          "bg-[#F07B20]  text-white font-semibold text-md px-6 py-3 rounded-xl transition",
+          "border-2 border-[#F07B20]  text-white font-semibold text-md px-6 py-3 rounded-xl transition",
       },
 
     
