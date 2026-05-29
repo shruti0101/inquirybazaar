@@ -11,7 +11,7 @@ export default function Banner({ data }) {
       <div className="relative rounded-lg overflow-hidden group">
         
         {/* BANNER IMAGE */}
-        <Link href={data.link || "#"}>
+        <div >
           <Image
             src={data.image}
             alt="banner"
@@ -19,7 +19,7 @@ export default function Banner({ data }) {
             height={400}
             className="max-w-full h-auto group-hover:scale-105 transition duration-300"
           />
-        </Link>
+        </div>
 
         {/* BUTTONS */}
     {/* BUTTONS */}

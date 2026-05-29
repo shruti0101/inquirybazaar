@@ -15,7 +15,7 @@ export default function FeaturedProducts({ data }) {
       <section className="">
         {/* HEADER */}
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-md md:text-xl font-bold text-black">
+          <h2 className="text-md md:text-xl font-bold text-black px-1">
             Featured Categories for You - Explore Top Picks in Every Industry
           </h2>
         </div>
@@ -138,7 +138,7 @@ export default function FeaturedProducts({ data }) {
 
         <button
           className="
-           border-2 border-[#F07B20] cursor-pointer hover:bg-[#cd6413] text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2
+           border-2 border-[#F07B20] cursor-pointer  text-white font-semibold text-md px-3 py-3 rounded-xl shadow-lg transition flex items-center gap-2
           "
         >
           Register Free →

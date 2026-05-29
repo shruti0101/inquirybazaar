@@ -22,13 +22,13 @@ const data2 = [
     title: "Inquiry Bazaar",
     subtitle: "Buy Premium Domains",
     img: "/doodle/3-3.png",
-    link:"/premium"
+    link:"/domain.promozionebranding.com"
   },
   {
     title: "Inquiry Bazaar",
     subtitle: "Membership Plans",
     img: "/doodle/4-4.png",
-    link:"https://corporate.inquirybazaar.com/solutions"
+    link:"https://corporate.inquirybazaar.com/pricing"
   },
   {
     title: "Inquiry Bazaar",
@@ -313,7 +313,7 @@ const mobileBanners = [
         <span className="text-[#0D2340]">product?</span>
       </h2>
 
-      <button className="bg-[#f48335] text-white text-[11px] px-2 py-1.5 rounded-md w-fit">
+      <button className="border border-[#f48335] text-white text-[11px] px-2 py-1.5 rounded-md w-fit">
         Post Requirement →
       </button>
     </div>
@@ -334,7 +334,7 @@ const mobileBanners = [
         <span className="text-[#0D2340]">10x faster</span>
       </h2>
 
-      <button className="bg-[#24457a] text-white text-[11px] px-2 py-1.5 rounded-md w-fit">
+      <button className="border border-[#24457a] text-white text-[11px] px-2 py-1.5 rounded-md w-fit">
         Free Listing →
       </button>
     </div>

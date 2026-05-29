@@ -4,7 +4,7 @@ const bannerData = [
   {
     id: 2,
     image: "/b2.jpeg",
-    link: "/services",
+ 
     buttons: [
       {
         text: "Get Quotation →",
@@ -30,13 +30,13 @@ const bannerData = [
   {
     id: 3,
     image: "/b1-1.png",
-    link: "/contact",
+  
     buttons: [
       {
         text: "Register Free ->",
         href: "/contact",
         className:
-          "border-2 border-[#F07B20]  text-white font-semibold text-md px-6 py-3 rounded-xl transition",
+          "border-2 border-[#F07B20]  text-white font-semibold text-md px-3 py-2 rounded-xl transition",
       },
 
     
@@ -47,7 +47,7 @@ const bannerData = [
 
   {
     id: 3,
-    image: "/banner2.png",
+    image: "/banner2-2.png",
     link: "/contact",
     // buttons: [
     //   {

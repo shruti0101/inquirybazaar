@@ -40,10 +40,15 @@ export default function MoreForYou() {
   ];
 
   return (
-    <div className="w-full bg-[#f5f5f5] md:py-10">
+
+<>
+
+
+
+    <div className="w-full bg-[#f5f5f5] py-2">
 
       {/* TITLE */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-4 md:mb-6">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 px-1 mb-2">
         More for You
       </h2>
 
@@ -181,5 +186,12 @@ export default function MoreForYou() {
 
       </div>
     </div>
+
+
+
+
+
+    
+</>
   );
 }

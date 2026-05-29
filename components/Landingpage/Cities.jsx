@@ -49,7 +49,7 @@ export default function TopCities() {
    
 
     <section className="">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-5">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-5 px-1">
         Find Suppliers from Top Cities
       </h2>
     <div className="w-full px-7 py-10 bg-white">

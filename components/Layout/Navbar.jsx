@@ -120,7 +120,7 @@ export default function Navbar() {
         <div className=" mx-auto w-full flex items-center justify-between px-2 md:px-12">
 
           <Link href="/" className=" font-semibold text-black mt-3  ">
-          <Image  src="/logocheck.png" alt="Logo" width={280} height={60} >
+          <Image  src="/logocheck.png" alt="Logo" width={270} height={60} >
 
           </Image>
           </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
 
             
             <nav className="hidden md:flex items-center gap-8 text-[19px] mt-3 text-black">
-              <Link href="#">Home</Link>
+              <Link href="/">Home</Link>
               <button onClick={()=> setIsOpen(true)}>Request A Quote</button>
               <Link href="/contact-us">Contact Us</Link>
               <a href="http://dir.inquirybazaar.com/">All Categories</a>
@@ -175,7 +175,7 @@ export default function Navbar() {
 
 {/* MOBILE NAV LINKS */}
 <div className="space-y-2 text-[#0D2340] font-medium">
-  <Link href="#" className="block py-2 border-b">Home</Link>
+  <Link href="/" className="block py-2 border-b">Home</Link>
   <button onClick={()=> setIsOpen(true)} className="block py-2 border-b">Request A Quote</button>
   <Link href="contact-us" className="block py-2 border-b">Contact Us</Link>
   <a href="http://dir.inquirybazaar.com/" className="block py-2">All Categories</a>
@@ -232,13 +232,26 @@ export default function Navbar() {
               )}
             </div>
 
+
+<a href="https://www.google.com/maps/place/Inquiry+Bazaar+%5C%5C+Hybrid+B2B+Marketplace/@28.6922061,77.1477074,17z/data=!3m1!4b1!4m6!3m5!1s0x390d03087fd1b4df:0xec224959e4ec6e13!8m2!3d28.6922061!4d77.1477074!16s%2Fg%2F11njwfyl1v?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D">
+
+
+
+
+
             <button className="h-[48px] bg-[#0D2340] text-white rounded-md text-[14px]">
               ✍️ Write a Review
             </button>
+</a>
+
+
+<Link href="/faq">
 
             <button className="h-[48px] bg-[#ec771c] text-white rounded-md text-[14px]">
               💬 Help Center
             </button>
+</Link>
+
 
           </div>
         </div>
@@ -299,13 +312,23 @@ export default function Navbar() {
             )}
           </div>
 
+<a href="https://www.google.com/maps/place/Inquiry+Bazaar+%5C%5C+Hybrid+B2B+Marketplace/@28.6922061,77.1477074,17z/data=!3m1!4b1!4m6!3m5!1s0x390d03087fd1b4df:0xec224959e4ec6e13!8m2!3d28.6922061!4d77.1477074!16s%2Fg%2F11njwfyl1v?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D">
+
+
+
           <button className="h-[42px] px-5 bg-[#0D2340] text-white rounded-md text-[14px] flex items-center gap-2">
             ✍️ Write a Review
           </button>
+</a>
+
+<Link href="/faq">
+
 
           <button className="h-[42px] px-5 bg-[#ec771c] text-white rounded-md text-[14px] flex items-center gap-2">
             💬 Help Center
           </button>
+</Link>
+
 
         </div>
       </div>
