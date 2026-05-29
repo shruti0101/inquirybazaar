@@ -131,7 +131,7 @@ export default function Navbar() {
             <nav className="hidden md:flex items-center gap-8 text-[19px] mt-3 text-black">
               <Link href="#">Home</Link>
               <button onClick={()=> setIsOpen(true)}>Request A Quote</button>
-              <Link href="#">Contact Us</Link>
+              <Link href="/contact-us">Contact Us</Link>
               <a href="http://dir.inquirybazaar.com/">All Categories</a>
             </nav>
 

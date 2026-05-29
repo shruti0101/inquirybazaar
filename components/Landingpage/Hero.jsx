@@ -218,19 +218,19 @@ const mobileBanners = [
 
     <div className="absolute inset-0 flex flex-col justify-center pl-2 md:pl-6  bg-black/10 ">
 
-      <h2 className=" text-black text-[19px] sm:text-lg md:text-2xl font-semibold leading-snug">
-        Looking for a <br /> <span className="text-[#1753C5]">product?</span> 
+      <h2 className="mt-3 text-black text-[20px] sm:text-lg md:text-2xl font-semibold leading-snug">
+        Looking for a <br /> <span className="text-[#1753C5]">Quality Product?</span> 
       </h2>
 
 <div className="hidden md:flex items-center mt-1 sm:mt-3">
-        <span className="text-black text-[10px] sm:text-[17px] leading-snug">
-          100% <br></br> Transparent 
+        <span className="text-black text-[10px] sm:text-[16px] leading-snug">
+          100%  Transparent <br></br> Process
            
         </span>
 
-        <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-gray-500"></div>
+        <div className="h-4 sm:h-8 border-r mx-2 sm:mx-3 border-gray-500"></div>
 
-        <span className="text-black text-[10px] sm:text-[17px] leading-snug">
+        <span className="text-black text-[10px] sm:text-[16px] leading-snug">
           Direct Supplier <br></br> Contact
         </span>
       </div>
@@ -263,14 +263,14 @@ const mobileBanners = [
       </h2>
 
       <div className="hidden md:flex items-center mt-1 sm:mt-3">
-        <span className="text-black text-[10px] sm:text-[17px] leading-snug">
+        <span className="text-black text-[10px] sm:text-[16px] leading-snug">
           Showcase <br></br>
            product
         </span>
 
         <div className="h-4 sm:h-8 border-r mx-2 sm:mx-4 border-gray-500"></div>
 
-        <span className="text-black text-[10px] sm:text-[17px] leading-snug">
+        <span className="text-black text-[10px] sm:text-[16px] leading-snug">
           Get Free <br></br> listing
         </span>
       </div>
