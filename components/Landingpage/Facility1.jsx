@@ -9,6 +9,7 @@ import {
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Autoplay } from "swiper/modules";
 
 export default function MoreForYou() {
   const items = [
@@ -50,10 +51,17 @@ export default function MoreForYou() {
 
         {/* ✅ MOBILE SWIPER (same size cards) */}
         <div className="md:hidden">
-          <Swiper
-            spaceBetween={0}
-            slidesPerView={2}   // EXACT same as grid-cols-2
-          >
+         <Swiper
+  modules={[Autoplay]}
+  slidesPerView={2}
+  spaceBetween={0}
+  freeMode={true}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+  }}
+  loop={true}
+>
             {items.map((item, i) => (
               <SwiperSlide key={i}>
                 <div

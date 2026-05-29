@@ -311,7 +311,7 @@ const mobileBanners = [
     />
 
     <div className="absolute inset-0  flex flex-col justify-center px-2">
-      <h2 className="text-black relative text-[17px] font-semibold leading-snug mb-2">
+      <h2 className="text-black relative text-[15px] font-semibold leading-snug mb-2">
         Looking for a{" "}
         <span className="text-[#0D2340]">product?</span>
       </h2>
@@ -332,7 +332,7 @@ const mobileBanners = [
     />
 
     <div className="absolute inset-0  flex flex-col justify-center px-2">
-      <h2 className="text-black text-[16px] font-semibold leading-snug mb-2 relative">
+      <h2 className="text-black text-[15px] font-semibold leading-snug mb-2 relative">
         Grow business{" "} <br />
         <span className="text-[#0D2340]">10x faster</span>
       </h2>
@@ -391,11 +391,17 @@ const mobileBanners = [
 
   {/* ✅ Mobile Slider */}
   <div className="md:hidden">
-    <Swiper
-      slidesPerView={2}
-      spaceBetween={12}
-      freeMode={true}
-    >
+ <Swiper
+  modules={[Autoplay]}
+  slidesPerView={2}
+  spaceBetween={12}
+  freeMode={true}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  loop={true}
+>
       {data2.map((item, i) => (
         <SwiperSlide key={i}>
           <Link

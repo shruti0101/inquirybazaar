@@ -5,7 +5,15 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaXTwitter,
+} from "react-icons/fa6";
 import  RequestQuoteModal from "@/components/Layout/Requestquote";
+import { FaLinkedin } from "react-icons/fa";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -66,19 +74,53 @@ export default function Navbar() {
         </div>
 
         {/* Right Section */}
-        <div>
-          <button className="font-medium text-white transition hover:text-gray-300">
-            Write Review ✍️
-          </button>
-        </div>
+      <div className="flex items-center gap-3">
+
+        Follow Us On
+  <a
+    href="https://www.facebook.com/profile.php?id=61562989183794"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white hover:text-gray-300 transition"
+  >
+    <FaFacebookF size={15} />
+  </a>
+
+  <a
+    href="https://www.instagram.com/inquirybazaar/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white hover:text-gray-300 transition"
+  >
+    <FaInstagram size={18} />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/inquiry-bazaar/?viewAsMember=true"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white hover:text-gray-300 transition"
+  >
+    <FaLinkedin size={18} />
+  </a>
+
+  <a
+    href="https://youtube.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white hover:text-gray-300 transition"
+  >
+    <FaYoutube size={19 } />
+  </a>
+</div>
       </div>
     </div>
       {/* ================= TOP NAV ================= */}
-      <div className="bg-white flex h-[58px] border-b border-gray-300 pb-3 items-center">
+      <div className="bg-white flex h-[58px] border-b border-[#183B63] pb-3 items-center">
         <div className=" mx-auto w-full flex items-center justify-between px-4 md:px-12">
 
           <p className=" font-semibold text-black mt-3  ">
-          <Image className="w-full h-auto" src="/logocheck.png" alt="Logo" width={300} height={60} >
+          <Image  src="/logocheck.png" alt="Logo" width={280} height={60} >
 
           </Image>
           </p>

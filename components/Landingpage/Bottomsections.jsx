@@ -198,11 +198,31 @@ export default function Footer() {
           <div>
             <p className="font-bold text-[15px] mb-3">COMPANY</p>
             <ul className="space-y-1">
-              <Link href="https://corporate.inquirybazaar.com/about/whoweare">About Us</Link>
-              <Link href="https://corporate.inquirybazaar.com/contact">Contact Us</Link>
-              <Link href="https://corporate.inquirybazaar.com/career">Careers</Link>
+
+<div>
+<Link href="https://corporate.inquirybazaar.com/about/whoweare">About Us</Link>
+
+</div>
+              
+              <div>
+   <Link href="https://corporate.inquirybazaar.com/contact">Contact Us</Link>
+
+              </div>
+
+
+           
+<div>
+ <Link href="https://corporate.inquirybazaar.com/career">Careers</Link>
+
+</div>
+
+             
               <li>Become a Supplier</li>
-              <Link href="https://corporate.inquirybazaar.com/blogs">Blog</Link>
+
+              <div>
+        <Link href="https://corporate.inquirybazaar.com/blogs">Blog</Link>
+              </div>
+      
             </ul>
           </div>
 
