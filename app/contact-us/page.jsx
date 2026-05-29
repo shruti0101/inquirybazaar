@@ -155,7 +155,8 @@ const page = () => {
               Head Office
             </h3>
             <p className="text-gray-600 leading-relaxed">
-          6th Floor, Best Business Park, Office No, 605-606, <br /> Netaji Subhash Place, Delhi, 110034
+       Office No. 605-606, 6th Floor, Best Business Park, <br />
+Netaji Subhash Place, Delhi, 110034
 
 
             </p>
