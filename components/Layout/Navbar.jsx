@@ -292,7 +292,7 @@ export default function Navbar() {
 
 <Link href="/whytrustus">
 
-          <button className="py-2 px-5 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[13px] flex items-center ">
+          <button className="py-2 px-3 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[13px] flex items-center ">
              Why Trust Us
           </button>
 </Link>
@@ -309,7 +309,7 @@ export default function Navbar() {
             </button>
 
             {open && (
-              <div className="absolute right-0 mt-2 w-[180px] bg-white border rounded-md shadow-md overflow-hidden">
+              <div className="absolute right-0 mt-2 z-9999 w-[180px] bg-white border rounded-md shadow-md overflow-hidden">
                 <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                   Login as Supplier
                 </button>
@@ -324,7 +324,7 @@ export default function Navbar() {
 
 
 
-          <button className="h-[42px] px-5 bg-[#0D2340] text-white rounded-md text-[14px] flex items-center gap-2">
+          <button className="h-[42px] px-3 bg-[#0D2340] text-white rounded-md text-[14px] flex items-center gap-2">
             ✍️ Write a Review
           </button>
 </a>
@@ -332,7 +332,7 @@ export default function Navbar() {
 <Link href="/faqs">
 
 
-          <button className="h-[42px] px-5 bg-[#ec771c] text-white rounded-md text-[14px] flex items-center gap-2">
+          <button className="h-[42px] px-3 bg-[#ec771c] text-white rounded-md text-[14px] flex items-center gap-2">
             💬 Help Center
           </button>
 </Link>
