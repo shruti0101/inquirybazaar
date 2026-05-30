@@ -313,7 +313,7 @@ const mobileBanners = [
         <span className="text-[#0D2340]">product?</span>
       </h2>
 
-      <button className="border bg-amber-50/50 border-[#f48335] text-black text-[11px] font-semibold px-2 py-1.5 rounded-md w-fit">
+      <button className="border bg-amber-50/70 border-[#f48335] text-black text-[11px] font-semibold px-2 py-1.5 rounded-md w-fit">
         Post Requirement →
       </button>
     </div>
