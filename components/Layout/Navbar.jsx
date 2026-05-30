@@ -116,7 +116,7 @@ export default function Navbar() {
       </div>
     </div>
       {/*  TOP NAV  */}
-     <div className="bg-white flex min-h-[58px] border-b border-[#183B63]  items-center">
+     <div className="bg-white flex min-h-[52px] border-b border-[#183B63]  items-center">
        <div className="mx-auto w-full flex items-center justify-between px-2 sm:px-4 md:px-12 gap-2">
 
          <Link
@@ -141,7 +141,7 @@ export default function Navbar() {
               <Link href="/">Home</Link>
               <button onClick={()=> setIsOpen(true)}>Request A Quote</button>
               <Link href="/contact-us">Contact Us</Link>
-              <a href="http://dir.inquirybazaar.com/">All Categories</a>
+              <a href="https://dir.inquirybazaar.com/">All Categories</a>
             </nav>
 
 
@@ -186,7 +186,7 @@ export default function Navbar() {
   <Link href="/" className="block py-2 border-b">Home</Link>
   <button onClick={()=> setIsOpen(true)} className="block py-2 border-b">Request A Quote</button>
   <Link href="contact-us" className="block py-2 border-b">Contact Us</Link>
-  <a href="http://dir.inquirybazaar.com/" className="block py-2">All Categories</a>
+  <a href="https://dir.inquirybazaar.com/" className="block py-2">All Categories</a>
 </div>
 
 
@@ -267,7 +267,7 @@ export default function Navbar() {
 
       {/* ================= DESKTOP SEARCH STRIP (UNCHANGED) ================= */}
       <div className="hidden md:block bg-white border-b border-gray-200">
-      <div className="w-full mx-auto px-4 md:px-12 py-[10px] flex items-center gap-3 xl:gap-4 overflow-x-auto">
+      <div className="w-full mx-auto px-4 md:px-12 py-[6px] flex items-center gap-3 xl:gap-4 overflow-x-auto">
 
           <div className="flex items-center bg-[#FAFAF8] border-2 border-[#ec771c] rounded-md overflow-hidden h-[50px]">
             <input placeholder="📍 Search City..." className="px-3 text-[14px] w-[140px] lg:w-[200px]outline-none" />
@@ -292,7 +292,7 @@ export default function Navbar() {
 
 <Link href="/whytrustus">
 
-          <button className="py-2 px-5 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[15px] flex items-center ">
+          <button className="py-2 px-5 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[13px] flex items-center ">
              Why Trust Us
           </button>
 </Link>
