@@ -40,7 +40,7 @@ export default function Navbar() {
     
     
 
-<header className="w-full fixed top-0 z-50 font-sans overflow-x-hidden">
+<header className="w-full fixed top-0 z-[9999] font-sans overflow-visible">
 <div className="w-full bg-[#183B63] hidden md:block text-white">
       <div className="mx-auto flex w-full px-4 xl:px-15  flex-col items-center justify-between gap-3 py-2 text-sm md:flex-row md:gap-0">
         
@@ -218,7 +218,7 @@ export default function Navbar() {
             </button>
 </Link>
 
-           <div className="relative z-[9999]" ref={dropdownRef}>
+            <div className="relative z-[9999]" ref={dropdownRef}>
               <button
                 onClick={() => setOpen(!open)}
                 className="w-full h-[48px] border-2 border-gray-300 bg-[#FAFAF8] rounded-md text-[14px] flex items-center justify-center gap-2"
@@ -267,7 +267,7 @@ export default function Navbar() {
 
       {/* ================= DESKTOP SEARCH STRIP (UNCHANGED) ================= */}
       <div className="hidden md:block bg-white border-b border-gray-200">
-      <div className="w-full mx-auto px-4 md:px-12 py-[6px] flex items-center gap-3 xl:gap-4 overflow-x-auto">
+      <div className="w-full mx-auto px-4 md:px-12 py-[6px] flex items-center gap-3 xl:gap-4 overflow-visible">
 
           <div className="flex items-center bg-[#FAFAF8] border-2 border-[#ec771c] rounded-md overflow-hidden h-[50px]">
             <input placeholder="📍 Search City..." className="px-3 text-[14px] w-[140px] lg:w-[200px]outline-none" />
@@ -309,7 +309,7 @@ export default function Navbar() {
             </button>
 
             {open && (
-              <div className="absolute right-0 mt-2 z-[9999] w-[180px] bg-white border rounded-md shadow-md overflow-visible">
+       <div className="absolute right-0 mt-2 z-[99999] w-[180px] bg-white border rounded-md shadow-md overflow-hidden">
                 <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                   Login as Supplier
                 </button>
@@ -324,7 +324,7 @@ export default function Navbar() {
 
 
 
-          <button className="h-[45px] px-3 bg-[#0D2340] text-white rounded-md text-[14px] flex items-center gap-2">
+          <button className="h-[42px] px-3 bg-[#0D2340] text-white rounded-md text-[14px] flex items-center gap-2">
             ✍️ Write a Review
           </button>
 </a>

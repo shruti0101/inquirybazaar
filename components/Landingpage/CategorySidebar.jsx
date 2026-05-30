@@ -48,7 +48,7 @@ const truncate = (text, limit = 12) =>
         </Swiper>
       </div>
 
-      {/* ✅ DESKTOP SIDEBAR (UNCHANGED) */}++
+      {/* ✅ DESKTOP SIDEBAR (UNCHANGED) */}
       <div className="hidden md:block col-span-3  bg-white rounded-lg p-3 sticky top-0 self-start shadow h-fit">
         {categoriesToShow?.length > 0 ? (
           <>

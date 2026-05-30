@@ -191,7 +191,7 @@ setIsOpen(true);
     <>
       {/* OVERLAY */}
       <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center"
+        className="fixed z-[99999] inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center"
         onClick={handleClose}
       >
         {/* POPUP CARD */}
