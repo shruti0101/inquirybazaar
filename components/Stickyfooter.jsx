@@ -32,7 +32,7 @@ const Stickyfooter = () => {
           </button>
 
           <Link
-            href="/contact"
+            href="/contact-us"
             className="flex flex-col items-center text-xs"
           >
             <Phone className="text-red-600" size={26} />

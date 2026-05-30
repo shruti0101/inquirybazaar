@@ -89,7 +89,7 @@ export default function FeaturedProducts({ data }) {
       </section>
 
 {/* BANNER */}
-<section className="mt-6 hidden md:block">
+<section className="mt-7 hidden md:block">
 
   <div className="relative overflow-hidden rounded-md">
 

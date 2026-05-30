@@ -205,7 +205,7 @@ export default function Footer() {
 </div>
               
               <div>
-   <Link href="https://corporate.inquirybazaar.com/contact">Contact Us</Link>
+   <Link href="/contact-us">Contact Us</Link>
 
               </div>
 

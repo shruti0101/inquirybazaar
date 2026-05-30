@@ -91,7 +91,7 @@ const mobileBanners = [
 
       {
         text: "Partner With Us",
-        link: "/contact",
+        link: "/contact-us",
         className:
           "border-1 border-cyan-400 text-white px-1 py-1 rounded-lg text-[10px] ",
       },

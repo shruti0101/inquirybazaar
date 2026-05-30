@@ -34,7 +34,7 @@ const bannerData = [
     buttons: [
       {
         text: "Register Free ->",
-        href: "/contact",
+        href: "/contact-us",
         className:
           "border-2 border-[#F07B20]  text-white font-semibold text-md px-3 py-2 rounded-xl transition",
       },
@@ -48,7 +48,7 @@ const bannerData = [
   {
     id: 3,
     image: "/banner2-2.png",
-    link: "/contact",
+    link: "/contact-us",
     // buttons: [
     //   {
     //     text: "Register Free ->",
