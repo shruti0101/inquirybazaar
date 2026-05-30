@@ -40,9 +40,9 @@ export default function Navbar() {
     
     
 
-    <header className="w-full fixed top-0 z-50 font-sans">
+<header className="w-full fixed top-0 z-50 font-sans overflow-x-hidden">
 <div className="w-full bg-[#183B63] hidden md:block text-white">
-      <div className="mx-auto flex w-full px-15 flex-col items-center justify-between gap-3 py-2 text-sm md:flex-row md:gap-0">
+      <div className="mx-auto flex w-full px-4 xl:px-15  flex-col items-center justify-between gap-3 py-2 text-sm md:flex-row md:gap-0">
         
         {/* Left Section */}
         <div className="flex flex-col items-center gap-2 md:flex-row md:gap-8">
@@ -116,16 +116,25 @@ export default function Navbar() {
       </div>
     </div>
       {/*  TOP NAV  */}
-      <div className="bg-white flex h-[58px] border-b border-[#183B63] pb-3 items-center">
-        <div className=" mx-auto w-full flex items-center justify-between px-2 md:px-12">
+     <div className="bg-white flex min-h-[58px] border-b border-[#183B63]  items-center">
+       <div className="mx-auto w-full flex items-center justify-between px-2 sm:px-4 md:px-12 gap-2">
 
-          <Link href="/" className=" font-semibold text-black mt-3  ">
-          <Image  src="/logocheck.png" alt="Logo" width={270} height={60} >
+         <Link
+  href="/"
+  className="font-semibold text-black mt-1 md:mt-3 flex-shrink-0"
+>
+         <Image
+  src="/logocheck.png"
+  alt="Logo"
+  width={270}
+  height={60}
+  className="w-[150px] sm:w-[180px] md:w-[270px] h-auto"
+/>
 
-          </Image>
+        
           </Link>
 
-          <div className="flex items-center gap-3 md:gap-8">
+       <div className="flex items-center gap-2 md:gap-8 flex-1 justify-end">
 
             
             <nav className="hidden md:flex items-center gap-8 text-[19px] mt-3 text-black">
@@ -141,15 +150,15 @@ export default function Navbar() {
             </button>
 
       
-      <div className="md:hidden ml-2 mt-2">
+  <div className="md:hidden flex-1 max-w-[220px] sm:max-w-[260px]">
   <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
 
 
     {/* Search Input */}
-    <input
-      type="text"
-      placeholder="Search Products.."
-      className="flex-1 bg-transparent outline-none text-[12px] text-gray-700 placeholder:text-gray-400"
+<input
+  type="text"
+  placeholder="Search..."
+  className="flex-1 min-w-0 bg-transparent outline-none text-[11px] sm:text-[12px] text-gray-700 placeholder:text-gray-400"
     />
 
    
@@ -159,7 +168,7 @@ export default function Navbar() {
            
             <button
               onClick={() => setMobileMenu(!mobileMenu)}
-              className="md:hidden text-black"
+    className="md:hidden text-black flex-shrink-0"
             >
               {mobileMenu ? <X size={26} /> : <Menu size={26} />}
             </button>
@@ -170,8 +179,7 @@ export default function Navbar() {
 
       {/*  MOBILE PANEL  */}
       {mobileMenu && (
-        <div className="md:hidden bg-white border-b border-gray-200 px-4 py-4 space-y-4 shadow-lg">
-
+<div className="md:hidden bg-white border-b border-gray-200 px-3 sm:px-4 py-4 space-y-4 shadow-lg">
 
 {/* MOBILE NAV LINKS */}
 <div className="space-y-2 text-[#0D2340] font-medium">
@@ -201,12 +209,12 @@ export default function Navbar() {
       
 
           {/* BUTTONS */}
-          <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
 
 <Link href="/whytrustus">
 
-            <button className="py-3 px-1 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[14px]">
-              🛡 Why Trust Us
+            <button className="py-3 px-2 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[14px]">
+              Why Trust Us
             </button>
 </Link>
 
@@ -239,15 +247,15 @@ export default function Navbar() {
 
 
 
-            <button className="h-[48px] bg-[#0D2340] text-white rounded-md text-[14px]">
+            <button className="h-[48px] bg-[#0D2340] text-white rounded-md px-2 text-[14px]">
               ✍️ Write a Review
             </button>
 </a>
 
 
-<Link href="/faq">
+<Link href="/faqs">
 
-            <button className="h-[48px] bg-[#ec771c] text-white rounded-md text-[14px]">
+            <button className="h-[48px] bg-[#ec771c] px-2 text-white rounded-md text-[14px]">
               💬 Help Center
             </button>
 </Link>
@@ -259,10 +267,10 @@ export default function Navbar() {
 
       {/* ================= DESKTOP SEARCH STRIP (UNCHANGED) ================= */}
       <div className="hidden md:block bg-white border-b border-gray-200">
-        <div className="w-full mx-auto px-4 md:px-12 py-[10px] flex items-center gap-4">
+      <div className="w-full mx-auto px-4 md:px-12 py-[10px] flex items-center gap-3 xl:gap-4 overflow-x-auto">
 
           <div className="flex items-center bg-[#FAFAF8] border-2 border-[#ec771c] rounded-md overflow-hidden h-[50px]">
-            <input placeholder="📍 Search City..." className="px-3 text-[14px] w-[200px] outline-none" />
+            <input placeholder="📍 Search City..." className="px-3 text-[14px] w-[140px] lg:w-[200px]outline-none" />
             <button className="bg-[#ec771c] w-[42px] h-[50px] flex items-center justify-center">
               <Search size={16} color="#fff" />
             </button>
@@ -270,7 +278,7 @@ export default function Navbar() {
 
           <div className="h-[45px] w-px bg-gray-400"></div>
 
-          <div className="flex items-center flex-1 max-w-[722px] h-[42px]">
+       <div className="flex items-center flex-1 min-w-[280px] max-w-[722px] h-[42px]">
             <input
               placeholder="Search for products, supplier"
               className="w-full h-[50px] border-2 border-[#ec771c] px-4 text-[14px] rounded-l-md outline-none bg-[#FAFAF8]"
@@ -285,7 +293,7 @@ export default function Navbar() {
 <Link href="/whytrustus">
 
           <button className="py-2 px-5 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[15px] flex items-center ">
-            🛡 Why Trust Us
+             Why Trust Us
           </button>
 </Link>
 
@@ -321,7 +329,7 @@ export default function Navbar() {
           </button>
 </a>
 
-<Link href="/faq">
+<Link href="/faqs">
 
 
           <button className="h-[42px] px-5 bg-[#ec771c] text-white rounded-md text-[14px] flex items-center gap-2">

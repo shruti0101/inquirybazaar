@@ -320,7 +320,7 @@ Contact: ${form.phone}`;
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 overflow-y-auto py-2 md:py-10">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 overflow-y-auto  md:py-10">
 
       <div className="bg-white w-full max-w-[600px] rounded-2xl shadow-xl p-3 md:p-6 relative animate-scaleIn">
 
@@ -334,7 +334,7 @@ Contact: ${form.phone}`;
         </button>
 
         {/* HEADING */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-2 md:mb-6">
           <h2 className="text-2xl font-semibold">
             Request a Quote
           </h2>
@@ -344,138 +344,133 @@ Contact: ${form.phone}`;
           </p>
         </div>
 
-        {/* FORM */}
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-4"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* FORM */}
+      
+<form
+  onSubmit={handleSubmit}
+  className="space-y-3 md:space-y-4"
+>
+ <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+    <input
+      type="text"
+      name="name"
+      value={form.name}
+      onChange={handleChange}
+      placeholder="Full Name *"
+      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      disabled={loading}
+      required
+    />
 
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Full Name *"
-              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-black outline-none"
-              disabled={loading}
-              required
-            />
+    <input
+      type="email"
+      name="email"
+      value={form.email}
+      onChange={handleChange}
+      placeholder="Email"
+      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      disabled={loading}
+    />
+  </div>
 
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Email"
-              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-black outline-none"
-              disabled={loading}
-            />
-          </div>
+<div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
+    <input
+      type="text"
+      name="companyName"
+      value={form.companyName}
+      onChange={handleChange}
+      placeholder="Company Name"
+      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      disabled={loading}
+    />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <input
+      type="text"
+      name="gstNumber"
+      value={form.gstNumber}
+      onChange={handleChange}
+      placeholder="GST Number"
+      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      disabled={loading}
+    />
+  </div>
 
-            <input
-              type="text"
-              name="companyName"
-              value={form.companyName}
-              onChange={handleChange}
-              placeholder="Company Name"
-              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-black outline-none"
-              disabled={loading}
-            />
+  <input
+    type="tel"
+    name="phone"
+    value={form.phone}
+    onChange={(e) =>
+      setForm({
+        ...form,
+        phone: e.target.value.replace(/\D/g, ""),
+      })
+    }
+    maxLength={10}
+    placeholder="Phone Number *"
+    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+    disabled={loading}
+    required
+  />
 
-            <input
-              type="text"
-              name="gstNumber"
-              value={form.gstNumber}
-              onChange={handleChange}
-              placeholder="GST Number"
-              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-black outline-none"
-              disabled={loading}
-            />
-          </div>
+  {/* RECAPTCHA */}
+  <div className="w-full overflow-x-auto">
+    <div
+      id={recaptchaId}
+      className="flex justify-center min-w-[304px]"
+    />
+  </div>
 
-          <input
-            type="tel"
-            name="phone"
-            value={form.phone}
-            onChange={(e) =>
-              setForm({
-                ...form,
-                phone: e.target.value.replace(
-                  /\D/g,
-                  ""
-                ),
-              })
-            }
-            maxLength={10}
-            placeholder="Phone Number *"
-            className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-black outline-none"
-            disabled={loading}
-            required
-          />
+  {/* OTP BOX */}
+  {showOtpBox && !isPhoneVerified && (
+    <div className="space-y-3 rounded-lg border border-gray-200 bg-gray-50 p-3">
+      <input
+        type="text"
+        placeholder="Enter OTP"
+        value={otp}
+        onChange={(e) =>
+          setOtp(
+            e.target.value.replace(/\D/g, "")
+          )
+        }
+        maxLength={6}
+        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      />
 
-          {/* RECAPTCHA */}
-          <div
-            id={recaptchaId}
-            className="flex justify-center"
-          ></div>
+      <button
+        type="button"
+        onClick={verifyOTP}
+        disabled={loading}
+        className="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base"
+      >
+        {loading ? "Verifying..." : "Verify OTP"}
+      </button>
+    </div>
+  )}
 
-          {/* OTP BOX */}
-          {showOtpBox && !isPhoneVerified && (
-            <div className="space-y-3">
+  <textarea
+    name="message"
+    value={form.message}
+    onChange={handleChange}
+    rows={3}
+    placeholder="Your requirement..."
+    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none resize-none"
+    disabled={loading}
+  />
 
-              <input
-                type="text"
-                placeholder="Enter OTP"
-                value={otp}
-                onChange={(e) =>
-                  setOtp(
-                    e.target.value.replace(/\D/g, "")
-                  )
-                }
-                maxLength={6}
-                className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-black outline-none"
-              />
-
-              <button
-                type="button"
-                onClick={verifyOTP}
-                disabled={loading}
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold"
-              >
-                {loading
-                  ? "Verifying..."
-                  : "Verify OTP"}
-              </button>
-            </div>
-          )}
-
-          <textarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            rows={4}
-            placeholder="Your requirement..."
-            className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-black outline-none"
-            disabled={loading}
-          />
-
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-[#10316C] text-white py-3 rounded-lg font-semibold"
-          >
-            {loading
-              ? "Loading..."
-              : !showOtpBox
-              ? "Send OTP"
-              : !isPhoneVerified
-              ? "Verify OTP First"
-              : "Submit Request"}
-          </button>
-        </form>
+  <button
+    type="submit"
+    disabled={loading}
+    className="w-full bg-[#10316C] hover:bg-[#0c2756] text-white py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+  >
+    {loading
+      ? "Loading..."
+      : !showOtpBox
+      ? "Send OTP"
+      : !isPhoneVerified
+      ? "Verify OTP First"
+      : "Submit Request"}
+  </button>
+</form>
       </div>
 
       <style jsx>{`

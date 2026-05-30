@@ -313,7 +313,7 @@ const mobileBanners = [
         <span className="text-[#0D2340]">product?</span>
       </h2>
 
-      <button className="border border-[#f48335] text-white text-[11px] px-2 py-1.5 rounded-md w-fit">
+      <button className="border border-[#f48335] text-black text-[11px] px-2 py-1.5 rounded-md w-fit">
         Post Requirement →
       </button>
     </div>
@@ -334,7 +334,7 @@ const mobileBanners = [
         <span className="text-[#0D2340]">10x faster</span>
       </h2>
 
-      <button className="border border-[#24457a] text-white text-[11px] px-2 py-1.5 rounded-md w-fit">
+      <button className="border border-[#24457a] text-black text-[11px] px-2 py-1.5 rounded-md w-fit">
         Free Listing →
       </button>
     </div>
