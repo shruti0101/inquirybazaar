@@ -40,7 +40,7 @@ export default function Navbar() {
     
     
 
-<header className="w-full fixed top-0 z-50 font-sans overflow-x-hidden">
+<header className="w-full fixed top-0 z-[99999] font-sans overflow-visible">
 <div className="w-full bg-[#183B63] hidden md:block text-white">
       <div className="mx-auto flex w-full px-4 xl:px-15  flex-col items-center justify-between gap-3 py-2 text-sm md:flex-row md:gap-0">
         
@@ -218,7 +218,7 @@ export default function Navbar() {
             </button>
 </Link>
 
-            <div className="relative" ref={dropdownRef}>
+           <div className="relative z-[9999]" ref={dropdownRef}>
               <button
                 onClick={() => setOpen(!open)}
                 className="w-full h-[48px] border-2 border-gray-300 bg-[#FAFAF8] rounded-md text-[14px] flex items-center justify-center gap-2"
@@ -309,7 +309,7 @@ export default function Navbar() {
             </button>
 
             {open && (
-              <div className="absolute right-0 mt-2 z-9999 w-[180px] bg-white border rounded-md shadow-md overflow-hidden">
+         <div className="absolute right-0 top-full mt-2 z-[9999] w-[180px] bg-white border rounded-md shadow-md overflow-visible">
                 <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                   Login as Supplier
                 </button>

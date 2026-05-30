@@ -48,7 +48,7 @@ const truncate = (text, limit = 12) =>
         </Swiper>
       </div>
 
-      {/* ✅ DESKTOP SIDEBAR (UNCHANGED) */}
+      {/* ✅ DESKTOP SIDEBAR (UNCHANGED) */}++
       <div className="hidden md:block col-span-3  bg-white rounded-lg p-3 sticky top-0 self-start shadow h-fit">
         {categoriesToShow?.length > 0 ? (
           <>
@@ -108,7 +108,7 @@ const truncate = (text, limit = 12) =>
         Write a Review
       </h3>
 
-      <p className="text-[15px]  leading-[1.4] text-black mt-2 max-w-[250px]">
+      <p className="text-[12px] xl:text-[15px]  leading-[1.4] text-black mt-2 max-w-[250px]">
         Share your experiences with the products
       </p>
     </div>
