@@ -324,7 +324,7 @@ export default function Navbar() {
 
 
 
-          <button className="h-[42px] px-3 bg-[#0D2340] text-white rounded-md text-[14px] flex items-center gap-2">
+          <button className="h-[45px] px-3 bg-[#0D2340] text-white rounded-md text-[14px] flex items-center gap-2">
             ✍️ Write a Review
           </button>
 </a>
@@ -332,7 +332,7 @@ export default function Navbar() {
 <Link href="/faqs">
 
 
-          <button className="h-[42px] px-3 bg-[#ec771c] text-white rounded-md text-[14px] flex items-center gap-2">
+          <button className="h-[45px] px-3 bg-[#ec771c] text-white rounded-md text-[14px] flex items-center gap-2">
             💬 Help Center
           </button>
 </Link>
