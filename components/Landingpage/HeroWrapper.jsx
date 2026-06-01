@@ -55,15 +55,16 @@ export default async function HeroWrapper() {
 
 
   const sections = [
-    pharmaData,
+     chemicalData,
+   
     hospitalData,
     buildingData,
     Industrial,
     packingData,
-    chemicalData,
+    pharmaData,
     labData,
     mechanicalData
-    // 👉 add more here later
+  
   ];
 
 

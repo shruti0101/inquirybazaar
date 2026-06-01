@@ -320,13 +320,13 @@ Contact: ${form.phone}`;
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 overflow-y-auto  md:py-10">
+    <div className="fixed inset-0  z-[9999] flex items-center justify-center bg-black/50 px-4 overflow-y-auto  md:py-10">
 
       <div className="bg-white w-full max-w-[600px] rounded-2xl shadow-xl p-3 md:p-6 relative animate-scaleIn">
 
-        {/* CLOSE */}
         <button
           onClick={() => setIsOpen(false)}
+          
           
           className="absolute top-4 right-4 text-gray-500 hover:text-black"
         >
@@ -345,7 +345,7 @@ Contact: ${form.phone}`;
         </div>
 
       {/* FORM */}
-      
+
 <form
   onSubmit={handleSubmit}
   className="space-y-3 md:space-y-4"
