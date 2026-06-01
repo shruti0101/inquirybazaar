@@ -299,10 +299,10 @@ const faqs = [
     </div>
 
     {/* Heading */}
-    <h1 className="mt-5 text-[42px] md:text-[68px] leading-[1.05] font-semibold tracking-[-2px] text-black">
+    <h1 className="mt-5 text-[42px] md:text-[68px] leading-[1.05] font-semibold tracking-[-2px] text-[#1D3A76]">
       Stop competing for leads.
       <br />
-      <span className="text-[#ef6b2e]">
+      <span className="text-[#F27A1B]">
         Start owning them.
       </span>
     </h1>
@@ -331,7 +331,7 @@ const faqs = [
 
         <div className="py-8 px-10 border-b md:border-b-0 md:border-r border-gray-200">
           <h3 className="text-[52px] leading-none font-semibold text-black">
-            21.9<span className="text-[#ef6b2e]">Cr</span>
+            21.9<span className="text-[#F27A1B]">Cr</span>
           </h3>
           <p className="mt-2 text-[#7b8190] text-lg">
             Active buyers
@@ -340,7 +340,7 @@ const faqs = [
 
         <div className="py-8 px-10 border-b md:border-b-0 md:border-r border-gray-200">
           <h3 className="text-[52px] leading-none font-semibold text-black">
-            86<span className="text-[#ef6b2e]">L+</span>
+            86<span className="text-[#F27A1B]">L+</span>
           </h3>
           <p className="mt-2 text-[#7b8190] text-lg">
             Verified suppliers
@@ -349,7 +349,7 @@ const faqs = [
 
         <div className="py-8 px-10">
           <h3 className="text-[52px] leading-none font-semibold text-black">
-            100<span className="text-[#ef6b2e]">%</span>
+            100<span className="text-[#F27A1B]">%</span>
           </h3>
           <p className="mt-2 text-[#7b8190] text-lg">
             Exclusive leads
@@ -377,7 +377,7 @@ const faqs = [
     </div>
 
     {/* Heading */}
-    <h2 className="max-w-[900px] mx-auto text-[34px] md:text-[46px] leading-[1.12] font-semibold text-[#0b1220] tracking-[-1.8px]">
+    <h2 className="max-w-[900px] mx-auto text-[34px] md:text-[46px] leading-[1.12] font-semibold text-[#1D3A76] tracking-[-1.8px]">
       Why businesses fail on traditional marketplaces 
     </h2>
 
@@ -444,7 +444,7 @@ const faqs = [
         </div>
 
         {/* Heading */}
-        <h2 className="text-center text-[34px] md:text-[56px] font-semibold leading-[1.1] tracking-[-2px] text-[#0c1323]">
+        <h2 className="text-center text-[34px] md:text-[56px] font-semibold leading-[1.1] tracking-[-2px] text-[#1D3A76]">
           Inquiry Bazaar vs traditional marketplaces
         </h2>
 
@@ -537,7 +537,7 @@ const faqs = [
         </div>
 
         {/* Heading */}
-        <h2 className="text-center text-[34px] md:text-[56px] font-semibold leading-[1.1] tracking-[-2px] text-black">
+        <h2 className="text-center text-[34px] md:text-[56px] font-semibold leading-[1.1] tracking-[-2px] text-[#1D3A76]">
           The lead journey: them vs us
         </h2>
 
@@ -646,7 +646,7 @@ const faqs = [
         </div>
 
         {/* Heading */}
-        <h2 className="max-w-[780px] text-[44px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#0d0d0d]">
+        <h2 className="max-w-[780px] text-[44px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#1D3A76]">
           Built for results, not just listings
         </h2>
 
@@ -712,7 +712,7 @@ const faqs = [
     </div>
 
     {/* Heading */}
-    <h2 className=" text-center text-[46px] font-medium leading-[1.1] tracking-[-0.04em] text-[#070707]">
+    <h2 className=" text-center text-[46px] font-medium leading-[1.1] tracking-[-0.04em] text-[#1D3A76]">
       Stop selling on price. Start building a brand.
     </h2>
 
@@ -796,7 +796,7 @@ const faqs = [
     </div>
 
     {/* Heading */}
-    <h2 className=" text-center text-[56px] font-medium leading-[1.08] tracking-[-0.04em] text-[#050505]">
+    <h2 className=" text-center text-[56px] font-medium leading-[1.08] tracking-[-0.04em] text-[#1D3A76]">
       What this means for your business
     </h2>
 
@@ -932,7 +932,7 @@ const faqs = [
         </div>
 
         {/* Heading */}
-        <h2 className=" text-center text-[56px] font-medium leading-[1.08] tracking-[-0.04em] text-[#050505]">
+        <h2 className=" text-center text-[56px] font-medium leading-[1.08] tracking-[-0.04em] text-[#1D3A76]">
           100% transparent. 100% yours.
         </h2>
 
@@ -1044,7 +1044,7 @@ const faqs = [
         </div>
 
         {/* Heading */}
-        <h2 className="mb-5 text-[56px] font-medium leading-[1.08] tracking-[-0.04em] text-black">
+        <h2 className="mb-5 text-[56px] font-medium leading-[1.08] tracking-[-0.04em] text-[#1D3A76]">
           What our sellers say
         </h2>
 
@@ -1136,11 +1136,11 @@ const faqs = [
       </span>
     </div>
 
-    <h2 className="text-[56px] font-medium leading-[1.08] tracking-[-0.04em] text-black">
+    <h2 className="text-[56px] font-medium leading-[1.08] tracking-[-0.04em] text-[#1D3A76]">
       Objections answered honestly
     </h2>
 
-    <p className="mt-4 text-[18px] text-black">
+    <p className="mt-4 text-[18px] text-[#1D3A76]">
       Real questions from businesses evaluating Inquiry Bazaar —
       answered straight.
     </p>
@@ -1221,7 +1221,7 @@ const faqs = [
         
 
           <form className=" space-y-5">
-            <div className=''>
+            <div className='mt-3'>
           
 
               <input
@@ -1285,7 +1285,7 @@ const faqs = [
         <h2 className="max-w-[700px] text-[64px] font-medium leading-[1.05] tracking-[-0.04em] text-white">
           Don't just get leads.
           <br />
-          <span className="text-[#eb6425]">Get results.</span>
+          <span className="text-[#F27A1B]">Get results.</span>
         </h2>
 
         {/* Description */}
