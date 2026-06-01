@@ -248,7 +248,7 @@ const testimonials = [
 
 const faqs = [
   {
-    question: "Will I get fewer leads than on IndiaMART?",
+    question: "Will I get fewer leads than on Traditional Marketplace?",
     answer:
       "Yes — and that is intentional. You get fewer leads, but each one is exclusive and high-intent. One qualified lead that converts is worth more than 50 shared leads that go nowhere. Our sellers see 3× better conversion on average.",
   },
@@ -266,7 +266,7 @@ const faqs = [
     question:
       "Can I use this alongside my existing marketplace listings?",
     answer:
-      "Absolutely. Many sellers use Inquiry Bazaar alongside IndiaMART, TradeIndia, and other channels.",
+      "Absolutely. Many sellers use Inquiry Bazaar alongside Traditional Marketplace, TradeIndia, and other channels.",
   },
   {
     question: 'What makes it a "hybrid" marketplace?',
@@ -295,7 +295,7 @@ const faqs = [
     {/* Badge */}
     <div className="inline-flex items-center gap-3 border border-[#ef6b2e] rounded-xl px-5 py-3 text-[#ef6b2e] text-sm font-medium bg-white">
       <span className="w-2 h-2 rounded-full bg-[#ef6b2e]" />
-      India's hybrid B2B marketplace
+      India's Hybrid B2B Marketplace
     </div>
 
     {/* Heading */}
@@ -415,13 +415,13 @@ const faqs = [
 
     {/* Result Box */}
     <div className="mt-3 max-w-5xl mx-auto rounded-xl border border-[#f5c7be] bg-[#fff5f2]">
-      <div className="flex items-center gap-4 px-7 py-6 border-l-4 border-[#e14d2a]">
+      <div className="flex items-center justify-center gap-4 px-7 py-6 border-l-4 border-[#e14d2a]">
         <AlertCircle
           size={18}
           className="text-[#a13c26] shrink-0"
         />
 
-        <p className="text-[20px] font-medium text-[#8f2f1d]">
+        <p className="text-[20px] font-medium text-[#8f2f1d] ">
           Result: High cost. Low ROI. Zero ownership of your buyers.
         </p>
       </div>
@@ -468,7 +468,7 @@ const faqs = [
 
             <div className="px-8 py-5 bg-[#fafafa] border-l border-[#e5e5e5]">
               <span className="text-[13px] tracking-[2px] uppercase text-[#8a94a6] font-semibold">
-                IndiaMart / TradeIndia
+                Traditional Marketplace / TradeIndia
               </span>
             </div>
 
@@ -700,83 +700,86 @@ const faqs = [
 {/* section 6 */}
 
 
-   <section className="bg-[#f6f6f5] py-10">
-      <div className="mx-auto max-w-[1440px] px-[44px]">
-        {/* Label */}
-        <div className="mb-3 flex items-center gap-2">
-          <div className="h-px w-5 bg-[#e86c2f]" />
-          <span className="text-[13px] font-medium uppercase tracking-[3px] text-[#e86c2f]">
-            Your Positioning
+ <section className="bg-[#f6f6f5] py-10">
+  <div className="mx-auto flex flex-col items-center ">
+
+    {/* Label */}
+    <div className="mb-3 flex items-center gap-2">
+      <div className="h-px w-5 bg-[#e86c2f]" />
+      <span className="text-[13px] font-medium uppercase tracking-[3px] text-[#e86c2f]">
+        Your Positioning
+      </span>
+    </div>
+
+    {/* Heading */}
+    <h2 className=" text-center text-[46px] font-medium leading-[1.1] tracking-[-0.04em] text-[#070707]">
+      Stop selling on price. Start building a brand.
+    </h2>
+
+    {/* Description */}
+    <p className="mt-3 max-w-[960px] text-center text-[18px] leading-[2] text-[#5c6470]">
+      On traditional platforms you are a commodity. On Inquiry Bazaar,
+      you are a trusted brand.
+    </p>
+
+    {/* Comparison Cards */}
+    <div className="mx-auto mt-5 grid  grid-cols-1 gap-4 lg:grid-cols-2">
+      
+      {/* Left Card */}
+      <div className="rounded-[16px] border border-[#dddddd] bg-white px-[30px] py-[20px]">
+        <div className="inline-flex rounded-[8px] bg-[#f7ece8] px-4 py-2">
+          <span className="text-[13px] font-medium uppercase tracking-[2px] text-[#b13f2d]">
+            Traditional Platforms
           </span>
         </div>
 
-        {/* Heading */}
-        <h2 className="max-w-[1000px] text-[46px] font-medium leading-[1.1] tracking-[-0.04em] text-[#070707]">
-          Stop selling on price. Start building a brand.
-        </h2>
+        <h3 className="mt-3 text-[22px] font-medium text-[#0a0a0a]">
+          You are a commodity
+        </h3>
 
-        {/* Description */}
-        <p className="mt-3 max-w-[960px] text-[18px] leading-[2] text-[#5c6470]">
-          On traditional platforms you are a commodity. On Inquiry Bazaar,
-          you are a trusted brand.
-        </p>
-
-        {/* Comparison Cards */}
-        <div className="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2 max-w-[925px]">
-          {/* Left Card */}
-          <div className="rounded-[16px] border border-[#dddddd] bg-white px-[30px] py-[20px]">
-            <div className="inline-flex rounded-[8px] bg-[#f7ece8] px-4 py-2">
-              <span className="text-[13px] font-medium uppercase tracking-[2px] text-[#b13f2d]">
-                Traditional Platforms
-              </span>
-            </div>
-
-            <h3 className="mt-3 text-[22px] font-medium text-[#0a0a0a]">
-              You are a commodity
-            </h3>
-
-            <ul className="mt-4 space-y-3">
-              {traditionalItems.map((item) => (
-                <li key={item} className="flex items-center gap-4">
-                  <X
-                    size={16}
-                    strokeWidth={2}
-                    className="shrink-0 text-[#e04d39]"
-                  />
-                  <span className="text-[17px] text-[#4f5661]">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Right Card */}
-          <div className="rounded-[16px] border border-[#f0a57f] bg-white px-[30px] py-[20px]">
-            <div className="inline-flex rounded-[8px] bg-[#f4ece7] px-4 py-2">
-              <span className="text-[13px] font-medium uppercase tracking-[2px] text-[#c85e29]">
-                Inquiry Bazaar
-              </span>
-            </div>
-
-            <h3 className="mt-3 text-[22px] font-medium text-[#0a0a0a]">
-              You are a brand
-            </h3>
-
-            <ul className="mt-3 space-y-3">
-              {brandItems.map((item) => (
-                <li key={item} className="flex items-center gap-4">
-                  <Check
-                    size={16}
-                    strokeWidth={2}
-                    className="shrink-0 text-[#0d7b4b]"
-                  />
-                  <span className="text-[17px] text-[#4f5661]">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <ul className="mt-4 space-y-3">
+          {traditionalItems.map((item) => (
+            <li key={item} className="flex items-center gap-4">
+              <X
+                size={16}
+                strokeWidth={2}
+                className="shrink-0 text-[#e04d39]"
+              />
+              <span className="text-[17px] text-[#4f5661]">{item}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-    </section>
+
+      {/* Right Card */}
+      <div className="rounded-[16px] border border-[#f0a57f] bg-white px-[30px] py-[20px]">
+        <div className="inline-flex rounded-[8px] bg-[#f4ece7] px-4 py-2">
+          <span className="text-[13px] font-medium uppercase tracking-[2px] text-[#c85e29]">
+            Inquiry Bazaar
+          </span>
+        </div>
+
+        <h3 className="mt-3 text-[22px] font-medium text-[#0a0a0a]">
+          You are a brand
+        </h3>
+
+        <ul className="mt-3 space-y-3">
+          {brandItems.map((item) => (
+            <li key={item} className="flex items-center gap-4">
+              <Check
+                size={16}
+                strokeWidth={2}
+                className="shrink-0 text-[#0d7b4b]"
+              />
+              <span className="text-[17px] text-[#4f5661]">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
     {/* sectuin7 */}
@@ -1124,7 +1127,7 @@ const faqs = [
 {/* section 10 */}
 
 <section className="bg-[#f6f6f5] py-12">
-  <div className="mx-auto w-full px-[24px]">
+  <div className="mx-auto w-full px-[44px]">
     {/* Header */}
     <div className="mb-4 flex items-center gap-2">
       <div className="h-px w-5 bg-[#eb6425]" />
@@ -1207,7 +1210,7 @@ const faqs = [
       </div>
 
       {/* FORM */}
-      <div className="w-full xl:w-[580px] xl:shrink-0">
+      <div className="w-full xl:w-[700px] xl:shrink-0">
         <div className=" rounded-[16px] border border-[#dddddd] bg-white p-8">
         
 
@@ -1247,20 +1250,17 @@ const faqs = [
                 className="h-[56px] w-full rounded-[10px] border border-[#cfd3d7] px-4 outline-none focus:border-[#eb6425]"
               />
             </div>
+<div>
+  <label className="mb-2 block text-[13px] uppercase tracking-[1.5px] text-[#7a828f]">
+    Your Requirements
+  </label>
 
-            <div>
-              <label className="mb-2 block text-[13px] uppercase tracking-[1.5px] text-[#7a828f]">
-                Product Category
-              </label>
-
-              <select className="h-[56px] w-full rounded-[10px] border border-[#cfd3d7] px-4 outline-none focus:border-[#eb6425]">
-                <option>Select category</option>
-                <option>Industrial Equipment</option>
-                <option>Textiles</option>
-                <option>Chemicals</option>
-                <option>Packaging</option>
-              </select>
-            </div>
+  <textarea
+    placeholder="Please describe your requirements"
+    rows={4}
+    className="w-full rounded-[10px] border border-[#cfd3d7] px-4 py-3 outline-none focus:border-[#eb6425] resize-none"
+  />
+</div>
 
             <button
               type="submit"
@@ -1278,7 +1278,7 @@ const faqs = [
 
 
 {/* section 11 */}
- <section className="bg-black py-[20px]">
+ <section className="bg-black py-[26px]">
       <div className="mx-auto flex max-w-[1440px] flex-col items-center px-6 text-center">
         
         {/* Heading */}

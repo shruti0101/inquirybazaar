@@ -292,7 +292,7 @@ export default function Navbar() {
 
 <Link href="/whytrustus">
 
-          <button className="py-2 px-3 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[13px] flex items-center ">
+          <button className="py-2 px-3 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[16px] flex items-center ">
              Why Trust Us
           </button>
 </Link>
