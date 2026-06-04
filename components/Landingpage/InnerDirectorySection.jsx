@@ -32,7 +32,7 @@ export default function InnerDirectorySection() {
     console.log(industries);
   return (
     <div>
-          {industries?.map((section, index) => (
+          {industries && industries?.slice(0,8).map((section, index) => (
             <div key={index}>
               
               {/* SECTION */}
