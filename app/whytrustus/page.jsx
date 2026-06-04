@@ -266,7 +266,7 @@ const faqs = [
     question:
       "Can I use this alongside my existing marketplace listings?",
     answer:
-      "Absolutely. Many sellers use Inquiry Bazaar alongside Traditional Marketplace, TradeIndia, and other channels.",
+      "Absolutely. Many sellers use Inquiry Bazaar alongside Traditional Marketplace, Traditional Marketplace, and other channels.",
   },
   {
     question: 'What makes it a "hybrid" marketplace?',
@@ -468,7 +468,7 @@ const faqs = [
 
             <div className="px-8 py-5 bg-[#fafafa] border-l border-[#e5e5e5]">
               <span className="text-[13px] tracking-[2px] uppercase text-[#8a94a6] font-semibold">
-                Traditional Marketplace / TradeIndia
+                Traditional Marketplace / Traditional Marketplace
               </span>
             </div>
 
