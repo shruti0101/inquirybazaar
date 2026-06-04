@@ -187,7 +187,7 @@ useEffect(() => {
 
    <a
               
-                href="https://www.linkedin.com/company/inquiry-bazaar/?viewAsMember=true"
+                href="https://www.youtube.com/@inquirybazaar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-300 transition"

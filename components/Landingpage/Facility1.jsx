@@ -26,7 +26,7 @@ export default function MoreForYou() {
       title: "Connect with Verified Suppliers",
       desc: "Find trusted & verified manufacturers, wholesalers, and exporters across India. Share your requirement and get the best quotes instantly.",
       btn: "Get Verified Suppliers",
-       link: "https://buyer.inquirybazaar.com/",
+       link: "https://dir.inquirybazaar.com/",
     },
     {
       icon: <Store size={28} className="sm:w-9 sm:h-9" />,
