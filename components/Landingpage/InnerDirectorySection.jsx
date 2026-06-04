@@ -29,7 +29,6 @@ export default function InnerDirectorySection() {
       fetchIndustries();
     }, []);
 
-    console.log(industries);
   return (
     <div>
           {industries && industries?.slice(0,8).map((section, index) => (
