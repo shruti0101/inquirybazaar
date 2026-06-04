@@ -620,6 +620,65 @@ const Exhibition = () => {
         </div>
       </section>
 
+       <section className="relative bg-[#0F172A] px-6 py-7 md:py-12 text-white overflow-hidden">
+        {/* GLOW BACKGROUND */}
+        <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+          <div className="w-[500px] h-[500px] bg-orange-500/10 blur-[120px] rounded-full"></div>
+        </div>
+
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-[900px] mx-auto text-center">
+          <p className="text-orange-500 tracking-wider text-sm font-md mb-3">READY TO GO DIGITAL?</p>
+
+          <h2 className="text-3xl syne-font md:text-6xl font-bold leading-tight mb-4">
+            Ab Agle
+            
+            Exhibition Ka
+            <br />
+            <span className="text-orange-500">Wait Mat Karo.</span>
+          </h2>
+
+          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+            Aaj se aapka Google pe virtual stall live ho sakta hai. Buyers
+            search kar rahe hain — kya aap visible hain?
+          </p>
+
+          {/* BUTTONS */}
+          <div className="flex flex-wrap justify-center gap-4">
+            {/* PRIMARY BUTTON */}
+            <a
+              href="https://www.inquirybazaar.com"
+              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-medium transition"
+            >
+              List My Business Now
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M3 8h10M9 4l4 4-4 4"
+                  stroke="#fff"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+
+            {/* OUTLINE BUTTON */}
+            <a
+              href="https://www.inquirybazaar.com"
+              className="px-6 py-3 rounded-lg border border-white/20 hover:border-orange-500 hover:text-orange-500 transition"
+            >
+              Talk to Our Team
+            </a>
+          </div>
+
+          {/* NOTE */}
+          <p className="text-sm text-gray-500 mt-6">
+            ✦ Free listing available &nbsp;·&nbsp; GST invoice provided
+            &nbsp;·&nbsp; Setup in 24 hours
+          </p>
+        </div>
+      </section>
+
       <section className="bg-[#0F172A] text-white px-6 py-4 md:py-12">
         <div className="max-w-[1100px] mx-auto text-start">
           {/* TOP */}
@@ -747,64 +806,7 @@ const Exhibition = () => {
         </div>
       </section>
 
-      <section className="relative bg-[#0F172A] px-6 py-7 md:py-12 text-white overflow-hidden">
-        {/* GLOW BACKGROUND */}
-        <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-          <div className="w-[500px] h-[500px] bg-orange-500/10 blur-[120px] rounded-full"></div>
-        </div>
-
-        {/* CONTENT */}
-        <div className="relative z-10 max-w-[900px] mx-auto text-center">
-          <p className="text-orange-500 tracking-wider text-sm font-md mb-3">READY TO GO DIGITAL?</p>
-
-          <h2 className="text-3xl syne-font md:text-6xl font-bold leading-tight mb-4">
-            Ab Agle
-            <br />
-            Exhibition Ka
-            <br />
-            <span className="text-orange-500">Wait Mat Karo.</span>
-          </h2>
-
-          <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Aaj se aapka Google pe virtual stall live ho sakta hai. Buyers
-            search kar rahe hain — kya aap visible hain?
-          </p>
-
-          {/* BUTTONS */}
-          <div className="flex flex-wrap justify-center gap-4">
-            {/* PRIMARY BUTTON */}
-            <a
-              href="https://www.inquirybazaar.com"
-              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-medium transition"
-            >
-              List My Business Now
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  stroke="#fff"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
-
-            {/* OUTLINE BUTTON */}
-            <a
-              href="https://www.inquirybazaar.com"
-              className="px-6 py-3 rounded-lg border border-white/20 hover:border-orange-500 hover:text-orange-500 transition"
-            >
-              Talk to Our Team
-            </a>
-          </div>
-
-          {/* NOTE */}
-          <p className="text-sm text-gray-500 mt-6">
-            ✦ Free listing available &nbsp;·&nbsp; GST invoice provided
-            &nbsp;·&nbsp; Setup in 24 hours
-          </p>
-        </div>
-      </section>
+     
 
      
     </>

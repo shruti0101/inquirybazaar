@@ -6,7 +6,6 @@ import HeroSection from "./Hero";
 import Cta from "./Cta";
 import CategorySidebar from "./CategorySidebar";
 import FeaturedProducts from "./FeaturedCategories";
-import DirectorySection from "./DirectorySection";
 // import Banner3Section from "./Banner3";
 import Clientele from "./Clientele";
 import MoreForYou from "./Facility1";
@@ -27,6 +26,7 @@ import chemicalData from "@/data/chemicalData"
 import labData from "@/data/labData"
 import mechanicalData from "@/data/mechanicalData"
 import Banner from "@/components/Landingpage/DirectoryBanner"
+import InnerDirectorySection from "./InnerDirectorySection";
 
 //  Fetch functions (SERVER SIDE)
 async function getData(url) {
@@ -54,18 +54,7 @@ export default async function HeroWrapper() {
 
 
 
-  const sections = [
-     chemicalData,
-   
-    hospitalData,
-    buildingData,
-    Industrial,
-    packingData,
-    pharmaData,
-    labData,
-    mechanicalData
   
-  ];
 
 
 
@@ -96,7 +85,10 @@ export default async function HeroWrapper() {
   const aboutData = aboutRes?.content;
   const footerdata = footerRes;
 
+ 
+
   return (
+    
     <>
       <section className="px-1 md:px-8  mx-auto  bg-[#F3F4F6]">
         <div className="grid grid-cols-12 ">
@@ -121,20 +113,7 @@ export default async function HeroWrapper() {
               <DirectorySection key={dir._id} data={dir.content} />
             ))} */}
 
-          <div>
-      {sections.map((section, index) => (
-        <div key={index}>
-          
-          {/* SECTION */}
-          <DirectorySection data={section} />
-
-          {/* SHOW BANNER AFTER EVERY 2 SECTIONS */}
-          {(index + 1) % 2 === 0 && (
-            <Banner data={bannerData[(index + 1) / 2 - 1]} />
-          )}
-        </div>
-      ))}
-    </div>
+          <InnerDirectorySection></InnerDirectorySection>
 
             {/* <Banner3Section data={banner3Data} /> */}
 

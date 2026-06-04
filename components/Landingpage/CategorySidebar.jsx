@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Autoplay } from "swiper/modules";
 
 // ✅ Swiper imports
@@ -11,6 +11,8 @@ import "swiper/css";
 const CategorySidebar = ({ data }) => {
   const [showAll, setShowAll] = useState(false);
 
+  const [Catdata, setcatData] = useState([]);
+
   const visibleCount = 15;
   const categoriesToShow = showAll
     ? data?.categories
@@ -18,6 +20,26 @@ const CategorySidebar = ({ data }) => {
 
 const truncate = (text, limit = 12) =>
   text.length > limit ? text.slice(0, limit) + ".." : text;
+
+   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}api/industries`
+        );
+
+        const result = await res.json();
+        console.log(result);
+        setcatData(result.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    
+    fetchData();
+    
+  }, []);
+  console.log(Catdata);
 
   return (
     <>
@@ -52,9 +74,11 @@ const truncate = (text, limit = 12) =>
       <div className="hidden md:block col-span-3  bg-white rounded-lg p-3 sticky top-0 self-start shadow h-fit">
         {categoriesToShow?.length > 0 ? (
           <>
-            {categoriesToShow.map((cat, i) => (
-              <Link
-                href={cat.link}
+          
+            {Catdata.map((cat, i) => (
+              
+              <a target="_blank"
+                href={`https://dir.inquirybazaar.com/industries/${cat.slug}`}
                 key={i}
                 className="flex group items-center gap-3 py-2 px-2 hover:bg-gray-100 rounded transition"
               >
@@ -67,7 +91,7 @@ const truncate = (text, limit = 12) =>
                 <div className="ml-auto">
                   <ChevronRight className="text-sm text-orange-500 group-hover:translate-x-2 transform transition-all duration-300" />
                 </div>
-              </Link>
+              </a>
             ))}
 
             {/* SHOW MORE BUTTON */}

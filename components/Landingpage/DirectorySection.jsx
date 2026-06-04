@@ -1,118 +1,19 @@
-// "use client";
-// import Link from "next/link";
-
-// export default function DirectorySection({ data }) {
-//   if (!data || !data.sections) return null;
-
-//   return (
-//     <section className="px-8 py-8 bg-white rounded-sm">
-
-//       {/* TITLE */}
-//       <h2 className="text-2xl font-semibold mb-6 text-black">
-//         {data.title}
-//       </h2>
-
-//       <div className="grid grid-cols-12 gap-6">
-
-//         {/* LEFT IMAGE */}
-//         <div className="col-span-4">
-//           {data.image && (
-//             <img
-//               src={data.image}
-//               className="w-full h-full object-cover rounded"
-//             />
-//           )}
-//         </div>
-
-//         {/* RIGHT */}
-//         <div className="col-span-8 grid grid-cols-3 gap-8">
-
-//           {data.sections.map((sec, i) => (
-//             <div key={i} className="flex gap-3 group">
-
-//               {/* ICON */}
-//               {sec.image && (
-//                 <img
-//                   src={sec.image}
-//                   className="w-16 h-16 object-contain"
-//                 />
-//               )}
-
-//               {/* CONTENT */}
-//               <div className="flex flex-col">
-
-//                 {/* SECTION TITLE (CLICKABLE) */}
-//                 {sec.viewAllLink ? (
-//                   <Link
-//                     href={sec.viewAllLink}
-//                     className="font-semibold text-lg mb-1 hover:text-orange-500 transition"
-//                   >
-//                     {sec.title}
-//                   </Link>
-//                 ) : (
-//                   <h3 className="font-semibold text-sm mb-1">
-//                     {sec.title}
-//                   </h3>
-//                 )}
-
-//                 {/* LINKS */}
-//                 <div className="flex flex-col text-blue-600 text-sm space-y-1">
-//                   {sec.links?.map((link, j) => (
-//                     link.url ? (
-//                       <Link
-//                         key={j}
-//                         href={link.url}
-//                         className="hover:underline hover:text-orange-500 transition"
-//                       >
-//                         {link.text}
-//                       </Link>
-//                     ) : (
-//                       <span key={j}>{link.text}</span>
-//                     )
-//                   ))}
-//                 </div>
-
-//                 {/* VIEW ALL BUTTON */}
-//                 {sec.viewAllLink && (
-//                   <Link
-//                     href={sec.viewAllLink}
-//                     className="mt-2 text-sm text-red-600 hover:text-orange-500 transition flex items-center gap-1"
-//                   >
-//                    view all -
-//                   </Link>
-//                 )}
-
-//               </div>
-
-//             </div>
-//           ))}
-
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 
 
-
-
-
-
-
-
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 
 export default function CategorySection({ data }) {
+  
+  
 
   return (
     <div className="w-full mx-auto px-3 md:px-6 py-2 md:py-5 bg-white">
       
       {/* Title */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-4 md:mb-6">
-        {data.title}
+        {data.name}
       </h2>
 
       <div className="grid grid-cols-12 gap-4 ">
@@ -121,8 +22,8 @@ export default function CategorySection({ data }) {
         <div className="col-span-12 md:col-span-4">
           <div className="bg-gray-100 ">
             <Image
-              src={data.mainImage}
-              alt={data.title}
+              src={data.imageUrl}
+              alt={data.name}
               width={400}
               height={500}
               className="object-cover h-[160px] sm:h-[220px] md:h-[240px] w-full"
@@ -133,14 +34,14 @@ export default function CategorySection({ data }) {
 
         {/* RIGHT GRID */}
         <div className="col-span-12 md:col-span-8 grid grid-cols-2 gap-2 md:gap-6">
-          {data.categories.map((item, index) => (
+          {data.categories.slice(0,4).map((item, index) => (
             <div key={index} className="flex gap-3">
               
               {/* ICON */}
               <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
                 <Image
-                  src={item.image}
-                  alt={item.title}
+                  src={item.imageUrl}
+                  alt={item.name}
                   width={70}
                   height={66}
                   className="object-contain"
@@ -149,20 +50,23 @@ export default function CategorySection({ data }) {
 
               {/* TEXT */}
               <div>
+                <a target="_blank" className="hover:underline" href={`${process.env.NEXT_PUBLIC_DIR_URL}categories/${item.slug}`}>
+
                 <h3 className="text-xs sm:text-md font-semibold text-gray-800 mb-1">
-                  {item.title}
+                  {item.name}
                 </h3>
+                </a>
 
           <div className="flex flex-col text-xs sm:text-sm text-orange-600">
-  {item.links.map((link, i) => (
-    <Link
-      key={i}
-      href="#"
+  {item.subCategories.slice(0,3).map((link, index) => (
+    <a target="_blank"
+      key={index}
+      href={`${process.env.NEXT_PUBLIC_DIR_URL}category/${link.slug}`}
     className="hover:underline flex items-start gap-2 leading-[1.2]"
     >
      <span className="w-1 h-1 rounded-full bg-orange-500 mt-[5px] flex-shrink-0"></span>
-      {link}
-    </Link>
+      {link.name}
+    </a>
   ))}
 </div>
               </div>
@@ -174,7 +78,7 @@ export default function CategorySection({ data }) {
         {/* BOTTOM BUTTON (UNCHANGED) */}
         <div className="col-span-12 flex justify-center ">
           <Link
-            href="https://dir.promotebharat.com/"
+            href={`${process.env.NEXT_PUBLIC_DIR_URL}industries/${data.slug}`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#ef7a1b] text-white px-5 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium shadow-md hover:shadow-lg hover:scale-105 transition duration-300"
