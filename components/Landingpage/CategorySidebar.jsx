@@ -29,7 +29,7 @@ const truncate = (text, limit = 12) =>
         );
 
         const result = await res.json();
-        console.log(result);
+      
         setcatData(result.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -39,7 +39,7 @@ const truncate = (text, limit = 12) =>
     fetchData();
     
   }, []);
-  console.log(Catdata);
+
 
   return (
     <>
@@ -54,17 +54,17 @@ const truncate = (text, limit = 12) =>
                       autoplay={{ delay: 3000 }}
           
         >
-          {data?.categories?.map((cat, i) => (
+          {Catdata.map((cat, i) => (
             <SwiperSlide key={i} style={{ width: "auto" }}>
-              <Link
-                href={cat.link}
+              <a
+                href={`https://dir.inquirybazaar.com/industries/${cat.slug}`}
                 className="flex flex-col items-center justify-center min-w-[60px]"
               >
                 <div className="text-xl mb-1">{cat.icon}</div>
                 <span className="text-xs  capitalize text-black whitespace-nowrap">
            {truncate(cat.name)}
                 </span>
-              </Link>
+              </a>
             </SwiperSlide>
           ))}
         </Swiper>

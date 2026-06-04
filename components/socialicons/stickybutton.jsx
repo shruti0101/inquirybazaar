@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import Link from "next/link";
 export default function StickyOfferButton() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -43,7 +43,7 @@ export default function StickyOfferButton() {
       {showPopup && (
         <div
           onClick={() => setShowPopup(false)}
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center px-4"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center px-4"
         >
           <div
             onClick={(e) => e.stopPropagation()}
@@ -69,6 +69,11 @@ export default function StickyOfferButton() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               
               {/* SUPPLIER */}
+
+<Link href="https://seller.inquirybazaar.com/register">
+
+
+
               <button className="group relative p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#24457A] text-white text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-xl cursor-pointer">
                 <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">🏭</div>
                 <h3 className="font-semibold text-sm sm:text-lg">Register as Supplier</h3>
@@ -77,16 +82,25 @@ export default function StickyOfferButton() {
                 </p>
                 <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-white/10 opacity-0 group-hover:opacity-100 transition" />
               </button>
+</Link>
 
               {/* BUYER */}
+
+
+<Link href="https://buyer.inquirybazaar.com/register">
+
+
+
               <button className="group relative p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#F48335] text-white text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-xl cursor-pointer">
                 <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">🛒</div>
                 <h3 className="font-semibold text-sm sm:text-lg">Register as Buyer</h3>
-                <p className="text-xs sm:text-sm mt-1">
-                  Find trusted suppliers instantly
+                <p className="text-xs sm:text-sm mt-3">
+                  Find trusted suppliers instantly and grow your business
                 </p>
                 <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-white/10 opacity-0 group-hover:opacity-100 transition" />
               </button>
+</Link>
+
             </div>
 
             {/* FOOTER */}

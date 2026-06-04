@@ -105,9 +105,9 @@ export default function ClienteleSlider() {
 
           <div className="text-gray-600">
             Want to be featured?{" "}
-            <span className="text-[#ec771c] font-medium cursor-pointer">
+            <a href="https://seller.inquirybazaar.com/" className="text-[#ec771c] font-medium cursor-pointer">
               List your brand free →
-            </span>
+            </a>
           </div>
 
         </div>

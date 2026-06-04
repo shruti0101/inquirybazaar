@@ -12,19 +12,19 @@ import MoreForYou from "./Facility1";
 import TopCities from "./Cities";
 // import Bestseller from "./Bestseller";
 import TestimonialSection from "./Testimonial";
-import Youtube from "./Youtube";
+// import Youtube from "./Youtube";
 import About from "./About";
 import FooterLinksUI from "./Footerlink";
 import Fourcards from "./Fourcards";
-import pharmaData from "@/data/pharmaData";
-import hospitalData from "@/data/hospitalData";
-import bannerData from "@/data/bannerData";
-import buildingData from "@/data/buildingData"
-import Industrial from "@/data/Industrial"
-import packingData from "@/data/packingData"
-import chemicalData from "@/data/chemicalData"
-import labData from "@/data/labData"
-import mechanicalData from "@/data/mechanicalData"
+// import pharmaData from "@/data/pharmaData";
+// import hospitalData from "@/data/hospitalData";
+// import bannerData from "@/data/bannerData";
+// import buildingData from "@/data/buildingData"
+// import Industrial from "@/data/Industrial"
+// import packingData from "@/data/packingData"
+// import chemicalData from "@/data/chemicalData"
+// import labData from "@/data/labData"
+// import mechanicalData from "@/data/mechanicalData"
 import Banner from "@/components/Landingpage/DirectoryBanner"
 import InnerDirectorySection from "./InnerDirectorySection";
 
@@ -58,7 +58,7 @@ export default async function HeroWrapper() {
 
 
 
-  // ✅ Parallel fetching (SUPER FAST)
+  //  Parallel fetching (SUPER FAST)
   const [
     heroRes,
     categoriesRes,
@@ -123,7 +123,7 @@ export default async function HeroWrapper() {
             <TopCities />
 
             <TestimonialSection />
-            <Youtube />
+            {/* <Youtube /> */}
 
             <About content={aboutData} />
             <Fourcards />

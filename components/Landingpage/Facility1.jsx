@@ -1,5 +1,11 @@
 "use client";
 
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import RequestQuoteModal from "@/components/Layout/Requestquote";
+
 import {
   BadgeCheck,
   Store,
@@ -12,30 +18,36 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 
 export default function MoreForYou() {
+ const [isOpen, setIsOpen] = useState(false);
+
   const items = [
     {
       icon: <Receipt size={28} className="sm:w-9 sm:h-9" />,
       title: "Connect with Verified Suppliers",
       desc: "Find trusted & verified manufacturers, wholesalers, and exporters across India. Share your requirement and get the best quotes instantly.",
       btn: "Get Verified Suppliers",
+       link: "https://buyer.inquirybazaar.com/",
     },
     {
       icon: <Store size={28} className="sm:w-9 sm:h-9" />,
       title: "Sell on Inquiry Bazaar for Free",
       desc: "Expand your business reach and connect with high-intent buyers. Generate quality B2B leads without upfront cost.",
       btn: "Start Selling",
+      link: "https://seller.inquirybazaar.com/",
     },
     {
       icon: <Smartphone size={28} className="sm:w-9 sm:h-9" />,
       title: "Get Instant Business Enquiries",
       desc: "Receive real-time enquiries directly on your mobile & dashboard. Never miss a potential deal with instant alerts.",
       btn: "Get Enquiries Now",
+      popup: true, // <-- third button popup
     },
     {
       icon: <BadgeCheck size={28} className="sm:w-9 sm:h-9" />,
       title: "Legal Compliance",
       desc: "Verified Goods & Service Tax Identification Number (GSTIN) indicates a registered business that complies with Indian tax regulations.",
       btn: "Know More",
+      link: "/gst",
     },
   ];
 
@@ -54,7 +66,7 @@ export default function MoreForYou() {
 
       <div className="bg-white border border-gray-200 rounded-sm">
 
-        {/* ✅ MOBILE SWIPER (same size cards) */}
+        {/* MOBILE SWIPER (same size cards) */}
         <div className="md:hidden">
          <Swiper
   modules={[Autoplay]}
@@ -109,24 +121,39 @@ export default function MoreForYou() {
                   </p>
 
                   {/* BUTTON */}
-                  <button
-                    className={`mt-auto px-4 py-1.5 mb-5 rounded-full text-xs transition-all duration-300
-
-                      
-
-                    ${i === 1
-                      ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
-                      : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
-                    }`}
-                  >
-                    {item.btn}
-                  </button>
+               {item.popup ? (
+  <button
+    onClick={() => setIsOpen(true)}
+    className={`mt-auto px-4 py-1.5 mb-5 rounded-full text-xs transition-all duration-300
+    ${
+      i === 1
+        ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
+        : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
+    }`}
+  >
+    {item.btn}
+  </button>
+) : (
+  <Link
+    href={item.link}
+    className={`mt-auto px-4 py-1.5 mb-5 rounded-full text-xs transition-all duration-300
+    ${
+      i === 1
+        ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
+        : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
+    }`}
+  >
+    {item.btn}
+  </Link>
+)}
 
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
+
+
 
         {/* ✅ DESKTOP GRID (100% untouched) */}
         <div className="hidden md:grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-0 items-stretch">
@@ -168,16 +195,31 @@ export default function MoreForYou() {
                 {item.desc}
               </p>
 
-              <button
-                className={`mt-auto px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm transition-all duration-300
-
-                ${i === 1
-                  ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
-                  : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
-                }`}
-              >
-                {item.btn}
-              </button>
+            {item.popup ? (
+  <button
+    onClick={() => setIsOpen(true)}
+    className={`mt-auto px-4 py-1.5 mb-5 rounded-full text-xs transition-all duration-300
+    ${
+      i === 1
+        ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
+        : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
+    }`}
+  >
+    {item.btn}
+  </button>
+) : (
+  <Link
+    href={item.link}
+    className={`mt-auto px-4 py-1.5 mb-5 rounded-full text-xs transition-all duration-300
+    ${
+      i === 1
+        ? "border border-white text-white hover:bg-white hover:text-[#ec771c]"
+        : "border border-[#10316C] text-[#10316C] hover:bg-white hover:text-[#ec771c]"
+    }`}
+  >
+    {item.btn}
+  </Link>
+)}
 
             </div>
           ))}
@@ -189,7 +231,10 @@ export default function MoreForYou() {
 
 
 
-
+<RequestQuoteModal
+  isOpen={isOpen}
+  setIsOpen={setIsOpen}
+/>  
 
     
 </>

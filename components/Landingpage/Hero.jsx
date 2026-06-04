@@ -6,11 +6,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
 import Image from "next/image";
-
+import RequestQuoteModal from "@/components/Layout/Requestquote";
 import { ArrowRight } from "lucide-react";
-
+import { useEffect, useState } from "react";
 export default function HeroSection({ data }) {
-
+  const [isOpen, setIsOpen] = useState(false);
 const data2 = [
   {
     title: "Inquiry Bazaar",
@@ -22,7 +22,7 @@ const data2 = [
     title: "Inquiry Bazaar",
     subtitle: "Buy Premium Domains",
     img: "/doodle/3-3.png",
-    link:"/domain.promozionebranding.com"
+    link:"https://domain.inquirybazaar.com"
   },
   {
     title: "Inquiry Bazaar",
@@ -182,17 +182,27 @@ const mobileBanners = [
                 </h2>
 
                 {/* BUTTONS */}
-                <div className="flex flex-col gap-3 absolute bottom-7">
-                  {b.buttons.map((btn, idx) => (
-                    <Link
-                      key={idx}
-                      href={btn.link}
-                      className={btn.className}
-                    >
-                      {btn.text}
-                    </Link>
-                  ))}
-                </div>
+              <div className="flex flex-col gap-3 absolute bottom-7">
+  {b.buttons.map((btn, idx) =>
+    btn.text === "Post Requirement" ? (
+      <button
+        key={idx}
+        onClick={() => setIsOpen(true)}
+        className={btn.className}
+      >
+        {btn.text}
+      </button>
+    ) : (
+      <Link
+        key={idx}
+        href={btn.link}
+        className={btn.className}
+      >
+        {btn.text}
+      </Link>
+    )
+  )}
+</div>
 
               </div>
 
@@ -236,10 +246,12 @@ const mobileBanners = [
       </div>
    
 
-      <button className="mt-2 sm:mt-3 mb-2 text-black px-1 py-2 sm:px-4 sm:py-2 rounded-lg border  border-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95">
-        Post As Per Requirement →
-      </button>
-
+  <button
+  onClick={() => setIsOpen(true)}
+  className="mt-2 sm:mt-3 mb-2 text-black px-1 py-2 sm:px-4 sm:py-2 rounded-lg border border-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95"
+>
+  Post As Per Requirement →
+</button>
 
 
     </div>
@@ -275,9 +287,14 @@ const mobileBanners = [
         </span>
       </div>
 
-      <button className="hidden md:block mt-2 sm:mt-4 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-lg border border-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
+<a href="https://seller.inquirybazaar.com/">
+ <button className="hidden md:block mt-2 sm:mt-4 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-lg border border-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
         Sell On Inquiry Bazaar →
       </button>
+
+</a>
+
+     
 
 
            <button className="block md:hidden mt-2 sm:mt-4 text-white px-2 py-2 sm:px-4 sm:py-2 rounded-lg bg-[#24457a] w-fit text-[12px] sm:text-[14px] hover:shadow-md transition active:scale-95">
@@ -313,9 +330,12 @@ const mobileBanners = [
         <span className="text-[#0D2340]">product?</span>
       </h2>
 
-      <button className="border bg-amber-50/70 border-[#f48335] text-black text-[11px] font-semibold px-2 py-1.5 rounded-md w-fit">
-        Post Requirement →
-      </button>
+   <button
+  onClick={() => setIsOpen(true)}
+  className="mt-2 sm:mt-3 mb-2 text-black px-1 py-2 sm:px-4 sm:py-2 rounded-lg border border-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95"
+>
+  Post As Per Requirement →
+</button>
     </div>
   </div>
 
@@ -333,6 +353,12 @@ const mobileBanners = [
         Grow business{" "} <br />
         <span className="text-[#0D2340]">10x faster</span>
       </h2>
+<a href="https://seller.inquirybazaar.com/">
+      <button className="block mt-2 sm:mt-4 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-lg border border-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
+        Sell On Inquiry Bazaar →
+      </button>
+</a>
+
 
       <button className="border bg-amber-50/50 border-[#24457a] font-semibold text-black text-[11px] px-2 py-1.5 rounded-md w-fit">
         Free Listing →
@@ -445,7 +471,7 @@ const mobileBanners = [
       </div>
     </section>
 
-
+   <RequestQuoteModal isOpen={isOpen} setIsOpen={setIsOpen} />
    
     </>
   );

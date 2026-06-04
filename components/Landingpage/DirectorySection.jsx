@@ -52,12 +52,12 @@ export default function CategorySection({ data }) {
               <div>
                 <a target="_blank" className="hover:underline" href={`${process.env.NEXT_PUBLIC_DIR_URL}categories/${item.slug}`}>
 
-                <h3 className="text-xs sm:text-md font-semibold text-gray-800 mb-1">
+                <h3 className="text-[10px] md:text-lg space-y-1 font-semibold text-gray-800 mb-1">
                   {item.name}
                 </h3>
                 </a>
 
-          <div className="flex flex-col text-xs sm:text-sm text-orange-600">
+          <div className="flex flex-col text-[9px] md:text-[15px]  text-orange-600">
   {item.subCategories.slice(0,3).map((link, index) => (
     <a target="_blank"
       key={index}

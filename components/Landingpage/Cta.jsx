@@ -8,8 +8,82 @@ import {
   Star,
   Lock,
 } from "lucide-react";
+import { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function HeroInquiry() {
+
+
+
+
+
+
+
+const [loading, setLoading] = useState(false);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const product = form.product.value;
+  const mobile = form.mobile.value;
+
+  if (mobile.length !== 10) {
+    return toast.error("Enter valid mobile number");
+  }
+
+  try {
+    setLoading(true);
+
+    const formData = {
+      platform: "Hero Inquiry Form",
+      platformEmail: "lead.inquirybazaar@gmail.com",
+      name: "N/A",
+      phone: mobile,
+      email: "N/A",
+      place: "N/A",
+      product: product,
+      message: `Product Requirement: ${product}`,
+    };
+
+    const { data } = await axios.post(
+      "https://brandbnalo.com/api/form/add",
+      formData
+    );
+
+    if (data?.success) {
+      toast.success("Requirement Submitted Successfully");
+
+      const whatsappText = `Hi,
+
+I am looking for:
+
+${product}
+
+My Contact Number: ${mobile}`;
+
+      window.open(
+        `https://wa.me/6306530720?text=${encodeURIComponent(
+          whatsappText
+        )}`,
+        "_blank"
+      );
+
+      form.reset();
+    } else {
+      toast.error("Submission Failed");
+    }
+  } catch (error) {
+    console.log(error);
+    toast.error("Server Error");
+  } finally {
+    setLoading(false);
+  }
+};
+
+
   return (
     <section className="bg-[#f7f8fa] relative overflow-hidden">
       {/* BACKGROUND */}
@@ -62,12 +136,10 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
               
             </h2>
 
-       
-            <form
-              action="/api/enquiry"
-              method="POST"
-              className="mt-5 md:mt-6 space-y-4"
-            >
+       <form
+  onSubmit={handleSubmit}
+  className="mt-5 md:mt-6 space-y-4"
+>
               <input
                 name="product"
                 type="text"
@@ -89,12 +161,13 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
                 />
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-[#10316C] to-[#10316C] hover:opacity-90 text-white py-2.5 sm:py-3 rounded-lg text-[15px] sm:text-[17px] font-semibold shadow-md transition"
-              >
-                Submit Requirement
-              </button>
+          <button
+  type="submit"
+  disabled={loading}
+  className="w-full bg-gradient-to-r from-[#10316C] to-[#10316C] hover:opacity-90 text-white py-2.5 sm:py-3 rounded-lg text-[15px] sm:text-[17px] font-semibold shadow-md transition"
+>
+  {loading ? "Submitting..." : "Submit Requirement"}
+</button>
             </form>
 
             {/* BENEFITS */}

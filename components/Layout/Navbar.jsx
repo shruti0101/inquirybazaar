@@ -62,7 +62,7 @@ const fetchSearchResults = async () => {
     setLoading(true);
 
     const res = await fetch(
-      `https://inquiry-bazaar-backend.vercel.app/api/search?q=${searchQuery}`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}api/search?q=${searchQuery}`
     );
 
     const data = await res.json();
@@ -182,6 +182,20 @@ useEffect(() => {
               >
                 <FaLinkedin size={18} />
               </a>
+
+
+
+   <a
+              
+                href="https://www.linkedin.com/company/inquiry-bazaar/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-gray-300 transition"
+              >
+             
+                <FaYoutube size={18} />
+              </a>
+
             </div>
           </div>
         </div>
@@ -209,9 +223,14 @@ useEffect(() => {
                 <a href="https://dir.inquirybazaar.com/">All Categories</a>
               </nav>
 
-              <button className="hidden md:block mt-3 bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
+<Link href="https://seller.inquirybazaar.com/register">
+  <button className="hidden md:block mt-3 bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
                 Register Free →
               </button>
+
+</Link>
+
+            
 
               <div className="md:hidden flex-1 max-w-[220px] sm:max-w-[260px]">
                 <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
@@ -292,12 +311,12 @@ useEffect(() => {
 
                 {open && (
                   <div className="absolute right-0 mt-2 w-full bg-white border rounded-md shadow-md overflow-hidden z-50">
-                    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                    <Link href="https://seller.inquirybazaar.com/register" className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                       Login as Supplier
-                    </button>
-                    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                    </Link>
+                    <Link href="https://buyer.inquirybazaar.com/register" className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
                       Login as Buyer
-                    </button>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -368,7 +387,7 @@ useEffect(() => {
         ))
       ) : (
         <div className="p-4 text-center text-gray-500">
-          No Results Found
+         Start typing to see results...
         </div>
       )}
     </div>
@@ -397,14 +416,25 @@ useEffect(() => {
               </button>
 
               {open && (
-                <div className="absolute right-0 mt-2 z-[99999] w-[180px] bg-white border rounded-md shadow-md overflow-hidden">
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
-                    Login as Supplier
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
-                    Login as Buyer
-                  </button>
-                </div>
+             <div className="absolute right-0 mt-2 z-[99999] w-[180px] overflow-hidden rounded-md border bg-white shadow-lg">
+  <a
+    href="https://seller.inquirybazaar.com/register"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100"
+  >
+    Login as Supplier
+  </a>
+
+  <a
+    href="https://buyer.inquirybazaar.com/register"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100"
+  >
+    Login as Buyer
+  </a>
+</div>
               )}
             </div>
 

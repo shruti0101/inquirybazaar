@@ -122,9 +122,9 @@ export default function FeaturedProducts({ data }) {
       "
     >
 
-      <Link href="/post-requirement">
+  
 
-        <button
+        <button onClick={() => setIsOpen(true)}
           className="
           border-2 border-cyan-400 cursor-pointer text-white hover:bg-cyan-400/10 font-semibold text-md px-3 py-2 rounded-xl backdrop-blur-sm transition
           "
@@ -132,9 +132,9 @@ export default function FeaturedProducts({ data }) {
           Post Requirement
         </button>
 
-      </Link>
+     
 
-      <Link href="/register">
+      <Link href="https://seller.inquirybazaar.com/register">
 
         <button
           className="

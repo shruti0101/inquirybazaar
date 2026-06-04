@@ -4,7 +4,7 @@ import Image from "next/image";
 import {
   FaFacebookF,
   FaInstagram,
-  FaPinterestP,
+  FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
 import { useState } from "react";
@@ -185,6 +185,29 @@ export default function Footer() {
       <FaLinkedinIn />
     </a>
 
+    {/* YOUTUBE */}
+    <a
+      href="https://www.youtube.com/@inquirybazaar"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        w-9 h-9
+        rounded-full
+        border
+        border-gray-300
+        flex
+        items-center
+        justify-center
+        hover:bg-[#FF0000]
+        hover:text-white
+        hover:border-[#FF0000]
+        transition-all
+        duration-300
+      "
+    >
+      <FaYoutube />
+    </a>
+
   </div>
 </div>
 
@@ -216,8 +239,12 @@ export default function Footer() {
 
 </div>
 
+
+<div>
+  <Link href="https://seller.inquirybazaar.com/register">Become a Supplier</Link>
+</div>
              
-              <li>Become a Supplier</li>
+            
 
               <div>
         <Link href="https://corporate.inquirybazaar.com/blogs">Blog</Link>

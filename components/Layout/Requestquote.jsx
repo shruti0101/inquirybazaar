@@ -215,7 +215,7 @@ export default function RequestQuotePopup({
 
     const formData = {
   platform: "Request Quote Popup Form inquirybazaar site",
-  platformEmail: "care@inquirybazaar.com",
+  platformEmail: "lead.inquirybazaar@gmail.com",
   name: form.name,
   phone: form.phone,
   email: form.email,

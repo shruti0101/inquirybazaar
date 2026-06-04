@@ -165,7 +165,7 @@
 
 
 "use client";
-
+import Link from "next/link";
 import { Lock } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -249,9 +249,9 @@ setIsOpen(true);
                   Terms & Conditions
                 </span>
                
-                <span className="underline cursor-pointer text-gray-600">
+                <Link href="/terms-conditions" className="underline cursor-pointer text-gray-600">
                   T&C's Privacy Policy
-                </span>
+                </Link>
               </p>
             </div>
 

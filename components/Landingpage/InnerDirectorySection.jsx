@@ -10,7 +10,7 @@ export default function InnerDirectorySection() {
      const [industries, setIndustries] = useState([]);
   
     useEffect(() => {
-        console.log("ello");
+       
       const fetchIndustries = async () => {
         try {
           const res = await fetch(
@@ -19,7 +19,7 @@ export default function InnerDirectorySection() {
   
           const data = await res.json();
   
-          console.log(data);
+         
           setIndustries(data.data);
         } catch (error) {
           console.error("Failed to fetch industries:", error);
@@ -38,7 +38,7 @@ export default function InnerDirectorySection() {
               {/* SECTION */}
               <DirectorySection data={section} />
     
-              {/* SHOW BANNER AFTER EVERY 2 SECTIONS */}
+           
               {(index + 1) % 2 === 0 && (
                 <Banner data={bannerData[(index + 1) / 2 - 1]} />
               )}
