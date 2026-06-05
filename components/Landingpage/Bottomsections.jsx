@@ -286,6 +286,8 @@ export default function Footer() {
             <ul className="space-y-1">
               <li><Link href="/faqs">FAQs</Link></li>
               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link href="/shipping-policy">Shipping Policy</Link></li>
+              <li><Link href="/return-refund">Return & Refund Policy</Link></li>
               <li><Link href="/terms-conditions">Terms & Conditions</Link></li>
               <li><a href="mailto:care@inquirybazaar.com">Write to Management</a></li>
             </ul>

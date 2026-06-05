@@ -322,7 +322,7 @@ Contact: ${form.phone}`;
   return (
     <div className="fixed inset-0  z-[9999] flex items-center justify-center bg-black/50 px-4 overflow-y-auto  md:py-10">
 
-      <div className="bg-white w-full max-w-[600px] rounded-2xl shadow-xl p-3 md:p-6 relative animate-scaleIn">
+      <div className="bg-white w-full max-w-[600px] rounded-2xl shadow-xl p-3 relative animate-scaleIn">
 
         <button
           onClick={() => setIsOpen(false)}
@@ -417,7 +417,7 @@ Contact: ${form.phone}`;
     <div
       id={recaptchaId}
       className="flex justify-center min-w-[304px]"
-    />
+    />                               
   </div>
 
   {/* OTP BOX */}
