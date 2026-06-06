@@ -48,7 +48,7 @@ const mobileBanners = [
     buttons: [
       {
         text: "Register Free ->",
-        link: "/register",
+        link: "https://seller.inquirybazaar.com/register",
         className:
           "border-2 border-[#F07B20] text-white px-1 py-2 rounded-lg text-[11px] font-semibold",
       },
@@ -63,14 +63,14 @@ const mobileBanners = [
   buttons: [
       {
         text: "Register Free",
-        link: "/sell",
+        link: "https://seller.inquirybazaar.com/register",
         className:
           "border-2 border-[#F07B20] text-white px-1 py-1 rounded-lg text-[10px] ",
       },
 
       {
         text: "Post Requirement",
-        link: "/contact",
+        link: "https://inquirybazaar.com/contact-us",
         className:
           "border-1 border-cyan-400 text-white px-1 py-1 rounded-lg text-[10px] ",
       },
@@ -84,20 +84,22 @@ const mobileBanners = [
     buttons: [
       {
         text: "Get Quotation",
-        link: "/sell",
+        link: "https://seller.inquirybazaar.com/register",
         className:
           "border-2 border-[#F07B20] text-white px-1 py-1 rounded-lg text-[10px] ",
       },
 
       {
         text: "Partner With Us",
-        link: "/contact-us",
+        link: "https://inquirybazaar.com/contact-us",
         className:
           "border-1 border-cyan-400 text-white px-1 py-1 rounded-lg text-[10px] ",
       },
     ],
   },
 ];
+
+
   return (
 
     <>
@@ -182,9 +184,9 @@ const mobileBanners = [
                 </h2>
 
                 {/* BUTTONS */}
-              <div className="flex flex-col gap-3 absolute bottom-7">
+<div className="flex flex-col gap-3 absolute bottom-7">
   {b.buttons.map((btn, idx) =>
-    btn.text === "Post Requirement" ? (
+    btn.text === "Post Requirement " || "Get Quotation" ? (
       <button
         key={idx}
         onClick={() => setIsOpen(true)}
@@ -332,7 +334,7 @@ const mobileBanners = [
 
    <button
   onClick={() => setIsOpen(true)}
-  className="mt-2 sm:mt-3 mb-2 text-black px-1 py-2 sm:px-4 sm:py-2 rounded-lg border border-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95"
+  className="mt-2 sm:mt-3 bg-white/60 mb-2 text-black px-1 py-2 sm:px-4 sm:py-2 rounded-lg border border-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95"
 >
   Post As Per Requirement →
 </button>
@@ -354,15 +356,13 @@ const mobileBanners = [
         <span className="text-[#0D2340]">10x faster</span>
       </h2>
 <a href="https://seller.inquirybazaar.com/">
-      <button className="block mt-2 sm:mt-4 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-lg border border-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
-        Sell On Inquiry Bazaar →
+      <button className="block mt-2 bg-white/60 sm:mt-4 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-lg border border-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
+        Free Listing →
       </button>
 </a>
 
 
-      <button className="border bg-amber-50/50 border-[#24457a] font-semibold text-black text-[11px] px-2 py-1.5 rounded-md w-fit">
-        Free Listing →
-      </button>
+   
     </div>
   </div>
 
