@@ -255,7 +255,7 @@ useEffect(() => {
 
         {/*  MOBILE PANEL  */}
         {mobileMenu && (
-          <div className="md:hidden bg-white border-b border-gray-200 px-3 sm:px-4 py-4 space-y-4 shadow-lg">
+          <div className="md:hidden bg-white border-b h-200 border-gray-200 px-3 sm:px-4 py-4 space-y-4 shadow-lg">
             {/* MOBILE NAV LINKS */}
             <div className="space-y-2 text-[#0D2340] font-medium">
               <Link href="/" className="block py-2 border-b">
