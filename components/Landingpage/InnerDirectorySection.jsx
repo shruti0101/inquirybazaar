@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import DirectorySection from "./DirectorySection";
 import Banner from "./DirectoryBanner";
@@ -23,30 +22,12 @@ export default function InnerDirectorySection() {
           "Food & Beverages",
           "Furniture & Supplies",
           "Houseware and Supplies",
-          "Hospital,Clinic and Consultation",
+          "Hospital,Clinic and Consultation"
         ];
 
-        const industryOrder = {
-           Chemicals: 1,
-        
-          Automobile: 2,
-           Agriculture: 3,
-          "Construction & Real Estate": 4,
-          "Industrial Plants & Machinery": 5,
-          "Metals, Alloys & Minerals": 6,
-          "Packaging & Paper": 7,
-          "Textiles & Fabrics": 8,
-        };
-
-        const filteredIndustries = data.data
-          .filter(
-            (industry) => !hiddenCategories.includes(industry.name)
-          )
-          .sort((a, b) => {
-            const orderA = industryOrder[a.name] ?? 999;
-            const orderB = industryOrder[b.name] ?? 999;
-            return orderA - orderB;
-          });
+        const filteredIndustries = data.data.filter(
+          (industry) => !hiddenCategories.includes(industry.name)
+        );
 
         setIndustries(filteredIndustries);
       } catch (error) {
@@ -59,8 +40,8 @@ export default function InnerDirectorySection() {
 
   return (
     <div>
-      {industries.slice(0, 8).map((section, index) => (
-        <div key={section._id || index}>
+      {industries?.slice(0, 8).map((section, index) => (
+        <div key={index}>
           <DirectorySection data={section} />
 
           {(index + 1) % 2 === 0 && (
