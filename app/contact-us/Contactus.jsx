@@ -44,18 +44,7 @@ const Contactus = () => {
         </a>
       </div>
 
-      {/* Help */}
-      <div>
-        <p className="text-gray-900 text-lg font-medium">
-          Help
-        </p>
-        <a
-          href="mailto:helpdesk@tradeindia.com"
-          className="text-[#5a6f84] text-2xl hover:text-black transition break-all"
-        >
-          care@inquirybazaar.com
-        </a>
-      </div>
+    
 
       {/* Write to Us */}
       <div>

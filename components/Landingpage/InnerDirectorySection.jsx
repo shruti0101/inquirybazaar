@@ -25,9 +25,39 @@ export default function InnerDirectorySection() {
           "Hospital,Clinic and Consultation"
         ];
 
-        const filteredIndustries = data.data.filter(
-          (industry) => !hiddenCategories.includes(industry.name)
-        );
+     const filteredIndustries = data.data.filter(
+  (industry) => !hiddenCategories.includes(industry.name)
+);
+
+const customOrder = [
+    "Chemicals",
+ 
+
+  "Construction & Real Estate",
+  "Industrial Plants & Machinery",
+  "Metals, Alloys & Minerals",
+  "Packaging & Paper",
+  "Textiles & Fabrics",
+];
+
+// Build array in exact order
+const orderedIndustries = customOrder
+  .map((name) =>
+    filteredIndustries.find(
+      (industry) => industry.name === name
+    )
+  )
+  .filter(Boolean);
+
+// Add remaining industries at the end
+const remainingIndustries = filteredIndustries.filter(
+  (industry) => !customOrder.includes(industry.name)
+);
+
+setIndustries([
+  ...orderedIndustries,
+  ...remainingIndustries,
+]);
 
         setIndustries(filteredIndustries);
       } catch (error) {
