@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import RequestQuoteModal from "@/components/Layout/Requestquote";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 export default function HeroSection({ data }) {
   const [isOpen, setIsOpen] = useState(false);
 const data2 = [

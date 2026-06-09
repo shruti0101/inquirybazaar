@@ -216,6 +216,7 @@ export default function RequestQuotePopup({
     const formData = {
   platform: "Request Quote Popup Form inquirybazaar site",
   platformEmail: "lead.inquirybazaar@gmail.com",
+  supplierToken: "7303486777",
   name: form.name,
   phone: form.phone,
   email: form.email,

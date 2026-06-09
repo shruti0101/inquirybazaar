@@ -5,7 +5,7 @@ import { Toaster  } from "react-hot-toast";
 import Stickyfooter from "@/components/Stickyfooter";
 import Head from "next/head";
 
-
+import InquiryChat from "@/components/InquiryChat";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"], 
@@ -52,7 +52,15 @@ export default function RootLayout({ children }) {
 <Stickyfooter></Stickyfooter>
 
           {children}
+          
         </Layoutwrapper>  
+
+
+
+
+<InquiryChat></InquiryChat>
+
+        
       </body>
     </html>
   );
