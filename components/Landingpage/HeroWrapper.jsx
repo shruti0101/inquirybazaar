@@ -27,6 +27,7 @@ import Fourcards from "./Fourcards";
 // import mechanicalData from "@/data/mechanicalData"
 import Banner from "@/components/Landingpage/DirectoryBanner"
 import InnerDirectorySection from "./InnerDirectorySection";
+import RecommendedProducts from "./Recomend";
 
 //  Fetch functions (SERVER SIDE)
 async function getData(url) {
@@ -106,7 +107,7 @@ export default async function HeroWrapper() {
              <Clientele />
             <Cta />
          
-
+<RecommendedProducts/>
             <FeaturedProducts data={featuredData} />
 
             {/* {directoryData?.map((dir) => (

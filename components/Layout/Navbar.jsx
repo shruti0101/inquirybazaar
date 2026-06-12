@@ -33,6 +33,40 @@ export default function Navbar() {
 
 
 
+  const saveRecentSearch = (item) => {
+  try {
+    const existing =
+      JSON.parse(
+        localStorage.getItem("recentSearches")
+      ) || [];
+
+    const searchData = {
+      keyword: item.slug,
+      name: item.name,
+      type: item.type,
+      timestamp: Date.now(),
+    };
+
+    const filtered = existing.filter(
+      (search) =>
+        search.keyword !== item.slug
+    );
+
+    filtered.unshift(searchData);
+
+    localStorage.setItem(
+      "recentSearches",
+      JSON.stringify(
+        filtered.slice(0, 10)
+      )
+    );
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+
+
 
 const searchRef = useRef(null);
 
@@ -271,7 +305,7 @@ useEffect(() => {
                 Contact Us
               </Link>
               <a href="https://dir.inquirybazaar.com/" className="block py-2">
-                All Categories
+                All Cat egories
               </a>
             </div>
 
@@ -370,12 +404,15 @@ useEffect(() => {
         </div>
       ) : searchResults?.length > 0 ? (
         searchResults.map((item, index) => (
-          <Link
-            key={index}
-     href={`https://dir.inquirybazaar.com/search/${item.slug}`}
-            className="block px-4 py-3 border-b hover:bg-orange-50"
-            onClick={() => setShowResults(false)}
-          >
+         <Link
+  key={index}
+  href={`https://dir.inquirybazaar.com/search/${item.slug}`}
+  className="block px-4 py-3 border-b hover:bg-orange-50"
+  onClick={() => {
+    saveRecentSearch(item);
+    setShowResults(false);
+  }}
+>
             <div className="font-medium">
               {item.name}
             </div>
