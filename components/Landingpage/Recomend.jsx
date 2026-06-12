@@ -137,7 +137,7 @@ export default function RecentRecommendations() {
     className="
       h-[520px]
       bg-white
-      rounded-[28px]
+     
       overflow-hidden
       border border-gray-200
       shadow-md
@@ -156,8 +156,8 @@ export default function RecentRecommendations() {
           src={imageUrl}
           alt={product.name}
           className="
-            w-[180px]
-            h-[180px]
+            w-[120px]
+            h-[120px]
             object-contain
             transition-all
             duration-500
@@ -177,30 +177,30 @@ export default function RecentRecommendations() {
     <div className="flex flex-col flex-1 p-5">
       <h3
         className="
-          text-lg
+          text-md
           font-bold
           text-[#1A2238]
           leading-7
           line-clamp-2
-          h-[56px]
+          h-[48px]
         "
       >
         {product.name}
       </h3>
 
-      <p className="text-gray-500 text-sm mt-2 truncate">
+      <p className="text-gray-700 text-sm mt-2 truncate">
         {product.brandName}
       </p>
 
-      <div className="mt-4 flex items-center justify-between">
-        <div>
-          <p className="text-xs text-gray-400">Starting From</p>
-          <p className="text-[30px] font-bold text-[#ec771c] leading-none">
+      <div className="mt-2 flex items-center justify-between">
+        <div className="">
+          <p className="text-xs mb-1 text-gray-400">Starting From</p>
+          <p className="text-[30px] font-bold text-black leading-none">
             ₹{product.price}
           </p>
         </div>
 
-        <span className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">
+        <span className="px-3  py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">
           In Stock
         </span>
       </div>
@@ -213,7 +213,7 @@ export default function RecentRecommendations() {
         <a
           href={`tel:${product?.supplier?.phone || product?.supplierId?.phone}`}
           className="
-            h-11
+            h-7
             rounded-xl
             border-2
             border-[#183B63]
@@ -234,10 +234,11 @@ export default function RecentRecommendations() {
         <button
           onClick={() => openQuoteModal(product)}
           className="
-            h-11
+            h-8
             rounded-xl
             bg-[#183B63]
             text-white
+            text-[12px]
             font-semibold
             hover:bg-[#102845]
             transition
