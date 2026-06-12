@@ -266,11 +266,11 @@ export default function Footer() {
               <a href="https://www.promotionbranding.com/">Promotion Branding</a>
 </li>
 
-<li>
+{/* <li>
 
 
               <a href="https://promotebharat.com/">Promote Bharat</a>
-</li>
+</li> */}
 
 <li>
 

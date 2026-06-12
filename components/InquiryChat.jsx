@@ -113,7 +113,7 @@ keywords: ["hi","hy", "hello", "hey"],
   {
     keywords: ["sister companies", "related brands"],
     answer:
-      "Our sister brands include Promozione Branding, Promotion Branding, Promote Bharat, and Top 10 Digital Marketing Agency.",
+      "Our sister brands include Promozione Branding, Promotion Branding and Top 10 Digital Marketing Agency.",
   },
 
   {
