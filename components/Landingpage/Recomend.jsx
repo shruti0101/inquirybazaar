@@ -4,9 +4,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Link from "next/link";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import {  Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -76,7 +76,7 @@ export default function RecentRecommendations() {
   return (
     <section className="pb-6">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-6 gap-4">
+        <div className="flex items-center justify-between mb-4 gap-4">
           <h2 className="text-2xl font-bold">Recommended For You</h2>
           <div className="flex items-center gap-2">
             <button
@@ -100,14 +100,14 @@ export default function RecentRecommendations() {
           <p>Loading...</p>
         ) : (
         <Swiper
-  modules={[Navigation, Autoplay]}
-  navigation
+  modules={[ Autoplay]}
+
   autoplay={{
     delay: 4000,
     disableOnInteraction: false,
   }}
   spaceBetween={24}
-  slidesPerView={1.2}
+  slidesPerView={1.5}
   breakpoints={{
     640: {
       slidesPerView: 2,
@@ -137,7 +137,8 @@ export default function RecentRecommendations() {
      <SwiperSlide key={product._id} className="h-auto">
   <div
     className="
-      h-[400px]
+    h-[320px]
+      md:h-[400px]
    
      
       overflow-hidden
@@ -152,14 +153,20 @@ export default function RecentRecommendations() {
     "
   >
     {/* Product Image */}
-    <div className="relative h-[220px] bg-white flex items-center justify-center">
+    <div className="relative h-[130px] md:h-[220px] bg-white flex items-center justify-center">
       {imageUrl ? (
-        <img
+        <Image
+        width={100}
+        height={100}
           src={imageUrl}
           alt={product.name}
           className="
-            w-[170px]
-            h-[170px]
+
+w-[120px]
+h-[120px]
+
+            md:w-[170px]
+            md:h-[170px]
             object-contain
             transition-all
             duration-500
@@ -179,25 +186,26 @@ export default function RecentRecommendations() {
     <div className="flex flex-col flex-1 p-5">
       <h3
         className="
-          text-md
+        text-xs
+          md:text-[17px]
           font-bold
           text-[#1A2238]
-          leading-7
+          md:leading-7
           line-clamp-2
-          h-[48px]
+          md:h-[48px]
         "
       >
         {product.name}
       </h3>
 
-      <p className="text-gray-700 text-sm mt-2 truncate">
+      <p className="text-gray-700 text-sm md:mt-2 truncate">
         {product.brandName}
       </p>
 
       <div className="mt-2 flex items-center justify-between">
         <div className="">
           <p className="text-xs mb-1 text-gray-400">Starting From</p>
-          <p className="text-[20px] font-bold text-black leading-none">
+          <p className="text-[18px] md:text-[20px] font-bold text-black leading-none">
             ₹{product.price}
           </p>
         </div>
@@ -211,7 +219,7 @@ export default function RecentRecommendations() {
       <div className="flex-1" />
 
       {/* Buttons */}
-      <div className="grid grid-cols-2 gap-2 mt-5">
+      <div className="grid grid-cols-2 gap-2 md:mt-5">
         <a
           href={`tel:${product?.supplier?.phone || product?.supplierId?.phone}`}
           className="
@@ -228,6 +236,7 @@ export default function RecentRecommendations() {
             hover:bg-black
             hover:text-white
             transition
+            text-sm 
           "
         >
           Call Now
@@ -236,15 +245,16 @@ export default function RecentRecommendations() {
         <button
           onClick={() => openQuoteModal(product)}
           className="
-            h-8
+            h-7
             rounded-xl
             bg-[#183B63]
             text-white
-            text-[12px]
-            
+            md:text-[12px]
+            text-[10px]
             font-semibold
             hover:bg-[#102845]
             transition
+            
           "
         >
           Request Quote
