@@ -51,7 +51,7 @@ export default function FeaturedProducts({ data }) {
 
                 {/* IMAGE */}
                 <div className="h-[130px] flex items-center justify-center mb-4">
-                  <img src={p.image} className="max-h-full object-contain" />
+                  <img alt="B2B Marketplace" src={p.image} className="max-h-full object-contain"  />
                 </div>
 
                 {/* NAME */}
@@ -96,7 +96,7 @@ export default function FeaturedProducts({ data }) {
     {/* IMAGE */}
     <Image
       src="/b3.jpeg"
-      alt="banner"
+      alt="B2B Marketplace"
       width={2000}
       height={700}
       className="

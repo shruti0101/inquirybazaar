@@ -128,7 +128,7 @@ const mobileBanners = [
   {/* Desktop Image */}
   <img
     src={b.image}
-    alt={b.title}
+    alt="B2B Marketplace"
     className="w-full h-auto object-cover"
   />
 </picture>
@@ -166,7 +166,7 @@ const mobileBanners = [
               {/* IMAGE */}
               <img
                 src={b.image}
-                alt={b.title}
+                alt="B2B Marketplace"
                 className="w-full h-auto object-cover"
               />
 
@@ -322,7 +322,7 @@ const mobileBanners = [
     <Image
       src="/mobile2-2.jpeg"
    fill
-      alt="Looking for product"
+      alt="B2B Mrketplace"
       className="object-cover"
     />
 
@@ -346,7 +346,7 @@ const mobileBanners = [
     <Image
       src="/mobile1-1.jpeg"
      fill
-      alt="Grow business faster"
+      alt="B2B Mrketplace"
       className="object-cover"
     />
 
