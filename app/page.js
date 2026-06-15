@@ -1,12 +1,12 @@
 import HeroWrapper from "@/components/Landingpage/HeroWrapper";
 
 // import StickyOfferButton from "@/components/socialicons/stickybutton";
-import Lead from "@/components/Landingpage/Lead";
+// import Lead from "@/components/Landingpage/Lead";
 export default function Page() {
   return (
     <div>
       {/* <StickyOfferButton></StickyOfferButton> */}
-      <Lead></Lead>
+      {/* <Lead></Lead> */}
 
       <div className="pt-[52px] md:pt-[168px]">
 
