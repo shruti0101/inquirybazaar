@@ -344,27 +344,26 @@ const [showTooltip] = useState(true);
 
       {/* Floating Button */}
   <div className="fixed bottom-18 md:bottom-6 right-2 md:right-6 z-50">
-{!isOpen && (
-  <div className=" absolute bottom-20 right-0 animate-pulse">
-    <div className="relative w-[150px] md:w-[200px] rounded-2xl bg-white px-4 py-2 md:py-3  shadow-xl border border-gray-200">
-      <div className="flex items-center gap-2">
-        <span className="h-2.5 w-2.5 rounded-full bg-green-500"></span>
-
-        <p className="hidden md:block text-sm font-medium text-gray-800">
-         IB Assistant is online
-        </p>
-
-          <p className="block md:hidden text-sm font-medium text-gray-800">
-    Ask Anything
-        </p>
-      </div>
-
-     
-
-      <div className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 bg-white border-r border-b border-gray-200"></div>
-    </div>
-  </div>
-)}
+{isOpen && (
+  <div
+    className="
+      fixed
+      bottom-20 md:bottom-24
+      right-2 md:right-6
+      left-2 md:left-auto
+      z-[9999]
+      flex
+      h-[75vh] md:h-[550px]
+      w-auto md:w-[400px]
+      flex-col
+      overflow-hidden
+      rounded-3xl
+      border
+      border-gray-200
+      bg-white
+      shadow-2xl
+    "
+  >
 
   <button
    onClick={() => {
@@ -383,7 +382,7 @@ const [showTooltip] = useState(true);
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-9999 flex h-[550px] w-[400px] flex-col overflow-hidden rounded-3xl border border-white/20 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.25)] backdrop-blur-xl">
           {/* Header */}
-          <div className="bg-blue-600 p-4 text-white">
+          <div className="bg-orange-600 p-4 text-white">
             <h3 className="font-bold">IB Assistant</h3>
             <p className="text-xs opacity-90">
               Ask anything about our services
@@ -404,7 +403,7 @@ const [showTooltip] = useState(true);
       <div
         className={`max-w-[80%] rounded-xl px-4 py-2 text-sm ${
           msg.sender === "user"
-            ? "bg-blue-600 text-white"
+            ? "bg-orange-600 text-white"
             : "bg-gray-100 text-gray-800"
         }`}
       >
@@ -489,12 +488,12 @@ const [showTooltip] = useState(true);
                 onKeyDown={(e) =>
                   e.key === "Enter" && sendMessage()
                 }
-                className="flex-1 rounded-lg border px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 rounded-lg border px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-orange-500"
               />
 
               <button
                 onClick={sendMessage}
-                className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+                className="rounded-lg bg-orange-600 px-4 py-2 text-white hover:bg-orange-700"
               >
                 Send
               </button>
