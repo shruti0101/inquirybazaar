@@ -92,10 +92,10 @@ My Contact Number: ${mobile}`;
       <div className="relative px-4 sm:px-6 md:px-8  grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-12 items-start max-w-7xl mx-auto">
         {/* ================= LEFT ================= */}
         <div>
-          <h1 className="text-[24px] sm:text-[32px]  leading-[36px] sm:leading-[46px] md:leading-[56px] font-bold text-[#1f2937]">
+          <h2 className="text-[24px] sm:text-[32px]  leading-[36px] sm:leading-[46px] md:leading-[56px] font-bold text-[#1f2937]">
             We connect {" "}
             <span className="text-[#e85d12]">Buyers & Sellers</span>
-          </h1>
+          </h2>
 
           <p className=" text-[14px] hidden md:block  text-black max-w-full sm:max-w-[600px] leading-relaxed">
 Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to verified buyers and trusted suppliers—making trade more reliable and efficient
