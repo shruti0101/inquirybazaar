@@ -92,11 +92,15 @@ useEffect(() => {
 
 
 const fetchSearchResults = async () => {
+  if (!searchQuery.trim()) return;
+
   try {
     setLoading(true);
 
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}api/search?q=${searchQuery}`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}api/search?q=${encodeURIComponent(
+        searchQuery.trim()
+      )}`
     );
 
     const data = await res.json();
@@ -118,10 +122,6 @@ const fetchSearchResults = async () => {
 
     setSearchResults(results);
     setShowResults(true);
-
-    console.log("Results:", results);
-  } catch (error) {
-    console.error(error);
   } finally {
     setLoading(false);
   }
@@ -266,16 +266,58 @@ useEffect(() => {
 
             
 
-              <div className="md:hidden flex-1 max-w-[220px] sm:max-w-[260px]">
-                <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
-                  {/* Search Input */}
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="flex-1 min-w-0 bg-transparent outline-none text-[11px] sm:text-[12px] text-gray-700 placeholder:text-gray-400"
-                  />
-                </div>
-              </div>
+          <div
+  className="md:hidden flex-1 max-w-[220px] sm:max-w-[260px] relative"
+  ref={searchRef}
+>
+  <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
+    <Search size={16} className="text-gray-400 mr-2" />
+
+    <input
+      type="text"
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      onFocus={() => setShowResults(true)}
+      placeholder="Search..."
+      className="flex-1 min-w-0 bg-transparent outline-none text-[12px] text-gray-700 placeholder:text-gray-400"
+    />
+  </div>
+
+  {showResults && (
+    <div className="absolute top-[50px] left-0 w-full bg-white border shadow-xl rounded-lg max-h-[350px] overflow-y-auto z-[99999]">
+      {loading ? (
+        <div className="p-4 text-center text-sm">
+          Searching...
+        </div>
+      ) : searchResults?.length > 0 ? (
+        searchResults.map((item, index) => (
+          <Link
+            key={index}
+            href={`https://dir.inquirybazaar.com/search/${item.slug}`}
+            className="block px-4 py-3 border-b hover:bg-orange-50"
+            onClick={() => {
+              saveRecentSearch(item);
+              setShowResults(false);
+              setMobileMenu(false);
+            }}
+          >
+            <div className="font-medium text-sm">
+              {item.name}
+            </div>
+
+            <div className="text-xs text-gray-500">
+              {item.type}
+            </div>
+          </Link>
+        ))
+      ) : (
+        <div className="p-4 text-center text-gray-500 text-sm">
+          Start typing to see results...
+        </div>
+      )}
+    </div>
+  )}
+</div>
 
               <button
                 onClick={() => setMobileMenu(!mobileMenu)}
