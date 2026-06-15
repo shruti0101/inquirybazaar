@@ -77,7 +77,7 @@ export default function RecentRecommendations() {
     <section className="pb-6">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-4 gap-4">
-          <h2 className="text-2xl font-bold">Recommended For You</h2>
+          <h2 className="text-xl md:text-2xl font-bold">Recommended For You</h2>
           <div className="flex items-center gap-2">
             <button
               type="button"

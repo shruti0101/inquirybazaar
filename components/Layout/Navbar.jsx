@@ -18,18 +18,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const dropdownRef = useRef(null);
-
+const desktopSearchRef = useRef(null);
+const mobileSearchRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+
 
 
 
@@ -68,7 +61,7 @@ export default function Navbar() {
 
 
 
-const searchRef = useRef(null);
+
 
 const [searchQuery, setSearchQuery] = useState("");
 const [searchResults, setSearchResults] = useState([]);
@@ -92,15 +85,11 @@ useEffect(() => {
 
 
 const fetchSearchResults = async () => {
-  if (!searchQuery.trim()) return;
-
   try {
     setLoading(true);
 
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}api/search?q=${encodeURIComponent(
-        searchQuery.trim()
-      )}`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}api/search?q=${searchQuery}`
     );
 
     const data = await res.json();
@@ -122,6 +111,10 @@ const fetchSearchResults = async () => {
 
     setSearchResults(results);
     setShowResults(true);
+
+    console.log("Results:", results);
+  } catch (error) {
+    console.error(error);
   } finally {
     setLoading(false);
   }
@@ -129,13 +122,15 @@ const fetchSearchResults = async () => {
 
 
 
-
 useEffect(() => {
   const handleClickOutside = (e) => {
-    if (
-      searchRef.current &&
-      !searchRef.current.contains(e.target)
-    ) {
+    const clickedDesktop =
+      desktopSearchRef.current?.contains(e.target);
+
+    const clickedMobile =
+      mobileSearchRef.current?.contains(e.target);
+
+    if (!clickedDesktop && !clickedMobile) {
       setShowResults(false);
     }
 
@@ -147,7 +142,10 @@ useEffect(() => {
     }
   };
 
-  document.addEventListener("mousedown", handleClickOutside);
+  document.addEventListener(
+    "mousedown",
+    handleClickOutside
+  );
 
   return () =>
     document.removeEventListener(
@@ -266,9 +264,9 @@ useEffect(() => {
 
             
 
-          <div
+        <div
   className="md:hidden flex-1 max-w-[220px] sm:max-w-[260px] relative"
-  ref={searchRef}
+  ref={mobileSearchRef}
 >
   <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
     <Search size={16} className="text-gray-400 mr-2" />
@@ -284,7 +282,7 @@ useEffect(() => {
   </div>
 
   {showResults && (
-    <div className="absolute top-[50px] left-0 w-full bg-white border shadow-xl rounded-lg max-h-[350px] overflow-y-auto z-[99999]">
+    <div className="absolute top-[50px] left-0 w-full bg-white border rounded-xl shadow-xl max-h-[350px] overflow-y-auto z-[99999]">
       {loading ? (
         <div className="p-4 text-center text-sm">
           Searching...
@@ -298,7 +296,7 @@ useEffect(() => {
             onClick={() => {
               saveRecentSearch(item);
               setShowResults(false);
-              setMobileMenu(false);
+              setSearchQuery("");
             }}
           >
             <div className="font-medium text-sm">
@@ -310,15 +308,18 @@ useEffect(() => {
             </div>
           </Link>
         ))
+      ) : searchQuery?.length > 1 ? (
+        <div className="p-4 text-center text-gray-500 text-sm">
+          No results found
+        </div>
       ) : (
         <div className="p-4 text-center text-gray-500 text-sm">
-          Start typing to see results...
+          Start typing...
         </div>
       )}
     </div>
   )}
 </div>
-
               <button
                 onClick={() => setMobileMenu(!mobileMenu)}
                 className="md:hidden text-black flex-shrink-0"
@@ -428,7 +429,10 @@ useEffect(() => {
             <div className="h-[45px] w-px bg-gray-400"></div>
 
             <div className="flex items-center flex-1 min-w-[280px] max-w-[722px] h-[42px]">
-             <div className="relative w-full">
+          <div
+  className="relative w-full"
+  ref={desktopSearchRef}
+>
   <input
     type="text"
     value={searchQuery}
@@ -450,10 +454,11 @@ useEffect(() => {
   key={index}
   href={`https://dir.inquirybazaar.com/search/${item.slug}`}
   className="block px-4 py-3 border-b hover:bg-orange-50"
-  onClick={() => {
-    saveRecentSearch(item);
-    setShowResults(false);
-  }}
+ onClick={() => {
+  saveRecentSearch(item);
+  setShowResults(false);
+  setSearchQuery("");
+}}
 >
             <div className="font-medium">
               {item.name}
