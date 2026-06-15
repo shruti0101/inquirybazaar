@@ -341,39 +341,35 @@ const [showTooltip] = useState(true);
 
 
 
+{/* Floating Button */}
+<div className="fixed bottom-16 md:bottom-6 right-3 md:right-6 z-50">
 
-      {/* Floating Button */}
-  <div className="fixed bottom-18 md:bottom-6 right-2 md:right-6 z-50">
-{isOpen && (
-  <div
-    className="
-      fixed
-      bottom-20 md:bottom-24
-      right-2 md:right-6
-      left-2 md:left-auto
-      z-[9999]
-      flex
-      h-[75vh] md:h-[550px]
-      w-auto md:w-[400px]
-      flex-col
-      overflow-hidden
-      rounded-3xl
-      border
-      border-gray-200
-      bg-white
-      shadow-2xl
-    "
-  >
+  {!isOpen && (
+    <div className="absolute bottom-18 right-0 animate-pulse">
+      <div className="relative rounded-2xl bg-white px-4 py-2 shadow-xl border border-gray-200">
+        <div className="flex items-center gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-green-500"></span>
+
+          <p className="hidden md:block text-sm font-medium text-gray-800">
+            IB Assistant is online
+          </p>
+
+          <p className="md:hidden text-sm font-medium text-gray-800">
+            Ask Anything
+          </p>
+        </div>
+
+        <div className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 bg-white border-r border-b border-gray-200"></div>
+      </div>
+    </div>
+  )}
 
   <button
-   onClick={() => {
-  setIsOpen(!isOpen);
-}}
-    className="relative flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#EC771C] to-orange-600 text-white shadow-[0_10px_40px_rgba(37,99,235,0.5)] transition-all duration-300 hover:scale-110"
+    onClick={() => setIsOpen(true)}
+    className="relative flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#EC771C] to-orange-600 text-white shadow-xl transition-all duration-300 hover:scale-110"
   >
     <MessageCircle size={28} />
 
-    {/* Online Dot */}
     <span className="absolute right-1 top-1 h-4 w-4 rounded-full border-2 border-white bg-green-500"></span>
   </button>
 </div>
