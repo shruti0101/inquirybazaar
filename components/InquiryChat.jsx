@@ -343,21 +343,23 @@ const [showTooltip] = useState(true);
 
 
       {/* Floating Button */}
-  <div className="fixed bottom-6 right-6 z-50">
+  <div className="fixed bottom-18 md:bottom-6 right-2 md:right-6 z-50">
 {!isOpen && (
-  <div className="absolute bottom-20 right-0 animate-pulse">
-    <div className="relative w-[240px] rounded-2xl bg-white px-4 py-3 shadow-xl border border-gray-200">
+  <div className=" absolute bottom-20 right-0 animate-pulse">
+    <div className="relative w-[150px] md:w-[200px] rounded-2xl bg-white px-4 py-2 md:py-3  shadow-xl border border-gray-200">
       <div className="flex items-center gap-2">
         <span className="h-2.5 w-2.5 rounded-full bg-green-500"></span>
 
-        <p className="text-sm font-medium text-gray-800">
+        <p className="hidden md:block text-sm font-medium text-gray-800">
          IB Assistant is online
+        </p>
+
+          <p className="block md:hidden text-sm font-medium text-gray-800">
+    Ask Anything
         </p>
       </div>
 
-      <p className="mt-1 text-xs text-gray-500">
-        Ask me anything about suppliers, products and services.
-      </p>
+     
 
       <div className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 bg-white border-r border-b border-gray-200"></div>
     </div>
