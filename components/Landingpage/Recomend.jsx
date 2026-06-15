@@ -106,7 +106,7 @@ export default function RecentRecommendations() {
     delay: 4000,
     disableOnInteraction: false,
   }}
-  spaceBetween={24}
+  spaceBetween={18}
   slidesPerView={1.5}
   breakpoints={{
     640: {
