@@ -342,7 +342,7 @@ const [showTooltip] = useState(true);
 
 
 {/* Floating Button */}
-<div className="fixed bottom-16 md:bottom-6 right-3 md:right-6 z-50">
+<div className="hidden md:block fixed bottom-16 md:bottom-6 right-3 md:right-6 z-50">
 
   {!isOpen && (
     <div className="absolute bottom-18 right-0 animate-pulse">
