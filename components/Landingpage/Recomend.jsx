@@ -140,7 +140,7 @@ export default function RecentRecommendations() {
     h-[320px]
       md:h-[400px]
    
-     
+     bg-white
       overflow-hidden
       border border-gray-200
       shadow-md
