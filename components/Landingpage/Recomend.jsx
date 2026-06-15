@@ -131,6 +131,8 @@ export default function RecentRecommendations() {
       product.thumbnail ||
       product.photo;
 
+      
+
     return (
      <SwiperSlide key={product._id} className="h-auto">
   <div
