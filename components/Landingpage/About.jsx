@@ -45,7 +45,7 @@ const About = () => {
     {/* Heading */}
     <div className="text-start mb-2">
       <h2 className="text-2xl md:text-4xl font-bold text-gray-800 leading-snug">
-        India’s Smartest B2B Growth Platform
+        India’s Smartest B2B Growth Platform - <h1>B2B Marketplace</h1> 
       </h2>
 
       <p className="text-orange-500 font-medium mt-2 text-sm md:text-lg">
