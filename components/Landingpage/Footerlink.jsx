@@ -26,29 +26,33 @@ export default function FooterLinksUI({ data }) {
     fetchData();
   }, []);
 
-  const renderLinks = (items) => (
-    <section className="w-full">
-      <div className="flex flex-wrap gap-y-2">
-        {items?.map((item, i) => (
-          <span
-            key={item._id || i}
-            className="flex items-center flex-wrap min-w-0"
+const renderLinks = (items, type = "category") => (
+  <section className="w-full">
+    <div className="flex flex-wrap gap-y-2">
+      {items?.map((item, i) => (
+        <span
+          key={item._id || i}
+          className="flex items-center flex-wrap min-w-0"
+        >
+          <Link
+            href={
+              type === "search"
+                ? item.link || "#"
+                : `https://dir.inquirybazaar.com/industries/${item.slug}`
+            }
+            className="hover:underline break-words"
           >
-            <Link
-              href={`https://dir.inquirybazaar.com/industries/${item.slug}`}
-              className="hover:underline break-words"
-            >
-              {item.title || item.name}
-            </Link>
+            {item.title || item.name}
+          </Link>
 
-            {i !== items.length - 1 && (
-              <span className="mx-2 sm:mx-3 text-gray-500">|</span>
-            )}
-          </span>
-        ))}
-      </div>
-    </section>
-  );
+          {i !== items.length - 1 && (
+            <span className="mx-2 sm:mx-3 text-gray-500">|</span>
+          )}
+        </span>
+      ))}
+    </div>
+  </section>
+);
 
   return (
     <section className="w-full bg-gray-100 px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-10 text-xs sm:text-sm text-gray-800 leading-relaxed">
@@ -60,7 +64,7 @@ export default function FooterLinksUI({ data }) {
         </h3>
 
         <div className="capitalize w-full">
-          {renderLinks(Catdata)}
+       {renderLinks(Catdata, "category")}
         </div>
       </div>
 
@@ -70,7 +74,7 @@ export default function FooterLinksUI({ data }) {
           POPULAR SEARCHES
         </h3>
 
-        {renderLinks(data?.searches)}
+{renderLinks(data?.searches, "search")}
       </div>
 
     </section>
