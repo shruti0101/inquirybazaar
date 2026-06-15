@@ -233,7 +233,7 @@ useEffect(() => {
         </div>
         {/*  TOP NAV  */}
         <div className="bg-white flex min-h-[52px] border-b border-[#183B63]  items-center">
-          <div className="mx-auto w-full flex items-center justify-between px-2 sm:px-4 md:px-12 gap-2">
+          <div className="mx-auto w-full flex items-center justify-between px-2 sm:px-4 md:px-12">
             <Link
               href="/"
               className="font-semibold text-black mt-1 md:mt-3 flex-shrink-0"
@@ -243,7 +243,7 @@ useEffect(() => {
                 alt="Logo"
                 width={270}
                 height={60}
-                className="w-[150px] sm:w-[180px] md:w-[270px] h-auto"
+                className="w-[145px] sm:w-[180px] md:w-[270px] h-auto"
               />
             </Link>
 
@@ -268,7 +268,7 @@ useEffect(() => {
   className="md:hidden flex-1 max-w-[220px] sm:max-w-[260px] relative"
   ref={mobileSearchRef}
 >
-  <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-3 h-[45px] shadow-sm">
+  <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-1 h-[45px] shadow-sm">
     <Search size={16} className="text-gray-400 mr-2" />
 
     <input
