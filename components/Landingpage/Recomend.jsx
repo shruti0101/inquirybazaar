@@ -131,14 +131,14 @@ export default function RecentRecommendations() {
       product.thumbnail ||
       product.photo;
 
-      
+
 
     return (
      <SwiperSlide key={product._id} className="h-auto">
   <div
     className="
-      h-[520px]
-      bg-white
+      h-[400px]
+   
      
       overflow-hidden
       border border-gray-200
@@ -152,14 +152,14 @@ export default function RecentRecommendations() {
     "
   >
     {/* Product Image */}
-    <div className="relative h-[220px] bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center">
+    <div className="relative h-[220px] bg-white flex items-center justify-center">
       {imageUrl ? (
         <img
           src={imageUrl}
           alt={product.name}
           className="
-            w-[120px]
-            h-[120px]
+            w-[170px]
+            h-[170px]
             object-contain
             transition-all
             duration-500
@@ -197,12 +197,12 @@ export default function RecentRecommendations() {
       <div className="mt-2 flex items-center justify-between">
         <div className="">
           <p className="text-xs mb-1 text-gray-400">Starting From</p>
-          <p className="text-[30px] font-bold text-black leading-none">
+          <p className="text-[20px] font-bold text-black leading-none">
             ₹{product.price}
           </p>
         </div>
 
-        <span className="px-3  py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">
+        <span className="px-3  py-1 rounded-full bg-emerald-100 text-green-700 text-xs font-medium">
           In Stock
         </span>
       </div>
@@ -211,7 +211,7 @@ export default function RecentRecommendations() {
       <div className="flex-1" />
 
       {/* Buttons */}
-      <div className="grid grid-cols-2 gap-3 mt-5">
+      <div className="grid grid-cols-2 gap-2 mt-5">
         <a
           href={`tel:${product?.supplier?.phone || product?.supplierId?.phone}`}
           className="
@@ -241,6 +241,7 @@ export default function RecentRecommendations() {
             bg-[#183B63]
             text-white
             text-[12px]
+            
             font-semibold
             hover:bg-[#102845]
             transition
