@@ -1,6 +1,8 @@
 "use client"
 
-import React from 'react'
+import axios from "axios";
+import toast from "react-hot-toast";
+
 import {
   Users,
   TrendingDown,
@@ -27,7 +29,7 @@ import {
 
 import { useState } from "react";
 
-
+import Link from 'next/link';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -276,6 +278,70 @@ const faqs = [
 ];
 
 
+const [form, setForm] = useState({
+  name: "",
+  companyName: "",
+  phone: "",
+  requirement: "",
+});
+
+const [loading, setLoading] = useState(false);
+
+const handleChange = (e) => {
+  setForm({
+    ...form,
+    [e.target.name]: e.target.value,
+  });
+};
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!form.name || !form.phone) {
+    return toast.error("Please fill required fields");
+  }
+
+  try {
+    setLoading(true);
+
+    const formData = {
+      platform: "Exclusive Lead Form",
+      platformEmail: "care@inquirybazaar.com",
+      name: form.name,
+      phone: form.phone,
+      email: "N/A",
+      companyName: form.companyName,
+      place: "N/A",
+      product: "Exclusive Lead",
+      message: form.requirement,
+    };
+
+    const { data } = await axios.post(
+      "https://brandbnalo.com/api/form/add",
+      formData
+    );
+
+    if (data?.success) {
+      toast.success("Lead Submitted Successfully");
+
+      setForm({
+        name: "",
+        companyName: "",
+        phone: "",
+        requirement: "",
+      });
+    } else {
+      toast.error("Failed to submit");
+    }
+  } catch (error) {
+    console.log(error);
+    toast.error("Server Error");
+  } finally {
+    setLoading(false);
+  }
+};
+
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggleFAQ = (index) => {
@@ -316,13 +382,24 @@ const faqs = [
 
     {/* Buttons */}
     <div className="flex flex-col sm:flex-row justify-center gap-5 mt-6">
+
+<a href="https://seller.inquirybazaar.com/register">
+
+
       <button className="h-[58px] px-10 rounded-xl bg-[#ef6b2e] text-white font-semibold text-lg hover:scale-105 transition-all duration-300">
         Get exclusive leads
       </button>
+</a>
+
+
+<a href="/contact-us">
 
       <button className="h-[58px] px-10 rounded-xl border border-gray-300 bg-white text-black font-medium text-lg hover:bg-gray-50 transition-all duration-300">
         Book free demo
       </button>
+
+      </a>
+
     </div>
 
     {/* Stats */}
@@ -1209,69 +1286,121 @@ const faqs = [
         </div>
       </div>
 
+
       {/* FORM */}
-      <div className="w-full xl:w-[700px] xl:shrink-0">
-        <div className=" rounded-[16px] border border-[#dddddd] bg-white p-8">
-        
+<form onSubmit={handleSubmit} className="space-y-5">
+  <div className="rounded-[18px] border border-[#ececec] bg-gradient-to-b from-[#fffaf7] to-white p-5">
 
-          <h3 className="text-[36px] font-medium leading-tight text-black">
-            Get your first exclusive lead
-          </h3>
+    {/* Name */}
+    <div className="mb-4">
+      <label className="mb-2 block text-sm font-medium text-[#2b2b2b]">
+        Full Name
+      </label>
 
-        
-
-          <form className=" space-y-5">
-            <div className='mt-3'>
-          
-
-              <input
-                type="text"
-                placeholder="Full name"
-                className="h-[56px] w-full rounded-[10px] border border-[#cfd3d7] px-4 outline-none focus:border-[#eb6425]"
-              />
-            </div>
-
-            <div>
-           
-
-              <input
-                type="text"
-                placeholder="Company name"
-                className="h-[56px] w-full rounded-[10px] border border-[#cfd3d7] px-4 outline-none focus:border-[#eb6425]"
-              />
-            </div>
-
-            <div>
-          
-
-              <input
-                type="tel"
-                placeholder="+91 XXXXX XXXXX"
-                className="h-[56px] w-full rounded-[10px] border border-[#cfd3d7] px-4 outline-none focus:border-[#eb6425]"
-              />
-            </div>
-<div>
-  <label className="mb-2 block text-[13px] uppercase tracking-[1.5px] text-[#7a828f]">
-    Your Requirements
-  </label>
-
-  <textarea
-    placeholder="Please describe your requirements"
-    rows={4}
-    className="w-full rounded-[10px] border border-[#cfd3d7] px-4 py-3 outline-none focus:border-[#eb6425] resize-none"
-  />
-</div>
-
-            <button
-              type="submit"
-              className="h-[60px] w-full rounded-[12px] bg-[#eb6425] text-[18px] font-medium text-white transition hover:bg-[#d9571f]"
-            >
-              Get my first exclusive lead
-            </button>
-
-          </form>
-        </div>
+      <div className="relative">
+        <input
+          type="text"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          placeholder="Enter your full name"
+          className="h-[58px] w-full rounded-xl border border-[#e4e4e4] bg-white px-4 text-[15px] shadow-sm transition-all outline-none focus:border-[#eb6425] focus:ring-4 focus:ring-[#eb6425]/10"
+        />
       </div>
+    </div>
+
+    {/* Company */}
+    <div className="mb-4">
+      <label className="mb-2 block text-sm font-medium text-[#2b2b2b]">
+        Company Name
+      </label>
+
+      <input
+        type="text"
+        name="companyName"
+        value={form.companyName}
+        onChange={handleChange}
+        placeholder="Your company name"
+        className="h-[58px] w-full rounded-xl border border-[#e4e4e4] bg-white px-4 text-[15px] shadow-sm transition-all outline-none focus:border-[#eb6425] focus:ring-4 focus:ring-[#eb6425]/10"
+      />
+    </div>
+
+    {/* Phone */}
+    <div className="mb-4">
+      <label className="mb-2 block text-sm font-medium text-[#2b2b2b]">
+        Mobile Number
+      </label>
+
+      <div className="flex overflow-hidden rounded-xl border border-[#e4e4e4] bg-white shadow-sm">
+        <div className="flex items-center border-r bg-[#fafafa] px-4 font-medium text-[#555]">
+          +91
+        </div>
+
+        <input
+          type="tel"
+          name="phone"
+          value={form.phone}
+          onChange={handleChange}
+          placeholder="Enter mobile number"
+          className="h-[58px] w-full px-4 outline-none"
+        />
+      </div>
+    </div>
+
+    {/* Requirement */}
+    <div>
+      <label className="mb-2 block text-sm font-medium text-[#2b2b2b]">
+        Tell us what you need
+      </label>
+
+      <textarea
+        name="requirement"
+        value={form.requirement}
+        onChange={handleChange}
+        placeholder="Describe your product, quantity, location, specifications or any requirement..."
+        rows={5}
+        className="w-full rounded-xl border border-[#e4e4e4] bg-white px-4 py-4 text-[15px] shadow-sm transition-all outline-none resize-none focus:border-[#eb6425] focus:ring-4 focus:ring-[#eb6425]/10"
+      />
+    </div>
+
+    {/* Trust Points */}
+    <div className="mt-4 flex flex-wrap gap-3 text-xs text-[#666]">
+      <span className="rounded-full bg-[#f7f7f7] px-3 py-1">
+        ✓ Verified Leads
+      </span>
+
+      <span className="rounded-full bg-[#f7f7f7] px-3 py-1">
+        ✓ Quick Response
+      </span>
+
+      <span className="rounded-full bg-[#f7f7f7] px-3 py-1">
+        ✓ Genuine Buyers
+      </span>
+    </div>
+  </div>
+
+  {/* CTA */}
+  <button
+    type="submit"
+    disabled={loading}
+    className="group relative h-[62px] w-full overflow-hidden rounded-2xl bg-[#eb6425] text-[18px] font-semibold text-white shadow-[0_15px_40px_rgba(235,100,37,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#d9571f]"
+  >
+    <span className="relative z-10">
+      {loading
+        ? "Submitting..."
+        : "Get My First Exclusive Lead"}
+    </span>
+
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] transition-transform duration-700 group-hover:translate-x-[100%]" />
+  </button>
+
+  <p className="text-center text-xs text-[#7a828f]">
+    By submitting this form, you agree to receive calls and messages regarding your business requirements.
+  </p>
+</form>
+
+
+
     </div>
   </div>
 </section>
@@ -1297,6 +1426,11 @@ const faqs = [
         {/* Buttons */}
         <div className="mt-12 flex flex-col gap-4 sm:flex-row">
           {/* Primary CTA */}
+
+<a href="https://seller.inquirybazaar.com/register">
+
+
+
           <button
             className="
           
@@ -1315,8 +1449,12 @@ const faqs = [
           >
             Get exclusive leads now
           </button>
+</a>
 
-          {/* Secondary CTA */}
+
+
+<a href="tel:+917303486777">
+    {/* Secondary CTA */}
           <button
             className="
               min-w-[255px]
@@ -1337,6 +1475,10 @@ const faqs = [
           >
             Book free strategy call
           </button>
+
+</a>
+
+      
         </div>
       </div>
     </section>

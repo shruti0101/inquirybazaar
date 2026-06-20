@@ -23,9 +23,6 @@ const mobileSearchRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
 
-
-
-
   const saveRecentSearch = (item) => {
   try {
     const existing =

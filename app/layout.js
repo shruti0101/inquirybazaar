@@ -45,7 +45,35 @@ export default function RootLayout({ children }) {
     </Head>
 
       <body className="h-full font-sans">
-      <Toaster position="top-center top-20" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
+ <Toaster
+  position="top-center"
+  reverseOrder={false}
+  toastOptions={{
+    duration: 3000,
+    style: {
+      marginTop: "80px",
+      borderRadius: "12px",
+      background: "#fff",
+      color: "#111",
+      boxShadow:
+        "0 10px 30px rgba(0,0,0,0.12)",
+    },
+
+    success: {
+      iconTheme: {
+        primary: "#16a34a",
+        secondary: "#fff",
+      },
+    },
+
+    error: {
+      iconTheme: {
+        primary: "#dc2626",
+        secondary: "#fff",
+      },
+    },
+  }}
+/>
 
 
         <Layoutwrapper>

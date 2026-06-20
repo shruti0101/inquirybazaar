@@ -7,14 +7,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {  Autoplay } from "swiper/modules";
-
+import RequestQuoteModal from "@/components/Layout/Requestquote";
 import "swiper/css";
 import "swiper/css/navigation";
 export default function RecentRecommendations() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const sliderRef = useRef(null);
-
+ const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     fetchRecommendations();
   }, []);
@@ -74,6 +74,10 @@ export default function RecentRecommendations() {
   };
 
   return (
+
+    <>
+    
+    
     <section className="pb-6">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-4 gap-4">
@@ -243,7 +247,8 @@ h-[120px]
         </a>
 
         <button
-          onClick={() => openQuoteModal(product)}
+          onClick={() => setIsOpen(true)}
+
           className="
             h-7
             rounded-xl
@@ -269,5 +274,10 @@ h-[120px]
         )}
       </div>
     </section>
+
+
+ <RequestQuoteModal isOpen={isOpen} setIsOpen={setIsOpen} />
+
+    </>
   );
 }
