@@ -37,7 +37,7 @@ const Contactus = () => {
           Customer Service No.
         </p>
         <a
-          href="tel:01146710423"
+          href="tel:+917303486777"
           className="text-[#5a6f84] text-2xl hover:text-black transition"
         >
          +91 7303486777
@@ -52,7 +52,7 @@ const Contactus = () => {
           Write to us
         </p>
         <a
-          href="mailto:customercare@tradeindia.com"
+          href="mailto:care@inquirybazaar.com"
           className="text-[#5a6f84] text-2xl hover:text-black transition break-all"
         >
           care@inquirybazaar.com
@@ -157,7 +157,7 @@ Netaji Subhash Place, Delhi, 110034
               Phone
             </h3>
             <a
-              href="tel:+911234567890"
+              href="tel:+917303486777"
               className="text-gray-600 hover:text-black"
             >
               +91 7303486777
@@ -169,7 +169,7 @@ Netaji Subhash Place, Delhi, 110034
               Email
             </h3>
             <a
-              href="mailto:info@yourcompany.com"
+              href="mailto:care@inquirybazaar.com"
               className="text-gray-600 hover:text-black"
             >
               care@inquirybazaar.com
