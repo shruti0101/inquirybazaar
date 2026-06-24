@@ -65,7 +65,7 @@ ${product}
 My Contact Number: ${mobile}`;
 
       window.open(
-        `https://wa.me/6306530720?text=${encodeURIComponent(
+        `https://wa.me/917303486777?text=${encodeURIComponent(
           whatsappText
         )}`,
         "_blank"
