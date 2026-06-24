@@ -36,10 +36,9 @@ export default function RequestQuotePopup({
   const [isPhoneVerified, setIsPhoneVerified] =
     useState(false);
 
-  // UNIQUE CAPTCHA ID
+
   const recaptchaId = "request-quote-recaptcha";
 
-  // FIREBASE RECAPTCHA
   useEffect(() => {
     if (!isOpen) return;
 
@@ -59,7 +58,7 @@ export default function RequestQuotePopup({
 
           await verifier.render();
 
-          // STORE VERIFIER
+       
           window.requestQuoteRecaptchaVerifier =
             verifier;
         }
@@ -197,7 +196,7 @@ export default function RequestQuotePopup({
 
       toast.success("Phone Verified Successfully");
 
-      // SUBMIT FORM AFTER VERIFY
+     
       await submitForm();
     } catch (error) {
       console.log(error);
@@ -208,7 +207,7 @@ export default function RequestQuotePopup({
     }
   };
 
-  // SUBMIT FORM
+
   const submitForm = async () => {
     try {
       setLoading(true);
@@ -292,7 +291,7 @@ Contact: ${form.phone}`;
     }
   };
 
-  // HANDLE SUBMIT
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -308,13 +307,13 @@ Contact: ${form.phone}`;
       );
     }
 
-    // IF VERIFIED
+
     if (isPhoneVerified) {
       await submitForm();
       return;
     }
 
-    // SEND OTP
+   
     await sendOTP();
   };
 
@@ -335,7 +334,7 @@ Contact: ${form.phone}`;
         </button>
 
         {/* HEADING */}
-        <div className="text-center mb-2 md:mb-6">
+        <div className="text-center mb-2 ">
           <h2 className="text-2xl font-semibold">
             Request a Quote
           </h2>
@@ -349,7 +348,7 @@ Contact: ${form.phone}`;
 
 <form
   onSubmit={handleSubmit}
-  className="space-y-3 md:space-y-4"
+  className="space-y-3 "
 >
  <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
     <input
@@ -358,7 +357,7 @@ Contact: ${form.phone}`;
       value={form.name}
       onChange={handleChange}
       placeholder="Full Name *"
-      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      className="w-full px-3 sm:px-4 py-2.5  text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
       disabled={loading}
       required
     />
@@ -369,7 +368,7 @@ Contact: ${form.phone}`;
       value={form.email}
       onChange={handleChange}
       placeholder="Email"
-      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      className="w-full px-3 sm:px-4 py-2.5  text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
       disabled={loading}
     />
   </div>
@@ -381,7 +380,7 @@ Contact: ${form.phone}`;
       value={form.companyName}
       onChange={handleChange}
       placeholder="Company Name"
-      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      className="w-full px-3 sm:px-4 py-2.5  text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
       disabled={loading}
     />
 
@@ -391,7 +390,7 @@ Contact: ${form.phone}`;
       value={form.gstNumber}
       onChange={handleChange}
       placeholder="GST Number"
-      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+      className="w-full px-3 sm:px-4 py-2.5  text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
       disabled={loading}
     />
   </div>
@@ -408,13 +407,13 @@ Contact: ${form.phone}`;
     }
     maxLength={10}
     placeholder="Phone Number *"
-    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+    className="w-full px-3 sm:px-4 py-2.5  text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
     disabled={loading}
     required
   />
 
   {/* RECAPTCHA */}
-  <div className="w-full overflow-x-auto">
+  <div className="w-full  overflow-x-auto">
     <div
       id={recaptchaId}
       className="flex justify-center min-w-[304px]"
@@ -434,14 +433,14 @@ Contact: ${form.phone}`;
           )
         }
         maxLength={6}
-        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
+        className="w-full px-3 sm:px-4 py-2.5  text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none"
       />
 
       <button
         type="button"
         onClick={verifyOTP}
         disabled={loading}
-        className="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base"
+        className="w-full bg-green-600 hover:bg-green-700 text-white py-2.5  rounded-lg font-semibold text-sm sm:text-base"
       >
         {loading ? "Verifying..." : "Verify OTP"}
       </button>
@@ -454,7 +453,7 @@ Contact: ${form.phone}`;
     onChange={handleChange}
     rows={3}
     placeholder="Your requirement..."
-    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none resize-none"
+    className="w-full px-3 sm:px-4 py-2.5  text-sm sm:text-base border rounded-lg focus:ring-2 focus:ring-black outline-none resize-none"
     disabled={loading}
   />
 

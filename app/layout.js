@@ -1,7 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Layoutwrapper from "@/components/Layout/Layoutwrapper";
-import { Toaster  } from "react-hot-toast";
+import ToastProvider from "@/components/ToastProvider";
 import Stickyfooter from "@/components/Stickyfooter";
 import Head from "next/head";
 
@@ -45,35 +45,7 @@ export default function RootLayout({ children }) {
     </Head>
 
       <body className="h-full font-sans">
- <Toaster
-  position="top-center"
-  reverseOrder={false}
-  toastOptions={{
-    duration: 3000,
-    style: {
-      marginTop: "80px",
-      borderRadius: "12px",
-      background: "#fff",
-      color: "#111",
-      boxShadow:
-        "0 10px 30px rgba(0,0,0,0.12)",
-    },
-
-    success: {
-      iconTheme: {
-        primary: "#16a34a",
-        secondary: "#fff",
-      },
-    },
-
-    error: {
-      iconTheme: {
-        primary: "#dc2626",
-        secondary: "#fff",
-      },
-    },
-  }}
-/>
+<ToastProvider />
 
 
         <Layoutwrapper>

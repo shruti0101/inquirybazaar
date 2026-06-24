@@ -3,6 +3,7 @@
 import Navbar from "./Navbar";
 import { usePathname } from "next/navigation";
 import Bottomsections from "../Landingpage/Bottomsections";
+import ToastProvider from "../ToastProvider";
 
 
 const Layoutwrapper = ({ children }) => {
@@ -16,7 +17,7 @@ const Layoutwrapper = ({ children }) => {
   return (
     <>
       {!hidenav && <Navbar />}
-
+<ToastProvider/>
       {children}
 
     {!hidenav && <Bottomsections/>}  

@@ -1,6 +1,94 @@
-import React from 'react'
+"use client"
+
+
+import  { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
+
 
 const Contactus = () => {
+
+
+
+const [loading, setLoading] = useState(false);
+
+const [form, setForm] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+});
+
+const handleChange = (e) => {
+  setForm({
+    ...form,
+    [e.target.name]: e.target.value,
+  });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!form.name || !form.phone || !form.message) {
+    toast.error("Please fill all required fields");
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    const formData = {
+      platform: "Inquiry Bazaar Contact Form",
+      platformEmail: "lead.inquirybazaar@gmail.com",
+      name: form.name,
+      phone: form.phone,
+      email: form.email || "N/A",
+      place: "N/A",
+      product: "Contact Us Inquiry",
+      message: form.message,
+    };
+
+    const { data } = await axios.post(
+      "https://brandbnalo.com/api/form/add",
+      formData
+    );
+
+    if (data?.success) {
+      toast.success("Message Sent Successfully");
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } else {
+      toast.error("Failed to submit form");
+    }
+  } catch (error) {
+    console.log(error);
+    toast.error("Server Error");
+  } finally {
+    setLoading(false);
+  }
+};
+
+
+
+
+
+
   return (
     <div>
      <section
@@ -78,59 +166,86 @@ const Contactus = () => {
           Fill out the form below and we'll get back to you as soon as possible.
         </p>
 
-        <form className="space-y-5">
-          <div>
-            <label className="block mb-2 font-medium">
-              Full Name
-            </label>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-black"
-            />
-          </div>
+      <form onSubmit={handleSubmit} className="space-y-5">
+  <div>
+    <label className="block mb-2 font-medium">
+      Full Name
+    </label>
 
-          <div>
-            <label className="block mb-2 font-medium">
-              Email Address
-            </label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-black"
-            />
-          </div>
+    <input
+      type="text"
+      name="name"
+      value={form.name}
+      onChange={handleChange}
+      placeholder="Enter your name"
+      className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-black"
+      required
+    />
+  </div>
 
-          <div>
-            <label className="block mb-2 font-medium">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              placeholder="Enter your phone number"
-              className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-black"
-            />
-          </div>
+  <div>
+    <label className="block mb-2 font-medium">
+      Email Address
+    </label>
+
+    <input
+      type="email"
+      name="email"
+      value={form.email}
+      onChange={handleChange}
+      placeholder="Enter your email"
+      className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-black"
+    />
+  </div>
+
+  <div>
+    <label className="block mb-2 font-medium">
+      Phone Number
+    </label>
+
+    <input
+      type="tel"
+      name="phone"
+      value={form.phone}
+      onChange={(e) =>
+        setForm({
+          ...form,
+          phone: e.target.value.replace(/\D/g, ""),
+        })
+      }
+      maxLength={10}
+      placeholder="Enter your phone number"
+      className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-black"
+      required
+    />
+  </div>
+
+  <div>
+    <label className="block mb-2 font-medium">
+      Message
+    </label>
+
+    <textarea
+      rows="5"
+      name="message"
+      value={form.message}
+      onChange={handleChange}
+      placeholder="Write your message..."
+      className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-black"
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    disabled={loading}
+    className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition disabled:opacity-60"
+  >
+    {loading ? "Sending..." : "Send Message"}
+  </button>
+</form>
 
 
-          <div>
-            <label className="block mb-2 font-medium">
-              Message
-            </label>
-            <textarea
-              rows="5"
-              placeholder="Write your message..."
-              className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-black"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition"
-          >
-            Send Message
-          </button>
-        </form>
       </div>
 
       {/* Office Details */}
