@@ -1,34 +1,32 @@
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
 import Layoutwrapper from "@/components/Layout/Layoutwrapper";
 import ToastProvider from "@/components/ToastProvider";
 import Stickyfooter from "@/components/Stickyfooter";
-import Head from "next/head";
-
 import InquiryChat from "@/components/InquiryChat";
+
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], 
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
 });
 
 export const metadata = {
   title: "Hybrid B2B Marketplace in India | Inquiry Bazaar",
-  
-  
-  description: "Inquiry Bazaar is the Smartest B2B Marketplace, combining marketplace and performance marketing to deliver high-intent business inquiries and real growth.",
+  description:
+    "Inquiry Bazaar is the Smartest B2B Marketplace, combining marketplace and performance marketing to deliver high-intent business inquiries and real growth.",
 
-icons:{
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 
-
-  icon: "/favicon.ico",
-  shortcut: "/favicon.ico",
-  apple: "/favicon.ico",
-}
-
-
-
-
+  verification: {
+    google: "6bbu4UfJBXU6bw_utiN0GWbpnttBceKaSZe77oyWJME",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -37,30 +35,32 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} h-full antialiased`}
     >
-
-
-    <Head>
-
-      <meta name="google-site-verification" content="6bbu4UfJBXU6bw_utiN0GWbpnttBceKaSZe77oyWJME" />    
-    </Head>
-
       <body className="h-full font-sans">
-<ToastProvider />
-
+        <ToastProvider />
 
         <Layoutwrapper>
-<Stickyfooter></Stickyfooter>
-
+          <Stickyfooter />
           {children}
-          
-        </Layoutwrapper>  
+        </Layoutwrapper>
 
+        <InquiryChat />
 
-
-
-<InquiryChat></InquiryChat>
-
-        
+        {/* Microsoft Clarity */}
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+        >
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);
+              t.async=1;
+              t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];
+              y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "wpdsdgoo5y");
+          `}
+        </Script>
       </body>
     </html>
   );
