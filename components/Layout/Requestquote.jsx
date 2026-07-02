@@ -241,27 +241,9 @@ Requirement: ${form.message}
           "Request Submitted Successfully"
         );
 
-        const whatsappText = `Hi, I am ${form.name}.
+     
 
-Company Name: ${form.companyName}
-
-GST Number: ${form.gstNumber}
-
-Email: ${form.email}
-
-Message: ${form.message}
-
-Contact: ${form.phone}`;
-
-        const waUrl = `https://wa.me/6306530720?text=${encodeURIComponent(
-          whatsappText
-        )}`;
-
-        setTimeout(() => {
-          window.open(waUrl, "_blank");
-        }, 1000);
-
-        // RESET
+        // RESETcmd
         setForm({
           name: "",
           email: "",
