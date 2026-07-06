@@ -47,7 +47,7 @@ export default function MoreForYou() {
       title: "Legal Compliance",
       desc: "Verified Goods & Service Tax Identification Number (GSTIN) indicates a registered business that complies with Indian tax regulations.",
       btn: "Know More",
-      link: "/gst",
+      link: "/whytrustus",
     },
   ];
 

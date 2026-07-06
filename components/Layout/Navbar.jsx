@@ -499,7 +499,7 @@ useEffect(() => {
               {open && (
              <div className="absolute right-0 mt-2 z-[99999] w-[180px] overflow-hidden rounded-md border bg-white shadow-lg">
   <a
-    href="https://seller.inquirybazaar.com/register"
+    href="https://seller.inquirybazaar.com/login"
     target="_blank"
     rel="noopener noreferrer"
     className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100"
@@ -508,7 +508,7 @@ useEffect(() => {
   </a>
 
   <a
-    href="https://buyer.inquirybazaar.com/register"
+    href="https://buyer.inquirybazaar.com/login"
     target="_blank"
     rel="noopener noreferrer"
     className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100"

@@ -235,7 +235,7 @@ const Exhibition = () => {
         {/* CTA Buttons */}
         <div className="slide-up relative z-10 mt-10 flex flex-wrap gap-4 justify-center">
           <a
-            href="#"
+            href="https://seller.inquirybazaar.com/register"
             className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-lg font-medium"
           >
             Apni Visibility Start Karo
@@ -251,7 +251,7 @@ const Exhibition = () => {
           </a>
 
           <a
-            href=""
+            href="https://corporate.inquirybazaar.com/about/whatwedo"
             className="px-6 py-3 border border-white/20 rounded-lg hover:border-orange-500 hover:bg-orange-500/10 transition"
           >
             See How It Works
@@ -647,7 +647,7 @@ const Exhibition = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {/* PRIMARY BUTTON */}
             <a
-              href="https://www.inquirybazaar.com"
+              href="https://seller.inquirybazaar.com/register"
               className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-medium transition"
             >
               List My Business Now
@@ -664,7 +664,7 @@ const Exhibition = () => {
 
             {/* OUTLINE BUTTON */}
             <a
-              href="https://www.inquirybazaar.com"
+              href="https://inquirybazaar.com/contact-us"
               className="px-6 py-3 rounded-lg border border-white/20 hover:border-orange-500 hover:text-orange-500 transition"
             >
               Talk to Our Team

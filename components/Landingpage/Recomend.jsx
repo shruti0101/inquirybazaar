@@ -187,7 +187,7 @@ h-[120px]
     </div>
 
     {/* Content */}
-    <div className="flex flex-col flex-1 p-5">
+    <div className="flex flex-col flex-1 p-2">
       <h3
         className="
         text-xs
@@ -223,7 +223,7 @@ h-[120px]
       <div className="flex-1" />
 
       {/* Buttons */}
-      <div className="grid grid-cols-2 gap-2 md:mt-5">
+      <div className="grid grid-cols-2 gap-1 md:mt-5">
         <a
           href={`tel:${product?.supplier?.phone || product?.supplierId?.phone}`}
           className="

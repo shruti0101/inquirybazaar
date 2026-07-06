@@ -155,6 +155,8 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
                 <input
                   name="mobile"
                   type="tel"
+                  maxLength={10}
+                  minLength={10}
                   placeholder="Mobile number"
                   className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-[14px] sm:text-[15px] outline-none"
                   required

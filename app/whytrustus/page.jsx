@@ -403,33 +403,35 @@ const handleSubmit = async (e) => {
     </div>
 
     {/* Stats */}
-    <div className="mt-8 max-w-3xl mx-auto bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm">
+    <div className="mt-8 max-w-5xl mx-auto bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm">
       <div className="grid grid-cols-1 md:grid-cols-3">
 
-        <div className="py-8 px-10 border-b md:border-b-0 md:border-r border-gray-200">
-          <h3 className="text-[52px] leading-none font-semibold text-black">
-            21.9<span className="text-[#F27A1B]">Cr</span>
+        <div className="py-8 px-5 border-b md:border-b-0 md:border-r border-gray-200">
+          <h3 className="text-[40px] leading-none font-semibold text-black">
+            82 <span className="text-[#F27A1B]">%</span>
           </h3>
-          <p className="mt-2 text-[#7b8190] text-lg">
-            Active buyers
+          <p className="mt-2 text-[#7b8190] text-md">
+          internet traffic in india comes from mobile phones - your buyers are searching on the go not at a desk
           </p>
         </div>
 
-        <div className="py-8 px-10 border-b md:border-b-0 md:border-r border-gray-200">
-          <h3 className="text-[52px] leading-none font-semibold text-black">
-            86<span className="text-[#F27A1B]">L+</span>
+        <div className="py-8 px-5 border-b md:border-b-0 md:border-r border-gray-200">
+          <h3 className="text-[40px] leading-none font-semibold text-black">
+            50 <span className="text-[#F27A1B]">%</span>
           </h3>
-          <p className="mt-2 text-[#7b8190] text-lg">
-            Verified suppliers
+          <p className="mt-2 text-[#7b8190] text-md">
+         internet uers research products and brands on social pltforms before making a purchase decision
+
+
           </p>
         </div>
 
-        <div className="py-8 px-10">
-          <h3 className="text-[52px] leading-none font-semibold text-black">
-            100<span className="text-[#F27A1B]">%</span>
+        <div className="py-8 px-3">
+          <h3 className="text-[40px] leading-none font-semibold text-black">
+            75 <span className="text-[#F27A1B]">%</span>
           </h3>
-          <p className="mt-2 text-[#7b8190] text-lg">
-            Exclusive leads
+          <p className="mt-2 text-[#7b8190] text-md">
+           B2B buyers never scroll past Google's first page - if your business isn't there, it simply doesn't exist to them
           </p>
         </div>
 
@@ -1339,6 +1341,8 @@ const handleSubmit = async (e) => {
         <input
           type="tel"
           name="phone"
+          maxLength={10}
+          minLength={10}
           value={form.phone}
           onChange={handleChange}
           placeholder="Enter mobile number"
