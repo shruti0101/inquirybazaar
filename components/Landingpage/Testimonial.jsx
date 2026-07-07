@@ -39,10 +39,52 @@ const testimonials = [
   },
   {
     name: "mr dates",
-    photo: "/client6logo.webp",
+    photo: "/client7logo.webp",
     message:
       "InquiryBazaar ne humara time aur effort dono bachaya. Ab hume sirf relevant aur high-intent buyers se hi inquiries milti hain.",
   },
+  {
+    name: "Vands Engineering Solutions ",
+    photo: "/client8logo.webp",
+    message:
+      "InquiryBazaar ne humari sales team ka kaafi time bachaya. Ab random calls ki jagah sirf serious industrial buyers hi contact karte hain.",
+  },
+  {
+    name: "Eutair ",
+    photo: "/client9logo.png",
+    message:
+      "InquiryBazaar ki targeted lead generation ki wajah se hume air compressor aur compressed air solutions ke liye high-quality business inquiries milti hain.",
+  },
+  {
+    name: "JL Industries ",
+    photo: "/client10logo.png",
+    message:
+      "Business expansion ke liye InquiryBazaar ek effective B2B marketplace hai. Quality inquiries aur professional support ki wajah se humara overall experience excellent raha hai.",
+  },
+  {
+    name: "RYKA ",
+    photo: "/client11logo.webp",
+    message:
+      "RYKA ke liye InquiryBazaar ek valuable B2B marketplace hai. Industrial buyers tak pahunchna pehle se kaafi aasan ho gaya hai.",
+  },
+  {
+    name: "NewTech",
+    photo: "/client15logo.png",
+    message:
+      "InquiryBazaar ne hume naye corporate clients tak pahunchne ka ek effective platform diya hai. Inquiry quality achhi hai aur business opportunities bhi lagatar mil rahi hain.",
+  },
+ 
+  {
+    name: "Genzee Switchgears ",
+    photo: "/client13logo.webp",
+    message:
+      "Hum InquiryBazaar ki professional support aur quality lead generation se bahut satisfied hain. Yeh platform business growth ke liye kaafi beneficial sabit hua hai.",
+  },
+  {
+    name: "Anand Aggarwal Properties",
+    photo: "/client11logo.webp",
+    message:
+ "Platform par listing ke baad humari online visibility aur client reach dono mein noticeable growth dekhne ko mili hai. Overall experience bahut positive raha hai.",    },
 ];
 
 export default function TestimonialSection() {
@@ -68,10 +110,8 @@ export default function TestimonialSection() {
       >
         {testimonials.map(({ name, photo, message }, index) => (
           <SwiperSlide key={index} className="!h-auto flex">
-
             {/* CARD */}
             <div className="flex flex-col w-full bg-white rounded-2xl shadow-lg p-4 h-full">
-
               {/* Logo */}
               <div className="mb-4 flex items-center justify-center h-12">
                 <img
@@ -87,12 +127,8 @@ export default function TestimonialSection() {
               </p>
 
               {/* Name */}
-              <p className="font-semibold capitalize text-gray-900">
-                {name}
-              </p>
-
+              <p className="font-semibold capitalize text-gray-900">{name}</p>
             </div>
-
           </SwiperSlide>
         ))}
       </Swiper>
