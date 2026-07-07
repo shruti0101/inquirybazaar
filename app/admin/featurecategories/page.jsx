@@ -123,6 +123,12 @@ export default function FeaturedAdmin() {
 
               <input
                 className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-black outline-none"
+                placeholder="URL"
+                value={p.URL}
+                onChange={(e) => updateField(i, "URL", e.target.value)}
+              />
+              <input
+                className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-black outline-none"
                 placeholder="Badge (e.g. Best Seller)"
                 value={p.badge}
                 onChange={(e) => updateField(i, "badge", e.target.value)}

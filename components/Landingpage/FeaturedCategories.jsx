@@ -40,7 +40,9 @@ export default function FeaturedProducts({ data }) {
         >
           {data?.products?.map((p, i) => (
             <SwiperSlide key={i}>
+              
               <div className="h-auto rounded-lg p-3 relative bg-white group">
+                <Link href={p.URL}>
                 
                 {/* BADGE */}
                 {p.badge && (
@@ -74,6 +76,7 @@ export default function FeaturedProducts({ data }) {
                 <p className="font-semibold text-[14px] mt-1">
                   ₹{p.price}
                 </p>
+                </Link>
 
                 {/* BUTTON */}
                 <button
@@ -83,6 +86,7 @@ export default function FeaturedProducts({ data }) {
                   Request a Quote
                 </button>
               </div>
+              
             </SwiperSlide>
           ))}
         </Swiper>
