@@ -318,12 +318,12 @@ const mobileBanners = [
 <div className="grid md:hidden grid-cols-2 gap-3 mt-4">
 
   {/* IMAGE 1 */}
-  <div className="relative h-[140px] ">
+  <div className="relative rounded-xl h-[150px] ">
     <Image
       src="/mobile2-2.jpeg"
    fill
       alt="B2B Mrketplace"
-      className="object-cover"
+      className="object-cover rounded-r-lg "
     />
 
     <div className="absolute inset-0  flex flex-col justify-center px-2">
@@ -334,7 +334,7 @@ const mobileBanners = [
 
    <button
   onClick={() => setIsOpen(true)}
-  className="mt-2 sm:mt-3 bg-white/60 mb-2 text-black px-1 py-2 sm:px-4 sm:py-2 rounded-lg border border-[#f48335] w-fit text-[11px] sm:text-sm hover:shadow-md transition active:scale-95"
+  className="mt-8 sm:mt-3 bg-white/60 mb-2 text-black px-1 py-2 sm:px-4 sm:py-2 rounded-lg border border-[#f48335] w-fit text-[10px] sm:text-sm hover:shadow-md transition active:scale-95"
 >
   Post As Per Requirement →
 </button>
@@ -342,12 +342,12 @@ const mobileBanners = [
   </div>
 
   {/* IMAGE 2 */}
-  <div className="relative h-[140px] overflow-hidden ">
+  <div className="relative h-[150px] overflow-hidden ">
     <Image
       src="/mobile1-1.jpeg"
      fill
       alt="B2B Mrketplace"
-      className="object-cover"
+      className="object-cover rounded-l-lg"
     />
 
     <div className="absolute inset-0  flex flex-col justify-center px-2">
@@ -356,7 +356,7 @@ const mobileBanners = [
         <span className="text-[#0D2340]">10x faster</span>
       </h2>
 <a href="https://seller.inquirybazaar.com/">
-      <button className="block mt-2 bg-white/60 sm:mt-4 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-lg border border-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
+      <button className="block mt-5 bg-white/60 sm:mt-4 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-lg border border-[#24457a] w-fit text-[10px] sm:text-[14px] hover:shadow-md transition active:scale-95">
         Free Listing →
       </button>
 </a>

@@ -41,51 +41,53 @@ export default function FeaturedProducts({ data }) {
           {data?.products?.map((p, i) => (
             <SwiperSlide key={i}>
               
-              <div className="h-auto rounded-lg p-3 relative bg-white group">
-                <Link href={p.URL}>
-                
-                {/* BADGE */}
-                {p.badge && (
-                  <div className="absolute capitalize top-2 left-2 text-[11px] bg-red-100 text-red-600 px-2 py-[2px] rounded">
-                    {p.badge}
-                  </div>
-                )}
+              <div className="min-h-[363px] md::min-h-auto rounded-lg p-3 bg-white group flex flex-col relative">
+  <Link href={p.URL} className="flex-1 flex flex-col">
+    {/* BADGE */}
+    {p.badge && (
+      <div className="absolute top-2 left-2 capitalize text-[11px] bg-red-100 text-red-600 px-2 py-[2px] rounded">
+        {p.badge}
+      </div>
+    )}
 
-                {/* IMAGE */}
-                <div className="h-[130px] flex items-center justify-center mb-4">
-                  <img alt="B2B Marketplace" src={p.image} className="max-h-full object-contain"  />
-                </div>
+    {/* IMAGE */}
+    <div className="h-[150px] flex items-center justify-center mb-4">
+      <img
+        alt="B2B Marketplace"
+        src={p.image}
+        className="max-h-full object-cover"
+      />
+    </div>
 
-                {/* NAME */}
-                <p className="capitalize text-[17px] line-clamp-2 text-black h-[30px]">
-                  {p.name}
-                </p>
+    {/* NAME */}
+    <p className="capitalize text-[17px] line-clamp-2 text-black min-h-[48px]">
+      {p.name}
+    </p>
 
-                {/* RATING */}
-                <div className="text-orange-500 text-[12px]">
-                  ★★★★★{" "}
-                  <span className="text-gray-400">{p.reviews}</span>
-                </div>
+    {/* RATING */}
+    <div className="text-orange-500 text-[12px]">
+      ★★★★★ <span className="text-gray-400">{p.reviews}</span>
+    </div>
 
-                {/* EXTRA */}
-                <p className="text-[14px] my-2 text-black capitalize">
-                  {p.extra}
-                </p>
+    {/* EXTRA */}
+    <p className="text-[14px] my-1 text-black capitalize">
+      {p.extra}
+    </p>
 
-                {/* PRICE */}
-                <p className="font-semibold text-[14px] mt-1">
-                  ₹{p.price}
-                </p>
-                </Link>
+    {/* PRICE */}
+    <p className="font-semibold text-[14px]">
+      ₹{p.price}
+    </p>
+  </Link>
 
-                {/* BUTTON */}
-                <button
-                  onClick={() => setIsOpen(true)}
-                  className="w-full bg-[#F45A06] text-white text-sm mt-2 py-2"
-                >
-                  Request a Quote
-                </button>
-              </div>
+  {/* BUTTON ALWAYS AT BOTTOM */}
+  <button
+    onClick={() => setIsOpen(true)}
+    className="mt-auto w-full bg-[#F45A06] text-white text-sm py-2 rounded-md"
+  >
+    Request a Quote
+  </button>
+</div>
               
             </SwiperSlide>
           ))}
