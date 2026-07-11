@@ -18,138 +18,109 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const dropdownRef = useRef(null);
-const desktopSearchRef = useRef(null);
-const mobileSearchRef = useRef(null);
+  const desktopSearchRef = useRef(null);
+  const mobileSearchRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
-
   const saveRecentSearch = (item) => {
-  try {
-    const existing =
-      JSON.parse(
-        localStorage.getItem("recentSearches")
-      ) || [];
+    try {
+      const existing = JSON.parse(localStorage.getItem("recentSearches")) || [];
 
-    const searchData = {
-      keyword: item.slug,
-      name: item.name,
-      type: item.type,
-      timestamp: Date.now(),
-    };
+      const searchData = {
+        keyword: item.slug,
+        name: item.name,
+        type: item.type,
+        timestamp: Date.now(),
+      };
 
-    const filtered = existing.filter(
-      (search) =>
-        search.keyword !== item.slug
-    );
+      const filtered = existing.filter(
+        (search) => search.keyword !== item.slug,
+      );
 
-    filtered.unshift(searchData);
+      filtered.unshift(searchData);
 
-    localStorage.setItem(
-      "recentSearches",
-      JSON.stringify(
-        filtered.slice(0, 10)
-      )
-    );
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-
-
-
-
-
-const [searchQuery, setSearchQuery] = useState("");
-const [searchResults, setSearchResults] = useState([]);
-const [loading, setLoading] = useState(false);
-const [showResults, setShowResults] = useState(false);
-
-useEffect(() => {
-  const delayDebounce = setTimeout(() => {
-    if (searchQuery.trim().length > 1) {
-      fetchSearchResults();
-    } else {
-      setSearchResults([]);
-      setShowResults(false);
-    }
-  }, 500);
-
-  return () => clearTimeout(delayDebounce);
-}, [searchQuery]);
-
-
-
-
-const fetchSearchResults = async () => {
-  try {
-    setLoading(true);
-
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}api/search?q=${searchQuery}`
-    );
-
-    const data = await res.json();
-
-    const results = [
-      ...(data?.data?.industries || []).map((item) => ({
-        ...item,
-        type: "Industry",
-      })),
-      ...(data?.data?.categories || []).map((item) => ({
-        ...item,
-        type: "Category",
-      })),
-      ...(data?.data?.products || []).map((item) => ({
-        ...item,
-        type: "Product",
-      })),
-    ];
-
-    setSearchResults(results);
-    setShowResults(true);
-
-    console.log("Results:", results);
-  } catch (error) {
-    console.error(error);
-  } finally {
-    setLoading(false);
-  }
-};
-
-
-
-useEffect(() => {
-  const handleClickOutside = (e) => {
-    const clickedDesktop =
-      desktopSearchRef.current?.contains(e.target);
-
-    const clickedMobile =
-      mobileSearchRef.current?.contains(e.target);
-
-    if (!clickedDesktop && !clickedMobile) {
-      setShowResults(false);
-    }
-
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(e.target)
-    ) {
-      setOpen(false);
+      localStorage.setItem(
+        "recentSearches",
+        JSON.stringify(filtered.slice(0, 10)),
+      );
+    } catch (err) {
+      console.log(err);
     }
   };
 
-  document.addEventListener(
-    "mousedown",
-    handleClickOutside
-  );
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [showResults, setShowResults] = useState(false);
 
-  return () =>
-    document.removeEventListener(
-      "mousedown",
-      handleClickOutside
-    );
-}, []);
+  useEffect(() => {
+    const delayDebounce = setTimeout(() => {
+      if (searchQuery.trim().length > 1) {
+        fetchSearchResults();
+      } else {
+        setSearchResults([]);
+        setShowResults(false);
+      }
+    }, 500);
+
+    return () => clearTimeout(delayDebounce);
+  }, [searchQuery]);
+
+  const fetchSearchResults = async () => {
+    try {
+      setLoading(true);
+
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}api/search?q=${searchQuery}`,
+      );
+
+      const data = await res.json();
+
+      const results = [
+        ...(data?.data?.industries || []).map((item) => ({
+          ...item,
+          type: "Industry",
+        })),
+        ...(data?.data?.categories || []).map((item) => ({
+          ...item,
+          type: "Category",
+        })),
+        ...(data?.data?.products || []).map((item) => ({
+          ...item,
+          type: "Product",
+        })),
+      ];
+
+      setSearchResults(results);
+      setShowResults(true);
+
+      console.log("Results:", results);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      const clickedDesktop = desktopSearchRef.current?.contains(e.target);
+
+      const clickedMobile = mobileSearchRef.current?.contains(e.target);
+
+      if (!clickedDesktop && !clickedMobile) {
+        setShowResults(false);
+      }
+
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <>
@@ -211,20 +182,14 @@ useEffect(() => {
               >
                 <FaLinkedin size={18} />
               </a>
-
-
-
-   <a
-              
+              <a
                 href="https://www.youtube.com/@inquirybazaar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-300 transition"
               >
-             
                 <FaYoutube size={18} />
               </a>
-
             </div>
           </div>
         </div>
@@ -252,71 +217,66 @@ useEffect(() => {
                 <a href="https://dir.inquirybazaar.com/">All Categories</a>
               </nav>
 
-<Link href="https://seller.inquirybazaar.com/register">
-  <button className="hidden md:block mt-3 bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
-                Register Free →
-              </button>
+              <Link href="https://seller.inquirybazaar.com/register">
+                <button className="hidden md:block mt-3 bg-[#ec771c] hover:bg-[#e85d12] text-white text-[14px] md:text-[16px] px-4 md:px-6 h-[36px] md:h-[40px] rounded-md whitespace-nowrap">
+                  Register Free →
+                </button>
+              </Link>
 
-</Link>
+              <div
+                className="md:hidden flex-1 max-w-[220px] sm:max-w-[260px] relative"
+                ref={mobileSearchRef}
+              >
+                <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-1 h-[45px] shadow-sm">
+                  <Search size={16} className="text-gray-400 mr-2" />
 
-            
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onFocus={() => setShowResults(true)}
+                    placeholder="Search..."
+                    className="flex-1 min-w-0 bg-transparent outline-none text-[12px] text-gray-700 placeholder:text-gray-400"
+                  />
+                </div>
 
-        <div
-  className="md:hidden flex-1 max-w-[220px] sm:max-w-[260px] relative"
-  ref={mobileSearchRef}
->
-  <div className="flex items-center bg-white border border-gray-200 rounded-2xl px-1 h-[45px] shadow-sm">
-    <Search size={16} className="text-gray-400 mr-2" />
+                {showResults && (
+                  <div className="absolute top-[50px] left-0 w-full bg-white border rounded-xl shadow-xl max-h-[350px] overflow-y-auto z-[99999]">
+                    {loading ? (
+                      <div className="p-4 text-center text-sm">
+                        Searching...
+                      </div>
+                    ) : searchResults?.length > 0 ? (
+                      searchResults.map((item, index) => (
+                        <Link
+                          key={index}
+                          href={`https://dir.inquirybazaar.com/search/${item.slug}`}
+                          className="block px-4 py-3 border-b hover:bg-orange-50"
+                          onClick={() => {
+                            saveRecentSearch(item);
+                            setShowResults(false);
+                            setSearchQuery("");
+                          }}
+                        >
+                          <div className="font-medium text-sm">{item.name}</div>
 
-    <input
-      type="text"
-      value={searchQuery}
-      onChange={(e) => setSearchQuery(e.target.value)}
-      onFocus={() => setShowResults(true)}
-      placeholder="Search..."
-      className="flex-1 min-w-0 bg-transparent outline-none text-[12px] text-gray-700 placeholder:text-gray-400"
-    />
-  </div>
-
-  {showResults && (
-    <div className="absolute top-[50px] left-0 w-full bg-white border rounded-xl shadow-xl max-h-[350px] overflow-y-auto z-[99999]">
-      {loading ? (
-        <div className="p-4 text-center text-sm">
-          Searching...
-        </div>
-      ) : searchResults?.length > 0 ? (
-        searchResults.map((item, index) => (
-          <Link
-            key={index}
-            href={`https://dir.inquirybazaar.com/search/${item.slug}`}
-            className="block px-4 py-3 border-b hover:bg-orange-50"
-            onClick={() => {
-              saveRecentSearch(item);
-              setShowResults(false);
-              setSearchQuery("");
-            }}
-          >
-            <div className="font-medium text-sm">
-              {item.name}
-            </div>
-
-            <div className="text-xs text-gray-500">
-              {item.type}
-            </div>
-          </Link>
-        ))
-      ) : searchQuery?.length > 1 ? (
-        <div className="p-4 text-center text-gray-500 text-sm">
-          No results found
-        </div>
-      ) : (
-        <div className="p-4 text-center text-gray-500 text-sm">
-          Start typing...
-        </div>
-      )}
-    </div>
-  )}
-</div>
+                          <div className="text-xs text-gray-500">
+                            {item.type}
+                          </div>
+                        </Link>
+                      ))
+                    ) : searchQuery?.length > 1 ? (
+                      <div className="p-4 text-center text-gray-500 text-sm">
+                        No results found
+                      </div>
+                    ) : (
+                      <div className="p-4 text-center text-gray-500 text-sm">
+                        Start typing...
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
               <button
                 onClick={() => setMobileMenu(!mobileMenu)}
                 className="md:hidden text-black flex-shrink-0"
@@ -332,20 +292,28 @@ useEffect(() => {
           <div className="md:hidden bg-white border-b h-200 border-gray-200 px-3 sm:px-4 py-4 space-y-4 shadow-lg">
             {/* MOBILE NAV LINKS */}
             <div className="space-y-2 text-[#0D2340] font-medium">
-              <Link href="/" className="block py-2 border-b">
+              <Link
+                onClick={() => setMobileMenu(!mobileMenu)}
+                href="/"
+                className="block py-2 border-b"
+              >
                 Home
               </Link>
               <button
                 onClick={() => setIsOpen(true)}
-                className="block py-2 border-b"
+                className="block py-2 w-full text-start border-b"
               >
                 Request A Quote
               </button>
-              <Link href="contact-us" className="block py-2 border-b">
+              <Link
+                onClick={() => setMobileMenu(!mobileMenu)}
+                href="contact-us"
+                className="block py-2 border-b"
+              >
                 Contact Us
               </Link>
               <a href="https://dir.inquirybazaar.com/" className="block py-2">
-                All Cat egories
+                All Categories
               </a>
             </div>
 
@@ -366,17 +334,22 @@ useEffect(() => {
             </div>
 
             {/* BUTTONS */}
-            <div className="grid grid-cols-2 gap-2 sm:gap-3">
-              <Link href="/whytrustus">
-                <button className="py-3 px-2 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[14px]">
+            <div className="grid grid-cols-2 gap-3">
+              {/* Why Trust Us */}
+              <Link href="/whytrustus" className="w-full">
+                <button
+                  onClick={() => setMobileMenu(!mobileMenu)}
+                  className="w-full h-12 border-2 border-[#FF6A1A] bg-[#fcf3ef] text-[#ec771c] font-semibold rounded-md text-[14px]"
+                >
                   Why Trust Us
                 </button>
               </Link>
 
-              <div className="relative z-[9999]" ref={dropdownRef}>
+              {/* Account */}
+              <div className="relative w-full" ref={dropdownRef}>
                 <button
                   onClick={() => setOpen(!open)}
-                  className="w-full h-[48px] border-2 border-gray-300 bg-[#FAFAF8] rounded-md text-[14px] flex items-center justify-center gap-2"
+                  className="w-full h-12 border-2 border-gray-300 bg-[#FAFAF8] rounded-md text-[14px] flex items-center justify-center gap-2"
                 >
                   <User size={18} />
                   Account
@@ -385,24 +358,41 @@ useEffect(() => {
 
                 {open && (
                   <div className="absolute right-0 mt-2 w-full bg-white border rounded-md shadow-md overflow-hidden z-50">
-                    <Link href="https://seller.inquirybazaar.com/register" className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                    <Link
+                      href="https://seller.inquirybazaar.com/register"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    >
                       Login as Supplier
                     </Link>
-                    <Link href="https://buyer.inquirybazaar.com/register" className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+
+                    <Link
+                      href="https://buyer.inquirybazaar.com/register"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    >
                       Login as Buyer
                     </Link>
                   </div>
                 )}
               </div>
 
-              <a href="https://www.google.com/maps/place/Inquiry+Bazaar+%5C%5C+Hybrid+B2B+Marketplace/@28.6922061,77.1477074,17z/data=!3m1!4b1!4m6!3m5!1s0x390d03087fd1b4df:0xec224959e4ec6e13!8m2!3d28.6922061!4d77.1477074!16s%2Fg%2F11njwfyl1v?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D">
-                <button className="h-[48px] bg-[#0D2340] text-white rounded-md px-2 text-[14px]">
+              {/* Write a Review */}
+              <a
+                href="https://www.google.com/maps/place/Inquiry+Bazaar+%5C%5C+Hybrid+B2B+Marketplace/@28.6922061,77.1477074,17z/data=!3m1!4b1!4m6!3m5!1s0x390d03087fd1b4df:0xec224959e4ec6e13!8m2!3d28.6922061!4d77.1477074!16s%2Fg%2F11njwfyl1v?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <button className="w-full h-12 bg-[#0D2340] text-white rounded-md text-[14px]">
                   ✍️ Write a Review
                 </button>
               </a>
 
-              <Link href="/faqs">
-                <button className="h-[48px] bg-[#ec771c] px-2 text-white rounded-md text-[14px]">
+              {/* Help Center */}
+              <Link href="/faqs" className="w-full">
+                <button
+                  onClick={() => setMobileMenu(!mobileMenu)}
+                  className="w-full h-12 bg-[#ec771c] text-white rounded-md text-[14px]"
+                >
                   💬 Help Center
                 </button>
               </Link>
@@ -426,54 +416,47 @@ useEffect(() => {
             <div className="h-[45px] w-px bg-gray-400"></div>
 
             <div className="flex items-center flex-1 min-w-[280px] max-w-[722px] h-[42px]">
-          <div
-  className="relative w-full"
-  ref={desktopSearchRef}
->
-  <input
-    type="text"
-    value={searchQuery}
-    onChange={(e) => setSearchQuery(e.target.value)}
-    onFocus={() => setShowResults(true)}
-    placeholder="Search products, suppliers, categories..."
-    className="w-full h-[50px] border-2 border-[#ec771c] px-4 text-[14px] rounded-l-md outline-none bg-[#FAFAF8]"
-  />
+              <div className="relative w-full" ref={desktopSearchRef}>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setShowResults(true)}
+                  placeholder="Search products, suppliers, categories..."
+                  className="w-full h-[50px] border-2 border-[#ec771c] px-4 text-[14px] rounded-l-md outline-none bg-[#FAFAF8]"
+                />
 
-  {showResults && (
-    <div className="absolute top-[55px] left-0 w-full bg-white border shadow-xl rounded-lg max-h-[450px] overflow-y-auto z-[99999]">
-      {loading ? (
-        <div className="p-4 text-center">
-          Searching...
-        </div>
-      ) : searchResults?.length > 0 ? (
-        searchResults.map((item, index) => (
-         <Link
-  key={index}
-  href={`https://dir.inquirybazaar.com/search/${item.slug}`}
-  className="block px-4 py-3 border-b hover:bg-orange-50"
- onClick={() => {
-  saveRecentSearch(item);
-  setShowResults(false);
-  setSearchQuery("");
-}}
->
-            <div className="font-medium">
-              {item.name}
-            </div>
+                {showResults && (
+                  <div className="absolute top-[55px] left-0 w-full bg-white border shadow-xl rounded-lg max-h-[450px] overflow-y-auto z-[99999]">
+                    {loading ? (
+                      <div className="p-4 text-center">Searching...</div>
+                    ) : searchResults?.length > 0 ? (
+                      searchResults.map((item, index) => (
+                        <Link
+                          key={index}
+                          href={`https://dir.inquirybazaar.com/search/${item.slug}`}
+                          className="block px-4 py-3 border-b hover:bg-orange-50"
+                          onClick={() => {
+                            saveRecentSearch(item);
+                            setShowResults(false);
+                            setSearchQuery("");
+                          }}
+                        >
+                          <div className="font-medium">{item.name}</div>
 
-            <div className="text-xs text-gray-500">
-              {item.type}
-            </div>
-          </Link>
-        ))
-      ) : (
-        <div className="p-4 text-center text-gray-500">
-         Start typing to see results...
-        </div>
-      )}
-    </div>
-  )}
-</div>
+                          <div className="text-xs text-gray-500">
+                            {item.type}
+                          </div>
+                        </Link>
+                      ))
+                    ) : (
+                      <div className="p-4 text-center text-gray-500">
+                        Start typing to see results...
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
               <button className="bg-[#ec771c] h-[50px] px-6 flex items-center gap-2 text-white text-[14px] font-medium rounded-r-md">
                 <Search size={16} />
                 Search
@@ -497,25 +480,25 @@ useEffect(() => {
               </button>
 
               {open && (
-             <div className="absolute right-0 mt-2 z-[99999] w-[180px] overflow-hidden rounded-md border bg-white shadow-lg">
-  <a
-    href="https://seller.inquirybazaar.com/login"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100"
-  >
-    Login as Supplier
-  </a>
+                <div className="absolute right-0 mt-2 z-[99999] w-[180px] overflow-hidden rounded-md border bg-white shadow-lg">
+                  <a
+                    href="https://seller.inquirybazaar.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100"
+                  >
+                    Login as Supplier
+                  </a>
 
-  <a
-    href="https://buyer.inquirybazaar.com/login"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100"
-  >
-    Login as Buyer
-  </a>
-</div>
+                  <a
+                    href="https://buyer.inquirybazaar.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full px-4 py-2 text-left text-sm hover:bg-gray-100"
+                  >
+                    Login as Buyer
+                  </a>
+                </div>
               )}
             </div>
 
