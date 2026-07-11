@@ -130,8 +130,8 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
 
    
         <div className="md:pl-4 lg:pl-6">
-          <div className="bg-white/80 backdrop-blur-lg border border-gray-200  p-4 ">
-            <h2 className="text-[22px] sm:text-[24px] text-center font-semibold text-black leading-snug">
+          <div className="bg-gradient-to-r rounded-xl from-[#10316C] to-[#10316C] backdrop-blur-lg border border-gray-200  p-4 ">
+            <h2 className="text-[22px] sm:text-[24px] text-center font-semibold text-white leading-snug">
               Tell us what you need
               
             </h2>
@@ -144,7 +144,7 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
                 name="product"
                 type="text"
                 placeholder="Product / Service"
-                className="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-[14px] sm:text-[15px] focus:ring-2 focus:ring-[#2a7f7f] outline-none"
+                className="w-full border text-white placeholder:text-white border-gray-300 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-[14px] sm:text-[15px] focus:ring-2 focus:ring-[#2a7f7f] outline-none"
                 required
               />
 
@@ -158,7 +158,7 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
                   maxLength={10}
                   minLength={10}
                   placeholder="Mobile number"
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-[14px] sm:text-[15px] outline-none"
+                  className="w-full text-white px-3 sm:px-4 placeholder:text-white py-2.5 sm:py-3 text-[14px] sm:text-[15px] outline-none"
                   required
                 />
               </div>
@@ -166,7 +166,7 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
           <button
   type="submit"
   disabled={loading}
-  className="w-full bg-gradient-to-r from-[#10316C] to-[#10316C] hover:opacity-90 text-white py-2.5 sm:py-3 rounded-lg text-[15px] sm:text-[17px] font-semibold shadow-md transition"
+  className="w-full bg-white hover:opacity-90 text-[#10316C] py-2.5 sm:py-3 rounded-lg text-[15px] sm:text-[17px] font-semibold shadow-md transition"
 >
   {loading ? "Submitting..." : "Submit Requirement"}
 </button>
@@ -174,11 +174,11 @@ Inquiry Bazaar is India’s hybrid B2B marketplace that connects businesses to v
 
             {/* BENEFITS */}
             <div className="hidden md:block mt-5 md:mt-6 space-y-2 md:space-y-3 text-[13px] sm:text-[14px]">
-              <div className="flex items-center gap-3 text-gray-600">
-                <ShieldCheck size={14} className="text-[#10316C]" />
+              <div className="flex items-center gap-3 text-white">
+                <ShieldCheck size={14} className="text-white" />
                 100% genuine inquiries {"  "}
 
-                    <Users size={14} className="text-[#10316C]" />
+                    <Users size={14} className="text-white" />
                 Verified business leads
               </div>
 
