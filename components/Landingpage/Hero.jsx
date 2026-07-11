@@ -91,7 +91,7 @@ const mobileBanners = [
 
       {
         text: "Partner With Us",
-        link: "https://inquirybazaar.com/contact-us",
+        link: "https://seller.inquirybazaar.com",
         className:
           "border-1 border-cyan-400 text-white px-1 py-1 rounded-lg text-[10px] ",
       },
@@ -186,24 +186,24 @@ const mobileBanners = [
                 {/* BUTTONS */}
 <div className="flex flex-col gap-3 absolute bottom-7">
   {b.buttons.map((btn, idx) =>
-    btn.text === "Post Requirement " || "Get Quotation" ? (
-      <button
-        key={idx}
-        onClick={() => setIsOpen(true)}
-        className={btn.className}
-      >
-        {btn.text}
-      </button>
-    ) : (
-      <Link
-        key={idx}
-        href={btn.link}
-        className={btn.className}
-      >
-        {btn.text}
-      </Link>
-    )
-  )}
+  btn.text === "Post Requirement" || btn.text === "Get Quotation" ? (
+    <button
+      key={idx}
+      onClick={() => setIsOpen(true)}
+      className={btn.className}
+    >
+      {btn.text}
+    </button>
+  ) : (
+    <Link
+      key={idx}
+      href={btn.link}
+      className={btn.className}
+    >
+      {btn.text}
+    </Link>
+  )
+)}
 </div>
 
               </div>
