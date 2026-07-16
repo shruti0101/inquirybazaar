@@ -10,6 +10,7 @@ const CategorySchema = new mongoose.Schema({
         reviews: String,
         badge: String,
         extra: String,
+        URL: String,
       },
     ],
   },

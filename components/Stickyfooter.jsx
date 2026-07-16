@@ -40,7 +40,8 @@ const Stickyfooter = () => {
           </Link>
 
           <a
-            href="dir.inquirybazaar.com"
+            
+            href="https://dir.inquirybazaar.com/"
             className="flex flex-col items-center text-xs"
           >
             <LayoutGrid className="text-black" size={26} />
