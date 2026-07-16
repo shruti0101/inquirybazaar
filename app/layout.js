@@ -35,6 +35,12 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} h-full antialiased`}
     >
+      {/* Contentsquare */}
+      <Script
+        src="https://t.contentsquare.net/uxa/eed592bfb5b81.js"
+        strategy="afterInteractive"
+      />
+
       <body className="h-full font-sans">
         <ToastProvider />
 
@@ -46,10 +52,7 @@ export default function RootLayout({ children }) {
         <InquiryChat />
 
         {/* Microsoft Clarity */}
-        <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-        >
+        <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
