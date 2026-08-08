@@ -6,6 +6,8 @@ const CategorySchema = new mongoose.Schema({
       {
         name: String,
         image: String,
+        imageFileId: String,
+
         price: String,
         reviews: String,
         badge: String,

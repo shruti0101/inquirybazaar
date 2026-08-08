@@ -11,7 +11,11 @@ export default function FeaturedAdmin() {
     axios.get("/api/categories").then((res) => {
       setData(res.data.content || { products: [] });
     });
+
   }, []);
+
+   console.log(data)
+
 
   const updateField = (i, field, value) => {
     const updated = [...data.products];
@@ -29,28 +33,45 @@ export default function FeaturedAdmin() {
     });
   };
 
-  const save = async () => {
-    await axios.post("/api/categories", data);
-   toast.success(" products updated successfully!")
-  };
-
-  const uploadImage = async (file, index) => {
+const save = async () => {
+  try {
     const formData = new FormData();
-    formData.append("file", file);
-    formData.append("upload_preset", process.env.NEXT_PUBLIC_UPLOAD_PRESET);
 
-    const res = await fetch(
-      `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUD_NAME}/image/upload`,
-      { method: "POST", body: formData }
-    );
+    data.products.forEach((p, i) => {
+      formData.append(`products[${i}][name]`, p.name);
+      formData.append(`products[${i}][price]`, p.price);
+      formData.append(`products[${i}][reviews]`, p.reviews);
+      formData.append(`products[${i}][badge]`, p.badge);
+      formData.append(`products[${i}][extra]`, p.extra);
+      formData.append(`products[${i}][URL]`, p.URL);
 
-    const result = await res.json();
+      // 👇 file (if selected)
+      if (p.file) {
+        formData.append(`products[${i}][file]`, p.file);
+      }
 
-    const updated = [...data.products];
-    updated[index].image = result.secure_url;
+      // 👇 existing image (if already uploaded)
+      if (p.image) {
+        formData.append(`products[${i}][image]`, p.image);
+      }
 
-    setData({ ...data, products: updated });
-  };
+      if (p.imageFileId) {
+        formData.append(`products[${i}][imageFileId]`, p.imageFileId);
+      }
+    });
+
+    await fetch("/api/categories", {
+      method: "POST",
+      body: formData,
+    });
+
+    toast.success("Products saved!");
+  } catch (err) {
+    console.error(err);
+    toast.error("Failed to save");
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-10">
@@ -90,10 +111,13 @@ export default function FeaturedAdmin() {
               )}
 
               <input
-                type="file"
-                className="text-sm"
-                onChange={(e) => uploadImage(e.target.files[0], i)}
-              />
+  type="file"
+  onChange={(e) => {
+    const updated = [...data.products];
+    updated[i].file = e.target.files[0]; // 👈 store file
+    setData({ ...data, products: updated });
+  }}
+/>
             </div>
 
             {/* Inputs */}
